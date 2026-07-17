@@ -45,8 +45,17 @@ static func _fusionar_profundo(base: Dictionary, extra: Dictionary) -> void:
 			base[k] = extra[k]
 
 func persist() -> void:
-	var f := FileAccess.open(path, FileAccess.WRITE)
+	# Escritura atómica: se escribe completo a un .tmp y recién ahí se renombra
+	# sobre el destino. Un corte a mitad de escritura nunca trunca el save.
+	var tmp := path + ".tmp"
+	var f := FileAccess.open(tmp, FileAccess.WRITE)
 	if f == null:
-		push_warning("No se pudo escribir el guardado en " + path)
+		push_warning("No se pudo escribir el guardado en " + tmp)
 		return
 	f.store_string(JSON.stringify(data, "  "))
+	f.close()
+	var err := DirAccess.rename_absolute(
+		ProjectSettings.globalize_path(tmp),
+		ProjectSettings.globalize_path(path))
+	if err != OK:
+		push_warning("No se pudo renombrar %s sobre %s (error %d)" % [tmp, path, err])
