@@ -14,6 +14,9 @@ const DORADO := Color("ffc800")
 static func fondo_pantalla(raiz: Control) -> void:
 	var bg := ColorRect.new()
 	bg.color = FONDO
+	# Decorativo: con el STOP default un fondo full-rect se traga los clicks
+	# de todo lo que quede detrás de la pantalla.
+	bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
 	raiz.add_child(bg)
 	raiz.move_child(bg, 0)
@@ -32,6 +35,9 @@ static func boton(texto: String, color: Color = PRIMARIO) -> Button:
 	b.add_theme_stylebox_override("hover", _estilo(color.lightened(0.1)))
 	b.add_theme_stylebox_override("pressed", _estilo(color.darkened(0.2)))
 	b.add_theme_stylebox_override("disabled", _estilo(Color(color, 0.4)))
+	# Mismo estilo que "normal": sin esto el anillo de foco del theme default
+	# se dibuja encima del estilo custom al navegar con teclado/click.
+	b.add_theme_stylebox_override("focus", _estilo(color))
 	b.add_theme_color_override("font_color", Color("0f2a00") if color == PRIMARIO else TEXTO)
 	b.add_theme_font_size_override("font_size", 26)
 	b.custom_minimum_size = Vector2(0, 64)

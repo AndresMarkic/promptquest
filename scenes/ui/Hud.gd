@@ -9,15 +9,24 @@ var _cont_corazones: HBoxContainer
 var _lbl_combo: Label
 
 func _ready() -> void:
+	# La raíz es full-rect y en Fase 4 convive encima del ejercicio: con el
+	# STOP default se tragaría todos los clicks. IGNORE deja pasar el mouse
+	# y los hijos interactivos (botón salir) siguen recibiendo input.
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	custom_minimum_size = Vector2(0, 110)
 	var fila := HBoxContainer.new()
+	# Anchors + offsets coherentes: nada de position/size a mano sobre un
+	# control anclado (warning en 4.6 y geometría dependiente del timing).
 	fila.set_anchors_preset(Control.PRESET_TOP_WIDE)
+	fila.offset_left = 16
+	fila.offset_top = 16
+	fila.offset_right = -16
+	fila.offset_bottom = 64
 	fila.add_theme_constant_override("separation", 12)
-	fila.position = Vector2(16, 16)
-	fila.size = Vector2(688, 48)
 	add_child(fila)
 
 	var salir := Button.new()
+	# TODO Fase 4: verificar glifo ✕ en la primera corrida con ventana.
 	salir.text = "✕"
 	salir.flat = true
 	salir.add_theme_font_size_override("font_size", 30)
@@ -49,6 +58,9 @@ func set_progreso(actual: int, total: int) -> void:
 
 func set_corazones(n: int) -> void:
 	for h in _cont_corazones.get_children():
+		# Fuera del árbol antes de liberar: queue_free solo no saca el nodo
+		# hasta fin de frame y se vería un frame con 10 corazones.
+		_cont_corazones.remove_child(h)
 		h.queue_free()
 	for k in EconomyRules.MAX_CORAZONES:
 		_cont_corazones.add_child(Icono.nuevo("corazon", k < n))
