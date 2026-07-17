@@ -6,6 +6,13 @@ config/name="PromptQuest"
 run/main_scene="res://scenes/main/Main.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
 
+[autoload]
+
+SaveData="*res://autoload/SaveData.gd"
+Economy="*res://autoload/Economy.gd"
+Content="*res://autoload/Content.gd"
+Game="*res://autoload/Game.gd"
+
 [display]
 window/size/viewport_width=720
 window/size/viewport_height=1280
