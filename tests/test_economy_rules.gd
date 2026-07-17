@@ -15,3 +15,20 @@ func test_estrellas() -> void:
 	check_eq(EconomyRules.estrellas(0, 200.0), 2, "sin errores pero lenta")
 	check_eq(EconomyRules.estrellas(2, 60.0), 1, "con errores")
 	check_eq(EconomyRules.estrellas(0, 180.0), 3, "borde exacto 180s da 3")
+
+func test_regen_corazones() -> void:
+	var r := EconomyRules.corazones_tras_regen(3, 1000, 1000 + 30 * 60)
+	check_eq(r["corazones"], 4, "30 min regeneran 1")
+	r = EconomyRules.corazones_tras_regen(3, 1000, 1000 + 75 * 60)
+	check_eq(r["corazones"], 5, "75 min regeneran 2")
+	check_eq(r["ultimo_unix"], 1000 + 75 * 60, "al llegar al máximo el reloj se resetea a ahora")
+	r = EconomyRules.corazones_tras_regen(1, 1000, 1000 + 45 * 60)
+	check_eq(r["corazones"], 2, "45 min regeneran 1")
+	check_eq(r["ultimo_unix"], 1000 + 30 * 60, "los 15 min sobrantes se conservan")
+
+func test_regen_no_pasa_del_maximo_ni_rompe_con_reloj_atrasado() -> void:
+	var r := EconomyRules.corazones_tras_regen(5, 1000, 999999)
+	check_eq(r["corazones"], 5, "lleno se queda lleno")
+	r = EconomyRules.corazones_tras_regen(2, 5000, 1000)  # reloj hacia atrás
+	check_eq(r["corazones"], 2, "reloj atrasado no regala ni quita")
+	check_eq(r["ultimo_unix"], 1000, "reloj atrasado resetea el timestamp")

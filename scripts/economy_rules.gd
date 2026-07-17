@@ -20,3 +20,16 @@ static func estrellas(errores: int, segundos: float) -> int:
 	if errores > 0:
 		return 1
 	return 3 if segundos <= SEGUNDOS_TRES_ESTRELLAS else 2
+
+static func corazones_tras_regen(corazones: int, ultimo_unix: int, ahora_unix: int) -> Dictionary:
+	## Devuelve {"corazones": int, "ultimo_unix": int} aplicando la regen por tiempo.
+	if corazones >= MAX_CORAZONES:
+		return {"corazones": MAX_CORAZONES, "ultimo_unix": ahora_unix}
+	var transcurrido := ahora_unix - ultimo_unix
+	if transcurrido < 0:
+		return {"corazones": corazones, "ultimo_unix": ahora_unix}
+	var ganados := int(transcurrido / SEGUNDOS_REGEN)
+	var nuevos: int = mini(MAX_CORAZONES, corazones + ganados)
+	if nuevos >= MAX_CORAZONES:
+		return {"corazones": MAX_CORAZONES, "ultimo_unix": ahora_unix}
+	return {"corazones": nuevos, "ultimo_unix": ahora_unix - (transcurrido % SEGUNDOS_REGEN)}
