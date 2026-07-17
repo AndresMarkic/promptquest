@@ -32,8 +32,17 @@ func _cargar() -> Dictionary:
 	if typeof(parseado) != TYPE_DICTIONARY:
 		push_warning("Guardado corrupto en %s: se arranca de cero." % path)
 		return base
-	base.merge(parseado, true)
+	_fusionar_profundo(base, parseado)
 	return base
+
+static func _fusionar_profundo(base: Dictionary, extra: Dictionary) -> void:
+	## Como merge(extra, true) pero recursivo: un save viejo con dicts
+	## anidados incompletos (p. ej. "settings": {}) no pierde los defaults.
+	for k in extra:
+		if base.get(k) is Dictionary and extra[k] is Dictionary:
+			_fusionar_profundo(base[k], extra[k])
+		else:
+			base[k] = extra[k]
 
 func persist() -> void:
 	var f := FileAccess.open(path, FileAccess.WRITE)
