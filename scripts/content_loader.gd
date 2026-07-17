@@ -30,34 +30,53 @@ static func cargar_leccion_cruda(ruta: String) -> Dictionary:
 	return parseado
 
 static func validar_leccion(leccion: Dictionary) -> Array[String]:
+	## Valida estructura Y tipos. Nunca crashea: contenido roto = problemas listados.
 	var problemas: Array[String] = []
 	var lid: String = str(leccion.get("id", "?"))
 	for campo in ["id", "title", "byte_intro", "byte_outro", "exercises"]:
 		if not leccion.has(campo):
 			problemas.append("%s: falta el campo '%s'" % [lid, campo])
+	var ejercicios = leccion.get("exercises", [])
+	if typeof(ejercicios) != TYPE_ARRAY:
+		problemas.append("%s: 'exercises' debe ser Array, es %s" % [lid, type_string(typeof(ejercicios))])
+		return problemas
 	var i := 0
-	for ej in leccion.get("exercises", []):
+	for ej in ejercicios:
 		var tag := "%s ej#%d" % [lid, i]
+		i += 1
+		if typeof(ej) != TYPE_DICTIONARY:
+			problemas.append("%s: el ejercicio debe ser Dictionary, es %s" % [tag, type_string(typeof(ej))])
+			continue
 		match ej.get("type", ""):
 			"multiple_choice":
-				var ops: Array = ej.get("options", [])
-				if ops.size() < 2:
+				var ops = ej.get("options", [])
+				if typeof(ops) != TYPE_ARRAY:
+					problemas.append("%s: 'options' debe ser Array, es %s" % [tag, type_string(typeof(ops))])
+					ops = []
+				elif ops.size() < 2:
 					problemas.append(tag + ": menos de 2 opciones")
-				var c: int = int(ej.get("correct", -1))
-				if c < 0 or c >= ops.size():
+				var c = ej.get("correct", -1)
+				if typeof(c) != TYPE_INT and typeof(c) != TYPE_FLOAT:
+					problemas.append("%s: 'correct' debe ser un número, es %s" % [tag, type_string(typeof(c))])
+				elif int(c) < 0 or int(c) >= ops.size():
 					problemas.append(tag + ": 'correct' fuera de rango")
 				for req in ["question", "explanation"]:
 					if not ej.has(req):
 						problemas.append(tag + ": falta '" + req + "'")
 			"block_builder":
-				var sol: Dictionary = ej.get("solution", {})
-				for lang in ["es", "en"]:
-					if sol.get(lang, []).is_empty():
-						problemas.append(tag + ": solution vacía o falta idioma '" + lang + "'")
+				var sol = ej.get("solution", {})
+				if typeof(sol) != TYPE_DICTIONARY:
+					problemas.append("%s: 'solution' debe ser Dictionary de idiomas, es %s" % [tag, type_string(typeof(sol))])
+				else:
+					for lang in ["es", "en"]:
+						var bloques = sol.get(lang, [])
+						if typeof(bloques) != TYPE_ARRAY:
+							problemas.append("%s: solution['%s'] debe ser Array, es %s" % [tag, lang, type_string(typeof(bloques))])
+						elif bloques.is_empty():
+							problemas.append(tag + ": solution vacía o falta idioma '" + lang + "'")
 				for req in ["goal", "explanation"]:
 					if not ej.has(req):
 						problemas.append(tag + ": falta '" + req + "'")
 			_:
 				problemas.append(tag + ": tipo desconocido '" + str(ej.get("type", "")) + "'")
-		i += 1
 	return problemas
