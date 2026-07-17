@@ -33,9 +33,16 @@ func _initialize() -> void:
 			if not m.name.begins_with("test_"):
 				continue
 			t.failures.clear()
+			t.checks_ejecutados = 0
 			t.call(m.name)
 			total += 1
-			if t.failures.is_empty():
+			if t.failures.is_empty() and t.checks_ejecutados == 0:
+				# Un error de runtime aborta el método con failures vacío;
+				# sin este guard, un test crasheado imprime OK (falso verde).
+				fallas += 1
+				print("FALLA %s :: %s" % [f, m.name])
+				print("      - ningún check ejecutado (¿error de runtime a mitad del test?)")
+			elif t.failures.is_empty():
 				print("OK   %s :: %s" % [f, m.name])
 			else:
 				fallas += 1
