@@ -1,0 +1,145 @@
+{
+  "id": "u1l01",
+  "title": { "es": "¿Qué es la IA generativa?", "en": "What is generative AI?" },
+  "byte_intro": {
+    "es": "¡Hola! Soy Byte. Perdí mi memoria... ¿me ayudás a recuperarla aprendiendo conmigo?",
+    "en": "Hi! I'm Byte. I lost my memory... will you help me recover it by learning with me?"
+  },
+  "byte_outro": {
+    "es": "¡Recuperé mi primer fragmento de memoria! Ya sé qué soy: una IA generativa.",
+    "en": "I got my first memory fragment back! Now I know what I am: a generative AI."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué hace una IA generativa?", "en": "What does a generative AI do?" },
+      "options": [
+        { "es": "Crea contenido nuevo: texto, imágenes, código", "en": "Creates new content: text, images, code" },
+        { "es": "Solo busca páginas en internet", "en": "It only searches web pages" },
+        { "es": "Guarda tus archivos en la nube", "en": "It stores your files in the cloud" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Generativa viene de 'generar': produce contenido nuevo en vez de solo buscarlo o guardarlo.",
+        "en": "Generative comes from 'generate': it produces new content instead of just finding or storing it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": {
+        "es": "¿Cuál es la diferencia con un programa tradicional?",
+        "en": "How is it different from a traditional program?"
+      },
+      "options": [
+        { "es": "El programa sigue reglas fijas; la IA produce respuestas nuevas según patrones", "en": "A program follows fixed rules; AI produces new answers based on patterns" },
+        { "es": "No hay diferencia, son lo mismo", "en": "There is no difference, they are the same" },
+        { "es": "La IA es siempre más rápida", "en": "AI is always faster" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una calculadora siempre da el mismo resultado exacto. Una IA generativa puede responder distinto cada vez, porque genera en base a patrones aprendidos.",
+        "en": "A calculator always gives the same exact result. A generative AI can answer differently each time, because it generates based on learned patterns."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos usa IA generativa?", "en": "Which of these uses generative AI?" },
+      "options": [
+        { "es": "Una calculadora de bolsillo", "en": "A pocket calculator" },
+        { "es": "Un chat que escribe un cuento original que le pediste", "en": "A chat that writes an original story you asked for" },
+        { "es": "Un reloj despertador", "en": "An alarm clock" }
+      ],
+      "correct": 1,
+      "explanation": {
+        "es": "Escribir un cuento que no existía antes es generar contenido nuevo: eso es IA generativa.",
+        "en": "Writing a story that didn't exist before is generating new content: that's generative AI."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿De dónde saca la IA lo que 'sabe'?", "en": "Where does AI get what it 'knows'?" },
+      "options": [
+        { "es": "De entrenar con enormes cantidades de texto y datos", "en": "From training on huge amounts of text and data" },
+        { "es": "De leer tu mente", "en": "From reading your mind" },
+        { "es": "De estar conectada a todos los teléfonos", "en": "From being connected to every phone" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Durante su entrenamiento procesó muchísimo texto y aprendió patrones del lenguaje. No te espía ni adivina: aprendió antes de hablar con vos.",
+        "en": "During training it processed massive amounts of text and learned language patterns. It doesn't spy or guess: it learned before ever talking to you."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": {
+        "es": "Armá la definición correcta de IA generativa",
+        "en": "Build the correct definition of generative AI"
+      },
+      "solution": {
+        "es": ["La IA generativa", "crea contenido nuevo", "a partir de patrones aprendidos."],
+        "en": ["Generative AI", "creates new content", "from learned patterns."]
+      },
+      "distractors": {
+        "es": ["copia páginas de internet", "sin aprender nada"],
+        "en": ["copies web pages", "without learning anything"]
+      },
+      "explanation": {
+        "es": "Genera (no copia) usando patrones que aprendió en su entrenamiento.",
+        "en": "It generates (doesn't copy) using patterns it learned during training."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": {
+        "es": "¿Qué puede hacer una IA generativa y qué no?",
+        "en": "What can generative AI do and not do?"
+      },
+      "options": [
+        { "es": "Puede escribir un poema; no puede saber qué hiciste ayer", "en": "It can write a poem; it can't know what you did yesterday" },
+        { "es": "Puede leer tu mente; no puede escribir texto", "en": "It can read your mind; it can't write text" },
+        { "es": "Puede todo, sin límites", "en": "It can do anything, no limits" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es muy buena generando contenido, pero no tiene acceso a tu vida ni a información que no le diste.",
+        "en": "It's great at generating content, but it has no access to your life or information you didn't give it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": {
+        "es": "Le pedís lo mismo dos veces a una IA generativa. ¿Qué puede pasar?",
+        "en": "You ask a generative AI the same thing twice. What can happen?"
+      },
+      "options": [
+        { "es": "Puede responder distinto cada vez", "en": "It may answer differently each time" },
+        { "es": "Responde siempre exactamente igual", "en": "It always answers exactly the same" },
+        { "es": "La segunda vez se niega a responder", "en": "The second time it refuses to answer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Como genera la respuesta en el momento, dos pedidos iguales pueden dar textos diferentes (y ambos válidos).",
+        "en": "Since it generates the answer on the spot, two identical requests can produce different (and both valid) texts."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": {
+        "es": "Armá un pedido válido para una IA generativa",
+        "en": "Build a valid request for a generative AI"
+      },
+      "solution": {
+        "es": ["Escribí", "una receta simple", "de pizza casera."],
+        "en": ["Write", "a simple recipe", "for homemade pizza."]
+      },
+      "distractors": {
+        "es": ["Adiviná", "qué cené anoche"],
+        "en": ["Guess", "what I had for dinner"]
+      },
+      "explanation": {
+        "es": "Pedile crear algo concreto. Adivinar datos de tu vida no es algo que pueda hacer.",
+        "en": "Ask it to create something concrete. Guessing facts about your life isn't something it can do."
+      }
+    }
+  ]
+}
