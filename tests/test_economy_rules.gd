@@ -32,3 +32,13 @@ func test_regen_no_pasa_del_maximo_ni_rompe_con_reloj_atrasado() -> void:
 	r = EconomyRules.corazones_tras_regen(2, 5000, 1000)  # reloj hacia atrás
 	check_eq(r["corazones"], 2, "reloj atrasado no regala ni quita")
 	check_eq(r["ultimo_unix"], 1000, "reloj atrasado resetea el timestamp")
+
+func test_racha() -> void:
+	check_eq(EconomyRules.racha_tras_actividad(0, "", "2026-07-17"), 1, "primera vez")
+	check_eq(EconomyRules.racha_tras_actividad(3, "2026-07-17", "2026-07-17"), 3, "misma fecha no suma")
+	check_eq(EconomyRules.racha_tras_actividad(3, "2026-07-16", "2026-07-17"), 4, "día consecutivo suma")
+	check_eq(EconomyRules.racha_tras_actividad(9, "2026-07-14", "2026-07-17"), 1, "racha rota arranca en 1")
+
+func test_racha_vigente_para_mostrar() -> void:
+	check_eq(EconomyRules.racha_vigente(5, "2026-07-16", "2026-07-17"), 5, "ayer jugó: sigue viva")
+	check_eq(EconomyRules.racha_vigente(5, "2026-07-14", "2026-07-17"), 0, "más de un día sin jugar: muerta")

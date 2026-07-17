@@ -33,3 +33,25 @@ static func corazones_tras_regen(corazones: int, ultimo_unix: int, ahora_unix: i
 	if nuevos >= MAX_CORAZONES:
 		return {"corazones": MAX_CORAZONES, "ultimo_unix": ahora_unix}
 	return {"corazones": nuevos, "ultimo_unix": ahora_unix - (transcurrido % SEGUNDOS_REGEN)}
+
+static func _dias_entre(fecha_a: String, fecha_b: String) -> int:
+	var ua := Time.get_unix_time_from_datetime_string(fecha_a + "T00:00:00")
+	var ub := Time.get_unix_time_from_datetime_string(fecha_b + "T00:00:00")
+	return int((ub - ua) / 86400)
+
+static func racha_tras_actividad(racha: int, ultima_fecha: String, hoy: String) -> int:
+	## Nueva racha al completar una lección hoy.
+	if ultima_fecha == "":
+		return 1
+	var dias := _dias_entre(ultima_fecha, hoy)
+	if dias == 0:
+		return maxi(racha, 1)
+	if dias == 1:
+		return racha + 1
+	return 1
+
+static func racha_vigente(racha: int, ultima_fecha: String, hoy: String) -> int:
+	## Racha para MOSTRAR (sin jugar): 0 si se rompió.
+	if ultima_fecha == "":
+		return 0
+	return racha if _dias_entre(ultima_fecha, hoy) <= 1 else 0
