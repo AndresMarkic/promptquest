@@ -1,0 +1,18 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+config/name="PromptQuest"
+run/main_scene="res://scenes/main/Main.tscn"
+config/features=PackedStringArray("4.6", "Mobile")
+
+[display]
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/handheld/orientation=1
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
