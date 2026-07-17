@@ -16,7 +16,7 @@
 - **Ejecutable de Godot** (ya instalado, NO descargar):
   `C:\Users\nodue\AppData\Local\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.6.3-stable_win64_console.exe`
 - **Correr tests:** `bash tools/test.sh` (creado en Tarea 0.3). **Smoke boot:** `bash tools/smoke.sh` (Tarea 0.2).
-- **Regla técnica:** el modo `-s` de Godot NO carga autoloads → los tests unitarios cubren SOLO clases puras con `class_name` (`scripts/`). Los autoloads son cáscaras finas verificadas con el smoke boot.
+- **Regla técnica (corregida en Fase 2, verificada en Godot 4.6.3):** el modo `-s` SÍ carga los autoloads (se instancian y su `_ready` corre después de `_initialize` del SceneTree). Consecuencias: (a) los tests unitarios igual cubren solo clases puras con `class_name` (`scripts/`) — los autoloads siguen siendo cáscaras finas verificadas con el smoke boot; (b) como los autoloads viven en cada corrida de tests, `SaveData` detecta el runner por línea de comandos y usa `user://save_test.json` en vez del save real (`user://save.json`) — NO diseñar fases futuras asumiendo que `-s` corre sin autoloads.
 - **Convención:** código y comentarios en español (el dueño del proyecto tiene nivel básico de Godot). Un commit por tarea, mensaje indicado en cada una.
 - Los textos visibles al jugador NUNCA van hardcodeados: UI → `tr("KEY")` con `i18n/ui.csv`; contenido → JSON con campos `es`/`en`.
 
@@ -536,7 +536,7 @@ static func validar_leccion(leccion: Dictionary) -> Array[String]:
 
 ### Tarea 2.1 — Los 4 autoloads + registro en project.godot
 
-Sin tests unitarios (los autoloads no cargan en modo `-s`): se verifica con `bash tools/smoke.sh` + los tests existentes siguen verdes.
+Se verifica con `bash tools/smoke.sh` + los tests existentes siguen verdes. (Nota corregida: en 4.6.3 los autoloads SÍ cargan en modo `-s`; por eso `SaveData` usa `user://save_test.json` bajo el runner — ver "Regla técnica" arriba.)
 
 `autoload/SaveData.gd`:
 ```gdscript
