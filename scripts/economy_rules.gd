@@ -44,7 +44,8 @@ static func racha_tras_actividad(racha: int, ultima_fecha: String, hoy: String) 
 	if ultima_fecha == "":
 		return 1
 	var dias := _dias_entre(ultima_fecha, hoy)
-	if dias == 0:
+	if dias <= 0:
+		# 0 = mismo día; negativo = reloj hacia atrás: ni suma ni rompe.
 		return maxi(racha, 1)
 	if dias == 1:
 		return racha + 1
@@ -54,4 +55,5 @@ static func racha_vigente(racha: int, ultima_fecha: String, hoy: String) -> int:
 	## Racha para MOSTRAR (sin jugar): 0 si se rompió.
 	if ultima_fecha == "":
 		return 0
+	# <= 1 incluye días negativos (reloj hacia atrás): se trata como mismo día.
 	return racha if _dias_entre(ultima_fecha, hoy) <= 1 else 0

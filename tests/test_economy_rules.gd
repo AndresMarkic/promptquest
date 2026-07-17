@@ -42,3 +42,10 @@ func test_racha() -> void:
 func test_racha_vigente_para_mostrar() -> void:
 	check_eq(EconomyRules.racha_vigente(5, "2026-07-16", "2026-07-17"), 5, "ayer jugó: sigue viva")
 	check_eq(EconomyRules.racha_vigente(5, "2026-07-14", "2026-07-17"), 0, "más de un día sin jugar: muerta")
+
+func test_racha_con_reloj_hacia_atras_se_trata_como_mismo_dia() -> void:
+	# ultima_fecha > hoy (el usuario atrasó el reloj): ni suma ni rompe.
+	check_eq(EconomyRules.racha_tras_actividad(5, "2026-07-18", "2026-07-17"), 5, "reloj atrasado conserva la racha")
+	check_eq(EconomyRules.racha_tras_actividad(0, "2026-07-18", "2026-07-17"), 1, "reloj atrasado con racha 0 arranca en 1")
+	check_eq(EconomyRules.racha_tras_actividad(5, "2026-08-01", "2026-07-17"), 5, "varios días hacia atrás tampoco rompe")
+	check_eq(EconomyRules.racha_vigente(5, "2026-07-18", "2026-07-17"), 5, "para mostrar tampoco se rompe")
