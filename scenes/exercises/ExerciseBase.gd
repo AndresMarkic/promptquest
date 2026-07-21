@@ -33,9 +33,9 @@ func _mostrar_feedback(correcto: bool) -> void:
 	var caja := VBoxContainer.new()
 	caja.add_theme_constant_override("separation", 10)
 	panel.add_child(caja)
-	caja.add_child(UiTheme.etiqueta("¡Correcto!" if correcto else "Ups, no era así",
+	caja.add_child(UiTheme.etiqueta(I18n.t("CORRECTO") if correcto else I18n.t("INCORRECTO"),
 		26, UiTheme.PRIMARIO if correcto else UiTheme.PELIGRO))
 	caja.add_child(UiTheme.etiqueta(str(data.get("explanation", "")), 20, UiTheme.TEXTO_SUAVE))
-	var btn := UiTheme.boton("CONTINUAR", UiTheme.PRIMARIO if correcto else UiTheme.PELIGRO)
+	var btn := UiTheme.boton(I18n.t("CONTINUAR"), UiTheme.PRIMARIO if correcto else UiTheme.PELIGRO)
 	btn.pressed.connect(func(): continue_pressed.emit())
 	caja.add_child(btn)

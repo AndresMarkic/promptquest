@@ -44,6 +44,12 @@ func test_flujo_completo_de_leccion() -> void:
 		# La raíz no está "ready" durante _initialize: se notifica a mano.
 		lesson.notification(Node.NOTIFICATION_READY)
 
+	# La lección arranca con el saludo de Byte (byte_intro): se cierra para
+	# empezar los ejercicios (en el juego, el jugador toca CONTINUAR).
+	check(lesson._overlay_intro != null, "Byte saluda antes del primer ejercicio")
+	check(lesson._actual == null, "el ejercicio no aparece hasta cerrar el saludo")
+	lesson._cerrar_intro()
+
 	var total: int = lesson.ejercicios.size()
 	check_eq(total, 8, "la lección 1 tiene 8 ejercicios")
 	check_eq(lesson.indice, 0, "arranca en el ejercicio 0")

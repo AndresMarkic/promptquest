@@ -11,7 +11,9 @@ const PANTALLAS := {
 var params: Dictionary = {}  # parámetros para la pantalla entrante
 
 func _ready() -> void:
-	TranslationServer.set_locale(SaveData.get_value("language", "es"))
+	var idioma: String = SaveData.get_value("language", "es")
+	I18n.idioma_actual = idioma
+	TranslationServer.set_locale(idioma)
 	# Pantalla inicial: intro la primera vez, mapa después.
 	goto.call_deferred("intro" if not SaveData.get_value("intro_seen", false) else "map")
 

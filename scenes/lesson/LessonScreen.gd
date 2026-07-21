@@ -16,6 +16,8 @@ var combo := 0
 var es_repaso := false
 var _hud: Hud
 var _actual: ExerciseBase = null
+var _byte: Mascot
+var _overlay_intro: Control = null
 var _inicio_ms := 0
 
 func _ready() -> void:
@@ -33,7 +35,51 @@ func _ready() -> void:
 		_hud.notification(Node.NOTIFICATION_READY)
 	_hud.set_corazones(Economy.hearts())
 	Economy.hearts_changed.connect(func(n): _hud.set_corazones(n))
+	# Byte en la esquina inferior izquierda, reaccionando a cada respuesta.
+	_byte = load("res://scenes/mascot/Mascot.tscn").instantiate()
+	_byte.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT, Control.PRESET_MODE_KEEP_SIZE)
+	_byte.offset_left = 16
+	_byte.offset_top = -116
+	_byte.offset_right = 116
+	_byte.offset_bottom = -16
+	add_child(_byte)
 	_inicio_ms = Time.get_ticks_msec()
+	# Byte saluda con byte_intro antes del primer ejercicio (si la lección lo trae).
+	var intro := str(leccion.get("byte_intro", ""))
+	if intro != "":
+		_mostrar_intro_byte(intro)
+	else:
+		_mostrar_ejercicio()
+
+func _mostrar_intro_byte(texto: String) -> void:
+	_overlay_intro = Control.new()
+	_overlay_intro.set_anchors_preset(Control.PRESET_FULL_RECT)
+	add_child(_overlay_intro)
+	var velo := ColorRect.new()
+	velo.color = Color(0.07, 0.07, 0.17, 0.92)
+	velo.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_overlay_intro.add_child(velo)
+	var caja := VBoxContainer.new()
+	caja.set_anchors_preset(Control.PRESET_CENTER)
+	caja.custom_minimum_size = Vector2(560, 0)
+	caja.add_theme_constant_override("separation", 24)
+	caja.alignment = BoxContainer.ALIGNMENT_CENTER
+	_overlay_intro.add_child(caja)
+	var byte: Mascot = load("res://scenes/mascot/Mascot.tscn").instantiate()
+	byte.custom_minimum_size = Vector2(140, 140)
+	byte.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	caja.add_child(byte)
+	var lbl := UiTheme.etiqueta(texto, 24)
+	lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	caja.add_child(lbl)
+	var btn := UiTheme.boton(I18n.t("CONTINUAR"))
+	btn.pressed.connect(_cerrar_intro)
+	caja.add_child(btn)
+
+func _cerrar_intro() -> void:
+	if _overlay_intro != null:
+		_overlay_intro.queue_free()
+		_overlay_intro = null
 	_mostrar_ejercicio()
 
 func _mostrar_ejercicio() -> void:
@@ -58,6 +104,8 @@ func _mostrar_ejercicio() -> void:
 	_actual = esc
 
 func _al_responder(correcto: bool) -> void:
+	if _byte != null:
+		_byte.set_animo("feliz" if correcto else "triste")
 	if correcto:
 		perfectas += 1
 		combo += 1
@@ -78,20 +126,21 @@ func _terminar() -> void:
 	var segundos := (Time.get_ticks_msec() - _inicio_ms) / 1000.0
 	var resumen := Economy.on_lesson_finished(
 		leccion["id"], perfectas, errores, segundos, es_repaso, bool(leccion.get("boss", false)))
+	resumen["byte_outro"] = leccion.get("byte_outro", "")
 	Game.goto("result", resumen)
 
 func _confirmar_salida() -> void:
 	var d := ConfirmationDialog.new()
-	d.dialog_text = "Si salís ahora perdés el progreso de esta lección. ¿Salir?"
-	d.ok_button_text = "Salir"
-	d.cancel_button_text = "Seguir"
+	d.dialog_text = I18n.t("SALIR_CONFIRMA")
+	d.ok_button_text = I18n.t("SALIR")
+	d.cancel_button_text = I18n.t("SEGUIR")
 	d.confirmed.connect(func(): Game.goto("map"))
 	add_child(d)
 	d.popup_centered()
 
 func _sin_corazones() -> void:
 	var d := AcceptDialog.new()
-	d.dialog_text = "¡Te quedaste sin corazones! Repasá una lección completada para recuperar uno."
+	d.dialog_text = I18n.t("SIN_CORAZONES")
 	d.confirmed.connect(func(): Game.goto("map"))
 	d.canceled.connect(func(): Game.goto("map"))
 	add_child(d)

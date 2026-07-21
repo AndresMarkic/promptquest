@@ -33,7 +33,7 @@ func _build() -> void:
 	for bloque in pool:
 		_pool_cont.add_child(_hacer_bloque(str(bloque), true))
 
-	_btn_verificar = UiTheme.boton("VERIFICAR", UiTheme.ACENTO)
+	_btn_verificar = UiTheme.boton(I18n.t("VERIFICAR"), UiTheme.ACENTO)
 	_btn_verificar.disabled = true
 	_btn_verificar.pressed.connect(_verificar)
 	caja.add_child(_btn_verificar)

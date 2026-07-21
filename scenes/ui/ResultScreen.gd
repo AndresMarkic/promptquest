@@ -12,9 +12,24 @@ func _ready() -> void:
 	caja.alignment = BoxContainer.ALIGNMENT_CENTER
 	add_child(caja)
 
-	var titulo := UiTheme.etiqueta("¡Lección completada!", 36, UiTheme.PRIMARIO)
+	var byte: Mascot = load("res://scenes/mascot/Mascot.tscn").instantiate()
+	byte.custom_minimum_size = Vector2(140, 140)
+	byte.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	caja.add_child(byte)
+	byte.set_animo("festejo")  # después de add_child: set_animo usa create_tween
+
+	var es_boss: bool = r.get("boss", false)
+	var titulo := UiTheme.etiqueta(
+		I18n.t("UNIDAD_COMPLETADA") if es_boss else I18n.t("LECCION_COMPLETADA"),
+		36, UiTheme.PRIMARIO)
 	titulo.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	caja.add_child(titulo)
+
+	var outro := str(r.get("byte_outro", ""))
+	if outro != "":
+		var lbl_outro := UiTheme.etiqueta(outro, 20, UiTheme.TEXTO_SUAVE)
+		lbl_outro.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		caja.add_child(lbl_outro)
 
 	var fila_estrellas := HBoxContainer.new()
 	fila_estrellas.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -32,9 +47,9 @@ func _ready() -> void:
 		var fila_racha := HBoxContainer.new()
 		fila_racha.alignment = BoxContainer.ALIGNMENT_CENTER
 		fila_racha.add_child(Icono.nuevo("fuego", true, 36.0))
-		fila_racha.add_child(UiTheme.etiqueta("¡Racha de %d días!" % int(r.get("racha", 1)), 26))
+		fila_racha.add_child(UiTheme.etiqueta(I18n.t("RACHA_DIAS") % int(r.get("racha", 1)), 26))
 		caja.add_child(fila_racha)
 
-	var btn := UiTheme.boton("CONTINUAR")
+	var btn := UiTheme.boton(I18n.t("CONTINUAR"))
 	btn.pressed.connect(func(): Game.goto("map"))
 	caja.add_child(btn)

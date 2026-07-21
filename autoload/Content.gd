@@ -9,6 +9,7 @@ func idioma() -> String:
 
 func set_idioma(codigo: String) -> void:
 	SaveData.set_value("language", codigo)
+	I18n.idioma_actual = codigo
 	TranslationServer.set_locale(codigo)
 
 func get_lesson(id: String) -> Dictionary:

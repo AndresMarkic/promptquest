@@ -23,6 +23,17 @@ func _armar_hud_superior() -> void:
 	espacio.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	fila.add_child(espacio)
 	fila.add_child(UiTheme.etiqueta("XP %d" % Economy.xp_total(), 24, UiTheme.DORADO))
+	# Botón de ajustes: texto en vez de ⚙ (la fuente por defecto no trae emoji).
+	var ajustes := Button.new()
+	ajustes.text = I18n.t("AJUSTES")
+	ajustes.flat = true
+	ajustes.add_theme_font_size_override("font_size", 18)
+	ajustes.add_theme_color_override("font_color", UiTheme.TEXTO_SUAVE)
+	ajustes.pressed.connect(_abrir_ajustes)
+	fila.add_child(ajustes)
+
+func _abrir_ajustes() -> void:
+	add_child(load("res://scenes/ui/SettingsPanel.tscn").instantiate())
 
 func _armar_camino() -> void:
 	var scroll := ScrollContainer.new()
@@ -62,15 +73,15 @@ func _al_tocar(id: String) -> void:
 	var estado := ProgressLogic.estado(id, Content.UNIT1_IDS, avance)
 	if estado == "completada":
 		var d := ConfirmationDialog.new()
-		d.dialog_text = "Ya completaste esta lección. ¿Repasarla? (recuperás 1 corazón)"
-		d.ok_button_text = "Repasar"
+		d.dialog_text = I18n.t("REPASAR_PREGUNTA")
+		d.ok_button_text = I18n.t("REPASAR")
 		d.confirmed.connect(func(): Game.goto("lesson", {"lesson_id": id, "review": true}))
 		add_child(d)
 		d.popup_centered()
 		return
 	if not Economy.can_start_lesson():
 		var d2 := AcceptDialog.new()
-		d2.dialog_text = "Sin corazones. Esperá que se regeneren o repasá una lección completada."
+		d2.dialog_text = I18n.t("SIN_CORAZONES_MAPA")
 		add_child(d2)
 		d2.popup_centered()
 		return

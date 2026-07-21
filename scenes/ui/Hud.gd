@@ -67,7 +67,6 @@ func set_corazones(n: int) -> void:
 
 func set_combo(n: int) -> void:
 	if n >= 3:
-		# Texto literal en español: el i18n propio llega en la Tarea 7.3.
-		_lbl_combo.text = "¡Combo x%d!" % n
+		_lbl_combo.text = I18n.t("COMBO") % n
 	else:
 		_lbl_combo.text = ""
