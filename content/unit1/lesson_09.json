@@ -1,0 +1,132 @@
+{
+  "id": "u1l09",
+  "title": { "es": "Enseñar con ejemplos", "en": "Teaching with examples" },
+  "byte_intro": {
+    "es": "Si me mostrás 1 o 2 ejemplos de lo que querés, ¡copio el patrón y te sale clavado!",
+    "en": "If you show me 1 or 2 examples of what you want, I copy the pattern and nail it!"
+  },
+  "byte_outro": {
+    "es": "¡Última del Núcleo dominada! Con ejemplos te doy justo el estilo y el formato que buscás.",
+    "en": "Last Core lesson mastered! With examples I give you exactly the style and format you want."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es dar ejemplos en el prompt (few-shot)?", "en": "What is giving examples in the prompt (few-shot)?" },
+      "options": [
+        { "es": "Mostrarle 1 o 2 ejemplos del resultado que querés", "en": "Showing it 1 or 2 examples of the result you want" },
+        { "es": "Pedirle que dispare al azar", "en": "Asking it to fire at random" },
+        { "es": "Mandarle una foto tuya", "en": "Sending it a photo of yourself" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Few-shot = enseñar con ejemplos: el modelo imita el patrón que le mostraste.",
+        "en": "Few-shot = teaching with examples: the model imitates the pattern you showed it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuándo ayuda más dar ejemplos?", "en": "When do examples help most?" },
+      "options": [
+        { "es": "Cuando el formato o el estilo son difíciles de describir con palabras", "en": "When the format or style is hard to describe in words" },
+        { "es": "Cuando ya no querés respuesta", "en": "When you no longer want an answer" },
+        { "es": "Nunca ayuda", "en": "It never helps" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "A veces mostrar un ejemplo dice más que explicarlo: el modelo copia ese molde.",
+        "en": "Sometimes showing an example says more than describing it: the model copies that mold."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés que clasifique reseñas como 'positiva' o 'negativa'. ¿Qué ayuda?", "en": "You want it to label reviews as 'positive' or 'negative'. What helps?" },
+      "options": [
+        { "es": "Darle 2 ejemplos ya clasificados antes de tu reseña", "en": "Giving it 2 already-labeled examples before your review" },
+        { "es": "No explicar nada y esperar suerte", "en": "Explaining nothing and hoping for luck" },
+        { "es": "Pedirle que invente categorías nuevas", "en": "Asking it to invent new categories" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Con ejemplos etiquetados, el modelo aprende el patrón y sigue tu criterio.",
+        "en": "With labeled examples, the model learns the pattern and follows your criteria."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué imita el modelo cuando le das ejemplos?", "en": "What does the model imitate when you give examples?" },
+      "options": [
+        { "es": "El patrón: formato, estilo y tipo de respuesta", "en": "The pattern: format, style and type of answer" },
+        { "es": "Tu letra manuscrita", "en": "Your handwriting" },
+        { "es": "El color de tu pantalla", "en": "Your screen color" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Copia la forma de tus ejemplos, así que ejemplos buenos = respuestas parecidas y buenas.",
+        "en": "It copies the shape of your examples, so good examples = similar, good answers."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuántos ejemplos suele bastar para empezar?", "en": "How many examples are usually enough to start?" },
+      "options": [
+        { "es": "Con 1 o 2 buenos ejemplos ya se nota la mejora", "en": "1 or 2 good examples already make a difference" },
+        { "es": "Mínimo 500 ejemplos", "en": "At least 500 examples" },
+        { "es": "Cero, los ejemplos molestan", "en": "Zero, examples get in the way" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "No hace falta un montón: 1 o 2 ejemplos claros suelen alcanzar para guiar el patrón.",
+        "en": "You don't need a ton: 1 or 2 clear examples are usually enough to guide the pattern."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué es enseñar con ejemplos", "en": "Build what teaching with examples is" },
+      "solution": {
+        "es": ["Mostrar 1 o 2 ejemplos", "del resultado que querés", "guía al modelo."],
+        "en": ["Showing 1 or 2 examples", "of the result you want", "guides the model."]
+      },
+      "distractors": {
+        "es": ["esconder lo que querés", "confunde al modelo"],
+        "en": ["hiding what you want", "confuses the model"]
+      },
+      "explanation": {
+        "es": "El modelo imita tus ejemplos: buenos ejemplos guían hacia buenas respuestas.",
+        "en": "The model imitates your examples: good examples guide toward good answers."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cuándo conviene dar ejemplos", "en": "Build when giving examples is worth it" },
+      "solution": {
+        "es": ["Dale ejemplos", "cuando el estilo o el formato", "son difíciles de describir."],
+        "en": ["Give examples", "when the style or format", "is hard to describe."]
+      },
+      "distractors": {
+        "es": ["nunca des ejemplos", "aunque no se entienda"],
+        "en": ["never give examples", "even if it's unclear"]
+      },
+      "explanation": {
+        "es": "Cuando explicar el formato con palabras cuesta, un ejemplo lo muestra al toque.",
+        "en": "When describing the format in words is hard, an example shows it instantly."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un mini prompt few-shot", "en": "Build a mini few-shot prompt" },
+      "solution": {
+        "es": ["Ejemplo: \"gato\" → \"animal\".", "Ahora clasificá:", "\"rosa\" → ?"],
+        "en": ["Example: \"cat\" → \"animal\".", "Now classify:", "\"rose\" → ?"]
+      },
+      "distractors": {
+        "es": ["no des pistas", "y ordená al azar"],
+        "en": ["give no hints", "and sort at random"]
+      },
+      "explanation": {
+        "es": "Un ejemplo resuelto ('gato → animal') le enseña el patrón para clasificar 'rosa'.",
+        "en": "One solved example ('cat → animal') teaches it the pattern to classify 'rose'."
+      }
+    }
+  ]
+}

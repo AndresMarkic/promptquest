@@ -1,0 +1,132 @@
+{
+  "id": "u1l08",
+  "title": { "es": "Formato de salida", "en": "Output format" },
+  "byte_intro": {
+    "es": "¿Querés la respuesta en lista, tabla o pasos? ¡Pedímelo y te la doy con esa forma!",
+    "en": "Want the answer as a list, table or steps? Just ask and I'll shape it that way!"
+  },
+  "byte_outro": {
+    "es": "¡Anotado! Si me decís la forma exacta, te entrego algo listo para usar.",
+    "en": "Noted! If you tell me the exact form, I hand you something ready to use."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Podés controlar la FORMA de la respuesta?", "en": "Can you control the SHAPE of the answer?" },
+      "options": [
+        { "es": "Sí: pedí lista, tabla, pasos, o un máximo de palabras", "en": "Yes: ask for a list, table, steps, or a word limit" },
+        { "es": "No, la forma es siempre la misma", "en": "No, the shape is always the same" },
+        { "es": "Solo si pagás extra", "en": "Only if you pay extra" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Decirle el formato (lista, tabla, pasos, largo) hace que la respuesta te venga lista.",
+        "en": "Telling it the format (list, table, steps, length) makes the answer come ready to use."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés comparar 3 celulares. ¿Qué formato conviene pedir?", "en": "You want to compare 3 phones. What format should you ask for?" },
+      "options": [
+        { "es": "Una tabla con una fila por celular", "en": "A table with one row per phone" },
+        { "es": "Un texto larguísimo sin cortes", "en": "One giant text with no breaks" },
+        { "es": "Un solo emoji", "en": "A single emoji" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una tabla ordena la comparación y se lee de un vistazo.",
+        "en": "A table organizes the comparison and reads at a glance."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "\"Respondé en máximo 50 palabras\" sirve para...", "en": "\"Answer in 50 words max\" is useful to..." },
+      "options": [
+        { "es": "Controlar el largo de la respuesta", "en": "Control the length of the answer" },
+        { "es": "Cambiar el idioma", "en": "Change the language" },
+        { "es": "Que responda más lento", "en": "Make it answer slower" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Poner un límite de largo evita respuestas eternas cuando querés algo breve.",
+        "en": "Setting a length limit avoids endless answers when you want something brief."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuándo conviene pedir \"pasos numerados\"?", "en": "When is asking for \"numbered steps\" useful?" },
+      "options": [
+        { "es": "Para instrucciones o procesos que se siguen en orden", "en": "For instructions or processes followed in order" },
+        { "es": "Nunca, es confuso", "en": "Never, it's confusing" },
+        { "es": "Solo para poesía", "en": "Only for poetry" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los pasos numerados son ideales para recetas, tutoriales y procesos ordenados.",
+        "en": "Numbered steps are ideal for recipes, tutorials and ordered processes."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué respuesta es más fácil de usar?", "en": "Which answer is easier to use?" },
+      "options": [
+        { "es": "Una con el formato que pediste (lista, tabla, pasos)", "en": "One in the format you asked for (list, table, steps)" },
+        { "es": "Un bloque de texto sin estructura", "en": "A block of text with no structure" },
+        { "es": "Da igual, todas cuestan lo mismo de leer", "en": "Doesn't matter, all are equally hard to read" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El formato adecuado ahorra trabajo: la respuesta viene ordenada para lo que la necesitás.",
+        "en": "The right format saves work: the answer comes organized for what you need it for."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido de formato en tabla", "en": "Build a request for table format" },
+      "solution": {
+        "es": ["Respondé", "en una tabla", "de 3 columnas."],
+        "en": ["Answer", "in a table", "with 3 columns."]
+      },
+      "distractors": {
+        "es": ["en un párrafo", "eterno y sin cortes"],
+        "en": ["in a paragraph", "endless and unbroken"]
+      },
+      "explanation": {
+        "es": "Pedir la estructura exacta (tabla de 3 columnas) te da algo listo para leer o pegar.",
+        "en": "Asking for the exact structure (3-column table) gives you something ready to read or paste."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido con límite de largo", "en": "Build a request with a length limit" },
+      "solution": {
+        "es": ["Resumime esto", "en 3 puntos", "de una línea cada uno."],
+        "en": ["Summarize this", "in 3 bullet points", "of one line each."]
+      },
+      "distractors": {
+        "es": ["escribí 20 páginas", "sobre el tema"],
+        "en": ["write 20 pages", "about the topic"]
+      },
+      "explanation": {
+        "es": "Cantidad (3) y largo (una línea) controlan el tamaño de la respuesta.",
+        "en": "Amount (3) and length (one line) control the size of the answer."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido de pasos", "en": "Build a step-by-step request" },
+      "solution": {
+        "es": ["Explicá cómo cambiar una rueda", "en pasos numerados", "y simples."],
+        "en": ["Explain how to change a tire", "in numbered steps", "and simple."]
+      },
+      "distractors": {
+        "es": ["en un solo bloque", "sin orden"],
+        "en": ["in one block", "with no order"]
+      },
+      "explanation": {
+        "es": "Los pasos numerados hacen que un proceso sea fácil de seguir.",
+        "en": "Numbered steps make a process easy to follow."
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "u1l06",
+  "title": { "es": "Tu primer prompt", "en": "Your first prompt" },
+  "byte_intro": {
+    "es": "¡Hora de hablarme bien! Un buen pedido (prompt) hace magia. Uno vago... me deja perdido.",
+    "en": "Time to talk to me well! A good request (prompt) works magic. A vague one... leaves me lost."
+  },
+  "byte_outro": {
+    "es": "¡Genial! Ya sabés pedir claro: tema, cantidad y forma. Así te doy justo lo que buscás.",
+    "en": "Awesome! Now you ask clearly: topic, amount and form. That's how I give you exactly what you want."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos prompts es más claro?", "en": "Which of these prompts is clearer?" },
+      "options": [
+        { "es": "Escribí 3 consejos breves para dormir mejor", "en": "Write 3 short tips to sleep better" },
+        { "es": "Escribime algo sobre dormir", "en": "Write me something about sleeping" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El primero define tema (dormir mejor), cantidad (3) y forma (consejos breves). El segundo es vago.",
+        "en": "The first defines topic (sleep better), amount (3) and form (short tips). The second is vague."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué hace bueno a un prompt?", "en": "What makes a prompt good?" },
+      "options": [
+        { "es": "Que sea específico: qué querés, cuánto y para quién", "en": "Being specific: what you want, how much, and for whom" },
+        { "es": "Que sea lo más corto y vago posible", "en": "Being as short and vague as possible" },
+        { "es": "Que tenga muchas mayúsculas", "en": "Having lots of capital letters" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cuanto más claro el pedido, mejor la respuesta. La especificidad guía al modelo.",
+        "en": "The clearer the request, the better the answer. Specificity guides the model."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés un correo para pedir vacaciones. ¿Qué prompt es mejor?", "en": "You want an email to request vacation. Which prompt is better?" },
+      "options": [
+        { "es": "Escribí un correo formal y breve a mi jefe pidiendo la semana del 10 al 17", "en": "Write a short formal email to my boss requesting the week of the 10th to the 17th" },
+        { "es": "Hacé un correo", "en": "Make an email" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Das tono (formal), largo (breve), destinatario (jefe) y el dato clave (las fechas).",
+        "en": "You give tone (formal), length (short), recipient (boss) and the key detail (the dates)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Conviene pedir muchas cosas distintas en un solo prompt?", "en": "Is it good to ask for many different things in one prompt?" },
+      "options": [
+        { "es": "Mejor ir de a un pedido claro por vez", "en": "Better to go one clear request at a time" },
+        { "es": "Sí, cuantas más cosas mezcladas, mejor", "en": "Yes, the more things mixed, the better" },
+        { "es": "Da igual, siempre acierta", "en": "Doesn't matter, it always nails it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un pedido enfocado por vez suele salir mejor que uno enorme con diez cosas mezcladas.",
+        "en": "One focused request at a time usually turns out better than a huge one with ten mixed things."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "\"Contame un chiste corto y apto para chicos sobre gatos\" es un prompt...", "en": "\"Tell me a short kid-friendly joke about cats\" is a prompt that is..." },
+      "options": [
+        { "es": "Específico: define largo, público y tema", "en": "Specific: it defines length, audience and topic" },
+        { "es": "Vago: no dice nada útil", "en": "Vague: it says nothing useful" },
+        { "es": "Imposible de responder", "en": "Impossible to answer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Largo (corto), público (chicos) y tema (gatos): el modelo sabe exactamente qué darte.",
+        "en": "Length (short), audience (kids) and topic (cats): the model knows exactly what to give you."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt específico", "en": "Build a specific prompt" },
+      "solution": {
+        "es": ["Escribí 5 ideas cortas", "de regalo económico", "para un cumpleaños de 30."],
+        "en": ["Write 5 short ideas", "for a cheap gift", "for a 30th birthday."]
+      },
+      "distractors": {
+        "es": ["dame algo", "no sé qué"],
+        "en": ["give me something", "not sure what"]
+      },
+      "explanation": {
+        "es": "Cantidad (5), forma (cortas), tema (regalo económico) y contexto (cumple de 30).",
+        "en": "Amount (5), form (short), topic (cheap gift) and context (a 30th birthday)."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la regla del buen prompt", "en": "Build the good-prompt rule" },
+      "solution": {
+        "es": ["Un buen prompt", "es específico:", "dice tema, cantidad y forma."],
+        "en": ["A good prompt", "is specific:", "it states topic, amount and form."]
+      },
+      "distractors": {
+        "es": ["es lo más vago", "que se pueda"],
+        "en": ["is as vague", "as possible"]
+      },
+      "explanation": {
+        "es": "Específico gana a vago casi siempre. Deciles qué querés con detalle.",
+        "en": "Specific beats vague almost always. Tell it what you want in detail."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un consejo para pedidos grandes", "en": "Build a tip for big requests" },
+      "solution": {
+        "es": ["Si tenés mucho para pedir,", "andá de a un pedido claro", "por vez."],
+        "en": ["If you have a lot to ask,", "go one clear request", "at a time."]
+      },
+      "distractors": {
+        "es": ["mezclá diez cosas", "en una sola frase"],
+        "en": ["mix ten things", "in a single sentence"]
+      },
+      "explanation": {
+        "es": "Dividir en pasos claros suele dar mejores resultados que un prompt enorme y mezclado.",
+        "en": "Breaking it into clear steps usually beats one huge, mixed prompt."
+      }
+    }
+  ]
+}

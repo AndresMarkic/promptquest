@@ -1,0 +1,131 @@
+{
+  "id": "u1l07",
+  "title": { "es": "Contexto y rol", "en": "Context and role" },
+  "byte_intro": {
+    "es": "Si me contás para qué es y qué papel querés que juegue, te respondo mucho mejor. ¡Probemos!",
+    "en": "If you tell me what it's for and what role to play, I answer much better. Let's try!"
+  },
+  "byte_outro": {
+    "es": "¡Buenísimo! Con contexto y un rol claro, me convierto en el asistente que necesitás.",
+    "en": "Great! With context and a clear role, I become the assistant you need."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es dar \"contexto\" en un prompt?", "en": "What is giving \"context\" in a prompt?" },
+      "options": [
+        { "es": "Contarle la situación: para quién es, tu nivel, el objetivo", "en": "Telling it the situation: who it's for, your level, the goal" },
+        { "es": "Escribir en otro idioma", "en": "Writing in another language" },
+        { "es": "Mandar solo emojis", "en": "Sending only emojis" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El contexto le da al modelo los datos para ajustar la respuesta a tu caso real.",
+        "en": "Context gives the model the details to tailor the answer to your real case."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es asignar un \"rol\"?", "en": "What is assigning a \"role\"?" },
+      "options": [
+        { "es": "Pedirle que actúe como cierto experto o personaje", "en": "Asking it to act as a certain expert or character" },
+        { "es": "Pedirle que hable más lento", "en": "Asking it to talk slower" },
+        { "es": "Darle un nombre propio", "en": "Giving it a proper name" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "\"Actuá como profesor de historia\" orienta el tono y el nivel de detalle de la respuesta.",
+        "en": "\"Act as a history teacher\" steers the tone and level of detail of the answer."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál da mejor contexto?", "en": "Which gives better context?" },
+      "options": [
+        { "es": "Soy principiante y es para un mail de trabajo: explicámelo simple", "en": "I'm a beginner and it's for a work email: explain it simply" },
+        { "es": "Explicámelo", "en": "Explain it to me" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Decir tu nivel (principiante) y el fin (mail de trabajo) hace que la respuesta te sirva de verdad.",
+        "en": "Stating your level (beginner) and purpose (work email) makes the answer actually useful."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "\"Actuá como nutricionista\" sirve para...", "en": "\"Act as a nutritionist\" is useful to..." },
+      "options": [
+        { "es": "Que responda con el enfoque y el tono de ese rol", "en": "Have it answer with that role's focus and tone" },
+        { "es": "Que la IA se convierta en humana", "en": "Turn the AI into a human" },
+        { "es": "Que hable en verso", "en": "Make it speak in verse" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El rol enfoca la respuesta; no vuelve real ni infalible al modelo, pero mejora el resultado.",
+        "en": "The role focuses the answer; it doesn't make the model real or infallible, but it improves the result."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Contexto y rol reemplazan a verificar los datos?", "en": "Do context and role replace verifying facts?" },
+      "options": [
+        { "es": "No: mejoran la respuesta, pero los datos importantes igual se verifican", "en": "No: they improve the answer, but important facts are still verified" },
+        { "es": "Sí, con un rol ya nunca se equivoca", "en": "Yes, with a role it never errs again" },
+        { "es": "Sí, el contexto lo vuelve infalible", "en": "Yes, context makes it infallible" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un buen prompt sube la calidad, pero el hábito de verificar datos duros sigue vigente.",
+        "en": "A good prompt raises quality, but the habit of verifying hard facts still applies."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt con rol y pedido claro", "en": "Build a prompt with role and a clear request" },
+      "solution": {
+        "es": ["Actuá como entrenador personal", "y armame una rutina", "de 20 minutos en casa."],
+        "en": ["Act as a personal trainer", "and build me a routine", "of 20 minutes at home."]
+      },
+      "distractors": {
+        "es": ["hacé cualquier cosa", "que se te ocurra"],
+        "en": ["do whatever", "comes to mind"]
+      },
+      "explanation": {
+        "es": "Rol (entrenador) + pedido claro (rutina de 20 min en casa) = respuesta a tu medida.",
+        "en": "Role (trainer) + clear request (20-min home routine) = a tailored answer."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt con buen contexto", "en": "Build a prompt with good context" },
+      "solution": {
+        "es": ["Soy principiante en cocina.", "Explicame cómo hervir pasta", "en pasos simples."],
+        "en": ["I'm a beginner cook.", "Explain how to boil pasta", "in simple steps."]
+      },
+      "distractors": {
+        "es": ["ya sé todo,", "no expliques nada"],
+        "en": ["I know it all,", "explain nothing"]
+      },
+      "explanation": {
+        "es": "Decir que sos principiante ajusta el nivel de la explicación a lo que necesitás.",
+        "en": "Saying you're a beginner adjusts the explanation's level to what you need."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la idea de contexto y rol", "en": "Build the idea of context and role" },
+      "solution": {
+        "es": ["Dale contexto", "y un rol", "para respuestas más útiles."],
+        "en": ["Give it context", "and a role", "for more useful answers."]
+      },
+      "distractors": {
+        "es": ["no le cuentes nada", "y esperá magia"],
+        "en": ["tell it nothing", "and expect magic"]
+      },
+      "explanation": {
+        "es": "Contexto (tu situación) + rol (qué papel juega) es una receta simple para mejorar respuestas.",
+        "en": "Context (your situation) + role (what part it plays) is a simple recipe to improve answers."
+      }
+    }
+  ]
+}

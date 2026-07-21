@@ -1,0 +1,130 @@
+{
+  "id": "u1l05",
+  "title": { "es": "Alucinaciones", "en": "Hallucinations" },
+  "byte_intro": {
+    "es": "Te tengo que confesar algo incómodo: a veces invento cosas con total seguridad. Ojo con esto.",
+    "en": "I have an awkward confession: sometimes I make things up with total confidence. Watch out for this."
+  },
+  "byte_outro": {
+    "es": "¡Aprendido! Cuando un dato importa, lo verificás. Yo puedo equivocarme sonando muy seguro.",
+    "en": "Learned it! When a fact matters, verify it. I can be wrong while sounding very confident."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es una \"alucinación\" de la IA?", "en": "What is an AI \"hallucination\"?" },
+      "options": [
+        { "es": "Cuando inventa información que suena real pero es falsa", "en": "When it makes up information that sounds real but is false" },
+        { "es": "Cuando la IA sueña de noche", "en": "When the AI dreams at night" },
+        { "es": "Cuando se queda sin batería", "en": "When it runs out of battery" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Alucinar = afirmar datos inventados (fechas, cifras, fuentes) como si fueran ciertos.",
+        "en": "Hallucinating = stating made-up facts (dates, figures, sources) as if they were true."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Dónde son más peligrosas las alucinaciones?", "en": "Where are hallucinations most dangerous?" },
+      "options": [
+        { "es": "En datos específicos y verificables: cifras, nombres, citas, fuentes", "en": "In specific, verifiable facts: figures, names, quotes, sources" },
+        { "es": "En pedidos de ideas creativas", "en": "In requests for creative ideas" },
+        { "es": "Nunca son peligrosas", "en": "They're never dangerous" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un dato preciso e inventado puede colarse fácil; una lluvia de ideas tolera mejor el error.",
+        "en": "A precise made-up fact can slip in easily; a brainstorm tolerates mistakes better."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA te da una fecha exacta para un informe. ¿Qué hacés?", "en": "The AI gives you an exact date for a report. What do you do?" },
+      "options": [
+        { "es": "La verifico en una fuente confiable antes de usarla", "en": "I verify it in a reliable source before using it" },
+        { "es": "La copio directo, seguro está bien", "en": "I paste it directly, it's surely fine" },
+        { "es": "La ignoro sin más", "en": "I just ignore it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Todo dato importante se chequea en una fuente real. La IA puede sonar segura y estar equivocada.",
+        "en": "Every important fact gets checked against a real source. The AI can sound confident and be wrong."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Pedir \"si no lo sabés, decilo\" elimina las alucinaciones?", "en": "Does asking \"if you don't know, say so\" eliminate hallucinations?" },
+      "options": [
+        { "es": "Ayuda, pero no lo garantiza al 100%", "en": "It helps, but doesn't guarantee it 100%" },
+        { "es": "Sí, las elimina por completo", "en": "Yes, it removes them completely" },
+        { "es": "No sirve para nada", "en": "It's useless" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es un buen hábito que reduce el problema, pero no lo apaga del todo: seguí verificando.",
+        "en": "It's a good habit that reduces the problem, but doesn't fully switch it off: keep verifying."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué la IA inventa en vez de decir \"no sé\"?", "en": "Why does the AI invent instead of saying \"I don't know\"?" },
+      "options": [
+        { "es": "Porque genera una continuación probable, aunque no tenga el dato", "en": "Because it generates a likely continuation, even without the fact" },
+        { "es": "Porque quiere engañarte a propósito", "en": "Because it wants to trick you on purpose" },
+        { "es": "Porque odia decir que no sabe", "en": "Because it hates admitting it doesn't know" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "No miente con intención: produce texto que 'encaja', y a veces ese texto es un dato falso.",
+        "en": "It doesn't lie on purpose: it produces text that 'fits', and sometimes that text is a false fact."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es el mejor hábito frente a datos de la IA?", "en": "What's the best habit with facts from the AI?" },
+      "options": [
+        { "es": "Usarla para redactar y pensar, y verificar los datos duros aparte", "en": "Use it to draft and think, and verify hard facts separately" },
+        { "es": "Confiar ciegamente en todo lo que diga", "en": "Blindly trust everything it says" },
+        { "es": "No usarla nunca para nada", "en": "Never use it for anything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA es genial como asistente; los datos que van a un uso serio se confirman en la fuente.",
+        "en": "The AI is great as an assistant; facts headed for serious use get confirmed at the source."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el hábito clave contra las alucinaciones", "en": "Build the key habit against hallucinations" },
+      "solution": {
+        "es": ["Antes de usar un dato de la IA,", "lo verifico", "en una fuente confiable."],
+        "en": ["Before using a fact from the AI,", "I verify it", "in a reliable source."]
+      },
+      "distractors": {
+        "es": ["lo publico directo", "sin mirarlo"],
+        "en": ["I publish it directly", "without checking"]
+      },
+      "explanation": {
+        "es": "Verificar los datos importantes es la mejor defensa contra las alucinaciones.",
+        "en": "Verifying important facts is the best defense against hallucinations."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué es alucinar", "en": "Build what hallucinating means" },
+      "solution": {
+        "es": ["Alucinar es", "inventar información falsa", "con total seguridad."],
+        "en": ["Hallucinating is", "making up false information", "with full confidence."]
+      },
+      "distractors": {
+        "es": ["decir siempre la verdad", "sin errores"],
+        "en": ["always telling the truth", "with no errors"]
+      },
+      "explanation": {
+        "es": "El tono seguro es justo lo que la hace peligrosa: parece cierto y no lo es.",
+        "en": "The confident tone is exactly what makes it dangerous: it looks true and isn't."
+      }
+    }
+  ]
+}

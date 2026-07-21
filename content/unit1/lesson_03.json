@@ -1,0 +1,130 @@
+{
+  "id": "u1l03",
+  "title": { "es": "Tokens y contexto", "en": "Tokens and context" },
+  "byte_intro": {
+    "es": "Cuando leo, no veo letras sueltas ni palabras enteras... veo \"tokens\". ¿Qué serán?",
+    "en": "When I read, I don't see single letters or whole words... I see \"tokens\". What are those?"
+  },
+  "byte_outro": {
+    "es": "¡Listo! Leo en tokens y tengo una memoria de trabajo con límite: la ventana de contexto.",
+    "en": "Got it! I read in tokens and I have a limited working memory: the context window."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un token para un LLM?", "en": "What is a token for an LLM?" },
+      "options": [
+        { "es": "Un pedacito de texto (parte de una palabra, una palabra corta, un signo)", "en": "A small chunk of text (part of a word, a short word, a symbol)" },
+        { "es": "Una moneda para pagar la IA", "en": "A coin to pay the AI" },
+        { "es": "Una contraseña secreta", "en": "A secret password" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo parte el texto en tokens (pedacitos) y trabaja con ellos, no con letras sueltas.",
+        "en": "The model splits text into tokens (chunks) and works with those, not with single letters."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es la ventana de contexto?", "en": "What is the context window?" },
+      "options": [
+        { "es": "La cantidad de texto que el modelo puede tener presente a la vez", "en": "How much text the model can keep in mind at once" },
+        { "es": "Una ventana del sistema operativo", "en": "A window in the operating system" },
+        { "es": "El tiempo que tarda en responder", "en": "How long it takes to answer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es como su memoria de trabajo: lo que entra ahí lo puede usar; lo que queda afuera, no.",
+        "en": "It's like its working memory: what fits there it can use; what's left out, it can't."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué pasa si una conversación supera la ventana de contexto?", "en": "What happens if a conversation exceeds the context window?" },
+      "options": [
+        { "es": "Lo más viejo puede quedar afuera y el modelo lo 'pierde de vista'", "en": "The oldest parts can drop out and the model 'loses sight' of them" },
+        { "es": "La IA se apaga para siempre", "en": "The AI shuts down forever" },
+        { "es": "Se borra tu cuenta", "en": "Your account gets deleted" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si es muy larga, lo del principio puede salir de la ventana y el modelo ya no lo tiene presente.",
+        "en": "If it's very long, the beginning can fall out of the window and the model no longer has it in mind."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene dar la info importante clara y junta?", "en": "Why is it good to give the important info clearly and together?" },
+      "options": [
+        { "es": "Para que entre en el contexto y el modelo la use bien", "en": "So it fits in the context and the model uses it well" },
+        { "es": "Porque a la IA le gusta el orden", "en": "Because the AI likes tidiness" },
+        { "es": "No importa cómo la des", "en": "It doesn't matter how you give it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si la info clave está clara y presente en el contexto, el modelo puede apoyarse en ella.",
+        "en": "If the key info is clear and present in the context, the model can rely on it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Textos más largos usan...", "en": "Longer texts use..." },
+      "options": [
+        { "es": "Más tokens", "en": "More tokens" },
+        { "es": "Menos tokens", "en": "Fewer tokens" },
+        { "es": "Siempre la misma cantidad", "en": "Always the same amount" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cuanto más texto, más tokens; y el contexto tiene un límite de tokens.",
+        "en": "The more text, the more tokens; and the context has a token limit."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿El modelo cuenta las letras de una palabra con facilidad?", "en": "Does the model easily count the letters in a word?" },
+      "options": [
+        { "es": "No siempre: trabaja en tokens, no en letras", "en": "Not always: it works in tokens, not letters" },
+        { "es": "Sí, letra por letra perfecto", "en": "Yes, letter by letter perfectly" },
+        { "es": "Nunca puede leer palabras", "en": "It can never read words" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Como ve tokens y no letras sueltas, tareas de contar letras pueden fallarle.",
+        "en": "Since it sees tokens and not single letters, letter-counting tasks can trip it up."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué es el contexto", "en": "Build what context is" },
+      "solution": {
+        "es": ["El contexto es", "la memoria de trabajo", "de la conversación."],
+        "en": ["Context is", "the working memory", "of the conversation."]
+      },
+      "distractors": {
+        "es": ["un disco infinito", "sin límites"],
+        "en": ["an infinite disk", "with no limits"]
+      },
+      "explanation": {
+        "es": "Es limitado: lo que entra en el contexto es lo que el modelo puede tener presente.",
+        "en": "It's limited: what fits in the context is what the model can keep in mind."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un buen hábito con textos largos", "en": "Build a good habit for long texts" },
+      "solution": {
+        "es": ["Si el texto es largo,", "poné lo importante junto y claro", "para que entre en el contexto."],
+        "en": ["If the text is long,", "put the important part together and clear", "so it fits in the context."]
+      },
+      "distractors": {
+        "es": ["escondé los datos clave", "al final de todo"],
+        "en": ["hide the key data", "at the very end"]
+      },
+      "explanation": {
+        "es": "Info clave clara y presente = el modelo la puede usar. Perdida en el ruido = se le puede escapar.",
+        "en": "Key info clear and present = the model can use it. Lost in the noise = it may miss it."
+      }
+    }
+  ]
+}

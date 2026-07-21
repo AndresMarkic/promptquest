@@ -1,0 +1,130 @@
+{
+  "id": "u1l04",
+  "title": { "es": "Cómo \"piensa\"", "en": "How it \"thinks\"" },
+  "byte_intro": {
+    "es": "¿Cómo hago para responder? Te confieso: no \"pienso\" como vos. ¡Te muestro cómo!",
+    "en": "How do I answer? I'll confess: I don't \"think\" like you do. Let me show you!"
+  },
+  "byte_outro": {
+    "es": "¡Ah! Voy prediciendo la palabra que sigue. Por eso soy fluido... y a veces me equivoco.",
+    "en": "Ah! I predict the next word each time. That's why I'm fluent... and sometimes wrong."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En el fondo, ¿qué hace un LLM al responder?", "en": "Deep down, what does an LLM do when answering?" },
+      "options": [
+        { "es": "Predice la siguiente palabra más probable, una y otra vez", "en": "It predicts the most likely next word, again and again" },
+        { "es": "Busca la respuesta exacta en una base de datos", "en": "It looks up the exact answer in a database" },
+        { "es": "Llama por teléfono a un experto", "en": "It phones an expert" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Genera texto palabra por palabra (token por token), eligiendo cada vez una continuación probable.",
+        "en": "It generates text word by word (token by token), each time picking a likely continuation."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué una respuesta equivocada puede sonar convincente?", "en": "Why can a wrong answer sound convincing?" },
+      "options": [
+        { "es": "Porque está armada para sonar fluida, tenga o no razón", "en": "Because it's built to sound fluent, whether it's right or not" },
+        { "es": "Porque siempre tiene razón", "en": "Because it's always right" },
+        { "es": "Porque copia un libro palabra por palabra", "en": "Because it copies a book word for word" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo optimiza que el texto fluya bien; eso no garantiza que el contenido sea correcto.",
+        "en": "The model optimizes for text that flows well; that doesn't guarantee the content is correct."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué suele mejorar sus respuestas en problemas difíciles?", "en": "What tends to improve its answers on hard problems?" },
+      "options": [
+        { "es": "Pedirle que razone paso a paso", "en": "Asking it to reason step by step" },
+        { "es": "Pedirle que responda lo más rápido posible", "en": "Asking it to answer as fast as possible" },
+        { "es": "Escribir todo en mayúsculas", "en": "Writing everything in capitals" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Al ir paso a paso, el modelo puede apoyarse en su propio razonamiento y acertar más.",
+        "en": "By going step by step, the model can build on its own reasoning and get it right more often."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿El modelo 'entiende' como una persona?", "en": "Does the model 'understand' like a person?" },
+      "options": [
+        { "es": "No igual: reconoce patrones del lenguaje, no vive experiencias", "en": "Not the same: it recognizes language patterns, it doesn't live experiences" },
+        { "es": "Sí, siente y recuerda su infancia", "en": "Yes, it feels and remembers its childhood" },
+        { "es": "Sí, es una persona dentro de la compu", "en": "Yes, it's a person inside the computer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es muy útil, pero funciona reconociendo patrones, no viviendo el mundo como vos.",
+        "en": "It's very useful, but it works by recognizing patterns, not by living in the world like you."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Si le das lo mismo dos veces, la respuesta...", "en": "If you give it the same thing twice, the answer..." },
+      "options": [
+        { "es": "Puede variar, porque genera cada vez", "en": "May vary, because it generates each time" },
+        { "es": "Es idéntica siempre, palabra por palabra", "en": "Is always identical, word for word" },
+        { "es": "Desaparece la segunda vez", "en": "Disappears the second time" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Como elige continuaciones probables, dos pedidos iguales pueden dar textos distintos.",
+        "en": "Since it picks likely continuations, two identical requests can produce different texts."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Conviene creerle todo solo porque suena seguro?", "en": "Should you believe everything just because it sounds confident?" },
+      "options": [
+        { "es": "No: sonar seguro no es lo mismo que estar en lo cierto", "en": "No: sounding confident is not the same as being right" },
+        { "es": "Sí, si suena seguro está bien", "en": "Yes, if it sounds confident it's fine" },
+        { "es": "Sí, la IA no se equivoca nunca", "en": "Yes, the AI never makes mistakes" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La seguridad del tono no mide la verdad. Los datos importantes se verifican.",
+        "en": "Confident tone doesn't measure truth. Important facts should be verified."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo genera un LLM", "en": "Build how an LLM generates" },
+      "solution": {
+        "es": ["Un LLM responde", "prediciendo la palabra que sigue,", "una y otra vez."],
+        "en": ["An LLM answers", "by predicting the next word,", "again and again."]
+      },
+      "distractors": {
+        "es": ["copiando una respuesta guardada", "de un cajón"],
+        "en": ["by copying a stored answer", "from a drawer"]
+      },
+      "explanation": {
+        "es": "Genera, no copia: va eligiendo continuaciones probables palabra por palabra.",
+        "en": "It generates, it doesn't copy: it picks likely continuations word by word."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un truco para problemas difíciles", "en": "Build a trick for hard problems" },
+      "solution": {
+        "es": ["Para tareas complejas,", "pedile que razone", "paso a paso."],
+        "en": ["For complex tasks,", "ask it to reason", "step by step."]
+      },
+      "distractors": {
+        "es": ["pedile que adivine", "sin pensar"],
+        "en": ["ask it to guess", "without thinking"]
+      },
+      "explanation": {
+        "es": "Razonar paso a paso suele darle mejores resultados que largar la respuesta de una.",
+        "en": "Reasoning step by step usually gives better results than blurting out the answer at once."
+      }
+    }
+  ]
+}

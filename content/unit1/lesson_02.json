@@ -1,0 +1,130 @@
+{
+  "id": "u1l02",
+  "title": { "es": "¿Qué es un LLM?", "en": "What is an LLM?" },
+  "byte_intro": {
+    "es": "Ahora que sé qué soy, ¿de qué estoy hecho? Dicen que soy un \"LLM\". ¡Averigüémoslo!",
+    "en": "Now that I know what I am, what am I made of? They say I'm an \"LLM\". Let's find out!"
+  },
+  "byte_outro": {
+    "es": "¡Ya entiendo! Soy un modelo de lenguaje: aprendí de muchísimo texto y después ayudo.",
+    "en": "Now I get it! I'm a language model: I learned from tons of text and then I help."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa LLM?", "en": "What does LLM mean?" },
+      "options": [
+        { "es": "Modelo grande de lenguaje", "en": "Large Language Model" },
+        { "es": "Lista larga de mensajes", "en": "Long List of Messages" },
+        { "es": "Lógica lineal de máquina", "en": "Linear Logic Machine" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "LLM = Large Language Model: un modelo grande entrenado para trabajar con lenguaje.",
+        "en": "LLM = Large Language Model: a big model trained to work with language."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo aprendió un LLM lo que sabe?", "en": "How did an LLM learn what it knows?" },
+      "options": [
+        { "es": "Procesando enormes cantidades de texto durante su entrenamiento", "en": "By processing huge amounts of text during training" },
+        { "es": "Preguntándole a Google cada vez", "en": "By asking Google every time" },
+        { "es": "Copiando lo que escribís vos", "en": "By copying what you write" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Aprendió patrones del lenguaje leyendo muchísimo texto antes de hablar con vos.",
+        "en": "It learned language patterns by reading tons of text before ever talking to you."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Entrenar un LLM y usarlo son lo mismo?", "en": "Are training and using an LLM the same thing?" },
+      "options": [
+        { "es": "No: se entrena una vez y después se usa muchas veces", "en": "No: it's trained once and then used many times" },
+        { "es": "Sí, aprende de cada charla en tiempo real", "en": "Yes, it learns from every chat in real time" },
+        { "es": "Sí, son exactamente lo mismo", "en": "Yes, they're exactly the same" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El entrenamiento pasa antes y una sola vez. Cuando charlás, ya está entrenado: no aprende de tu conversación.",
+        "en": "Training happens beforehand and only once. When you chat, it's already trained: it doesn't learn from your conversation."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Un LLM navega internet por sí solo?", "en": "Does an LLM browse the internet on its own?" },
+      "options": [
+        { "es": "No, salvo que le den herramientas para hacerlo", "en": "No, unless it's given tools to do so" },
+        { "es": "Sí, siempre está conectado a todo", "en": "Yes, it's always connected to everything" },
+        { "es": "Sí, lee tu historial de navegación", "en": "Yes, it reads your browsing history" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un LLM solo trabaja con lo que aprendió y lo que le escribís, salvo que le conecten herramientas (como búsqueda web).",
+        "en": "An LLM only works with what it learned and what you type, unless it's connected to tools (like web search)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué un LLM puede no conocer una noticia de ayer?", "en": "Why might an LLM not know yesterday's news?" },
+      "options": [
+        { "es": "Su conocimiento tiene una fecha de corte (hasta cuándo se entrenó)", "en": "Its knowledge has a cutoff date (how recent its training is)" },
+        { "es": "Porque se olvida las cosas viejas", "en": "Because it forgets old things" },
+        { "es": "Porque no le interesan las noticias", "en": "Because it doesn't care about news" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Se entrenó hasta cierta fecha; lo que pasó después no lo sabe, salvo que se lo cuentes o tenga búsqueda web.",
+        "en": "It was trained up to a certain date; it doesn't know what happened after, unless you tell it or it has web search."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué tienen en común Claude, ChatGPT y Gemini?", "en": "What do Claude, ChatGPT and Gemini have in common?" },
+      "options": [
+        { "es": "Los tres son LLMs (modelos de lenguaje)", "en": "All three are LLMs (language models)" },
+        { "es": "Son la misma empresa", "en": "They're the same company" },
+        { "es": "Ninguno usa lenguaje", "en": "None of them use language" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Son LLMs de empresas distintas; comparten la idea base y se diferencian en detalles y estilo.",
+        "en": "They're LLMs from different companies; they share the core idea and differ in details and style."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá de dónde saca un LLM lo que sabe", "en": "Build where an LLM gets what it knows" },
+      "solution": {
+        "es": ["Un LLM aprende de", "texto de entrenamiento,", "no de tus chats privados."],
+        "en": ["An LLM learns from", "training text,", "not from your private chats."]
+      },
+      "distractors": {
+        "es": ["espiando tu teléfono", "en tiempo real"],
+        "en": ["by spying your phone", "in real time"]
+      },
+      "explanation": {
+        "es": "Aprende antes, de texto de entrenamiento. No aprende de lo que le escribís al usarlo.",
+        "en": "It learns beforehand, from training text. It doesn't learn from what you type when using it."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una verdad sobre el conocimiento de un LLM", "en": "Build a truth about an LLM's knowledge" },
+      "solution": {
+        "es": ["El conocimiento de un LLM", "tiene una fecha de corte", "y puede estar desactualizado."],
+        "en": ["An LLM's knowledge", "has a cutoff date", "and may be outdated."]
+      },
+      "distractors": {
+        "es": ["se actualiza solo", "cada segundo"],
+        "en": ["updates itself", "every second"]
+      },
+      "explanation": {
+        "es": "Por eso conviene verificar datos recientes y darle contexto actualizado cuando haga falta.",
+        "en": "That's why it's worth checking recent facts and giving it up-to-date context when needed."
+      }
+    }
+  ]
+}
