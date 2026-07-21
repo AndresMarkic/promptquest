@@ -12,11 +12,8 @@ var params: Dictionary = {}  # parámetros para la pantalla entrante
 
 func _ready() -> void:
 	TranslationServer.set_locale(SaveData.get_value("language", "es"))
-	# TEMPORAL hasta Fase 6: bootear directo en la lección 1 para poder probar
-	# el flujo sin mapa. La Fase 6 restaura la línea de abajo.
-	goto.call_deferred("lesson", {"lesson_id": "u1l01"})
 	# Pantalla inicial: intro la primera vez, mapa después.
-	# goto.call_deferred("intro" if not SaveData.get_value("intro_seen", false) else "map")
+	goto.call_deferred("intro" if not SaveData.get_value("intro_seen", false) else "map")
 
 func goto(pantalla: String, p_params: Dictionary = {}) -> void:
 	if not PANTALLAS.has(pantalla):
