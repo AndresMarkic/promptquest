@@ -23,8 +23,14 @@ func goto(pantalla: String, p_params: Dictionary = {}) -> void:
 		push_error("Game.goto: pantalla desconocida '%s'" % pantalla)
 		return
 	params = p_params
-	# En modo test (-s) los autoloads también cargan pero no hay escena Main:
-	# sin este guard el goto diferido crashea al cerrar el runner.
+	# En modo test (-s) los autoloads cargan pero el nodo Game puede no estar aún
+	# dentro del árbol (get_tree() == null) y tampoco hay escena Main. Sin estos
+	# dos guardas el goto (diferido o disparado por un test) crashea. En el juego
+	# real Game siempre está en el árbol, así que esto no cambia el comportamiento.
+	# is_inside_tree() se chequea antes que get_tree() porque llamar get_tree()
+	# fuera del árbol imprime un ERROR de motor (aunque devuelva null).
+	if not is_inside_tree():
+		return
 	var main := get_tree().root.get_node_or_null("Main")
 	if main == null:
 		return
