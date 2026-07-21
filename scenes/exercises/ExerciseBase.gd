@@ -22,6 +22,7 @@ func _responder(correcto: bool) -> void:
 	if _respondido:
 		return
 	_respondido = true
+	Audio.acierto() if correcto else Audio.error()
 	answered.emit(correcto)
 	_mostrar_feedback(correcto)
 

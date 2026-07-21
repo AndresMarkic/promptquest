@@ -12,6 +12,7 @@ SaveData="*res://autoload/SaveData.gd"
 Economy="*res://autoload/Economy.gd"
 Content="*res://autoload/Content.gd"
 Game="*res://autoload/Game.gd"
+Audio="*res://autoload/Audio.gd"
 
 [display]
 window/size/viewport_width=720

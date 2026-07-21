@@ -124,6 +124,7 @@ func _tiempo_agotado() -> void:
 	# Se acabó el tiempo del ejercicio: cuenta como error y se pasa al siguiente.
 	if _actual != null:
 		_actual.bloquear()
+	Audio.error()
 	errores += 1
 	combo = 0
 	_hud.set_combo(0)

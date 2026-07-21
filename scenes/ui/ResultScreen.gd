@@ -4,6 +4,7 @@ extends Control
 
 func _ready() -> void:
 	UiTheme.fondo_pantalla(self)
+	Audio.festejo()
 	var r: Dictionary = Game.params
 	var caja := VBoxContainer.new()
 	caja.set_anchors_preset(Control.PRESET_CENTER)
