@@ -5,6 +5,7 @@ config_version=5
 config/name="PromptQuest"
 run/main_scene="res://scenes/main/Main.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
+config/icon="res://assets/icon.png"
 
 [autoload]
 
