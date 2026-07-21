@@ -1,0 +1,193 @@
+{
+  "id": "u1l10",
+  "boss": true,
+  "title": { "es": "Boss del Núcleo", "en": "Core Boss" },
+  "byte_intro": {
+    "es": "¡Recuperé casi toda mi memoria! Última prueba: repaso contra reloj. 20 segundos por pregunta. ¿Listos?",
+    "en": "I recovered almost all my memory! Final test: a timed review. 20 seconds per question. Ready?"
+  },
+  "byte_outro": {
+    "es": "¡LO LOGRAMOS! Recuperé el Núcleo entero gracias a vos. Ya sabés lo básico para trabajar con IA.",
+    "en": "WE DID IT! I recovered the whole Core thanks to you. You now know the basics to work with AI."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué distingue a la IA generativa?", "en": "What sets generative AI apart?" },
+      "options": [
+        { "es": "Crea contenido nuevo (texto, imágenes, código)", "en": "It creates new content (text, images, code)" },
+        { "es": "Solo guarda archivos", "en": "It only stores files" },
+        { "es": "Solo hace cuentas exactas", "en": "It only does exact math" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Genera contenido nuevo en base a patrones aprendidos.",
+        "en": "It generates new content based on learned patterns."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un LLM puede no saber algo reciente porque...", "en": "An LLM might not know something recent because..." },
+      "options": [
+        { "es": "Su entrenamiento tiene una fecha de corte", "en": "Its training has a cutoff date" },
+        { "es": "Se aburre de las noticias", "en": "It gets bored of the news" },
+        { "es": "Borra datos cada noche", "en": "It deletes data every night" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Se entrenó hasta cierta fecha; lo posterior no lo sabe salvo que se lo des.",
+        "en": "It was trained up to a date; it doesn't know later events unless you provide them."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El modelo lee el texto en...", "en": "The model reads text in..." },
+      "options": [
+        { "es": "Tokens (pedacitos de texto)", "en": "Tokens (chunks of text)" },
+        { "es": "Letras sueltas, una por una", "en": "Single letters, one by one" },
+        { "es": "Páginas completas de golpe", "en": "Whole pages at once" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Trabaja con tokens; por eso contar letras a veces se le complica.",
+        "en": "It works with tokens; that's why counting letters can trip it up."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué es la ventana de contexto", "en": "Build what the context window is" },
+      "solution": {
+        "es": ["La ventana de contexto", "es la memoria de trabajo", "y tiene un límite."],
+        "en": ["The context window", "is the working memory", "and it has a limit."]
+      },
+      "distractors": {
+        "es": ["es infinita", "y nunca olvida"],
+        "en": ["is infinite", "and never forgets"]
+      },
+      "explanation": {
+        "es": "Lo que entra en el contexto es lo que el modelo puede tener presente.",
+        "en": "What fits in the context is what the model can keep in mind."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo produce sus respuestas un LLM?", "en": "How does an LLM produce its answers?" },
+      "options": [
+        { "es": "Prediciendo la palabra siguiente, una y otra vez", "en": "By predicting the next word, again and again" },
+        { "es": "Leyéndote la mente", "en": "By reading your mind" },
+        { "es": "Buscando en una lista fija de respuestas", "en": "By searching a fixed list of answers" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Genera palabra por palabra; por eso es fluido aun cuando se equivoca.",
+        "en": "It generates word by word; that's why it's fluent even when wrong."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es una alucinación?", "en": "What is a hallucination?" },
+      "options": [
+        { "es": "Inventar un dato falso con total seguridad", "en": "Making up a false fact with total confidence" },
+        { "es": "Un error de conexión", "en": "A connection error" },
+        { "es": "Un tipo de emoji", "en": "A kind of emoji" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Suena convincente pero es falso: por eso hay que verificar.",
+        "en": "It sounds convincing but is false: that's why you must verify."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el hábito clave contra las alucinaciones", "en": "Build the key habit against hallucinations" },
+      "solution": {
+        "es": ["Verificá los datos importantes", "en una fuente confiable", "antes de usarlos."],
+        "en": ["Verify important facts", "in a reliable source", "before using them."]
+      },
+      "distractors": {
+        "es": ["usalos directo", "sin mirar"],
+        "en": ["use them directly", "without checking"]
+      },
+      "explanation": {
+        "es": "Verificar es la mejor defensa contra la información inventada.",
+        "en": "Verifying is the best defense against made-up information."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es el mejor prompt?", "en": "Which is the best prompt?" },
+      "options": [
+        { "es": "Escribí 3 tips breves para ahorrar luz en casa", "en": "Write 3 short tips to save electricity at home" },
+        { "es": "Decime algo de la luz", "en": "Tell me something about electricity" },
+        { "es": "Luz", "en": "Electricity" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Específico gana: tema, cantidad y forma claros.",
+        "en": "Specific wins: clear topic, amount and form."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt específico", "en": "Build a specific prompt" },
+      "solution": {
+        "es": ["Escribí un correo formal y breve", "a mi profesor", "pidiendo una prórroga."],
+        "en": ["Write a short formal email", "to my teacher", "asking for an extension."]
+      },
+      "distractors": {
+        "es": ["hacé algo", "por ahí"],
+        "en": ["do something", "or whatever"]
+      },
+      "explanation": {
+        "es": "Tono, largo, destinatario y objetivo bien definidos.",
+        "en": "Tone, length, recipient and goal all well defined."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "\"Actuá como profesor de matemática\" sirve para...", "en": "\"Act as a math teacher\" is useful to..." },
+      "options": [
+        { "es": "Darle un rol que enfoca el tono y el detalle", "en": "Give it a role that focuses tone and detail" },
+        { "es": "Volverlo humano de verdad", "en": "Make it truly human" },
+        { "es": "Cambiar el idioma solo", "en": "Change the language alone" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El rol orienta cómo responde, aunque no lo vuelve infalible.",
+        "en": "The role guides how it answers, though it doesn't make it infallible."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido con formato claro", "en": "Build a request with a clear format" },
+      "solution": {
+        "es": ["Compará 3 opciones", "en una tabla", "de 3 columnas."],
+        "en": ["Compare 3 options", "in a table", "with 3 columns."]
+      },
+      "distractors": {
+        "es": ["en un texto larguísimo", "sin cortes"],
+        "en": ["in a giant text", "with no breaks"]
+      },
+      "explanation": {
+        "es": "Pedir la forma exacta te da una respuesta lista para usar.",
+        "en": "Asking for the exact form gives you a ready-to-use answer."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá para qué sirven los ejemplos", "en": "Build what examples are for" },
+      "solution": {
+        "es": ["Dar 1 o 2 ejemplos", "le enseña el patrón", "que querés."],
+        "en": ["Giving 1 or 2 examples", "teaches it the pattern", "you want."]
+      },
+      "distractors": {
+        "es": ["no mostrar nada", "lo mejora"],
+        "en": ["showing nothing", "improves it"]
+      },
+      "explanation": {
+        "es": "Few-shot: el modelo imita los ejemplos que le das.",
+        "en": "Few-shot: the model imitates the examples you give it."
+      }
+    }
+  ]
+}

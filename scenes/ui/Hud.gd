@@ -7,6 +7,7 @@ signal exit_pressed
 var _barra: ProgressBar
 var _cont_corazones: HBoxContainer
 var _lbl_combo: Label
+var _lbl_tiempo: Label
 
 func _ready() -> void:
 	# La raíz es full-rect y en Fase 4 convive encima del ejercicio: con el
@@ -51,6 +52,17 @@ func _ready() -> void:
 	_lbl_combo = UiTheme.etiqueta("", 20, UiTheme.DORADO)
 	_lbl_combo.position = Vector2(16, 72)
 	add_child(_lbl_combo)
+
+	# Cuenta regresiva del boss, anclada arriba a la derecha (vacía fuera del boss).
+	_lbl_tiempo = UiTheme.etiqueta("", 24, UiTheme.PELIGRO)
+	_lbl_tiempo.set_anchors_preset(Control.PRESET_TOP_RIGHT)
+	_lbl_tiempo.offset_left = -90
+	_lbl_tiempo.offset_top = 72
+	_lbl_tiempo.offset_right = -20
+	add_child(_lbl_tiempo)
+
+func set_tiempo(seg: int) -> void:
+	_lbl_tiempo.text = ("%ds" % seg) if seg >= 0 else ""
 
 func set_progreso(actual: int, total: int) -> void:
 	_barra.max_value = total

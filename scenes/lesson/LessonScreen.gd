@@ -6,6 +6,7 @@ const ESCENAS_EJERCICIO := {
 	"multiple_choice": "res://scenes/exercises/MultipleChoice.tscn",
 	"block_builder": "res://scenes/exercises/BlockBuilder.tscn",
 }
+const BOSS_SEGUNDOS := 20  # cuenta regresiva por ejercicio en el boss (spec §2.4)
 
 var leccion: Dictionary
 var ejercicios: Array = []
@@ -14,10 +15,12 @@ var errores := 0
 var perfectas := 0
 var combo := 0
 var es_repaso := false
+var es_boss := false
 var _hud: Hud
 var _actual: ExerciseBase = null
 var _byte: Mascot
 var _overlay_intro: Control = null
+var _timer: Timer = null
 var _inicio_ms := 0
 
 func _ready() -> void:
@@ -25,6 +28,12 @@ func _ready() -> void:
 	leccion = Content.get_lesson(Game.params["lesson_id"])
 	ejercicios = leccion.get("exercises", [])
 	es_repaso = Game.params.get("review", false)
+	es_boss = bool(leccion.get("boss", false))
+	if es_boss:
+		_timer = Timer.new()
+		_timer.one_shot = true
+		_timer.timeout.connect(_tiempo_agotado)
+		add_child(_timer)
 	_hud = load("res://scenes/ui/Hud.tscn").instantiate()
 	_hud.exit_pressed.connect(_confirmar_salida)
 	add_child(_hud)
@@ -102,8 +111,32 @@ func _mostrar_ejercicio() -> void:
 	esc.answered.connect(_al_responder)
 	esc.continue_pressed.connect(_siguiente)
 	_actual = esc
+	# is_inside_tree(): en el juego real el timer siempre está en el árbol; bajo el
+	# runner headless no, y start() imprimiría un ERROR (los tests simulan el timeout).
+	if es_boss and _timer.is_inside_tree():
+		_timer.start(BOSS_SEGUNDOS)
+
+func _process(_delta: float) -> void:
+	if es_boss and _timer != null and not _timer.is_stopped():
+		_hud.set_tiempo(int(ceil(_timer.time_left)))
+
+func _tiempo_agotado() -> void:
+	# Se acabó el tiempo del ejercicio: cuenta como error y se pasa al siguiente.
+	if _actual != null:
+		_actual.bloquear()
+	errores += 1
+	combo = 0
+	_hud.set_combo(0)
+	_hud.set_tiempo(-1)
+	Economy.perder_corazon()
+	if Economy.hearts() <= 0:
+		_sin_corazones()
+		return
+	_siguiente()
 
 func _al_responder(correcto: bool) -> void:
+	if es_boss and _timer != null:
+		_timer.stop()
 	if _byte != null:
 		_byte.set_animo("feliz" if correcto else "triste")
 	if correcto:
@@ -124,9 +157,19 @@ func _siguiente() -> void:
 
 func _terminar() -> void:
 	var segundos := (Time.get_ticks_msec() - _inicio_ms) / 1000.0
+	# Boss: se aprueba con ≥9 de 12 correctas, es decir ≤3 errores (spec §2.4).
+	if es_boss and errores > 3:
+		var d := AcceptDialog.new()
+		d.dialog_text = I18n.t("BOSS_FALLADO")
+		d.confirmed.connect(func(): Game.goto("map"))
+		d.canceled.connect(func(): Game.goto("map"))
+		add_child(d)
+		d.popup_centered()
+		return
 	var resumen := Economy.on_lesson_finished(
-		leccion["id"], perfectas, errores, segundos, es_repaso, bool(leccion.get("boss", false)))
+		leccion["id"], perfectas, errores, segundos, es_repaso, es_boss)
 	resumen["byte_outro"] = leccion.get("byte_outro", "")
+	resumen["boss"] = es_boss
 	Game.goto("result", resumen)
 
 func _confirmar_salida() -> void:

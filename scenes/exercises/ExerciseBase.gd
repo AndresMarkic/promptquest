@@ -25,6 +25,10 @@ func _responder(correcto: bool) -> void:
 	answered.emit(correcto)
 	_mostrar_feedback(correcto)
 
+func bloquear() -> void:
+	## El tiempo se agotó (boss): el ejercicio deja de aceptar respuestas.
+	_respondido = true
+
 func _mostrar_feedback(correcto: bool) -> void:
 	var panel := UiTheme.panel(Color("173d0c") if correcto else Color("4a1220"))
 	panel.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
