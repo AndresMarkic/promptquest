@@ -16,11 +16,12 @@ Game="*res://autoload/Game.gd"
 Audio="*res://autoload/Audio.gd"
 
 [display]
-window/size/viewport_width=720
-window/size/viewport_height=1280
+window/size/viewport_width=1080
+window/size/viewport_height=1920
 window/handheld/orientation=1
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/stretch/scale=1.5
 
 [gui]
 theme/custom="res://assets/theme.tres"
@@ -28,3 +29,4 @@ theme/custom="res://assets/theme.tres"
 [rendering]
 renderer/rendering_method="mobile"
 renderer/rendering_method.mobile="mobile"
+anti_aliasing/quality/msaa_2d=2
