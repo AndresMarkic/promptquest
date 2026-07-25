@@ -6,16 +6,29 @@ var _botones: Array[Button] = []
 func _build() -> void:
 	var caja := VBoxContainer.new()
 	caja.set_anchors_preset(Control.PRESET_FULL_RECT)
-	caja.offset_left = 24
-	caja.offset_right = -24
-	caja.offset_top = 130
-	caja.add_theme_constant_override("separation", 16)
+	caja.offset_left = 26
+	caja.offset_right = -26
+	caja.offset_top = 116
+	caja.offset_bottom = -40
+	caja.add_theme_constant_override("separation", 15)
+	caja.alignment = BoxContainer.ALIGNMENT_CENTER  # centra el grupo (llena el vacío)
 	add_child(caja)
-	caja.add_child(UiTheme.etiqueta(str(data["question"]), 28))
+
+	var q := UiTheme.titulo(str(data["question"]), 27)
+	q.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	q.size_flags_horizontal = Control.SIZE_FILL
+	caja.add_child(q)
+	var esp := Control.new()
+	esp.custom_minimum_size = Vector2(0, 10)
+	caja.add_child(esp)
+
+	var letras := ["A", "B", "C", "D", "E"]
 	var i := 0
 	for opcion in data["options"]:
-		var b := UiTheme.boton(str(opcion), UiTheme.PANEL)
+		var b := UiTheme.boton("%s    %s" % [letras[i], str(opcion)], UiTheme.PANEL)
 		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		b.custom_minimum_size = Vector2(0, 74)
+		b.add_theme_font_size_override("font_size", 22)
 		var indice := i
 		b.pressed.connect(func(): _elegir(indice))
 		caja.add_child(b)

@@ -47,10 +47,10 @@ func _ready() -> void:
 	# Byte en la esquina inferior izquierda, reaccionando a cada respuesta.
 	_byte = load("res://scenes/mascot/Mascot.tscn").instantiate()
 	_byte.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT, Control.PRESET_MODE_KEEP_SIZE)
-	_byte.offset_left = 16
-	_byte.offset_top = -116
-	_byte.offset_right = 116
-	_byte.offset_bottom = -16
+	_byte.offset_left = 18
+	_byte.offset_top = -142
+	_byte.offset_right = 146
+	_byte.offset_bottom = -14
 	add_child(_byte)
 	_inicio_ms = Time.get_ticks_msec()
 	# Byte saluda con byte_intro antes del primer ejercicio (si la lección lo trae).

@@ -5,21 +5,27 @@ class_name SettingsPanel
 func _ready() -> void:
 	set_anchors_preset(Control.PRESET_FULL_RECT)
 	var velo := ColorRect.new()
-	velo.color = Color(0, 0, 0, 0.6)
+	velo.color = Color(0.02, 0.02, 0.07, 0.72)
 	velo.set_anchors_preset(Control.PRESET_FULL_RECT)
 	add_child(velo)
+	var center := CenterContainer.new()
+	center.set_anchors_preset(Control.PRESET_FULL_RECT)
+	add_child(center)
 	var panel := UiTheme.panel()
-	panel.set_anchors_preset(Control.PRESET_CENTER)
-	panel.custom_minimum_size = Vector2(480, 0)
-	add_child(panel)
+	panel.custom_minimum_size = Vector2(500, 0)
+	center.add_child(panel)
 	var caja := VBoxContainer.new()
-	caja.add_theme_constant_override("separation", 20)
+	caja.add_theme_constant_override("separation", 22)
 	panel.add_child(caja)
-	caja.add_child(UiTheme.etiqueta(I18n.t("AJUSTES"), 30))
+	var tit := UiTheme.titulo(I18n.t("AJUSTES"), 30, UiTheme.ACENTO)
+	tit.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	caja.add_child(tit)
 
 	var fila_idioma := HBoxContainer.new()
 	fila_idioma.add_theme_constant_override("separation", 16)
-	fila_idioma.add_child(UiTheme.etiqueta(I18n.t("IDIOMA"), 24))
+	var li := UiTheme.etiqueta(I18n.t("IDIOMA"), 24)
+	li.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	fila_idioma.add_child(li)
 	var sel := OptionButton.new()
 	sel.add_item("Español")   # índice 0 → "es"
 	sel.add_item("English")   # índice 1 → "en"
@@ -32,7 +38,9 @@ func _ready() -> void:
 
 	var fila_sonido := HBoxContainer.new()
 	fila_sonido.add_theme_constant_override("separation", 16)
-	fila_sonido.add_child(UiTheme.etiqueta(I18n.t("SONIDO"), 24))
+	var ls := UiTheme.etiqueta(I18n.t("SONIDO"), 24)
+	ls.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	fila_sonido.add_child(ls)
 	var chk := CheckButton.new()
 	var ajustes: Dictionary = SaveData.get_value("settings", {"sound": true})
 	chk.button_pressed = ajustes.get("sound", true)

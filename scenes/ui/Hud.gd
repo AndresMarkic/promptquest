@@ -37,12 +37,22 @@ func _ready() -> void:
 	_barra = ProgressBar.new()
 	_barra.min_value = 0
 	_barra.show_percentage = false
-	_barra.custom_minimum_size = Vector2(0, 22)
+	_barra.custom_minimum_size = Vector2(0, 20)
 	_barra.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_barra.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	# track visible (fondo oscuro con borde)
+	var fondo := StyleBoxFlat.new()
+	fondo.bg_color = Color("1a1a3a")
+	fondo.set_corner_radius_all(10)
+	fondo.border_width_top = 1
+	fondo.border_color = UiTheme.PANEL_BORDE
+	_barra.add_theme_stylebox_override("background", fondo)
+	# relleno neón con glow
 	var relleno := StyleBoxFlat.new()
 	relleno.bg_color = UiTheme.PRIMARIO
-	relleno.set_corner_radius_all(11)
+	relleno.set_corner_radius_all(10)
+	relleno.shadow_color = Color(UiTheme.PRIMARIO.r, UiTheme.PRIMARIO.g, UiTheme.PRIMARIO.b, 0.6)
+	relleno.shadow_size = 8
 	_barra.add_theme_stylebox_override("fill", relleno)
 	fila.add_child(_barra)
 
