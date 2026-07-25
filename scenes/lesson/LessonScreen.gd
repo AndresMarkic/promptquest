@@ -18,7 +18,6 @@ var es_repaso := false
 var es_boss := false
 var _hud: Hud
 var _actual: ExerciseBase = null
-var _byte: Mascot
 var _overlay_intro: Control = null
 var _timer: Timer = null
 var _inicio_ms := 0
@@ -45,14 +44,6 @@ func _ready() -> void:
 		_hud.notification(Node.NOTIFICATION_READY)
 	_hud.set_corazones(Economy.hearts())
 	Economy.hearts_changed.connect(func(n): _hud.set_corazones(n))
-	# Byte en la esquina inferior izquierda, reaccionando a cada respuesta.
-	_byte = load("res://scenes/mascot/Mascot.tscn").instantiate()
-	_byte.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT, Control.PRESET_MODE_KEEP_SIZE)
-	_byte.offset_left = 18
-	_byte.offset_top = -142
-	_byte.offset_right = 146
-	_byte.offset_bottom = -14
-	add_child(_byte)
 	_inicio_ms = Time.get_ticks_msec()
 	# Byte saluda con byte_intro antes del primer ejercicio (si la lección lo trae).
 	var intro := str(leccion.get("byte_intro", ""))
@@ -141,8 +132,6 @@ func _tiempo_agotado() -> void:
 func _al_responder(correcto: bool) -> void:
 	if es_boss and _timer != null:
 		_timer.stop()
-	if _byte != null:
-		_byte.set_animo("feliz" if correcto else "triste")
 	if correcto:
 		perfectas += 1
 		combo += 1

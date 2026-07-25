@@ -15,9 +15,9 @@ func _ready() -> void:
 	caja.add_theme_constant_override("separation", 28)
 	center.add_child(caja)
 	var byte: Mascot = load("res://scenes/mascot/Mascot.tscn").instantiate()
-	byte.custom_minimum_size = Vector2(220, 300)  # canvas alto para el cuerpo entero
+	byte.custom_minimum_size = Vector2(240, 240)
 	byte.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	byte.mostrar_cuerpo = true
+	byte.mostrar_cuerpo = true  # chispitas orbitando
 	caja.add_child(byte)
 	_lbl = UiTheme.etiqueta(I18n.t("INTRO_1"), 26)
 	_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
