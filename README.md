@@ -1,9 +1,9 @@
 # PromptQuest
 
 Juego educativo 2D estilo Duolingo, hecho en **Godot 4.6.3**, para aprender a usar
-inteligencia artificial generativa de cero a nivel profesional. Este repo es el **MVP**: la
-unidad "Fundamentos de IA" (10 lecciones en español e inglés), con XP, vidas, racha,
-estrellas y un boss cronometrado. 100% local, sin conexión ni cuentas.
+inteligencia artificial generativa **de cero a ingeniero de IA**. El juego completo son
+**8 zonas / 80 lecciones** en español e inglés, con XP, vidas, racha, estrellas, un boss
+cronometrado por zona y certificación final. 100% local, sin conexión ni cuentas.
 
 Guía al jugador **Byte**, una IA que perdió la memoria: cada lección que completás le devuelve
 un fragmento... y de paso te volvés experto en IA.
@@ -24,7 +24,7 @@ bash tools/run.sh      # abre el juego en una ventana
 
 ## Cómo correr los tests
 
-Toda la lógica y las pantallas tienen cobertura headless (46 tests):
+Toda la lógica y las pantallas tienen cobertura headless (53 tests):
 
 ```bash
 bash tools/test.sh     # corre todo sin ventana; sale != 0 si algo falla
@@ -58,5 +58,7 @@ Podés cambiar idioma (ES/EN) y sonido desde ⚙ Ajustes en el mapa.
 
 ## Estado
 
-MVP funcional y verificado en escritorio. Pendiente para llegar a la tienda: configurar el
-Android SDK + keystore y generar el `.aab` (ver la guía de publicación).
+Juego **completo** (8 zonas / 80 lecciones) funcional y verificado en escritorio (53 tests
+headless verdes). Currículum completo en [docs/curriculum-completo.md](docs/curriculum-completo.md).
+Pendiente para llegar a la tienda: configurar el Android SDK + keystore y generar el `.aab`
+(ver la guía de publicación).

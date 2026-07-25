@@ -72,6 +72,10 @@ func _correr() -> void:
 	await _cap_pantalla("captura_4_boss", "res://scenes/lesson/LessonScreen.tscn", func():
 		_game.params = {"lesson_id": "u1l10", "review": false}, true)
 
+	await _cap_pantalla("captura_5_certificacion", "res://scenes/ui/CertScreen.tscn", func():
+		_save.store.data["xp_total"] = 1580
+		_game.params = {"xp": 1580, "boss": true})
+
 	# 2) Feature graphic 1024x500
 	await _render_control("feature_graphic", Vector2i(1024, 500), _armar_feature)
 
