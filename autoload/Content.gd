@@ -34,6 +34,14 @@ func get_lesson(id: String) -> Dictionary:
 func _lesson_id(unidad: int, num: int) -> String:
 	return "u%dl%02d" % [unidad, num]
 
+## Color de ambiente de la zona a la que pertenece una lección (para teñir el fondo).
+func color_de_leccion(id: String) -> Color:
+	var num := int(id.substr(1).split("l")[0])
+	for u in UNIDADES:
+		if int(u["num"]) == num:
+			return Color(str(u.get("color", "22c9ff")))
+	return Color("22c9ff")
+
 ## ¿Es el boss de la última unidad (la marcada "final")? Dispara la certificación.
 func es_leccion_final(id: String) -> bool:
 	var partes := id.substr(1).split("l")  # "8l10" → ["8","10"]

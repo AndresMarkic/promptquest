@@ -88,9 +88,10 @@ func _correr() -> void:
 func _armar_feature(lienzo: Control, tam: Vector2) -> void:
 	UiTheme.fondo_pantalla(lienzo)
 	var byte: Mascot = load("res://scenes/mascot/Mascot.tscn").instantiate()
-	byte.custom_minimum_size = Vector2(300, 300)
-	byte.size = Vector2(300, 300)
-	byte.position = Vector2(90, tam.y / 2 - 150)
+	byte.custom_minimum_size = Vector2(300, 440)
+	byte.size = Vector2(300, 440)
+	byte.position = Vector2(70, tam.y / 2 - 220)
+	byte.mostrar_cuerpo = true
 	lienzo.add_child(byte)
 	byte.set_animo("festejo")
 

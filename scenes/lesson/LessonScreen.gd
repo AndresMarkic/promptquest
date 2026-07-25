@@ -24,7 +24,8 @@ var _timer: Timer = null
 var _inicio_ms := 0
 
 func _ready() -> void:
-	UiTheme.fondo_pantalla(self)
+	# el fondo toma el color de ambiente de la zona de esta lección
+	UiTheme.fondo_pantalla(self, Content.color_de_leccion(Game.params["lesson_id"]))
 	leccion = Content.get_lesson(Game.params["lesson_id"])
 	ejercicios = leccion.get("exercises", [])
 	es_repaso = Game.params.get("review", false)

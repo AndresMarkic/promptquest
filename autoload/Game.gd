@@ -34,9 +34,31 @@ func goto(pantalla: String, p_params: Dictionary = {}) -> void:
 	var main := get_tree().root.get_node_or_null("Main")
 	if main == null:
 		return
-	# Cargar ANTES de vaciar: si la escena falla en cargar, la pantalla
-	# actual queda en pie en vez de dejar la app en negro.
-	var escena: PackedScene = load(PANTALLAS[pantalla])
+	_transicion(main, pantalla)
+
+func _velo(main: Node) -> ColorRect:
+	# Velo full-rect que vive sobre todo para hacer los fundidos entre pantallas.
+	var v := main.get_node_or_null("Velo") as ColorRect
+	if v == null:
+		v = ColorRect.new()
+		v.name = "Velo"
+		v.color = Color(0.03, 0.03, 0.08, 0.0)
+		v.set_anchors_preset(Control.PRESET_FULL_RECT)
+		v.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		main.add_child(v)
+	return v
+
+func _transicion(main: Node, pantalla: String) -> void:
+	var velo := _velo(main)
+	var t1 := create_tween()
+	t1.tween_property(velo, "color:a", 1.0, 0.14)
+	await t1.finished
+	# Cargar ANTES de vaciar: si la escena falla en cargar, no deja la app en negro.
+	var nueva := (load(PANTALLAS[pantalla]) as PackedScene).instantiate()
 	for hijo in main.get_children():
-		hijo.queue_free()
-	main.add_child(escena.instantiate())
+		if hijo != velo:
+			hijo.queue_free()
+	main.add_child(nueva)
+	main.move_child(velo, -1)  # el velo siempre arriba
+	var t2 := create_tween()
+	t2.tween_property(velo, "color:a", 0.0, 0.22)

@@ -17,20 +17,21 @@ const DORADO := Color("ffcf3f")
 
 # --- Shader de fondo (degradado + glows + grilla animada + viñeta) ---
 const _SHADER_FONDO := "shader_type canvas_item;
+uniform vec4 tinte : source_color = vec4(0.13, 0.55, 1.0, 1.0);
 void fragment() {
 	vec2 uv = UV;
 	vec3 top = vec3(0.05, 0.055, 0.14);
 	vec3 bot = vec3(0.02, 0.015, 0.06);
 	vec3 col = mix(top, bot, uv.y);
-	float g1 = smoothstep(0.65, 0.0, distance(uv, vec2(0.5, 0.24)));
-	col += g1 * 0.30 * vec3(0.10, 0.42, 0.85);
+	vec3 tc = tinte.rgb;
+	col += smoothstep(0.65, 0.0, distance(uv, vec2(0.5, 0.24))) * 0.30 * tc;
 	float t = TIME * 0.06;
 	vec2 p2 = vec2(0.82 + 0.05 * sin(t), 0.86 + 0.04 * cos(t * 1.2));
-	col += smoothstep(0.5, 0.0, distance(uv, p2)) * 0.20 * vec3(0.5, 0.28, 0.95);
+	col += smoothstep(0.5, 0.0, distance(uv, p2)) * 0.18 * mix(tc, vec3(0.5, 0.28, 0.95), 0.5);
 	vec2 p3 = vec2(0.18 + 0.05 * cos(t * 0.9), 0.62 + 0.05 * sin(t));
-	col += smoothstep(0.4, 0.0, distance(uv, p3)) * 0.10 * vec3(0.12, 0.5, 0.9);
+	col += smoothstep(0.4, 0.0, distance(uv, p3)) * 0.10 * tc;
 	vec2 grid = abs(fract(uv * vec2(9.0, 16.0)) - 0.5);
-	col += smoothstep(0.49, 0.5, max(grid.x, grid.y)) * 0.018 * vec3(0.3, 0.6, 1.0);
+	col += smoothstep(0.49, 0.5, max(grid.x, grid.y)) * 0.018 * tc;
 	col *= mix(0.55, 1.0, smoothstep(1.15, 0.35, distance(uv, vec2(0.5, 0.5))));
 	COLOR = vec4(col, 1.0);
 }"
@@ -43,12 +44,15 @@ static func _shader_fondo() -> Shader:
 		_shader_fondo_cache.code = _SHADER_FONDO
 	return _shader_fondo_cache
 
-static func fondo_pantalla(raiz: Control) -> void:
+static func fondo_pantalla(raiz: Control, tinte: Color = ACENTO) -> void:
 	# Un único ColorRect full-rect con material de shader (degradado + glows).
+	# El tinte tiñe los glows: cada zona puede tener su color de ambiente.
 	var bg := ColorRect.new()
 	bg.color = Color.WHITE  # el shader pinta todo; el color base no importa
-	bg.material = ShaderMaterial.new()
-	bg.material.shader = _shader_fondo()
+	var mat := ShaderMaterial.new()
+	mat.shader = _shader_fondo()
+	mat.set_shader_parameter("tinte", tinte)
+	bg.material = mat
 	bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
 	raiz.add_child(bg)
