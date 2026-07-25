@@ -69,8 +69,36 @@ func _correr() -> void:
 	# captura del mapa scrolleado a la transición EL NÚCLEO → LA FORJA
 	await _cap_mapa_transicion()
 
+	# capturas de zonas profundas (variedad de color): todo completado
+	await _cap_zonas()
+
 	print("LISTO")
 	quit(0)
+
+func _cap_zonas() -> void:
+	_reset_save()
+	var lecs := {}
+	for u in range(1, 9):
+		for n in range(1, 11):
+			lecs["u%dl%02d" % [u, n]] = {"stars": 3}
+	_save.store.data["lessons"] = lecs
+	_save.store.data["xp_total"] = 1580
+	var mapa = (load("res://scenes/map/MapScreen.tscn") as PackedScene).instantiate()
+	root.add_child(mapa)
+	for i in 10:
+		await process_frame
+	var sc := _buscar_scroll(mapa)
+	# zona 3 (El Taller, verde), zona 6 (El Crisol, rojo), zona 8 (La Cima, dorado)
+	var destinos := {"zona_taller": 3560, "zona_crisol": 8990, "zona_cima": 12610}
+	for nombre in destinos:
+		if sc != null:
+			sc.scroll_vertical = destinos[nombre]
+		for i in 10:
+			await process_frame
+		root.get_viewport().get_texture().get_image().save_png("res://capturas/%s.png" % nombre)
+		print("captura: ", nombre)
+	mapa.queue_free()
+	await process_frame
 
 func _buscar_scroll(n: Node) -> ScrollContainer:
 	for h in n.get_children():
