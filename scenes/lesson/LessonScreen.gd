@@ -69,18 +69,20 @@ func _mostrar_intro_byte(texto: String) -> void:
 	velo.color = Color(0.07, 0.07, 0.17, 0.92)
 	velo.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_overlay_intro.add_child(velo)
+	var center := CenterContainer.new()
+	center.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_overlay_intro.add_child(center)
 	var caja := VBoxContainer.new()
-	caja.set_anchors_preset(Control.PRESET_CENTER)
 	caja.custom_minimum_size = Vector2(560, 0)
 	caja.add_theme_constant_override("separation", 24)
-	caja.alignment = BoxContainer.ALIGNMENT_CENTER
-	_overlay_intro.add_child(caja)
+	center.add_child(caja)
 	var byte: Mascot = load("res://scenes/mascot/Mascot.tscn").instantiate()
-	byte.custom_minimum_size = Vector2(140, 140)
+	byte.custom_minimum_size = Vector2(150, 150)
 	byte.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	caja.add_child(byte)
 	var lbl := UiTheme.etiqueta(texto, 24)
 	lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	lbl.size_flags_horizontal = Control.SIZE_FILL
 	caja.add_child(lbl)
 	var btn := UiTheme.boton(I18n.t("CONTINUAR"))
 	btn.pressed.connect(_cerrar_intro)

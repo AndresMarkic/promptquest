@@ -72,8 +72,42 @@ func _correr() -> void:
 	# capturas de zonas profundas (variedad de color): todo completado
 	await _cap_zonas()
 
+	# prueba de responsive: distintas proporciones de teléfono
+	await _cap_responsive()
+
 	print("LISTO")
 	quit(0)
+
+func _cap_responsive() -> void:
+	# teléfono muy alto (9:19.5) y uno más bajo (3:5), para verificar centrado
+	var tamanos := {"alto": Vector2i(1080, 2340), "bajo": Vector2i(1080, 1620)}
+	for etiqueta in tamanos:
+		root.size = tamanos[etiqueta]
+		for i in 6:
+			await process_frame
+		# intro (centrado vertical)
+		_reset_save()
+		var intro = (load("res://scenes/intro/IntroScreen.tscn") as PackedScene).instantiate()
+		root.add_child(intro)
+		for i in 14:
+			await process_frame
+		root.get_viewport().get_texture().get_image().save_png("res://capturas/resp_intro_%s.png" % etiqueta)
+		print("captura: resp_intro_", etiqueta)
+		intro.queue_free()
+		await process_frame
+		# mapa
+		_reset_save()
+		_save.store.data["lessons"] = {"u1l01": {"stars": 3}}
+		var mapa = (load("res://scenes/map/MapScreen.tscn") as PackedScene).instantiate()
+		root.add_child(mapa)
+		for i in 12:
+			await process_frame
+		root.get_viewport().get_texture().get_image().save_png("res://capturas/resp_mapa_%s.png" % etiqueta)
+		print("captura: resp_mapa_", etiqueta)
+		mapa.queue_free()
+		await process_frame
+	root.size = Vector2i(1080, 1920)  # restaurar
+	await process_frame
 
 func _cap_zonas() -> void:
 	_reset_save()
