@@ -5,3 +5,4 @@ export/*.apk
 *.keystore
 capturas/
 .claude/
+docs/difusion.md
