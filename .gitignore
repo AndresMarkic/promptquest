@@ -4,3 +4,4 @@ export/*.aab
 export/*.apk
 *.keystore
 capturas/
+.claude/

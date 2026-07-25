@@ -1,64 +1,119 @@
-# PromptQuest
+<div align="center">
 
-Juego educativo 2D estilo Duolingo, hecho en **Godot 4.6.3**, para aprender a usar
-inteligencia artificial generativa **de cero a ingeniero de IA**. El juego completo son
-**8 zonas / 80 lecciones** en español e inglés, con XP, vidas, racha, estrellas, un boss
-cronometrado por zona y certificación final. 100% local, sin conexión ni cuentas.
+# ✨ PromptQuest
 
-Guía al jugador **Byte**, una IA que perdió la memoria: cada lección que completás le devuelve
-un fragmento... y de paso te volvés experto en IA.
+### The free, open-source game that teaches you to use AI — from zero to AI engineer.
+### El juego gratis y open source que te enseña a usar la IA — de cero a ingeniero.
 
-## Requisitos
+**A Duolingo-style game for Artificial Intelligence. Built with [Claude Code](https://claude.com/claude-code).**
 
-- **Godot 4.6.3** (esta máquina lo tiene por winget). No necesita nada más para desarrollar y
-  jugar en escritorio. Para exportar a Android hacen falta el Android SDK + JDK (ver la guía de
-  publicación).
+![License: MIT](https://img.shields.io/badge/License-MIT-2ecc71.svg)
+![Godot](https://img.shields.io/badge/Godot-4.6-478cbf?logo=godotengine&logoColor=white)
+![Built with Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-8A2BE2)
+![Platform](https://img.shields.io/badge/Platform-Android-3ddc84?logo=android&logoColor=white)
+![Offline](https://img.shields.io/badge/100%25-Offline-1cb0f6)
+![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
 
-## Cómo abrir el proyecto
+![PromptQuest](store/feature_graphic.png)
 
-Abrí Godot 4.6.3 e importá la carpeta del repo (contiene `project.godot`), o desde la terminal:
+</div>
+
+---
+
+## 🎮 What is this?
+
+**PromptQuest** is a 2D mobile game (Godot 4) that teaches you how to use generative AI —
+the same addictive, bite-sized way Duolingo teaches languages. Instead of a language, you
+learn **Artificial Intelligence**: what an LLM is, how to write great prompts, how models
+compare, agents, RAG, prompt engineering, and how to build real AI workflows.
+
+Meet **Chispa**, a little AI spark that lost its memory. Every lesson you complete gives a
+fragment back — and by the end, **you can work with any AI like a pro.**
+
+- 🗺️ **8 zones · 80 lessons** — a full path from *zero* to *AI engineer*
+- 🌎 **Bilingual** — play in **Spanish or English**, switch anytime
+- 📶 **100% offline** — no accounts, no data collection, no internet needed
+- 🔥 Streaks, hearts, XP, stars, timed bosses, and a final **AI Engineer certification**
+- 🆓 **Free forever** and **open source** (MIT)
+
+<div align="center">
+
+| The world map | A lesson | Rewards | The final boss | Certification |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Map](store/captura_1_mapa.png) | ![Lesson](store/captura_2_leccion.png) | ![Result](store/captura_3_resultado.png) | ![Boss](store/captura_4_boss.png) | ![Cert](store/captura_5_certificacion.png) |
+
+</div>
+
+## 🧠 The curriculum — 8 zones, zero → AI engineer
+
+| # | Zone | You'll learn to... |
+|---|------|--------------------|
+| 1 | **The Core** | Understand AI, LLMs, tokens, context, hallucinations |
+| 2 | **The Forge** | Prompt like a pro: step-by-step, iterate, templates |
+| 3 | **The Workshop** | Use AI for writing, code, data, images, studying |
+| 4 | **The Observatory** | Compare models (Claude, GPT, Gemini…) and choose well |
+| 5 | **The Network** | APIs, agents, RAG, MCP — explained simply |
+| 6 | **The Crucible** | Advanced prompt engineering, safety, evaluation |
+| 7 | **The Factory** | Put AI into real workflows |
+| 8 | **The Summit** | Senior-level AI engineering + a final capstone |
+
+Full breakdown: [`docs/curriculum-completo.md`](docs/curriculum-completo.md).
+
+## 🤖 Built entirely with Claude Code
+
+This whole game — engine architecture, 80 bilingual lessons, the art (drawn in code, no
+external image assets), the tests, and the store assets — was **designed and built in
+collaboration with [Claude Code](https://claude.com/claude-code)**. The planning docs are
+public too, in [`docs/`](docs/), if you're curious how an AI helped ship a game about AI. 🤯
+
+## ▶️ Play / Run it
+
+You need **[Godot 4.6](https://godotengine.org/download)** (no other dependencies).
 
 ```bash
-bash tools/run.sh      # abre el juego en una ventana
+# Open the project in Godot, or from a terminal:
+bash tools/run.sh      # launch the game in a window
+bash tools/test.sh     # run the headless test suite (53 tests)
 ```
 
-## Cómo correr los tests
+Everything is code-drawn and self-contained — the whole app is tiny.
 
-Toda la lógica y las pantallas tienen cobertura headless (53 tests):
+## 🤝 Contribute — adding a lesson takes 5 minutes
 
-```bash
-bash tools/test.sh     # corre todo sin ventana; sale != 0 si algo falla
-bash tools/smoke.sh    # bootea el juego 1 frame para detectar errores de parseo
+Content lives in plain **JSON**, separate from the code. Adding or fixing a lesson doesn't
+require touching a single line of game logic. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+```
+content/unit3/lesson_04.json   ← a lesson is just this file
 ```
 
-## Cómo jugar
+Translations, new lessons, bug fixes, and new exercise types are all welcome. 💜
 
-`bash tools/run.sh`. La primera vez ves la intro de Byte (saltable); después, el mapa de
-lecciones. Tocá la lección desbloqueada, respondé los ejercicios (opción múltiple y armado de
-prompts con bloques), cuidá tus corazones y sumá racha. Al final del camino te espera el boss.
-Podés cambiar idioma (ES/EN) y sonido desde ⚙ Ajustes en el mapa.
+## 📦 Ship it to the Play Store
 
-## Estructura
+The game is store-ready. Step-by-step guide (SDK, keystore, listing, data safety):
+[`docs/publicacion-play-store.md`](docs/publicacion-play-store.md). Store copy in ES/EN:
+[`store/ficha-tienda.md`](store/ficha-tienda.md).
 
-| Carpeta | Qué hay |
-|---|---|
-| `autoload/` | Singletons: `SaveData` (guardado), `Economy` (XP/vidas/racha), `Content` (lecciones), `Game` (navegación), `Audio` (sonido) |
-| `scripts/` | Lógica pura y testeable: reglas de economía, guardado, contenido, bloques, progreso, i18n, UI |
-| `scenes/` | Pantallas y componentes: mapa, lección, ejercicios, resultado, intro, ajustes, HUD, mascota |
-| `content/unit1/` | Las 10 lecciones en JSON bilingüe (editable sin recompilar) |
-| `tests/` | Harness propio + tests headless |
-| `tools/` | Scripts de terminal (`test.sh`, `run.sh`, `smoke.sh`, `gen_icon.sh`) |
-| `docs/` | Especificación de diseño, plan de implementación y guía de publicación |
+## 🛠️ Tech
 
-## Documentación
+- **Godot 4.6** (GDScript), 2D, Mobile renderer, exports to Android
+- Rendered at 1080p with 2D anti-aliasing; responsive on any phone (`keep_width`)
+- All art (mascot, icons, backgrounds) is **drawn in code** — no image assets, no bloat
+- Own headless test harness (53 tests), content validator, screenshot tooling
 
-- Diseño del MVP: [docs/superpowers/specs/2026-07-17-promptquest-mvp-design.md](docs/superpowers/specs/2026-07-17-promptquest-mvp-design.md)
-- Plan de implementación: [docs/superpowers/plans/2026-07-17-promptquest-mvp.md](docs/superpowers/plans/2026-07-17-promptquest-mvp.md)
-- Publicar en Play Store: [docs/publicacion-play-store.md](docs/publicacion-play-store.md)
+## 📜 License & credits
 
-## Estado
+- **Code & content:** [MIT](LICENSE) — free to use, modify and share.
+- **Font:** [Fredoka](https://fonts.google.com/specimen/Fredoka) — SIL Open Font License ([`assets/fonts/OFL.txt`](assets/fonts/OFL.txt)).
+- **Built by** [@andresmarkic](https://github.com/andresmarkic) with 🤖 Claude Code, from Argentina 🇦🇷.
 
-Juego **completo** (8 zonas / 80 lecciones) funcional y verificado en escritorio (53 tests
-headless verdes). Currículum completo en [docs/curriculum-completo.md](docs/curriculum-completo.md).
-Pendiente para llegar a la tienda: configurar el Android SDK + keystore y generar el `.aab`
-(ver la guía de publicación).
+---
+
+<div align="center">
+
+**If PromptQuest helped you, drop a ⭐ — it genuinely helps others find it.**
+
+*Aprender a usar la IA debería ser gratis y divertido. / Learning to use AI should be free and fun.*
+
+</div>
