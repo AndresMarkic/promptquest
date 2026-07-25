@@ -1,0 +1,146 @@
+{
+  "id": "u2l08",
+  "title": { "es": "Conversar", "en": "Have a conversation" },
+  "byte_intro": {
+    "es": "No hace falta meter todo en un mega-mensaje. Aprendí a charlar de a poco y llegar más lejos.",
+    "en": "You don't have to cram everything into one mega-message. I learned to chat bit by bit and get further."
+  },
+  "byte_outro": {
+    "es": "¡Excelente! El ida y vuelta me deja corregir el rumbo sin rehacer todo. Fragmento recuperado.",
+    "en": "Excellent! The back-and-forth lets me steer without redoing everything. Fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué ventaja tiene conversar de a poco en vez de un solo mega-prompt?", "en": "What's the advantage of chatting bit by bit instead of one mega-prompt?" },
+      "options": [
+        { "es": "Ves cada respuesta y corregís el rumbo antes de seguir", "en": "You see each answer and adjust course before moving on" },
+        { "es": "La IA se cansa menos", "en": "The AI gets less tired" },
+        { "es": "Consume menos batería del celular", "en": "It uses less phone battery" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En una charla vas viendo resultados parciales y ajustás. Un mega-prompt te obliga a acertar todo de una.",
+        "en": "In a conversation you see partial results and adjust. A mega-prompt forces you to get everything right in one shot."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En una conversación, la IA recuerda...", "en": "In a conversation, the AI remembers..." },
+      "options": [
+        { "es": "Lo dicho antes en ese mismo chat (dentro de su contexto)", "en": "What was said earlier in that same chat (within its context)" },
+        { "es": "Todas tus conversaciones de toda la vida", "en": "All your conversations forever" },
+        { "es": "Nada, cada mensaje empieza de cero", "en": "Nothing, each message starts fresh" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Dentro de un chat, mantiene el hilo de lo hablado (mientras entre en su ventana de contexto). Por eso podés construir de a pasos.",
+        "en": "Within a chat, it keeps the thread of what was said (as long as it fits its context window). That's why you can build step by step."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA respondió algo casi bien. ¿Qué conviene hacer en la charla?", "en": "The AI answered almost right. What's good to do in the chat?" },
+      "options": [
+        { "es": "Pedirle el ajuste puntual sin repetir todo el contexto", "en": "Ask for the specific tweak without repeating all the context" },
+        { "es": "Abrir un chat nuevo y empezar de cero", "en": "Open a new chat and start over" },
+        { "es": "Copiar y pegar todo el prompt inicial otra vez", "en": "Copy-paste the whole initial prompt again" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Como recuerda el hilo, alcanza con pedir el cambio ('achicá el segundo punto'). No hace falta repetir el contexto entero.",
+        "en": "Since it remembers the thread, just ask for the change ('shorten the second point'). No need to repeat the whole context."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuándo es mejor abrir un chat NUEVO en vez de seguir el mismo?", "en": "When is it better to open a NEW chat instead of continuing the same one?" },
+      "options": [
+        { "es": "Cuando arrancás un tema totalmente distinto y sin relación", "en": "When you start a completely different, unrelated topic" },
+        { "es": "Cada vez que escribís una palabra nueva", "en": "Every time you type a new word" },
+        { "es": "Nunca, siempre en el mismo chat", "en": "Never, always the same chat" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si cambiás de tema por completo, un chat nuevo evita que arrastre contexto viejo que ya no viene al caso.",
+        "en": "If you switch topics entirely, a new chat avoids dragging in old context that no longer applies."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es útil hacer si la IA se desvió del objetivo en la charla?", "en": "What's useful if the AI drifted off-goal during the chat?" },
+      "options": [
+        { "es": "Recordarle el objetivo: 'volvamos a lo que buscábamos: X'", "en": "Remind it of the goal: 'let's get back to what we wanted: X'" },
+        { "es": "Insultarla para que reaccione", "en": "Insult it so it reacts" },
+        { "es": "Escribir en mayúsculas todo", "en": "Type everything in caps" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Reencuadrar la conversación ('volvamos a X') la reorienta sin perder lo bueno que ya se construyó.",
+        "en": "Reframing the conversation ('back to X') steers it without losing the good stuff already built."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo puede la IA ayudarte a arrancar cuando no tenés claro qué pedir?", "en": "How can the AI help you start when you're unsure what to ask?" },
+      "options": [
+        { "es": "Pidiéndole que te haga preguntas para entender qué necesitás", "en": "Ask it to ask you questions to figure out what you need" },
+        { "es": "Exigiéndole que adivine sin datos", "en": "Demanding it guess with no info" },
+        { "es": "Escribiendo un prompt de 3 páginas de una", "en": "Writing a 3-page prompt in one go" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La conversación es de ida y vuelta: podés pedirle que te entreviste primero y así definir mejor la tarea juntos.",
+        "en": "A conversation goes both ways: you can ask it to interview you first, so you define the task better together."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un mensaje de seguimiento que aproveche el hilo", "en": "Build a follow-up that uses the thread" },
+      "solution": {
+        "es": ["Perfecto, ahora", "sobre esa misma lista,", "ordenala por prioridad."],
+        "en": ["Perfect, now", "on that same list,", "order it by priority."]
+      },
+      "distractors": {
+        "es": ["te explico todo de nuevo:", "empecemos otra vez desde cero"],
+        "en": ["let me re-explain everything:", "let's start over from scratch"]
+      },
+      "explanation": {
+        "es": "Aprovechás lo ya hecho ('esa misma lista') y pedís el siguiente paso sin repetir el contexto.",
+        "en": "You build on what's done ('that same list') and ask for the next step without repeating context."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido para que la IA te entreviste primero", "en": "Build a request for the AI to interview you first" },
+      "solution": {
+        "es": ["Antes de escribir,", "hacéme 3 preguntas", "para entender qué necesito."],
+        "en": ["Before writing,", "ask me 3 questions", "to understand what I need."]
+      },
+      "distractors": {
+        "es": ["adiviná lo que quiero", "sin preguntar nada"],
+        "en": ["guess what I want", "without asking anything"]
+      },
+      "explanation": {
+        "es": "Pedirle que pregunte primero convierte el prompt en una charla que define mejor la tarea.",
+        "en": "Asking it to question you first turns the prompt into a conversation that defines the task better."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un mensaje que reencuadre una charla desviada", "en": "Build a message that reframes a drifting chat" },
+      "solution": {
+        "es": ["Nos fuimos de tema.", "Volvamos al objetivo:", "un plan de estudio en 5 pasos."],
+        "en": ["We drifted off topic.", "Back to the goal:", "a study plan in 5 steps."]
+      },
+      "distractors": {
+        "es": ["seguí con cualquier cosa", "no importa el objetivo"],
+        "en": ["keep going with anything", "the goal doesn't matter"]
+      },
+      "explanation": {
+        "es": "Reencuadrar recuerda el objetivo y reorienta la conversación sin empezar de cero.",
+        "en": "Reframing recalls the goal and steers the conversation back without starting over."
+      }
+    }
+  ]
+}

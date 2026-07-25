@@ -1,0 +1,146 @@
+{
+  "id": "u2l07",
+  "title": { "es": "Controlar tono, estilo y registro", "en": "Control tone, style and register" },
+  "byte_intro": {
+    "es": "El mismo dato se puede contar de mil formas. Aprendí a elegir la voz según a quién le hablo.",
+    "en": "The same fact can be told a thousand ways. I learned to pick the voice depending on who I'm talking to."
+  },
+  "byte_outro": {
+    "es": "¡Genial! Mismo contenido, distinto tono según el público. Otro fragmento vuelve a su lugar.",
+    "en": "Awesome! Same content, different tone depending on the audience. Another fragment back in place."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué controlás cuando ajustás el 'tono' de una respuesta?", "en": "What do you control when you adjust the 'tone' of an answer?" },
+      "options": [
+        { "es": "La voz y la actitud del texto, no el contenido en sí", "en": "The voice and attitude of the text, not the content itself" },
+        { "es": "El idioma únicamente", "en": "The language only" },
+        { "es": "La cantidad de errores", "en": "The number of errors" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El mismo mensaje se puede decir formal, gracioso o cálido. El tono cambia la voz, no los hechos.",
+        "en": "The same message can be said formally, humorously or warmly. Tone changes the voice, not the facts."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Escribís a un cliente importante. ¿Qué registro pedís?", "en": "You're writing to an important client. What register do you ask for?" },
+      "options": [
+        { "es": "\"Tono formal y profesional, tratando de usted.\"", "en": "\"Formal, professional tone, addressing them politely.\"" },
+        { "es": "\"Tono re relajado, como con un amigo del barrio.\"", "en": "\"Super chill tone, like a buddy from the block.\"" },
+        { "es": "\"Sin ningún tono en particular.\"", "en": "\"No particular tone.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El registro se elige según el público. Para un cliente importante, formal y profesional es lo apropiado.",
+        "en": "Register is chosen by audience. For an important client, formal and professional is appropriate."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es la forma más útil de pedir un tono?", "en": "What's the most useful way to ask for a tone?" },
+      "options": [
+        { "es": "Describirlo concreto: 'cercano pero respetuoso, sin tecnicismos'", "en": "Describe it concretely: 'warm but respectful, no jargon'" },
+        { "es": "Decir solo 'ponele buena onda'", "en": "Just say 'give it good vibes'" },
+        { "es": "No mencionar el tono", "en": "Not mention the tone at all" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cuanto más concreto describís el tono, mejor lo clava. 'Buena onda' es ambiguo; 'cercano pero respetuoso' guía.",
+        "en": "The more concretely you describe the tone, the better it nails it. 'Good vibes' is vague; 'warm but respectful' guides."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Una buena forma de fijar un estilo es...", "en": "A good way to lock in a style is..." },
+      "options": [
+        { "es": "Dar un referente: 'estilo de un divulgador que explica fácil'", "en": "Give a reference: 'the style of a science communicator who explains simply'" },
+        { "es": "Pedir que copie textual a una persona real famosa", "en": "Ask it to copy a real famous person word for word" },
+        { "es": "No dar ninguna referencia", "en": "Give no reference at all" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Describir un tipo de voz ('divulgador que explica fácil') orienta el estilo sin copiar a nadie en particular.",
+        "en": "Describing a type of voice ('a communicator who explains simply') guides the style without copying anyone in particular."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tenés un texto formal y lo querés para redes sociales. ¿Qué pedís?", "en": "You have a formal text and want it for social media. What do you ask?" },
+      "options": [
+        { "es": "\"Adaptá el mismo contenido a un tono informal y breve para Instagram.\"", "en": "\"Adapt the same content to an informal, brief tone for Instagram.\"" },
+        { "es": "\"Cambiá todos los datos por otros.\"", "en": "\"Swap all the facts for different ones.\"" },
+        { "es": "\"Borralo y escribí de otra cosa.\"", "en": "\"Delete it and write about something else.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Adaptar el registro mantiene el contenido y cambia la voz para el nuevo público (redes).",
+        "en": "Adapting the register keeps the content and changes the voice for the new audience (social)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa 'registro' en la comunicación?", "en": "What does 'register' mean in communication?" },
+      "options": [
+        { "es": "El nivel de formalidad según la situación y el público", "en": "The level of formality depending on the situation and audience" },
+        { "es": "Anotarse en una lista", "en": "Signing up on a list" },
+        { "es": "El volumen de la voz", "en": "The volume of the voice" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El registro es qué tan formal o informal hablás. No le escribís igual a un juez que a un amigo.",
+        "en": "Register is how formal or informal you speak. You don't write to a judge the way you write to a friend."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido que fije tono y público", "en": "Build a request that sets tone and audience" },
+      "solution": {
+        "es": ["Explicá el mismo tema", "en tono cercano y simple,", "para adolescentes."],
+        "en": ["Explain the same topic", "in a warm, simple tone,", "for teenagers."]
+      },
+      "distractors": {
+        "es": ["con lenguaje técnico", "para un congreso académico"],
+        "en": ["with technical language", "for an academic conference"]
+      },
+      "explanation": {
+        "es": "Fijás el tono (cercano, simple) y el público (adolescentes) sin tocar el contenido.",
+        "en": "You set the tone (warm, simple) and the audience (teenagers) without changing the content."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido para adaptar un texto a otro registro", "en": "Build a request to adapt a text to another register" },
+      "solution": {
+        "es": ["Pasá este texto formal", "a un tono informal y directo,", "manteniendo la información."],
+        "en": ["Turn this formal text", "into an informal, direct tone,", "keeping the information."]
+      },
+      "distractors": {
+        "es": ["cambiá los datos", "e inventá otros nuevos"],
+        "en": ["change the facts", "and invent new ones"]
+      },
+      "explanation": {
+        "es": "Adaptar el registro cambia la voz pero conserva la información: eso es controlar el tono.",
+        "en": "Adapting the register changes the voice but keeps the information: that's controlling tone."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido con estilo por referente descriptivo", "en": "Build a request with a descriptive style reference" },
+      "solution": {
+        "es": ["Escribilo con estilo", "de divulgador que explica fácil,", "con ejemplos cotidianos."],
+        "en": ["Write it in the style", "of a communicator who explains simply,", "with everyday examples."]
+      },
+      "distractors": {
+        "es": ["copiá palabra por palabra", "a un autor famoso real"],
+        "en": ["copy word for word", "a real famous author"]
+      },
+      "explanation": {
+        "es": "Describir un tipo de voz orienta el estilo; copiar textual a una persona real no corresponde.",
+        "en": "Describing a type of voice guides the style; copying a real person word for word isn't the way."
+      }
+    }
+  ]
+}

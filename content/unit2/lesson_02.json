@@ -1,0 +1,146 @@
+{
+  "id": "u2l02",
+  "title": { "es": "Descomponer una tarea grande", "en": "Break down a big task" },
+  "byte_intro": {
+    "es": "Un fragmento enorme no entra de un tirón. Aprendí a partirlo en pedazos y meterlos de a uno.",
+    "en": "A huge fragment won't fit in one go. I learned to split it into pieces and load them one at a time."
+  },
+  "byte_outro": {
+    "es": "¡Listo! Una tarea grande se vuelve fácil si la corto en sub-pedidos claros. Recuperé otro pedazo.",
+    "en": "Done! A big task becomes easy if I slice it into clear sub-requests. Recovered another piece."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene descomponer una tarea grande?", "en": "Why is it good to break down a big task?" },
+      "options": [
+        { "es": "Cada parte es más manejable y la IA se enfoca mejor en cada una", "en": "Each part is more manageable and the AI focuses better on each one" },
+        { "es": "Porque a la IA le gusta escribir más", "en": "Because the AI likes to write more" },
+        { "es": "Para que tarde más y parezca inteligente", "en": "So it takes longer and seems smarter" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un pedido gigante mezcla objetivos y sale confuso. Partirlo en sub-pedidos concretos da mejores resultados en cada paso.",
+        "en": "A giant request mixes goals and comes out muddled. Splitting it into concrete sub-requests gives better results at each step."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés organizar un cumpleaños con IA. ¿Cuál es el mejor primer paso?", "en": "You want to plan a birthday with AI. What's the best first step?" },
+      "options": [
+        { "es": "Pedirle que liste las sub-tareas: invitados, comida, lugar, presupuesto", "en": "Ask it to list the sub-tasks: guests, food, venue, budget" },
+        { "es": "Pedirle 'organizá todo el cumpleaños' en un solo mensaje", "en": "Ask it to 'organize the whole birthday' in one message" },
+        { "es": "Pedirle un poema sobre cumpleaños", "en": "Ask it for a poem about birthdays" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Primero identificás las partes; después trabajás cada una a fondo. Eso es descomponer.",
+        "en": "First you identify the parts; then you work each one in depth. That's decomposing."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos es un buen sub-pedido dentro de una tarea más grande?", "en": "Which of these is a good sub-request within a bigger task?" },
+      "options": [
+        { "es": "\"Ahora solo hacé la lista de invitados, 10 nombres, sin repetir.\"", "en": "\"Now just make the guest list, 10 names, no repeats.\"" },
+        { "es": "\"Hacé el cumpleaños entero ya mismo.\"", "en": "\"Do the whole birthday right now.\"" },
+        { "es": "\"Hacé algo, lo que sea.\"", "en": "\"Do something, anything.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un buen sub-pedido ataca una sola parte con un objetivo claro y acotado.",
+        "en": "A good sub-request tackles a single part with a clear, bounded goal."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿En qué orden conviene encarar las partes?", "en": "In what order should you tackle the parts?" },
+      "options": [
+        { "es": "Primero lo que las demás partes necesitan (ej. definir presupuesto antes de comprar)", "en": "First what the other parts depend on (e.g. set the budget before buying)" },
+        { "es": "Siempre en orden alfabético", "en": "Always in alphabetical order" },
+        { "es": "El orden no importa nunca", "en": "Order never matters" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Algunas partes dependen de otras. Resolvé primero las que habilitan al resto (una decisión base antes de las que la usan).",
+        "en": "Some parts depend on others. Solve first the ones that unlock the rest (a base decision before the ones that use it)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Después de resolver cada parte por separado, ¿qué falta?", "en": "After solving each part separately, what's left?" },
+      "options": [
+        { "es": "Pedirle que junte las partes en un resultado final coherente", "en": "Ask it to combine the parts into one coherent final result" },
+        { "es": "Descartar todas las partes", "en": "Throw away all the parts" },
+        { "es": "Empezar todo de cero otra vez", "en": "Start everything over from scratch" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Descomponer también incluye recomponer: al final unís las partes resueltas en un todo.",
+        "en": "Decomposing also means recomposing: at the end you assemble the solved parts into a whole."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué señal te dice que un pedido es demasiado grande para un solo tiro?", "en": "What sign tells you a request is too big for one shot?" },
+      "options": [
+        { "es": "Tiene varios objetivos distintos mezclados en una frase", "en": "It has several different goals mixed into one sentence" },
+        { "es": "Tiene una sola instrucción simple", "en": "It has a single simple instruction" },
+        { "es": "Usa la palabra 'por favor'", "en": "It uses the word 'please'" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si en un pedido metés investigar, escribir, resumir y traducir a la vez, conviene separarlo en pasos.",
+        "en": "If one request bundles researching, writing, summarizing and translating at once, it's better split into steps."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el primer paso para descomponer una tarea", "en": "Build the first step to break down a task" },
+      "solution": {
+        "es": ["Dividí esta tarea", "en sub-tareas más chicas", "y numerámelas."],
+        "en": ["Split this task", "into smaller sub-tasks", "and number them for me."]
+      },
+      "distractors": {
+        "es": ["resolvé todo junto", "en un solo bloque"],
+        "en": ["solve it all together", "in a single block"]
+      },
+      "explanation": {
+        "es": "Antes de resolver, pedile que identifique y numere las partes. Después atacás una por una.",
+        "en": "Before solving, ask it to identify and number the parts. Then you tackle them one by one."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un sub-pedido acotado", "en": "Build a bounded sub-request" },
+      "solution": {
+        "es": ["Ahora ocupate solo del paso 2", "escribí la introducción", "en 4 líneas."],
+        "en": ["Now handle only step 2", "write the introduction", "in 4 lines."]
+      },
+      "distractors": {
+        "es": ["hacé todos los pasos", "sin límite de largo"],
+        "en": ["do every step", "with no length limit"]
+      },
+      "explanation": {
+        "es": "Un sub-pedido bueno se enfoca en un solo paso con un límite claro.",
+        "en": "A good sub-request focuses on a single step with a clear limit."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el paso final de recomposición", "en": "Build the final recomposition step" },
+      "solution": {
+        "es": ["Juntá las partes anteriores", "en un documento final", "ordenado y sin repetir."],
+        "en": ["Combine the previous parts", "into one final document", "ordered and without repeats."]
+      },
+      "distractors": {
+        "es": ["borrá lo hecho", "y empezá de nuevo"],
+        "en": ["delete the work", "and start over"]
+      },
+      "explanation": {
+        "es": "Cerrás uniendo las piezas ya resueltas en un resultado coherente.",
+        "en": "You close by joining the already-solved pieces into a coherent result."
+      }
+    }
+  ]
+}

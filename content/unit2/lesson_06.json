@@ -1,0 +1,146 @@
+{
+  "id": "u2l06",
+  "title": { "es": "Ejemplos negativos", "en": "Negative examples" },
+  "byte_intro": {
+    "es": "A veces mostrar qué NO quiero ayuda tanto como decir qué quiero. Aprendí a marcar lo que hay que evitar.",
+    "en": "Sometimes showing what I DON'T want helps as much as saying what I want. I learned to flag what to avoid."
+  },
+  "byte_outro": {
+    "es": "¡Buenísimo! Un contraejemplo afina el resultado: 'así no'. Recuperé otro pedazo de memoria.",
+    "en": "Great! A counterexample sharpens the result: 'not like this'. Recovered another memory piece."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un ejemplo negativo en un prompt?", "en": "What is a negative example in a prompt?" },
+      "options": [
+        { "es": "Mostrarle qué NO querés, para que evite ese tipo de respuesta", "en": "Showing what you DON'T want, so it avoids that kind of answer" },
+        { "es": "Decirle algo con enojo", "en": "Telling it something angrily" },
+        { "es": "Un ejemplo escrito en negativo gramatical", "en": "An example written in grammatical negative" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un ejemplo negativo (o contraejemplo) le muestra un caso a evitar. Sirve para afinar el resultado marcando el límite.",
+        "en": "A negative example (or counterexample) shows it a case to avoid. It sharpens the result by marking the boundary."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés respuestas breves. ¿Cuál usa un ejemplo negativo?", "en": "You want short answers. Which uses a negative example?" },
+      "options": [
+        { "es": "\"Respondé en una línea. NO así: un párrafo largo con rodeos.\"", "en": "\"Answer in one line. NOT like this: a long rambling paragraph.\"" },
+        { "es": "\"Respondé como quieras.\"", "en": "\"Answer however you want.\"" },
+        { "es": "\"Escribí mucho.\"", "en": "\"Write a lot.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Mostrar el caso 'NO así' (párrafo largo) le marca justo lo que tiene que evitar.",
+        "en": "Showing the 'NOT like this' case (a long paragraph) marks exactly what it must avoid."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuándo conviene sumar un ejemplo negativo?", "en": "When is it worth adding a negative example?" },
+      "options": [
+        { "es": "Cuando la IA repite un error que ya te molestó antes", "en": "When the AI keeps making a mistake that already bugged you" },
+        { "es": "Cuando la respuesta ya salió perfecta", "en": "When the answer already came out perfect" },
+        { "es": "Nunca, siempre confunden", "en": "Never, they always confuse it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si insiste en un patrón que no querés (ej. arrancar con 'En este artículo...'), mostrarle ese caso como 'evitá esto' lo corrige.",
+        "en": "If it insists on a pattern you don't want (e.g. starting with 'In this article...'), showing it that case as 'avoid this' fixes it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es la forma más clara de dar un ejemplo negativo?", "en": "What's the clearest way to give a negative example?" },
+      "options": [
+        { "es": "Mostrar el caso malo Y el bueno: 'evitá esto, hacé esto otro'", "en": "Show the bad case AND the good one: 'avoid this, do this instead'" },
+        { "es": "Solo quejarte sin mostrar nada", "en": "Just complain without showing anything" },
+        { "es": "Mostrar diez ejemplos malos y ninguno bueno", "en": "Show ten bad examples and no good one" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El contraste 'así no / así sí' es lo más potente: ubica el límite y a la vez muestra el rumbo correcto.",
+        "en": "The 'not like this / like this' contrast is the most powerful: it marks the boundary and shows the right direction at once."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "\"Sugerime nombres de mascota. Evitá los típicos como 'Firulais' o 'Michi'.\" ¿Qué hace el ejemplo negativo acá?", "en": "\"Suggest pet names. Avoid the typical ones like 'Rex' or 'Whiskers'.\" What does the negative example do here?" },
+      "options": [
+        { "es": "Descarta lo obvio y empuja hacia opciones más originales", "en": "It rules out the obvious and pushes toward more original options" },
+        { "es": "Prohíbe sugerir cualquier nombre", "en": "It forbids suggesting any name" },
+        { "es": "Obliga a usar solo esos dos nombres", "en": "It forces using only those two names" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Nombrar lo que NO querés ('los típicos') corre a la IA de la respuesta obvia hacia algo más fresco.",
+        "en": "Naming what you DON'T want ('the typical ones') moves the AI off the obvious answer toward something fresher."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué riesgo tiene abusar de ejemplos negativos?", "en": "What's the risk of overusing negative examples?" },
+      "options": [
+        { "es": "Si solo decís qué evitar, la IA no sabe hacia dónde ir", "en": "If you only say what to avoid, the AI doesn't know where to go" },
+        { "es": "Ninguno, cuantos más mejor siempre", "en": "None, the more the better always" },
+        { "es": "Hacen que responda en mayúsculas", "en": "They make it answer in all caps" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los ejemplos negativos marcan el límite, pero conviene combinarlos con qué SÍ querés para dar dirección.",
+        "en": "Negative examples mark the boundary, but it's best to pair them with what you DO want to give direction."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido con un ejemplo negativo claro", "en": "Build a request with a clear negative example" },
+      "solution": {
+        "es": ["Escribí un título corto.", "Evitá clickbait", "como '¡No vas a creer esto!'."],
+        "en": ["Write a short title.", "Avoid clickbait", "like 'You won't believe this!'."]
+      },
+      "distractors": {
+        "es": ["hacé lo que quieras", "sin ninguna guía"],
+        "en": ["do whatever you want", "with no guidance"]
+      },
+      "explanation": {
+        "es": "Mostrás el caso a evitar (clickbait) con un ejemplo concreto, así la IA sabe qué NO hacer.",
+        "en": "You show the case to avoid (clickbait) with a concrete example, so the AI knows what NOT to do."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el contraste 'así no / así sí'", "en": "Build the 'not like this / like this' contrast" },
+      "solution": {
+        "es": ["No respondas con jerga técnica;", "usá lenguaje simple,", "como le hablarías a un amigo."],
+        "en": ["Don't answer with technical jargon;", "use simple language,", "as you'd talk to a friend."]
+      },
+      "distractors": {
+        "es": ["llená de términos difíciles", "y siglas raras"],
+        "en": ["pack it with hard terms", "and odd acronyms"]
+      },
+      "explanation": {
+        "es": "Combinás lo que hay que evitar (jerga) con lo que sí querés (lenguaje simple): direccion clara.",
+        "en": "You combine what to avoid (jargon) with what you do want (simple language): clear direction."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido que descarte lo obvio con un ejemplo negativo", "en": "Build a request that rules out the obvious with a negative example" },
+      "solution": {
+        "es": ["Dame ideas de regalo originales.", "Nada de lo típico", "como flores o chocolates."],
+        "en": ["Give me original gift ideas.", "None of the typical stuff", "like flowers or chocolates."]
+      },
+      "distractors": {
+        "es": ["repetí las ideas de siempre", "aunque sean aburridas"],
+        "en": ["repeat the usual ideas", "even if they're boring"]
+      },
+      "explanation": {
+        "es": "Excluir lo obvio ('flores o chocolates') empuja a la IA hacia respuestas menos previsibles.",
+        "en": "Excluding the obvious ('flowers or chocolates') pushes the AI toward less predictable answers."
+      }
+    }
+  ]
+}

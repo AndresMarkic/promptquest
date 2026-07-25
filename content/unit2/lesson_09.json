@@ -1,0 +1,146 @@
+{
+  "id": "u2l09",
+  "title": { "es": "Plantillas reutilizables", "en": "Reusable templates" },
+  "byte_intro": {
+    "es": "Descubrí el mejor truco de La Forja: armar un molde con huecos y reusarlo mil veces cambiando poco.",
+    "en": "I found the best trick in The Forge: build a mold with blanks and reuse it a thousand times changing little."
+  },
+  "byte_outro": {
+    "es": "¡Increíble! Con una plantilla, dejo de escribir lo mismo cada vez. Último fragmento antes del Boss.",
+    "en": "Incredible! With a template, I stop rewriting the same thing every time. Last fragment before the Boss."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es una plantilla de prompt?", "en": "What is a prompt template?" },
+      "options": [
+        { "es": "Un prompt 'molde' con huecos que completás en cada uso", "en": "A 'mold' prompt with blanks you fill in each time" },
+        { "es": "Una imagen de fondo para el chat", "en": "A background image for the chat" },
+        { "es": "Un prompt que no se puede cambiar nunca", "en": "A prompt you can never change" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una plantilla fija la estructura que funciona y deja huecos (variables) para adaptar cada caso sin reescribir todo.",
+        "en": "A template locks in the structure that works and leaves blanks (variables) to adapt each case without rewriting everything."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo se suelen marcar los huecos de una plantilla?", "en": "How are template blanks usually marked?" },
+      "options": [
+        { "es": "Con marcadores claros, como [PRODUCTO] o {cliente}", "en": "With clear placeholders, like [PRODUCT] or {client}" },
+        { "es": "Dejando espacios en blanco invisibles", "en": "Leaving invisible blank spaces" },
+        { "es": "Borrando partes al azar", "en": "Deleting parts at random" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Marcadores visibles como [PRODUCTO] indican exactamente qué reemplazar en cada uso.",
+        "en": "Visible placeholders like [PRODUCT] indicate exactly what to replace on each use."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Para qué tarea conviene armar una plantilla?", "en": "For which kind of task is a template worth building?" },
+      "options": [
+        { "es": "Una que repetís seguido cambiando pocos datos", "en": "One you repeat often, changing just a few details" },
+        { "es": "Algo que hacés una sola vez en la vida", "en": "Something you do only once in your life" },
+        { "es": "Cualquier cosa, aunque nunca la repitas", "en": "Anything, even if you never repeat it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La plantilla rinde cuando hay repetición: responder consultas, generar descripciones, escribir mails similares.",
+        "en": "A template pays off when there's repetition: answering queries, generating descriptions, writing similar emails."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos es un buen esqueleto de plantilla para un mail de ventas?", "en": "Which is a good template skeleton for a sales email?" },
+      "options": [
+        { "es": "\"Escribí un mail a [CLIENTE] ofreciendo [PRODUCTO] con un tono [TONO], máximo [N] palabras.\"", "en": "\"Write an email to [CLIENT] offering [PRODUCT] in a [TONE] tone, [N] words maximum.\"" },
+        { "es": "\"Escribí algo de ventas.\"", "en": "\"Write something about sales.\"" },
+        { "es": "\"Mail.\"", "en": "\"Email.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Tiene estructura fija (mail de ventas) y huecos claros para adaptar: cliente, producto, tono y largo.",
+        "en": "It has a fixed structure (sales email) and clear blanks to adapt: client, product, tone and length."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué conviene incluir en una buena plantilla además de los huecos?", "en": "Besides the blanks, what should a good template include?" },
+      "options": [
+        { "es": "Las instrucciones fijas que siempre querés (formato, tono, largo)", "en": "The fixed instructions you always want (format, tone, length)" },
+        { "es": "Nada más, solo huecos vacíos", "en": "Nothing else, just empty blanks" },
+        { "es": "Un chiste distinto cada vez", "en": "A different joke each time" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Lo bueno de la plantilla es que las partes que no cambian (formato, reglas) quedan escritas una vez y listas.",
+        "en": "The point of a template is that the parts that don't change (format, rules) are written once and ready."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tenés una plantilla que funciona. ¿Cómo la mejorás con el tiempo?", "en": "You have a template that works. How do you improve it over time?" },
+      "options": [
+        { "es": "Ajustándola cuando notás un patrón de error y guardando la versión mejorada", "en": "Tweaking it when you spot a recurring error and saving the improved version" },
+        { "es": "Nunca tocándola, aunque falle siempre", "en": "Never touching it, even if it always fails" },
+        { "es": "Rehaciéndola entera desde cero cada día", "en": "Rebuilding it from scratch every day" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La plantilla es viva: cuando detectás una falla repetida, la corregís una vez y todos los usos futuros mejoran.",
+        "en": "A template is a living thing: when you spot a repeated flaw, you fix it once and every future use improves."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una plantilla con huecos para reusar", "en": "Build a template with reusable blanks" },
+      "solution": {
+        "es": ["Escribí una descripción de", "[PRODUCTO] para [PÚBLICO],", "en máximo [N] palabras."],
+        "en": ["Write a description of", "[PRODUCT] for [AUDIENCE],", "in [N] words maximum."]
+      },
+      "distractors": {
+        "es": ["algo sobre cualquier cosa", "sin ningún hueco"],
+        "en": ["something about anything", "with no blanks"]
+      },
+      "explanation": {
+        "es": "La estructura queda fija y los huecos [PRODUCTO], [PÚBLICO], [N] se completan en cada uso.",
+        "en": "The structure stays fixed and the blanks [PRODUCT], [AUDIENCE], [N] get filled on each use."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una plantilla de respuesta a reseñas", "en": "Build a template for replying to reviews" },
+      "solution": {
+        "es": ["Respondé a esta reseña de [CLIENTE]", "con tono [TONO],", "agradeciendo y ofreciendo [SOLUCIÓN]."],
+        "en": ["Reply to this review from [CLIENT]", "in a [TONE] tone,", "thanking them and offering [SOLUTION]."]
+      },
+      "distractors": {
+        "es": ["contestá lo que sea", "sin estructura ni huecos"],
+        "en": ["reply with whatever", "with no structure or blanks"]
+      },
+      "explanation": {
+        "es": "Molde reutilizable: la forma es fija y cambiás cliente, tono y solución según el caso.",
+        "en": "A reusable mold: the form is fixed and you change client, tone and solution per case."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué parte de la plantilla queda fija", "en": "Build which part of the template stays fixed" },
+      "solution": {
+        "es": ["Las instrucciones que no cambian", "van escritas una sola vez;", "solo reemplazás los huecos."],
+        "en": ["The instructions that don't change", "are written just once;", "you only replace the blanks."]
+      },
+      "distractors": {
+        "es": ["hay que reescribir todo", "en cada uso otra vez"],
+        "en": ["you must rewrite everything", "on each use again"]
+      },
+      "explanation": {
+        "es": "La ventaja del molde: lo fijo se escribe una vez y solo cambiás las variables.",
+        "en": "The mold's advantage: the fixed part is written once and you only change the variables."
+      }
+    }
+  ]
+}

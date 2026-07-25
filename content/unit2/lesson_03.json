@@ -1,0 +1,146 @@
+{
+  "id": "u2l03",
+  "title": { "es": "Iterar", "en": "Iterate" },
+  "byte_intro": {
+    "es": "Descubrí algo: la primera respuesta casi nunca es la mejor. Es un borrador. ¡Se puede pulir!",
+    "en": "I found something out: the first answer is almost never the best. It's a draft. It can be polished!"
+  },
+  "byte_outro": {
+    "es": "¡Buenísimo! Pidiendo cambios concretos, cada versión sale mejor que la anterior. Fragmento recuperado.",
+    "en": "Great! By asking for concrete changes, each version comes out better than the last. Fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo conviene ver la primera respuesta de la IA?", "en": "How should you view the AI's first answer?" },
+      "options": [
+        { "es": "Como un borrador que se puede mejorar pidiendo ajustes", "en": "As a draft you can improve by asking for tweaks" },
+        { "es": "Como la única respuesta posible", "en": "As the only possible answer" },
+        { "es": "Como algo que no se puede tocar", "en": "As something you can't change" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Iterar es normal: pedís la primera versión y después la vas refinando con pedidos concretos.",
+        "en": "Iterating is normal: you get the first version and then refine it with concrete requests."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La respuesta quedó muy larga. ¿Cuál es el mejor pedido de mejora?", "en": "The answer came out too long. What's the best follow-up?" },
+      "options": [
+        { "es": "\"Hacelo más corto: dejalo en 3 oraciones.\"", "en": "\"Make it shorter: keep it to 3 sentences.\"" },
+        { "es": "\"Mejoralo.\"", "en": "\"Make it better.\"" },
+        { "es": "\"No me gustó.\"", "en": "\"I didn't like it.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un pedido de mejora concreto ('3 oraciones') guía mucho mejor que uno vago como 'mejoralo'.",
+        "en": "A concrete follow-up ('3 sentences') guides far better than a vague 'make it better'."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos es un pedido de iteración útil sobre el tono?", "en": "Which of these is a useful iteration request about tone?" },
+      "options": [
+        { "es": "\"Cambiá el tono a más informal, tuteando al lector.\"", "en": "\"Change the tone to more casual, addressing the reader directly.\"" },
+        { "es": "\"Que suene distinto.\"", "en": "\"Make it sound different.\"" },
+        { "es": "\"Ponele onda.\"", "en": "\"Give it some vibe.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Decir exactamente qué cambiar (informal, tuteo) le da al modelo una dirección clara.",
+        "en": "Saying exactly what to change (casual, direct address) gives the model a clear direction."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Al iterar, ¿qué conviene hacer con lo que ya estaba bien?", "en": "When iterating, what should you do with what was already good?" },
+      "options": [
+        { "es": "Decirle que mantenga eso y solo cambie lo puntual", "en": "Tell it to keep that and change only the specific bit" },
+        { "es": "Nunca aclarar nada, que rehaga todo", "en": "Never clarify anything, let it redo everything" },
+        { "es": "Borrar la conversación entera", "en": "Delete the whole conversation" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si no aclarás, puede cambiar cosas que ya te gustaban. Pedile 'mantené X, cambiá solo Y'.",
+        "en": "If you don't clarify, it may change things you already liked. Ask it to 'keep X, change only Y'."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es una ventaja de iterar en vez de escribir un prompt perfecto de una?", "en": "What's an advantage of iterating instead of writing one perfect prompt?" },
+      "options": [
+        { "es": "Ves un resultado real y ajustás sobre algo concreto", "en": "You see a real result and adjust against something concrete" },
+        { "es": "Gastás más tiempo sin motivo", "en": "You waste more time for no reason" },
+        { "es": "La IA se enoja menos", "en": "The AI gets less annoyed" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "A veces no sabés qué querés hasta ver una primera versión. Iterar te deja corregir el rumbo con algo tangible enfrente.",
+        "en": "Sometimes you don't know what you want until you see a first version. Iterating lets you course-correct with something tangible in front of you."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "\"El segundo párrafo está flojo, reescribí solo ese con un ejemplo real.\" ¿Qué tiene de bueno?", "en": "\"The second paragraph is weak, rewrite only that one with a real example.\" What's good about it?" },
+      "options": [
+        { "es": "Señala qué parte, qué falla y cómo arreglarla", "en": "It points to which part, what's wrong, and how to fix it" },
+        { "es": "Es demasiado vago para servir", "en": "It's too vague to be useful" },
+        { "es": "Pide rehacer todo desde cero", "en": "It asks to redo everything from scratch" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Buen feedback iterativo: ubica la parte (párrafo 2), el problema (flojo) y la solución (ejemplo real).",
+        "en": "Good iterative feedback: it locates the part (paragraph 2), the problem (weak) and the fix (a real example)."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido de mejora concreto sobre el largo", "en": "Build a concrete follow-up about length" },
+      "solution": {
+        "es": ["Está muy largo:", "resumilo a la mitad", "manteniendo la idea principal."],
+        "en": ["It's too long:", "cut it in half", "keeping the main idea."]
+      },
+      "distractors": {
+        "es": ["mejoralo un poco", "como quieras"],
+        "en": ["improve it a bit", "however you like"]
+      },
+      "explanation": {
+        "es": "Decís el problema (largo), la acción (a la mitad) y qué preservar (la idea). Eso es iterar bien.",
+        "en": "You state the problem (too long), the action (in half) and what to keep (the idea). That's iterating well."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido para cambiar el tono sin perder lo bueno", "en": "Build a request to change tone without losing the good parts" },
+      "solution": {
+        "es": ["Mantené el contenido,", "pero cambiá el tono", "a más formal y serio."],
+        "en": ["Keep the content,", "but change the tone", "to more formal and serious."]
+      },
+      "distractors": {
+        "es": ["rehacé todo de cero", "y borrá lo anterior"],
+        "en": ["redo it all from scratch", "and delete the previous"]
+      },
+      "explanation": {
+        "es": "Protegés lo que ya funciona (el contenido) y pedís cambiar solo una dimensión (el tono).",
+        "en": "You protect what already works (the content) and ask to change just one dimension (the tone)."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá feedback iterativo que ubique el problema", "en": "Build iterative feedback that locates the problem" },
+      "solution": {
+        "es": ["El final es abrupto:", "agregá una conclusión", "de dos oraciones."],
+        "en": ["The ending is abrupt:", "add a conclusion", "of two sentences."]
+      },
+      "distractors": {
+        "es": ["no me convence", "hacé otra cosa"],
+        "en": ["not convinced", "do something else"]
+      },
+      "explanation": {
+        "es": "Ubicás la parte (el final), el problema (abrupto) y el arreglo (conclusión de dos oraciones).",
+        "en": "You locate the part (the ending), the problem (abrupt) and the fix (a two-sentence conclusion)."
+      }
+    }
+  ]
+}

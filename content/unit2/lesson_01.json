@@ -1,0 +1,145 @@
+{
+  "id": "u2l01",
+  "title": { "es": "Pensá paso a paso", "en": "Think step by step" },
+  "byte_intro": {
+    "es": "Llegamos a La Forja. Acá aprendo a hacer que la IA muestre su razonamiento. Primer fragmento: pensar en voz alta.",
+    "en": "We reached The Forge. Here I learn to make the AI show its reasoning. First fragment: thinking out loud."
+  },
+  "byte_outro": {
+    "es": "¡Genial! Cuando le pido que piense paso a paso, se equivoca menos en problemas difíciles. Anotado.",
+    "en": "Awesome! When I ask it to think step by step, it makes fewer mistakes on hard problems. Noted."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa pedirle a la IA que 'piense paso a paso'?", "en": "What does asking the AI to 'think step by step' mean?" },
+      "options": [
+        { "es": "Que muestre el razonamiento antes de dar la respuesta final", "en": "That it shows its reasoning before giving the final answer" },
+        { "es": "Que responda más lento a propósito", "en": "That it answers slower on purpose" },
+        { "es": "Que use palabras más difíciles", "en": "That it uses harder words" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Chain-of-thought es pedirle que explicite los pasos intermedios. Al 'pensar en voz alta', razona mejor problemas complejos.",
+        "en": "Chain-of-thought means asking it to spell out the intermediate steps. By 'thinking out loud', it reasons better on complex problems."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿En qué tipo de problema ayuda más el razonamiento paso a paso?", "en": "For which kind of problem does step-by-step reasoning help most?" },
+      "options": [
+        { "es": "Un problema de varios pasos, como un cálculo o una lógica", "en": "A multi-step problem, like a calculation or a logic puzzle" },
+        { "es": "Saludar y decir 'hola'", "en": "Greeting and saying 'hi'" },
+        { "es": "Repetir una palabra que le diste", "en": "Repeating a word you gave it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En tareas de un solo paso no cambia nada. En las que encadenan pasos (matemática, lógica, planificación), pensar antes reduce errores.",
+        "en": "For one-step tasks it makes no difference. For tasks that chain steps (math, logic, planning), thinking first reduces errors."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos dos prompts hace razonar más a la IA?", "en": "Which of these two prompts makes the AI reason more?" },
+      "options": [
+        { "es": "\"Si 3 lápices cuestan $150, ¿cuánto cuestan 7? Resolvelo paso a paso.\"", "en": "\"If 3 pencils cost $150, how much do 7 cost? Solve it step by step.\"" },
+        { "es": "\"7 lápices, decime el total y nada más.\"", "en": "\"7 pencils, just tell me the total, nothing else.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El primero pide mostrar los pasos (sacar el precio unitario y multiplicar). El segundo apura la respuesta y es más fácil que se equivoque.",
+        "en": "The first asks to show the steps (find the unit price, then multiply). The second rushes the answer and is more likely to slip."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es una frase típica para activar el razonamiento paso a paso?", "en": "What's a typical phrase to trigger step-by-step reasoning?" },
+      "options": [
+        { "es": "\"Pensemos esto paso a paso antes de responder.\"", "en": "\"Let's think this through step by step before answering.\"" },
+        { "es": "\"Rápido, no pienses.\"", "en": "\"Quick, don't think.\"" },
+        { "es": "\"Respondé en una sola palabra.\"", "en": "\"Answer in a single word.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Frases como 'paso a paso' o 'explicá tu razonamiento' invitan al modelo a desplegar los pasos intermedios.",
+        "en": "Phrases like 'step by step' or 'explain your reasoning' invite the model to lay out the intermediate steps."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Después de que la IA razona paso a paso, ¿qué conviene pedirle al final?", "en": "After the AI reasons step by step, what's good to ask for at the end?" },
+      "options": [
+        { "es": "Que cierre con la respuesta final clara y separada", "en": "To close with a clear final answer, set apart" },
+        { "es": "Que borre todo el razonamiento sin mostrar nada", "en": "To erase all the reasoning and show nothing" },
+        { "es": "Que nunca dé una conclusión", "en": "To never give a conclusion" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El razonamiento ayuda a llegar bien, pero al final querés una conclusión clara: 'por lo tanto, la respuesta es...'.",
+        "en": "The reasoning helps get there, but at the end you want a clear conclusion: 'therefore, the answer is...'."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué razonar en voz alta suele dar mejores respuestas?", "en": "Why does reasoning out loud usually give better answers?" },
+      "options": [
+        { "es": "Al escribir cada paso, cada uno apoya al siguiente y se detectan errores", "en": "By writing each step, each one supports the next and errors get caught" },
+        { "es": "Porque usa más memoria de la computadora", "en": "Because it uses more computer memory" },
+        { "es": "Porque cambia el idioma automáticamente", "en": "Because it switches language automatically" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo genera palabra por palabra; si primero escribe los pasos, esos pasos guían la respuesta final en vez de adivinarla de una.",
+        "en": "The model generates word by word; if it writes the steps first, those steps guide the final answer instead of guessing it in one shot."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt que pida razonamiento paso a paso", "en": "Build a prompt that asks for step-by-step reasoning" },
+      "solution": {
+        "es": ["Resolvé este problema", "explicando cada paso", "y al final dame la respuesta."],
+        "en": ["Solve this problem", "explaining each step", "and give me the answer at the end."]
+      },
+      "distractors": {
+        "es": ["sin mostrar nada", "adiviná rápido"],
+        "en": ["without showing anything", "just guess fast"]
+      },
+      "explanation": {
+        "es": "Pedir los pasos y una respuesta final al cierre es la receta clásica de chain-of-thought.",
+        "en": "Asking for the steps plus a final answer at the close is the classic chain-of-thought recipe."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la frase que activa el razonamiento explícito", "en": "Build the phrase that triggers explicit reasoning" },
+      "solution": {
+        "es": ["Pensemos esto", "paso a paso", "antes de dar la respuesta."],
+        "en": ["Let's think this", "step by step", "before giving the answer."]
+      },
+      "distractors": {
+        "es": ["contestá de una", "sin pensar"],
+        "en": ["answer at once", "without thinking"]
+      },
+      "explanation": {
+        "es": "'Paso a paso, antes de responder' le dice al modelo que despliegue el razonamiento primero.",
+        "en": "'Step by step, before answering' tells the model to lay out the reasoning first."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Completá por qué conviene en problemas complejos", "en": "Complete why it helps on complex problems" },
+      "solution": {
+        "es": ["Mostrar el razonamiento", "reduce errores", "en tareas de varios pasos."],
+        "en": ["Showing the reasoning", "reduces errors", "on multi-step tasks."]
+      },
+      "distractors": {
+        "es": ["empeora la respuesta", "en cualquier tarea"],
+        "en": ["worsens the answer", "on any task"]
+      },
+      "explanation": {
+        "es": "El beneficio se nota cuando la tarea encadena pasos; ahí razonar antes evita saltar a una conclusión errada.",
+        "en": "The benefit shows when the task chains steps; there, reasoning first avoids jumping to a wrong conclusion."
+      }
+    }
+  ]
+}

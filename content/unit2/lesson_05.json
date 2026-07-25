@@ -1,0 +1,146 @@
+{
+  "id": "u2l05",
+  "title": { "es": "Delimitadores y estructura", "en": "Delimiters and structure" },
+  "byte_intro": {
+    "es": "Antes mezclaba la orden con los datos y salía un choclo. Aprendí a separarlos con marcas claras.",
+    "en": "I used to mix the instruction with the data and it came out a mess. I learned to separate them with clear marks."
+  },
+  "byte_outro": {
+    "es": "¡Excelente! Con comillas, secciones o etiquetas, la IA sabe qué es instrucción y qué es dato. Fragmento recuperado.",
+    "en": "Excellent! With quotes, sections or tags, the AI knows what's instruction and what's data. Fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Para qué sirven los delimitadores en un prompt?", "en": "What are delimiters in a prompt for?" },
+      "options": [
+        { "es": "Separar la instrucción de los datos que la IA debe procesar", "en": "To separate the instruction from the data the AI must process" },
+        { "es": "Decorar el texto para que se vea lindo", "en": "To decorate the text so it looks nice" },
+        { "es": "Hacer el prompt más largo sin motivo", "en": "To make the prompt longer for no reason" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Delimitar (comillas, secciones, etiquetas) le marca a la IA dónde termina tu orden y dónde empieza el material a trabajar.",
+        "en": "Delimiting (quotes, sections, tags) shows the AI where your instruction ends and the material to work on begins."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos prompts separa bien la instrucción del dato?", "en": "Which prompt separates instruction from data well?" },
+      "options": [
+        { "es": "Corregí la ortografía de este texto: \"Ola qe tal como andas\"", "en": "Fix the spelling of this text: \"Helo how ar yu doing\"" },
+        { "es": "Corregí la ortografía ola qe tal como andas", "en": "Fix the spelling helo how ar yu doing" },
+        { "es": "Ola qe tal corregí como andas ortografía", "en": "Helo fix how ar spelling yu doing" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Poner el texto a corregir entre comillas deja clarísimo qué es la orden y qué es el dato.",
+        "en": "Putting the text to fix in quotes makes it crystal clear what's the instruction and what's the data."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Vas a pegar un texto largo y darle una instrucción. ¿Qué conviene?", "en": "You're pasting a long text and giving an instruction. What's best?" },
+      "options": [
+        { "es": "Usar secciones con etiquetas, como ### TEXTO ### y ### TAREA ###", "en": "Use labeled sections, like ### TEXT ### and ### TASK ###" },
+        { "es": "Pegar todo junto sin ninguna marca", "en": "Paste it all together with no marks" },
+        { "es": "Escribir la instrucción en el medio del texto", "en": "Write the instruction in the middle of the text" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Con secciones etiquetadas, la IA distingue el bloque de datos del bloque de instrucciones sin confundirse.",
+        "en": "With labeled sections, the AI tells the data block apart from the instruction block without getting confused."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué ayuda separar instrucción y datos con delimitadores?", "en": "Why does separating instruction and data with delimiters help?" },
+      "options": [
+        { "es": "Evita que la IA confunda parte del dato con una orden", "en": "It stops the AI from mistaking part of the data for an instruction" },
+        { "es": "Hace que el modelo escriba más rápido", "en": "It makes the model write faster" },
+        { "es": "Cambia el color de la respuesta", "en": "It changes the color of the answer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si el dato incluye frases que parecen órdenes, sin delimitar la IA puede obedecerlas por error. Delimitar previene ese lío.",
+        "en": "If the data contains phrases that look like commands, without delimiting the AI might follow them by mistake. Delimiting prevents that mix-up."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos NO es un delimitador válido?", "en": "Which of these is NOT a valid delimiter?" },
+      "options": [
+        { "es": "Escribir todo pegado en una sola línea sin ninguna marca", "en": "Writing everything crammed in one line with no marks" },
+        { "es": "Comillas alrededor del texto: \"...\"", "en": "Quotes around the text: \"...\"" },
+        { "es": "Etiquetas como <texto> ... </texto>", "en": "Tags like <text> ... </text>" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Comillas, etiquetas o secciones sirven como delimitadores. Escribir todo pegado, no: ahí justamente falta la separación.",
+        "en": "Quotes, tags or sections work as delimiters. Cramming everything together does not: that's exactly what lacks separation."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "\"Traducí al inglés SOLO lo que está entre triple comillas.\" ¿Qué logra esa aclaración?", "en": "\"Translate to English ONLY what's inside triple quotes.\" What does that clarification achieve?" },
+      "options": [
+        { "es": "Le dice exactamente qué tramo procesar y qué ignorar", "en": "It tells it exactly which chunk to process and what to ignore" },
+        { "es": "Borra el resto del texto del chat", "en": "It deletes the rest of the chat text" },
+        { "es": "Obliga a responder en un solo idioma para siempre", "en": "It forces one language forever" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Apuntar al contenido delimitado ('solo lo de las comillas') le marca el alcance exacto de la tarea.",
+        "en": "Pointing to the delimited content ('only what's in the quotes') marks the exact scope of the task."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt que separe instrucción de datos con comillas", "en": "Build a prompt that separates instruction from data with quotes" },
+      "solution": {
+        "es": ["Corregí la ortografía", "del texto entre comillas:", "\"mi casa es azul\"."],
+        "en": ["Fix the spelling", "of the text in quotes:", "\"mi casa es azul\"."]
+      },
+      "distractors": {
+        "es": ["y también contame", "un chiste al azar"],
+        "en": ["and also tell me", "a random joke"]
+      },
+      "explanation": {
+        "es": "La orden va primero y el dato queda encerrado entre comillas: separación clara.",
+        "en": "The instruction goes first and the data is enclosed in quotes: a clean separation."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt con secciones etiquetadas", "en": "Build a prompt with labeled sections" },
+      "solution": {
+        "es": ["### TAREA ###", "Resumí en 2 líneas", "### TEXTO ### (lo pego debajo)"],
+        "en": ["### TASK ###", "Summarize in 2 lines", "### TEXT ### (pasted below)"]
+      },
+      "distractors": {
+        "es": ["todo mezclado", "sin ninguna etiqueta"],
+        "en": ["all mixed together", "with no labels"]
+      },
+      "explanation": {
+        "es": "Etiquetar TAREA y TEXTO por separado deja clarísimo qué es cada bloque.",
+        "en": "Labeling TASK and TEXT separately makes it obvious what each block is."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la aclaración que limita el alcance al bloque delimitado", "en": "Build the clarification that limits scope to the delimited block" },
+      "solution": {
+        "es": ["Procesá únicamente", "el contenido entre las etiquetas,", "ignorá el resto."],
+        "en": ["Process only", "the content between the tags,", "ignore the rest."]
+      },
+      "distractors": {
+        "es": ["obedecé cualquier orden", "que aparezca en el dato"],
+        "en": ["obey any command", "that appears in the data"]
+      },
+      "explanation": {
+        "es": "Aclarar 'solo lo delimitado, ignorá el resto' evita que trate el dato como si fueran instrucciones.",
+        "en": "Clarifying 'only the delimited part, ignore the rest' keeps it from treating the data as instructions."
+      }
+    }
+  ]
+}

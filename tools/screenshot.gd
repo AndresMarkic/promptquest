@@ -45,10 +45,14 @@ func _correr() -> void:
 	await _capturar("intro", "res://scenes/intro/IntroScreen.tscn", func(): pass)
 
 	await _capturar("mapa", "res://scenes/map/MapScreen.tscn", func():
-		_save.store.data["lessons"] = {"u1l01": {"stars": 3}, "u1l02": {"stars": 2}}
-		_save.store.data["streak_days"] = 4
+		# Unidad 1 completa → se ve la transición a la zona 2 (LA FORJA).
+		var lecs := {}
+		for n in range(1, 11):
+			lecs["u1l%02d" % n] = {"stars": 3 if n <= 7 else 2}
+		_save.store.data["lessons"] = lecs
+		_save.store.data["streak_days"] = 7
 		_save.store.data["last_activity_date"] = Time.get_date_string_from_system()
-		_save.store.data["xp_total"] = 85)
+		_save.store.data["xp_total"] = 210)
 
 	await _capturar("leccion", "res://scenes/lesson/LessonScreen.tscn", func():
 		_game.params = {"lesson_id": "u1l01", "review": false})
@@ -59,5 +63,39 @@ func _correr() -> void:
 
 	await _capturar("ajustes", "res://scenes/ui/SettingsPanel.tscn", func(): pass)
 
+	# captura del mapa scrolleado a la transición EL NÚCLEO → LA FORJA
+	await _cap_mapa_transicion()
+
 	print("LISTO")
 	quit(0)
+
+func _buscar_scroll(n: Node) -> ScrollContainer:
+	for h in n.get_children():
+		if h is ScrollContainer:
+			return h
+		var r := _buscar_scroll(h)
+		if r != null:
+			return r
+	return null
+
+func _cap_mapa_transicion() -> void:
+	_reset_save()
+	var lecs := {}
+	for n in range(1, 11):
+		lecs["u1l%02d" % n] = {"stars": 3}
+	_save.store.data["lessons"] = lecs
+	_save.store.data["streak_days"] = 7
+	_save.store.data["xp_total"] = 210
+	var mapa = (load("res://scenes/map/MapScreen.tscn") as PackedScene).instantiate()
+	root.add_child(mapa)
+	for i in 10:
+		await process_frame
+	var sc := _buscar_scroll(mapa)
+	if sc != null:
+		sc.scroll_vertical = 1360  # ~fin de la zona 1 / inicio de la zona 2
+	for i in 14:
+		await process_frame
+	root.get_viewport().get_texture().get_image().save_png("res://capturas/mapa_transicion.png")
+	print("captura: mapa_transicion")
+	mapa.queue_free()
+	await process_frame

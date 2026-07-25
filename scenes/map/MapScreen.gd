@@ -52,6 +52,23 @@ func _armar_hud_superior() -> void:
 func _abrir_ajustes() -> void:
 	add_child(load("res://scenes/ui/SettingsPanel.tscn").instantiate())
 
+func _header_zona(u: Dictionary) -> Control:
+	var cont := Control.new()
+	cont.custom_minimum_size = Vector2(720, 82)
+	var t := UiTheme.titulo(str(u["zona"]), 28, UiTheme.ACENTO)
+	t.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	t.autowrap_mode = TextServer.AUTOWRAP_OFF
+	t.set_anchors_preset(Control.PRESET_TOP_WIDE)
+	t.position = Vector2(0, 14)
+	cont.add_child(t)
+	var s := UiTheme.etiqueta(str(u["sub"]), 17, UiTheme.TEXTO_SUAVE)
+	s.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	s.autowrap_mode = TextServer.AUTOWRAP_OFF
+	s.set_anchors_preset(Control.PRESET_TOP_WIDE)
+	s.position = Vector2(0, 52)
+	cont.add_child(s)
+	return cont
+
 func _armar_camino() -> void:
 	var scroll := ScrollContainer.new()
 	scroll.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -63,44 +80,37 @@ func _armar_camino() -> void:
 	lienzo.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	scroll.add_child(lienzo)
 
-	var metas: Array = Content.get_unit_lessons()
+	var unidades: Array = Content.get_unidades()
 	var avance: Dictionary = SaveData.get_value("lessons", {})
-	var ids: Array = Content.UNIT1_IDS
+	var flat: Array = Content.todos_los_ids()  # orden global para el desbloqueo
 
-	# encabezado de la unidad
-	var header := UiTheme.titulo("EL NÚCLEO", 30, UiTheme.ACENTO)
-	header.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	header.set_anchors_preset(Control.PRESET_TOP_WIDE)
-	header.position = Vector2(0, 8)
-	header.custom_minimum_size = Vector2(720, 0)
-	lienzo.add_child(header)
-	var sub := UiTheme.etiqueta("Fundamentos de IA", 18, UiTheme.TEXTO_SUAVE)
-	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	sub.set_anchors_preset(Control.PRESET_TOP_WIDE)
-	sub.position = Vector2(0, 46)
-	lienzo.add_child(sub)
-
-	var margen_top := 110.0
 	var paso := 168.0
 	var cx := 360.0
 	var amplitud := 150.0
+	var y := 12.0
+	var gi := 0  # índice global del zigzag (continuo entre zonas)
 	var nodos: Array = []
-	var i := 0
-	for meta in metas:
-		var estado := ProgressLogic.estado(meta["id"], ids, avance)
-		var nodo: LessonNode = load("res://scenes/map/LessonNode.tscn").instantiate()
-		lienzo.add_child(nodo)
-		nodo.configurar(meta, estado, int(avance.get(meta["id"], {}).get("stars", 0)), i + 1)
-		nodo.pressed.connect(_al_tocar)
-		# posición serpenteante
-		var px := cx + amplitud * sin(i * 0.9)
-		var py := margen_top + i * paso
-		nodo.position = Vector2(px - 110, py)  # -110 ~ media anchura del nodo
-		nodo.custom_minimum_size = Vector2(220, 0)
-		nodos.append(nodo)
-		i += 1
+	for u in unidades:
+		var header := _header_zona(u)
+		header.position = Vector2(0, y)
+		lienzo.add_child(header)
+		y += 96.0
+		var n := 1
+		for meta in u["lecciones"]:
+			var estado := ProgressLogic.estado(meta["id"], flat, avance)
+			var nodo: LessonNode = load("res://scenes/map/LessonNode.tscn").instantiate()
+			lienzo.add_child(nodo)
+			nodo.configurar(meta, estado, int(avance.get(meta["id"], {}).get("stars", 0)), n)
+			nodo.pressed.connect(_al_tocar)
+			nodo.position = Vector2(cx + amplitud * sin(gi * 0.9) - 110, y)
+			nodo.custom_minimum_size = Vector2(220, 0)
+			nodos.append(nodo)
+			y += paso
+			gi += 1
+			n += 1
+		y += 34.0  # aire entre zonas
 
-	lienzo.custom_minimum_size = Vector2(720, margen_top + i * paso + 40)
+	lienzo.custom_minimum_size = Vector2(720, y + 40)
 	_dibujar_camino(lienzo, nodos)
 
 func _dibujar_camino(lienzo: Control, nodos: Array) -> void:
@@ -124,7 +134,7 @@ func _dibujar_camino(lienzo: Control, nodos: Array) -> void:
 
 func _al_tocar(id: String) -> void:
 	var avance: Dictionary = SaveData.get_value("lessons", {})
-	var estado := ProgressLogic.estado(id, Content.UNIT1_IDS, avance)
+	var estado := ProgressLogic.estado(id, Content.todos_los_ids(), avance)
 	if estado == "completada":
 		var d := ConfirmationDialog.new()
 		d.dialog_text = I18n.t("REPASAR_PREGUNTA")

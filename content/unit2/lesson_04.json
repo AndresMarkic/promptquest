@@ -1,0 +1,146 @@
+{
+  "id": "u2l04",
+  "title": { "es": "Poner restricciones", "en": "Set constraints" },
+  "byte_intro": {
+    "es": "Sin límites, la IA se desborda. Aprendí a ponerle rejas: cuánto, hasta dónde y con qué materiales.",
+    "en": "Without limits, the AI overflows. I learned to set fences: how much, how far, and with what materials."
+  },
+  "byte_outro": {
+    "es": "¡Perfecto! Con restricciones claras, la respuesta viene justa a medida. Otro fragmento en su lugar.",
+    "en": "Perfect! With clear constraints, the answer comes tailored to fit. Another fragment back in place."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Para qué sirve ponerle restricciones a un prompt?", "en": "What are constraints in a prompt for?" },
+      "options": [
+        { "es": "Acotar largo, alcance y qué puede o no usar", "en": "To bound length, scope, and what it may or may not use" },
+        { "es": "Confundir a la IA a propósito", "en": "To confuse the AI on purpose" },
+        { "es": "Hacer que responda en otro idioma sin pedirlo", "en": "To make it answer in another language unprompted" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Las restricciones marcan los límites: cuánto escribir, qué incluir y qué dejar afuera. Así la respuesta viene a medida.",
+        "en": "Constraints set the limits: how much to write, what to include, and what to leave out. That way the answer is tailored."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es una restricción de LARGO bien puesta?", "en": "Which is a well-set LENGTH constraint?" },
+      "options": [
+        { "es": "\"Máximo 100 palabras.\"", "en": "\"100 words maximum.\"" },
+        { "es": "\"Ni muy largo ni muy corto.\"", "en": "\"Not too long, not too short.\"" },
+        { "es": "\"Lo que te salga.\"", "en": "\"Whatever comes out.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un número concreto (100 palabras) es una restricción medible; 'ni largo ni corto' no le dice nada útil.",
+        "en": "A concrete number (100 words) is a measurable constraint; 'not too long, not too short' tells it nothing useful."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "\"Explicá qué es el ADN usando SOLO palabras que entienda un chico de 8 años.\" ¿Qué tipo de restricción es?", "en": "\"Explain what DNA is using ONLY words an 8-year-old would understand.\" What kind of constraint is this?" },
+      "options": [
+        { "es": "De alcance/estilo: limita el vocabulario permitido", "en": "Scope/style: it limits the allowed vocabulary" },
+        { "es": "De idioma: la obliga a traducir", "en": "Language: it forces a translation" },
+        { "es": "Ninguna, no hay restricción", "en": "None, there's no constraint" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "'Solo palabras simples' acota los materiales que puede usar: es una restricción de alcance y estilo.",
+        "en": "'Only simple words' bounds the materials it can use: that's a scope and style constraint."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es una restricción de tipo 'no incluyas aquello'?", "en": "Which is a 'do not include that' type of constraint?" },
+      "options": [
+        { "es": "\"No menciones marcas ni precios.\"", "en": "\"Don't mention brands or prices.\"" },
+        { "es": "\"Escribí sobre lo que quieras.\"", "en": "\"Write about whatever you want.\"" },
+        { "es": "\"Agregá todo lo que se te ocurra.\"", "en": "\"Add anything that comes to mind.\"" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Prohibir algo puntual ('no marcas ni precios') es una restricción de exclusión muy útil para acotar la salida.",
+        "en": "Forbidding a specific thing ('no brands or prices') is an exclusion constraint, very handy for narrowing the output."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "\"Basate SOLO en el texto que te pego, no uses conocimiento externo.\" ¿Qué logra esto?", "en": "\"Base it ONLY on the text I paste, don't use outside knowledge.\" What does this achieve?" },
+      "options": [
+        { "es": "Limita la fuente para que no invente ni traiga datos de afuera", "en": "It limits the source so it won't invent or bring in outside data" },
+        { "es": "Hace que la IA olvide el idioma", "en": "It makes the AI forget the language" },
+        { "es": "No cambia nada la respuesta", "en": "It doesn't change the answer at all" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Restringir la fuente ('solo este texto') reduce el riesgo de que mezcle información inventada o irrelevante.",
+        "en": "Restricting the source ('only this text') lowers the risk of it mixing in invented or irrelevant information."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué pasa si ponés demasiadas restricciones contradictorias?", "en": "What happens if you pile on too many contradictory constraints?" },
+      "options": [
+        { "es": "La IA no puede cumplirlas todas y la respuesta empeora", "en": "The AI can't satisfy them all and the answer gets worse" },
+        { "es": "Siempre mejora, cuantas más mejor", "en": "It always improves, the more the better" },
+        { "es": "Las ignora todas por igual", "en": "It ignores them all equally" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Ojo: pedir 'muy detallado pero en 10 palabras' se contradice. Las restricciones tienen que ser claras y compatibles.",
+        "en": "Careful: asking for 'very detailed but in 10 words' contradicts itself. Constraints must be clear and compatible."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt con restricción de largo y de exclusión", "en": "Build a prompt with a length and an exclusion constraint" },
+      "solution": {
+        "es": ["Resumí la noticia", "en máximo 3 oraciones", "y no incluyas opiniones."],
+        "en": ["Summarize the news", "in 3 sentences maximum", "and don't include opinions."]
+      },
+      "distractors": {
+        "es": ["todo lo largo que quieras", "y agregá tu opinión"],
+        "en": ["as long as you want", "and add your opinion"]
+      },
+      "explanation": {
+        "es": "Combinás un límite medible (3 oraciones) con una exclusión (sin opiniones): dos restricciones claras.",
+        "en": "You combine a measurable limit (3 sentences) with an exclusion (no opinions): two clear constraints."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una restricción que limite la fuente", "en": "Build a constraint that limits the source" },
+      "solution": {
+        "es": ["Respondé usando", "solo la información del texto de arriba,", "sin agregar datos externos."],
+        "en": ["Answer using", "only the information in the text above,", "without adding outside data."]
+      },
+      "distractors": {
+        "es": ["usá lo que sepas de internet", "e inventá lo que falte"],
+        "en": ["use whatever you know online", "and make up the rest"]
+      },
+      "explanation": {
+        "es": "Acotar la fuente al texto dado evita que traiga o invente información de afuera.",
+        "en": "Bounding the source to the given text prevents it from bringing in or inventing outside information."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una restricción de estilo por público", "en": "Build a style constraint by audience" },
+      "solution": {
+        "es": ["Explicalo", "con palabras simples", "para alguien sin conocimientos técnicos."],
+        "en": ["Explain it", "with simple words", "for someone with no technical background."]
+      },
+      "distractors": {
+        "es": ["con jerga avanzada", "para expertos del área"],
+        "en": ["with advanced jargon", "for domain experts"]
+      },
+      "explanation": {
+        "es": "Fijar el vocabulario y el público es una restricción de alcance que enfoca la respuesta.",
+        "en": "Setting the vocabulary and the audience is a scope constraint that focuses the answer."
+      }
+    }
+  ]
+}
