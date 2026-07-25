@@ -1,0 +1,146 @@
+{
+  "id": "u8l03",
+  "title": { "es": "RAG de verdad", "en": "RAG for real" },
+  "byte_intro": {
+    "es": "Ya vimos RAG por arriba. Ahora en serio: cómo partir documentos, recuperar bien y re-rankear. Acá se gana o se pierde.",
+    "en": "We saw RAG at a glance. Now for real: how to split documents, retrieve well and re-rank. This is where you win or lose."
+  },
+  "byte_outro": {
+    "es": "¡Qué avance! Chunking, recuperación y re-ranking. Ya entendés por qué un RAG falla y cómo hacerlo funcionar de verdad.",
+    "en": "What progress! Chunking, retrieval and re-ranking. You now get why a RAG fails and how to make it truly work."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es el 'chunking' en un sistema RAG?", "en": "What is 'chunking' in a RAG system?" },
+      "options": [
+        { "es": "Partir los documentos en pedazos manejables para poder recuperarlos", "en": "Splitting documents into manageable pieces so they can be retrieved" },
+        { "es": "Borrar documentos viejos", "en": "Deleting old documents" },
+        { "es": "Entrenar el modelo con tus datos", "en": "Training the model on your data" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "RAG no busca en documentos enteros: los parte en pedazos (chunks). Recupera los pedazos relevantes y se los pasa al modelo.",
+        "en": "RAG doesn't search whole documents: it splits them into pieces (chunks). It retrieves the relevant pieces and hands them to the model."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué el tamaño del chunk importa tanto?", "en": "Why does chunk size matter so much?" },
+      "options": [
+        { "es": "Muy grande mete ruido; muy chico corta la idea a la mitad", "en": "Too big adds noise; too small cuts the idea in half" },
+        { "es": "No importa, cualquier tamaño da igual", "en": "It doesn't matter, any size is the same" },
+        { "es": "Cuanto más grande, siempre mejor", "en": "The bigger, the always better" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un chunk enorme trae texto de más (ruido); uno diminuto parte la idea y pierde contexto. El tamaño justo mantiene cada idea completa.",
+        "en": "A huge chunk brings extra text (noise); a tiny one splits the idea and loses context. The right size keeps each idea whole."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En RAG, ¿cómo se busca qué chunk es relevante?", "en": "In RAG, how do you find which chunk is relevant?" },
+      "options": [
+        { "es": "Comparando el significado de la pregunta con el de cada chunk (embeddings)", "en": "Comparing the meaning of the question with each chunk's meaning (embeddings)" },
+        { "es": "Buscando solo la palabra exacta, letra por letra", "en": "Searching only the exact word, letter by letter" },
+        { "es": "Preguntándole al usuario cuál usar", "en": "Asking the user which one to use" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Se comparan significados con embeddings: así 'auto' matchea con 'vehículo' aunque no sea la misma palabra. La búsqueda por significado supera a la literal.",
+        "en": "Meanings are compared via embeddings: so 'car' matches 'vehicle' even if it's not the same word. Meaning-based search beats literal search."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué hace el paso de 're-ranking'?", "en": "What does the 're-ranking' step do?" },
+      "options": [
+        { "es": "Reordena los chunks recuperados y deja arriba los más relevantes", "en": "Reorders the retrieved chunks and puts the most relevant on top" },
+        { "es": "Borra los documentos menos leídos", "en": "Deletes the least-read documents" },
+        { "es": "Traduce los chunks a otro idioma", "en": "Translates the chunks to another language" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La primera búsqueda trae candidatos rápido pero imperfectos. El re-ranker los mira con más cuidado y sube los que de verdad responden.",
+        "en": "The first search brings candidates fast but imperfect. The re-ranker looks at them more carefully and promotes the ones that truly answer."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un RAG responde mal aunque el dato SÍ está en tus documentos. ¿Causa probable?", "en": "A RAG answers badly even though the fact IS in your documents. Likely cause?" },
+      "options": [
+        { "es": "La recuperación no trajo el chunk correcto al contexto", "en": "Retrieval didn't bring the right chunk into the context" },
+        { "es": "El modelo se quedó sin batería", "en": "The model ran out of battery" },
+        { "es": "Los documentos son demasiado buenos", "en": "The documents are too good" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo solo puede usar lo que le llega. Si el chunk correcto no se recuperó, responde con lo que tiene (mal) o alucina. El cuello de botella suele ser la recuperación.",
+        "en": "The model can only use what reaches it. If the right chunk wasn't retrieved, it answers with what it has (badly) or hallucinates. The bottleneck is usually retrieval."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es una forma concreta de mejorar un RAG que recupera mal?", "en": "What's a concrete way to improve a RAG that retrieves badly?" },
+      "options": [
+        { "es": "Ajustar el tamaño de chunk y agregar un re-ranker", "en": "Tune chunk size and add a re-ranker" },
+        { "es": "Poner un modelo más caro para generar la respuesta final", "en": "Use a more expensive model for the final answer" },
+        { "es": "Pedirle al usuario que escriba mejor", "en": "Ask the user to write better" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si el problema es recuperación, la solución está ahí: mejor chunking y re-ranking. Cambiar el modelo generador no arregla que le llegue el chunk equivocado.",
+        "en": "If the problem is retrieval, the fix is there: better chunking and re-ranking. Swapping the generator model won't fix the wrong chunk arriving."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el flujo de un RAG en orden", "en": "Build the RAG flow in order" },
+      "solution": {
+        "es": ["Parto los documentos en chunks,", "recupero los más relevantes por significado,", "los re-rankeo y se los paso al modelo."],
+        "en": ["I split the documents into chunks,", "retrieve the most relevant by meaning,", "re-rank them and hand them to the model."]
+      },
+      "distractors": {
+        "es": ["le paso el documento entero al modelo", "sin buscar nada"],
+        "en": ["I hand the whole document to the model", "without searching anything"]
+      },
+      "explanation": {
+        "es": "Chunking, recuperación por significado y re-ranking: ese es el corazón de un RAG que funciona.",
+        "en": "Chunking, meaning-based retrieval and re-ranking: that's the heart of a RAG that works."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá por qué un chunk mal cortado arruina la respuesta", "en": "Build why a badly cut chunk ruins the answer" },
+      "solution": {
+        "es": ["Si el chunk corta la idea a la mitad,", "el modelo recibe contexto incompleto", "y responde mal o inventa."],
+        "en": ["If the chunk cuts the idea in half,", "the model gets incomplete context", "and answers badly or makes things up."]
+      },
+      "distractors": {
+        "es": ["cortar por la mitad", "siempre mejora la precisión"],
+        "en": ["cutting in half", "always improves accuracy"]
+      },
+      "explanation": {
+        "es": "Un buen chunk mantiene la idea completa; uno mal cortado le deja al modelo información a medias.",
+        "en": "A good chunk keeps the idea whole; a badly cut one leaves the model with half the information."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo diagnosticar un RAG que responde mal", "en": "Build how to diagnose a RAG that answers badly" },
+      "solution": {
+        "es": ["Primero reviso qué chunks recuperó:", "si no trajo el correcto,", "el problema es la recuperación, no el modelo."],
+        "en": ["First I check which chunks it retrieved:", "if it didn't bring the right one,", "the problem is retrieval, not the model."]
+      },
+      "distractors": {
+        "es": ["cambio el modelo de inmediato", "sin mirar qué recuperó"],
+        "en": ["I swap the model right away", "without checking what it retrieved"]
+      },
+      "explanation": {
+        "es": "Diagnosticar la causa raíz: mirá primero qué se recuperó antes de culpar al modelo.",
+        "en": "Diagnose the root cause: look first at what was retrieved before blaming the model."
+      }
+    }
+  ]
+}

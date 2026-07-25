@@ -1,0 +1,146 @@
+{
+  "id": "u6l09",
+  "title": { "es": "Contextos largos", "en": "Long contexts" },
+  "byte_intro": {
+    "es": "Puedo recibir muchísimo texto de una, pero más no siempre es mejor. Aprendí a elegir qué poner, qué dejar afuera y dónde ubicar lo importante para no perderlo.",
+    "en": "I can take in a huge amount of text at once, but more isn't always better. I learned what to include, what to leave out, and where to place what matters so it doesn't get lost."
+  },
+  "byte_outro": {
+    "es": "Contexto justo y bien ordenado: rindo mejor que con una montaña de texto desordenado. Último lingote antes del jefe.",
+    "en": "The right context, well ordered: I do better than with a mountain of messy text. Last ingot before the boss."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Con un modelo de contexto largo, ¿conviene meter todo el material posible?", "en": "With a long-context model, should you cram in all possible material?" },
+      "options": [
+        { "es": "No: conviene incluir lo relevante y dejar afuera el ruido", "en": "No: include what's relevant and leave out the noise" },
+        { "es": "Sí, cuanto más texto, siempre mejor", "en": "Yes, the more text, always the better" },
+        { "es": "Sí, el modelo ignora lo que sobra sin costo", "en": "Yes, the model ignores extra text at no cost" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Meter texto irrelevante puede diluir lo importante y confundir al modelo. Curar el contexto suele rendir mejor.",
+        "en": "Adding irrelevant text can dilute what matters and confuse the model. Curating the context usually pays off."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es el fenómeno de 'perderse en el medio' (lost in the middle)?", "en": "What is the 'lost in the middle' phenomenon?" },
+      "options": [
+        { "es": "El modelo tiende a usar peor la información ubicada en el medio de un contexto largo", "en": "The model tends to use info placed in the middle of a long context less well" },
+        { "es": "El modelo se traba y deja de responder", "en": "The model freezes and stops answering" },
+        { "es": "El texto del medio se borra solo", "en": "The middle text deletes itself" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Se observó que la info al principio y al final del contexto suele aprovecharse mejor que la del medio.",
+        "en": "It's been observed that info at the start and end of the context is often used better than the middle."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Sabiendo eso, ¿dónde conviene ubicar lo más importante?", "en": "Knowing that, where should you place the most important info?" },
+      "options": [
+        { "es": "Cerca del principio o del final, no enterrado en el medio", "en": "Near the start or the end, not buried in the middle" },
+        { "es": "Justo en el medio del texto", "en": "Right in the middle of the text" },
+        { "es": "En cualquier lado, da igual", "en": "Anywhere, it makes no difference" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Poner la instrucción clave y los datos críticos al principio o al final ayuda a que el modelo los tenga presentes.",
+        "en": "Placing the key instruction and critical data at the start or end helps the model keep them in mind."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué costo tiene llenar el contexto de material innecesario?", "en": "What's the cost of filling the context with unnecessary material?" },
+      "options": [
+        { "es": "Más tokens (más costo y latencia) y más ruido para el modelo", "en": "More tokens (more cost and latency) and more noise for the model" },
+        { "es": "Ninguno, es gratis y siempre mejor", "en": "None, it's free and always better" },
+        { "es": "El modelo responde en otro idioma", "en": "The model answers in another language" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cada token cuesta procesamiento y plata, y el exceso de texto puede tapar lo que de verdad importa.",
+        "en": "Each token costs processing and money, and excess text can bury what really matters."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tenés 200 páginas pero solo 3 son relevantes. ¿Qué conviene?", "en": "You have 200 pages but only 3 are relevant. What's best?" },
+      "options": [
+        { "es": "Seleccionar y pasar solo esos fragmentos relevantes", "en": "Select and pass only those relevant fragments" },
+        { "es": "Pegar las 200 páginas por las dudas", "en": "Paste all 200 pages just in case" },
+        { "es": "No pasar nada y que adivine", "en": "Pass nothing and let it guess" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Filtrar y pasar solo lo pertinente (recuperar los fragmentos útiles) mejora la respuesta y baja el costo.",
+        "en": "Filtering and passing only what's pertinent (retrieving the useful fragments) improves the answer and cuts cost."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué buena práctica ayuda al ordenar un contexto largo?", "en": "Which practice helps when organizing a long context?" },
+      "options": [
+        { "es": "Estructurar con secciones y poner la tarea clara cerca del final", "en": "Structure it with sections and state the task clearly near the end" },
+        { "es": "Escribir todo en un bloque sin separaciones", "en": "Write everything in one block with no separations" },
+        { "es": "Esconder la instrucción en el medio", "en": "Hide the instruction in the middle" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Secciones claras y repetir la tarea cerca del final ayudan a que el modelo no pierda de vista qué tiene que hacer.",
+        "en": "Clear sections and restating the task near the end help the model not lose track of what it must do."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la regla de qué poner en el contexto", "en": "Build the rule of what to put in the context" },
+      "solution": {
+        "es": ["Incluí solo lo relevante,", "dejá afuera el ruido", "y ubicá lo clave al inicio o al final."],
+        "en": ["Include only what's relevant,", "leave out the noise", "and place the key parts at the start or end."]
+      },
+      "distractors": {
+        "es": ["Pegá todo el material", "en cualquier orden."],
+        "en": ["Paste all the material", "in any order."]
+      },
+      "explanation": {
+        "es": "Curar + ubicar bien lo importante es la clave para aprovechar un contexto largo.",
+        "en": "Curating + placing the important parts well is the key to using a long context."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la idea de 'perderse en el medio'", "en": "Build the 'lost in the middle' idea" },
+      "solution": {
+        "es": ["El modelo aprovecha peor", "la información que queda", "en el medio de un contexto largo."],
+        "en": ["The model uses worse", "the information that sits", "in the middle of a long context."]
+      },
+      "distractors": {
+        "es": ["El modelo lee todo", "con la misma atención perfecta."],
+        "en": ["The model reads everything", "with the same perfect attention."]
+      },
+      "explanation": {
+        "es": "Saber que el medio se aprovecha peor te dice dónde NO enterrar lo importante.",
+        "en": "Knowing the middle is used worse tells you where NOT to bury the important stuff."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué hacer cuando el material es enorme", "en": "Build what to do when the material is huge" },
+      "solution": {
+        "es": ["Seleccioná los fragmentos relevantes", "en vez de pegar todo", "para ganar precisión y bajar el costo."],
+        "en": ["Select the relevant fragments", "instead of pasting everything", "to gain precision and cut cost."]
+      },
+      "distractors": {
+        "es": ["Pegá el documento entero", "siempre que puedas."],
+        "en": ["Paste the whole document", "whenever you can."]
+      },
+      "explanation": {
+        "es": "Menos texto pero pertinente rinde más que una montaña con todo mezclado.",
+        "en": "Less but pertinent text does better than a mountain with everything mixed in."
+      }
+    }
+  ]
+}

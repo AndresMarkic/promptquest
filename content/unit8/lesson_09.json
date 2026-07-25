@@ -1,0 +1,146 @@
+{
+  "id": "u8l09",
+  "title": { "es": "Ética y responsabilidad", "en": "Ethics and responsibility" },
+  "byte_intro": {
+    "es": "Podés construir algo poderoso. La pregunta de ingeniero senior no es solo '¿puedo?', sino '¿conviene?' y '¿a quién afecta?'.",
+    "en": "You can build something powerful. The senior engineer's question isn't just 'can I?', but 'should I?' and 'who does it affect?'."
+  },
+  "byte_outro": {
+    "es": "¡Enorme! Impacto, transparencia y límites. Un buen ingeniero de IA construye pensando en las personas, no solo en que funcione.",
+    "en": "Huge! Impact, transparency and limits. A good AI engineer builds thinking of people, not just of making it work."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Además de '¿funciona?', ¿qué se pregunta un ingeniero responsable?", "en": "Beyond 'does it work?', what does a responsible engineer ask?" },
+      "options": [
+        { "es": "¿A quién afecta, cómo, y qué pasa si se equivoca?", "en": "Who does it affect, how, and what happens if it's wrong?" },
+        { "es": "¿Cómo hago para que nadie se entere?", "en": "How do I make sure nobody finds out?" },
+        { "es": "¿Cómo lo hago lo más caro posible?", "en": "How do I make it as expensive as possible?" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Todo sistema tiene impacto en personas reales. Pensar a quién afecta y qué pasa cuando falla es parte del trabajo, no un extra.",
+        "en": "Every system impacts real people. Thinking about who it affects and what happens when it fails is part of the job, not an extra."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un sesgo (bias) en un sistema de IA?", "en": "What is bias in an AI system?" },
+      "options": [
+        { "es": "Que trate distinto o injustamente a grupos de personas por lo que aprendió", "en": "Treating groups of people differently or unfairly due to what it learned" },
+        { "es": "Que responda en varios idiomas", "en": "Answering in several languages" },
+        { "es": "Que use muchos tokens", "en": "Using lots of tokens" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si los datos de entrenamiento venían torcidos, el sistema puede reproducir esa injusticia (por género, origen, edad). Detectarlo y corregirlo es responsabilidad tuya.",
+        "en": "If the training data was skewed, the system can reproduce that unfairness (by gender, origin, age). Detecting and fixing it is your responsibility."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa transparencia con el usuario?", "en": "What does transparency with the user mean?" },
+      "options": [
+        { "es": "Que sepa que habla con una IA y que esta puede equivocarse", "en": "Letting them know they're talking to an AI and that it can be wrong" },
+        { "es": "Mostrarle todo el código fuente", "en": "Showing them all the source code" },
+        { "es": "Hacerle creer que es un humano", "en": "Making them believe it's a human" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La gente merece saber que interactúa con una IA y que puede errar, para no confiar ciegamente. Hacerla pasar por humana es engañoso.",
+        "en": "People deserve to know they're dealing with an AI that can err, so they don't trust it blindly. Passing it off as human is deceptive."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para una decisión de alto impacto (salud, crédito, justicia), lo responsable es...", "en": "For a high-impact decision (health, credit, justice), the responsible move is..." },
+      "options": [
+        { "es": "Que la IA asista, pero que una persona tenga la decisión final", "en": "Let AI assist, but keep the final decision with a person" },
+        { "es": "Que la IA decida sola, sin revisión", "en": "Let AI decide alone, no review" },
+        { "es": "No decidir nunca nada", "en": "Never decide anything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En decisiones que cambian vidas, la IA puede ayudar a analizar, pero la última palabra la tiene un humano responsable. Automatizar del todo es peligroso.",
+        "en": "In life-changing decisions, AI can help analyze, but the final say belongs to a responsible human. Fully automating is dangerous."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué NO conviene automatizar del todo con IA?", "en": "What is NOT worth fully automating with AI?" },
+      "options": [
+        { "es": "Decisiones sensibles donde un error tiene consecuencias graves para personas", "en": "Sensitive decisions where an error has serious consequences for people" },
+        { "es": "Resumir un texto largo", "en": "Summarizing a long text" },
+        { "es": "Sugerir ideas para un título", "en": "Suggesting ideas for a title" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Que se pueda automatizar no quiere decir que convenga. Cuanto más grave el error posible para una persona, más necesaria es la supervisión humana.",
+        "en": "Being able to automate doesn't mean you should. The graver the possible harm to a person, the more human oversight is needed."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El usuario te confía datos personales. ¿Qué es lo correcto?", "en": "A user trusts you with personal data. What's the right thing?" },
+      "options": [
+        { "es": "Usar solo lo necesario, protegerlo y ser claro sobre qué hacés con él", "en": "Use only what's needed, protect it and be clear about what you do with it" },
+        { "es": "Guardar todo para siempre por si acaso", "en": "Keep everything forever just in case" },
+        { "es": "Compartirlo con quien lo pida", "en": "Share it with whoever asks" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los datos de las personas se cuidan: pedí solo lo que necesitás, protegelo y sé transparente. La privacidad es parte del diseño, no un permiso que se asume.",
+        "en": "People's data must be cared for: ask only for what you need, protect it and be transparent. Privacy is part of the design, not an assumed permission."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá las preguntas éticas antes de construir", "en": "Build the ethical questions before building" },
+      "solution": {
+        "es": ["Antes de construir me pregunto a quién afecta,", "qué pasa si el sistema se equivoca,", "y si conviene automatizar esta decisión."],
+        "en": ["Before building I ask who it affects,", "what happens if the system is wrong,", "and whether automating this decision is wise."]
+      },
+      "distractors": {
+        "es": ["solo me pregunto si funciona", "y nada más"],
+        "en": ["I only ask if it works", "and nothing else"]
+      },
+      "explanation": {
+        "es": "Impacto, consecuencia del error y '¿conviene automatizar?': las tres preguntas de un ingeniero responsable.",
+        "en": "Impact, cost of error and 'should this be automated?': the three questions of a responsible engineer."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la regla de transparencia con el usuario", "en": "Build the transparency rule with the user" },
+      "solution": {
+        "es": ["Le digo al usuario que habla con una IA,", "que puede equivocarse,", "y le doy forma de verificar lo importante."],
+        "en": ["I tell the user they're talking to an AI,", "that it can be wrong,", "and I give them a way to verify what matters."]
+      },
+      "distractors": {
+        "es": ["le hago creer que es humana", "para que confíe más"],
+        "en": ["I make them believe it's human", "so they trust it more"]
+      },
+      "explanation": {
+        "es": "Transparencia: saber que es IA, que puede errar y poder verificar. Nunca engañar.",
+        "en": "Transparency: knowing it's AI, that it can err and being able to verify. Never deceive."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el manejo responsable de una decisión de alto impacto", "en": "Build the responsible handling of a high-impact decision" },
+      "solution": {
+        "es": ["Para una decisión sensible dejo que la IA asista,", "reviso los sesgos posibles,", "y una persona toma la decisión final."],
+        "en": ["For a sensitive decision I let the AI assist,", "review possible biases,", "and a person makes the final call."]
+      },
+      "distractors": {
+        "es": ["dejo que la IA decida sola", "sin ninguna supervisión"],
+        "en": ["I let the AI decide alone", "with no oversight"]
+      },
+      "explanation": {
+        "es": "En lo sensible: IA que asiste, chequeo de sesgos y un humano con la última palabra.",
+        "en": "In sensitive cases: AI that assists, a bias check and a human with the final say."
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "u8l07",
+  "title": { "es": "Diseñar para un caso de negocio real", "en": "Designing for a real business case" },
+  "byte_intro": {
+    "es": "La IA no es el objetivo: es el medio. Partamos de un problema de negocio y lleguemos a una arquitectura que se justifique.",
+    "en": "AI isn't the goal: it's the means. Let's start from a business problem and arrive at an architecture that justifies itself."
+  },
+  "byte_outro": {
+    "es": "¡Ahí está! Del problema a la solución, con cada pieza justificada por lo que aporta al negocio. Así piensa un ingeniero.",
+    "en": "There it is! From problem to solution, each piece justified by what it brings to the business. That's how an engineer thinks."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por dónde arranca el diseño de un sistema de IA para un negocio?", "en": "Where does designing an AI system for a business start?" },
+      "options": [
+        { "es": "Por el problema real a resolver y qué significa 'éxito'", "en": "With the real problem to solve and what 'success' means" },
+        { "es": "Por elegir el modelo más nuevo que salió", "en": "With picking the newest model released" },
+        { "es": "Por comprar la máquina más potente", "en": "With buying the most powerful machine" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Primero el problema: qué duele, a quién y cómo sabremos que lo resolvimos. La tecnología viene después, al servicio de eso.",
+        "en": "Problem first: what hurts, for whom, and how we'll know it's solved. The tech comes after, in service of that."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un negocio quiere 'usar IA'. ¿Qué es lo primero que le preguntás?", "en": "A business wants to 'use AI'. What do you ask first?" },
+      "options": [
+        { "es": "¿Qué problema concreto querés resolver y cómo medimos si mejora?", "en": "What concrete problem do you want to solve, and how do we measure improvement?" },
+        { "es": "¿Qué modelo te suena más lindo?", "en": "Which model sounds nicer to you?" },
+        { "es": "¿Cuánta IA querés, del 1 al 10?", "en": "How much AI do you want, from 1 to 10?" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "'Usar IA' no es un objetivo. El objetivo es un resultado medible: menos tiempo de respuesta, menos errores, más ventas. Eso guía todo el diseño.",
+        "en": "'Using AI' isn't a goal. The goal is a measurable result: faster response, fewer errors, more sales. That guides the whole design."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Definido el problema, ¿cómo elegís cada pieza de la arquitectura?", "en": "Once the problem is defined, how do you choose each architecture piece?" },
+      "options": [
+        { "es": "Cada pieza se justifica por lo que aporta al objetivo, no porque 'está de moda'", "en": "Each piece is justified by what it adds to the goal, not because it's 'trendy'" },
+        { "es": "Metés todas las tecnologías posibles por las dudas", "en": "You cram in every possible technology just in case" },
+        { "es": "Elegís al azar", "en": "You pick at random" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "¿Necesitás RAG? Solo si hace falta traer datos propios. ¿Un agente? Solo si hay varios pasos. Cada pieza responde a una necesidad real.",
+        "en": "Do you need RAG? Only if you must bring in your own data. An agent? Only if there are several steps. Each piece answers a real need."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Caso: responder preguntas sobre los manuales internos de la empresa. ¿Qué encaja?", "en": "Case: answer questions about the company's internal manuals. What fits?" },
+      "options": [
+        { "es": "RAG: recupera del manual y responde con esa base", "en": "RAG: retrieve from the manual and answer grounded in it" },
+        { "es": "Entrenar un modelo nuevo desde cero", "en": "Train a brand-new model from scratch" },
+        { "es": "Un agente con 20 herramientas", "en": "An agent with 20 tools" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es información propia que cambia: RAG es ideal, recupera del manual y responde con fundamento. Entrenar de cero sería carísimo e innecesario.",
+        "en": "It's your own information that changes: RAG is ideal, it retrieves from the manual and answers grounded. Training from scratch would be costly and needless."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué restricción del negocio puede cambiar toda la arquitectura?", "en": "Which business constraint can change the whole architecture?" },
+      "options": [
+        { "es": "Presupuesto, privacidad de datos, latencia y volumen esperado", "en": "Budget, data privacy, latency and expected volume" },
+        { "es": "El color favorito del gerente", "en": "The manager's favorite color" },
+        { "es": "Ninguna, la arquitectura es siempre igual", "en": "None, the architecture is always the same" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si los datos son sensibles, cambia dónde corren los modelos. Si tenés poco presupuesto o mucho volumen, cambia qué modelos usás. Las restricciones mandan.",
+        "en": "If data is sensitive, it changes where models run. Tight budget or high volume changes which models you use. Constraints rule."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es una buena señal de que tu diseño está justificado?", "en": "What's a good sign your design is justified?" },
+      "options": [
+        { "es": "Podés explicar qué aporta cada pieza y qué pasaría si la sacás", "en": "You can explain what each piece adds and what would happen without it" },
+        { "es": "Tiene la mayor cantidad de tecnologías posibles", "en": "It has the largest possible number of technologies" },
+        { "es": "Nadie entiende cómo funciona", "en": "Nobody understands how it works" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si podés defender cada pieza ('esto está por esto') y sacar lo que no aporta, tu arquitectura es sólida y no un rejunte de modas.",
+        "en": "If you can defend each piece ('this is here for this') and remove what adds nothing, your architecture is solid and not a pile of trends."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el orden correcto para diseñar", "en": "Build the correct order to design" },
+      "solution": {
+        "es": ["Empiezo por el problema del negocio y cómo medir el éxito,", "después elijo la arquitectura", "y justifico cada pieza por lo que aporta."],
+        "en": ["I start with the business problem and how to measure success,", "then I choose the architecture", "and justify each piece by what it adds."]
+      },
+      "distractors": {
+        "es": ["empiezo eligiendo el modelo más nuevo", "y después busco un problema"],
+        "en": ["I start by picking the newest model", "and then look for a problem"]
+      },
+      "explanation": {
+        "es": "Problema y métrica primero; tecnología después, siempre justificada.",
+        "en": "Problem and metric first; technology after, always justified."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la arquitectura para preguntas sobre documentos internos", "en": "Build the architecture for questions about internal documents" },
+      "solution": {
+        "es": ["Uso RAG para recuperar del manual interno,", "un modelo que responda con esa base,", "y verifico las respuestas contra la fuente."],
+        "en": ["I use RAG to retrieve from the internal manual,", "a model that answers grounded in it,", "and I check the answers against the source."]
+      },
+      "distractors": {
+        "es": ["entreno un modelo nuevo desde cero", "con todos los manuales"],
+        "en": ["I train a new model from scratch", "on all the manuals"]
+      },
+      "explanation": {
+        "es": "Datos propios que cambian = RAG con verificación contra la fuente, no entrenar de cero.",
+        "en": "Own data that changes = RAG with source-checking, not training from scratch."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo defender un diseño ante el negocio", "en": "Build how to defend a design to the business" },
+      "solution": {
+        "es": ["Explico qué aporta cada pieza al objetivo,", "qué pasaría si la sacara,", "y saco todo lo que no se justifica."],
+        "en": ["I explain what each piece adds to the goal,", "what would happen without it,", "and I remove anything that isn't justified."]
+      },
+      "distractors": {
+        "es": ["sumo cada tecnología nueva", "aunque no aporte nada"],
+        "en": ["I add every new technology", "even if it adds nothing"]
+      },
+      "explanation": {
+        "es": "Un buen diseño se defiende pieza por pieza y se limpia de lo que no aporta.",
+        "en": "A good design is defended piece by piece and cleaned of what adds nothing."
+      }
+    }
+  ]
+}

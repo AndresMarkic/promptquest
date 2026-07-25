@@ -1,0 +1,132 @@
+{
+  "id": "u7l02",
+  "title": { "es": "Encadenar prompts (pipelines)", "en": "Chaining prompts (pipelines)" },
+  "byte_intro": {
+    "es": "En la línea de montaje, cada estación pasa la pieza a la siguiente. Con la IA es igual: la salida de un paso alimenta al que sigue.",
+    "en": "On the assembly line, each station passes the part to the next. With AI it's the same: one step's output feeds the next."
+  },
+  "byte_outro": {
+    "es": "¡Pipeline armado! Cortar una tarea grande en pasos encadenados la vuelve más precisa y más fácil de arreglar.",
+    "en": "Pipeline built! Cutting a big task into chained steps makes it more precise and easier to fix."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es encadenar prompts (un pipeline)?", "en": "What is chaining prompts (a pipeline)?" },
+      "options": [
+        { "es": "Usar la salida de un paso como entrada del siguiente", "en": "Using one step's output as the next step's input" },
+        { "es": "Escribir un solo prompt gigante con todo mezclado", "en": "Writing one giant prompt with everything mixed in" },
+        { "es": "Pedir la misma cosa muchas veces seguidas", "en": "Asking for the same thing over and over" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En un pipeline, cada paso hace una parte y le pasa el resultado al siguiente, como una línea de montaje.",
+        "en": "In a pipeline, each step does one part and hands its result to the next, like an assembly line."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene partir una tarea grande en pasos?", "en": "Why is it better to split a big task into steps?" },
+      "options": [
+        { "es": "Cada paso es más simple, más preciso y más fácil de corregir", "en": "Each step is simpler, more precise and easier to fix" },
+        { "es": "Porque siempre es más barato usar mil pasos", "en": "Because a thousand steps is always cheaper" },
+        { "es": "Porque la IA se aburre con tareas cortas", "en": "Because AI gets bored with short tasks" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Dividir permite que cada paso haga una sola cosa bien, y si algo falla sabés exactamente en qué estación.",
+        "en": "Splitting lets each step do one thing well, and if something fails you know exactly which station."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés convertir una reunión grabada en tareas asignadas. ¿Qué pipeline sirve?", "en": "You want to turn a recorded meeting into assigned tasks. Which pipeline works?" },
+      "options": [
+        { "es": "Transcribir → resumir → extraer tareas → asignar responsables", "en": "Transcribe → summarize → extract tasks → assign owners" },
+        { "es": "Pedir todo de una y esperar que salga perfecto", "en": "Ask for it all at once and hope it comes out perfect" },
+        { "es": "Asignar responsables antes de tener la transcripción", "en": "Assign owners before having the transcript" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cada paso usa la salida del anterior: sin transcripción no hay resumen, sin resumen no hay tareas.",
+        "en": "Each step uses the previous output: no transcript, no summary; no summary, no tasks."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En un pipeline, el paso 3 recibe basura. ¿Dónde buscás la causa?", "en": "In a pipeline, step 3 gets garbage. Where do you look for the cause?" },
+      "options": [
+        { "es": "En la salida del paso 2, que es lo que alimenta al 3", "en": "In step 2's output, which is what feeds step 3" },
+        { "es": "En el último paso siempre, sin mirar el resto", "en": "Always in the last step, without checking the rest" },
+        { "es": "En ningún lado, la basura es normal", "en": "Nowhere, garbage is normal" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Como cada paso se alimenta del anterior, revisás la entrada que recibió: si el paso 2 dio algo malo, el 3 lo arrastra.",
+        "en": "Since each step feeds off the prior one, you check the input it got: if step 2 gave something bad, step 3 carries it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué ayuda a que un paso le pase datos limpios al siguiente?", "en": "What helps a step pass clean data to the next?" },
+      "options": [
+        { "es": "Pedir la salida en un formato fijo, como una lista o un JSON", "en": "Asking for the output in a fixed format, like a list or JSON" },
+        { "es": "Dejar que cada paso invente su propio formato", "en": "Letting each step invent its own format" },
+        { "es": "No definir ningún formato nunca", "en": "Never defining any format" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un formato de salida fijo hace que el siguiente paso sepa exactamente qué va a recibir y no se confunda.",
+        "en": "A fixed output format lets the next step know exactly what it'll receive and not get confused."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pipeline para responder reseñas de un producto", "en": "Build a pipeline to respond to product reviews" },
+      "solution": {
+        "es": ["Clasificar la reseña (positiva/negativa)", "→ redactar una respuesta acorde", "→ revisar el tono", "→ publicar."],
+        "en": ["Classify the review (positive/negative)", "→ draft a matching reply", "→ check the tone", "→ publish."]
+      },
+      "distractors": {
+        "es": ["publicar sin leer nada", "→ recién ahí clasificar."],
+        "en": ["publish without reading anything", "→ only then classify."]
+      },
+      "explanation": {
+        "es": "Primero entendés la reseña, después respondés, revisás y publicás. El orden importa: cada paso usa el anterior.",
+        "en": "First you understand the review, then reply, review and publish. Order matters: each step uses the prior one."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pipeline genérico de procesamiento con IA", "en": "Build a generic AI processing pipeline" },
+      "solution": {
+        "es": ["Entrada", "→ validar los datos", "→ procesar con IA", "→ revisar el resultado", "→ salida."],
+        "en": ["Input", "→ validate the data", "→ process with AI", "→ review the result", "→ output."]
+      },
+      "distractors": {
+        "es": ["→ borrar la entrada", "→ ignorar el resultado."],
+        "en": ["→ delete the input", "→ ignore the result."]
+      },
+      "explanation": {
+        "es": "Entrada, validar, procesar, revisar y salida: el esqueleto de casi cualquier flujo con IA.",
+        "en": "Input, validate, process, review and output: the skeleton of almost any AI flow."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená un pipeline para generar un informe desde datos de ventas", "en": "Order a pipeline to generate a report from sales data" },
+      "solution": {
+        "es": ["Cargar los datos de ventas", "→ que la IA calcule totales y tendencias", "→ redactar el informe en texto", "→ un humano lo revisa."],
+        "en": ["Load the sales data", "→ have the AI compute totals and trends", "→ write the report in prose", "→ a human reviews it."]
+      },
+      "distractors": {
+        "es": ["→ enviar el informe a los clientes", "antes de cargar los datos."],
+        "en": ["→ send the report to clients", "before loading the data."]
+      },
+      "explanation": {
+        "es": "Los datos alimentan el análisis, el análisis alimenta la redacción, y recién al final revisa un humano.",
+        "en": "Data feeds the analysis, the analysis feeds the writing, and only at the end a human reviews."
+      }
+    }
+  ]
+}

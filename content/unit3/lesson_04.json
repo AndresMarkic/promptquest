@@ -1,0 +1,146 @@
+{
+  "id": "u3l04",
+  "title": { "es": "Programar 2: depurar", "en": "Coding 2: debugging" },
+  "byte_intro": {
+    "es": "Cuando algo no anda, salta un error rojo que asusta. Hoy recuerdo cómo usar ese mensaje para que la IA encuentre la causa y lo arregle.",
+    "en": "When something breaks, a scary red error pops up. Today I recall how to use that message so the AI finds the cause and fixes it."
+  },
+  "byte_outro": {
+    "es": "¡Excelente! Un error ya no me asusta: lo pego entero, la IA busca la causa y lo arreglamos. Fragmento recuperado.",
+    "en": "Excellent! An error no longer scares me: I paste it whole, the AI finds the cause and we fix it. Fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tu programa tira un error. ¿Qué es lo mejor para que la IA ayude?", "en": "Your program throws an error. What's best so the AI can help?" },
+      "options": [
+        { "es": "Pegar el mensaje de error completo y el código relacionado", "en": "Paste the full error message and the related code" },
+        { "es": "Escribir 'no anda' y nada más", "en": "Write 'it doesn't work' and nothing else" },
+        { "es": "Solo decir que estás enojado", "en": "Just say you're angry" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El mensaje de error dice casi siempre qué falló y en qué línea. Con eso y el código, la IA diagnostica rápido.",
+        "en": "The error message almost always says what failed and on which line. With that plus the code, the AI diagnoses fast."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos pedidos ayuda más a depurar?", "en": "Which of these requests helps debug most?" },
+      "options": [
+        { "es": "Este código da este error (lo pego). Explicame la causa y cómo arreglarlo", "en": "This code gives this error (pasted). Explain the cause and how to fix it" },
+        { "es": "Arreglalo", "en": "Fix it" },
+        { "es": "Está roto, chau", "en": "It's broken, bye" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Darle el código, el error y pedir causa + solución le da todo el contexto para no adivinar.",
+        "en": "Giving it the code, the error and asking for cause + fix gives it the full context so it doesn't guess."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA propone un arreglo. ¿Qué conviene hacer?", "en": "The AI proposes a fix. What should you do?" },
+      "options": [
+        { "es": "Probarlo y ver si el error desaparece; si no, contarle qué pasó ahora", "en": "Try it and see if the error is gone; if not, tell it what happened now" },
+        { "es": "Confiar sin probar", "en": "Trust it without testing" },
+        { "es": "Cambiar de programa", "en": "Switch to another program" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Depurar es ida y vuelta: probás, y si sigue fallando le pasás el nuevo error. Así se va cerrando el problema.",
+        "en": "Debugging is back-and-forth: you test, and if it still fails you give it the new error. That's how the problem closes in."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene contarle qué esperabas que hiciera el código?", "en": "Why is it good to tell it what you expected the code to do?" },
+      "options": [
+        { "es": "Así distingue entre un error y un resultado que simplemente no querías", "en": "So it tells apart a crash from a result you simply didn't want" },
+        { "es": "Para que tarde más", "en": "To make it slower" },
+        { "es": "No sirve de nada", "en": "It's useless" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "A veces no hay error rojo, pero el resultado está mal. Decir qué esperabas ayuda a la IA a ver la diferencia.",
+        "en": "Sometimes there's no red error, but the result is wrong. Saying what you expected helps the AI see the gap."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un error dice 'file not found' (archivo no encontrado). ¿Qué suele significar?", "en": "An error says 'file not found'. What does it usually mean?" },
+      "options": [
+        { "es": "El programa busca un archivo en una ruta o nombre que no existe", "en": "The program looks for a file at a path or name that doesn't exist" },
+        { "es": "Que tu compu está rota", "en": "That your computer is broken" },
+        { "es": "Que la IA se cansó", "en": "That the AI got tired" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Muchos errores son literales. La IA puede traducirte el mensaje y, con el código, decirte dónde mirar.",
+        "en": "Many errors are literal. The AI can translate the message and, with the code, tell you where to look."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El mismo error vuelve tras el arreglo. ¿Qué es más útil decirle?", "en": "The same error returns after the fix. What's most useful to tell it?" },
+      "options": [
+        { "es": "Sigue igual; te paso el código actualizado y el error de nuevo", "en": "Still the same; here's the updated code and the error again" },
+        { "es": "Ya fue, no importa", "en": "Whatever, never mind" },
+        { "es": "Insultar a la IA", "en": "Insult the AI" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pasarle el estado actual (código + error de nuevo) evita que trabaje sobre una versión vieja.",
+        "en": "Giving it the current state (updated code + the error again) keeps it from working on an old version."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un buen pedido para depurar", "en": "Build a good debugging request" },
+      "solution": {
+        "es": ["Este código me da este error:", "(lo pego)", "explicame la causa y cómo lo arreglo."],
+        "en": ["This code gives me this error:", "(pasted)", "explain the cause and how to fix it."]
+      },
+      "distractors": {
+        "es": ["no anda", "arreglalo ya"],
+        "en": ["it's broken", "just fix it"]
+      },
+      "explanation": {
+        "es": "Código + error + pedido de causa y solución: contexto completo para diagnosticar.",
+        "en": "Code + error + request for cause and fix: full context to diagnose."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido cuando no hay error pero el resultado está mal", "en": "Build the request when there's no error but the result is wrong" },
+      "solution": {
+        "es": ["Esperaba que devolviera 10", "pero devuelve 0;", "¿por qué y cómo lo corrijo?"],
+        "en": ["I expected it to return 10", "but it returns 0;", "why and how do I fix it?"]
+      },
+      "distractors": {
+        "es": ["hace algo raro", "y no sé"],
+        "en": ["it does something weird", "and I don't know"]
+      },
+      "explanation": {
+        "es": "Decir qué esperabas vs. qué pasó le marca a la IA exactamente el problema.",
+        "en": "Saying expected vs. actual pinpoints the problem for the AI."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el mensaje cuando el arreglo no funcionó", "en": "Build the message when the fix didn't work" },
+      "solution": {
+        "es": ["Probé tu arreglo", "y sigue fallando;", "te paso el código y el error nuevos."],
+        "en": ["I tried your fix", "and it still fails;", "here's the updated code and error."]
+      },
+      "distractors": {
+        "es": ["no importa", "dejalo así"],
+        "en": ["never mind", "leave it"]
+      },
+      "explanation": {
+        "es": "Actualizar código y error en cada vuelta hace que la depuración avance de verdad.",
+        "en": "Updating code and error each round makes debugging actually progress."
+      }
+    }
+  ]
+}

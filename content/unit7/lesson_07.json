@@ -1,0 +1,132 @@
+{
+  "id": "u7l07",
+  "title": { "es": "Medir si funciona", "en": "Measuring if it works" },
+  "byte_intro": {
+    "es": "Toda fábrica lleva números: cuántas piezas salen buenas, cuántas fallan. Con la IA hay que medir si el sistema realmente ayuda.",
+    "en": "Every factory keeps numbers: how many parts come out good, how many fail. With AI you must measure whether the system truly helps."
+  },
+  "byte_outro": {
+    "es": "¡Excelente! Sin métricas, 'funciona' es una opinión. Con métricas simples sabés si vale la pena o hay que ajustar.",
+    "en": "Excellent! Without metrics, 'it works' is an opinion. With simple metrics you know if it's worth it or needs tuning."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué hay que medir un sistema con IA en vez de confiar en la sensación?", "en": "Why measure an AI system instead of trusting a gut feeling?" },
+      "options": [
+        { "es": "Porque 'parece que anda' no prueba que ayude ni cuánto", "en": "Because 'seems to work' doesn't prove it helps, or how much" },
+        { "es": "Porque medir es obligatorio por ley siempre", "en": "Because measuring is always required by law" },
+        { "es": "Porque a la IA le gusta que la midan", "en": "Because AI likes being measured" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Sin números no sabés si mejoró algo. Medir te dice si el sistema realmente aporta y dónde falla.",
+        "en": "Without numbers you don't know if anything improved. Measuring tells you if the system really helps and where it fails."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Automatizaste respuestas de soporte. ¿Qué métrica simple sirve?", "en": "You automated support replies. Which simple metric helps?" },
+      "options": [
+        { "es": "El tiempo promedio de respuesta y cuántos casos se resuelven sin humano", "en": "Average response time and how many cases resolve without a human" },
+        { "es": "El color favorito del equipo de soporte", "en": "The support team's favorite color" },
+        { "es": "Cuántas letras tiene cada respuesta", "en": "How many letters each reply has" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Tiempo de respuesta y tasa de resolución automática miden directo si el sistema está ayudando al negocio.",
+        "en": "Response time and auto-resolution rate directly measure whether the system is helping the business."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA clasifica mails. ¿Cómo sabés si clasifica bien?", "en": "AI classifies emails. How do you know it classifies well?" },
+      "options": [
+        { "es": "Comparando sus categorías con un conjunto revisado por humanos y midiendo el % de aciertos", "en": "Comparing its categories against a human-checked set and measuring the % correct" },
+        { "es": "Preguntándole a la IA si lo hizo bien", "en": "Asking the AI if it did well" },
+        { "es": "Suponiendo que si no se queja nadie, está perfecto", "en": "Assuming that if no one complains, it's perfect" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Se mide con casos de referencia ya etiquetados por humanos: cuántos aciertos tiene la IA sobre esos casos.",
+        "en": "You measure it against reference cases already labeled by humans: how many the AI gets right on those."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un 'baseline' o punto de comparación?", "en": "What is a 'baseline' or comparison point?" },
+      "options": [
+        { "es": "El resultado antes de usar IA, para ver si el sistema mejora sobre eso", "en": "The result before using AI, to see if the system improves on it" },
+        { "es": "El nombre técnico de la IA más cara", "en": "The technical name of the priciest AI" },
+        { "es": "Un tipo de error imposible de corregir", "en": "A kind of error impossible to fix" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El baseline es cómo se hacía antes. Sin ese punto de partida no podés afirmar que la IA mejoró nada.",
+        "en": "The baseline is how it was done before. Without that starting point you can't claim the AI improved anything."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA responde rapidísimo pero la mitad de las respuestas están mal. ¿Qué conclusión sacás?", "en": "The AI answers super fast but half the answers are wrong. What do you conclude?" },
+      "options": [
+        { "es": "La velocidad no alcanza: hay que mirar también la calidad", "en": "Speed isn't enough: you must also look at quality" },
+        { "es": "Es un éxito porque es rápida", "en": "It's a success because it's fast" },
+        { "es": "La calidad no importa si es veloz", "en": "Quality doesn't matter if it's fast" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una sola métrica engaña. Rápido pero incorrecto no sirve: hay que mirar velocidad Y calidad juntas.",
+        "en": "A single metric misleads. Fast but wrong is useless: you must look at speed AND quality together."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo evaluar si el sistema mejoró", "en": "Build how to evaluate if the system improved" },
+      "solution": {
+        "es": ["Medí el baseline sin IA,", "medí el resultado con IA,", "y compará las dos cifras."],
+        "en": ["Measure the baseline without AI,", "measure the result with AI,", "and compare the two figures."]
+      },
+      "distractors": {
+        "es": ["confiá en que mejoró", "porque suena moderno."],
+        "en": ["trust that it improved", "because it sounds modern."]
+      },
+      "explanation": {
+        "es": "Comparar antes vs. después es la única forma honesta de saber si la IA sumó.",
+        "en": "Comparing before vs. after is the only honest way to know if the AI added value."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un par de métricas para un clasificador de mails", "en": "Build a couple of metrics for an email classifier" },
+      "solution": {
+        "es": ["Medí el porcentaje de mails bien clasificados,", "y cuántos hubo que corregir a mano,", "sobre un conjunto de prueba etiquetado."],
+        "en": ["Measure the percentage of correctly classified emails,", "and how many needed manual fixing,", "over a labeled test set."]
+      },
+      "distractors": {
+        "es": ["medí el largo de los mails,", "y el humor del cliente."],
+        "en": ["measure the length of the emails,", "and the client's mood."]
+      },
+      "explanation": {
+        "es": "Porcentaje de aciertos y correcciones manuales, sobre un set de prueba: números claros y útiles.",
+        "en": "Percentage correct and manual fixes, over a test set: clear, useful numbers."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená el ciclo de mejora basado en métricas", "en": "Order the metric-based improvement cycle" },
+      "solution": {
+        "es": ["Medí cómo anda hoy,", "detectá dónde falla más,", "ajustá esa parte,", "y volvé a medir."],
+        "en": ["Measure how it does today,", "find where it fails most,", "tune that part,", "and measure again."]
+      },
+      "distractors": {
+        "es": ["cambiá todo al azar,", "y no midas nunca más."],
+        "en": ["change everything at random,", "and never measure again."]
+      },
+      "explanation": {
+        "es": "Medir, encontrar el punto débil, ajustar y volver a medir: mejora continua guiada por datos.",
+        "en": "Measure, find the weak spot, tune and measure again: data-driven continuous improvement."
+      }
+    }
+  ]
+}

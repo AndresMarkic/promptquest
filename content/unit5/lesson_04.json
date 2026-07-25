@@ -1,0 +1,130 @@
+{
+  "id": "u5l04",
+  "title": { "es": "¿Qué es un agente?", "en": "What is an agent?" },
+  "byte_intro": {
+    "es": "Encontré una IA distinta acá adentro: no espera una sola orden. Se pone un objetivo, decide qué pasos dar y actúa usando herramientas. A eso lo llaman agente.",
+    "en": "I found a different kind of AI in here: it doesn't wait for a single command. It sets a goal, decides which steps to take and acts using tools. They call it an agent."
+  },
+  "byte_outro": {
+    "es": "¡Ahora distingo! Un chat común responde y listo. Un agente persigue un objetivo: piensa, actúa, mira el resultado y sigue hasta lograrlo.",
+    "en": "Now I can tell them apart! A plain chat answers and that's it. An agent chases a goal: it thinks, acts, checks the result and keeps going until it's done."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué distingue a un agente de un chat común?", "en": "What sets an agent apart from a plain chat?" },
+      "options": [
+        { "es": "Decide pasos y actúa para lograr un objetivo, no solo responde", "en": "It decides steps and acts to reach a goal, not just answers" },
+        { "es": "Habla en mayúsculas", "en": "It talks in uppercase" },
+        { "es": "No usa ningún modelo", "en": "It uses no model at all" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un chat responde y para. Un agente encadena decisiones y acciones hasta cumplir la meta.",
+        "en": "A chat answers and stops. An agent chains decisions and actions until the goal is met."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué necesita un agente para actuar en el mundo?", "en": "What does an agent need to act in the world?" },
+      "options": [
+        { "es": "Herramientas que pueda usar (buscar, calcular, guardar)", "en": "Tools it can use (search, calculate, save)" },
+        { "es": "Solo buenos deseos", "en": "Just good wishes" },
+        { "es": "Nada, actúa con la mente", "en": "Nothing, it acts with its mind" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Sin herramientas un agente solo habla. Con herramientas puede buscar, calcular y hacer cosas.",
+        "en": "Without tools an agent only talks. With tools it can search, calculate and do things."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Le pedís a un agente 'organizá mi viaje'. ¿Qué hace, idealmente?", "en": "You ask an agent 'plan my trip'. Ideally, what does it do?" },
+      "options": [
+        { "es": "Divide en pasos: buscar vuelos, comparar, reservar", "en": "Breaks it into steps: search flights, compare, book" },
+        { "es": "Responde 'no' y se apaga", "en": "Answers 'no' and shuts down" },
+        { "es": "Te pide que hagas todo vos", "en": "Asks you to do everything yourself" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un objetivo grande se logra partiéndolo en pasos manejables y ejecutándolos.",
+        "en": "A big goal is reached by splitting it into manageable steps and executing them."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué un agente 'observa' después de actuar?", "en": "Why does an agent 'observe' after acting?" },
+      "options": [
+        { "es": "Para ver si funcionó y decidir el paso siguiente", "en": "To see if it worked and decide the next step" },
+        { "es": "Para descansar un rato", "en": "To rest a while" },
+        { "es": "Para borrar todo", "en": "To delete everything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Mirar el resultado le dice si va bien o si tiene que corregir el rumbo.",
+        "en": "Checking the result tells it whether it's on track or needs to correct course."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos es un agente?", "en": "Which of these is an agent?" },
+      "options": [
+        { "es": "Una IA que busca datos, los compara y arma un informe sola", "en": "An AI that searches data, compares it and builds a report on its own" },
+        { "es": "Una IA que solo repite lo que le decís", "en": "An AI that only repeats what you say" },
+        { "es": "Un reproductor de música", "en": "A music player" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Buscar, comparar y producir por su cuenta persiguiendo una meta = comportamiento de agente.",
+        "en": "Searching, comparing and producing on its own toward a goal = agent behavior."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la definición de un agente", "en": "Build the definition of an agent" },
+      "solution": {
+        "es": ["Un agente es una IA", "que decide pasos y actúa", "para cumplir un objetivo."],
+        "en": ["An agent is an AI", "that decides steps and acts", "to accomplish a goal."]
+      },
+      "distractors": {
+        "es": ["que solo saluda", "y no hace nada más"],
+        "en": ["that only says hi", "and does nothing else"]
+      },
+      "explanation": {
+        "es": "Objetivo + decidir pasos + actuar: eso es lo que hace agente a un agente.",
+        "en": "Goal + deciding steps + acting: that's what makes an agent an agent."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un riesgo de un agente autónomo es...", "en": "A risk of an autonomous agent is..." },
+      "options": [
+        { "es": "Que tome un paso equivocado si no lo supervisás", "en": "Taking a wrong step if you don't supervise it" },
+        { "es": "Que se vuelva humano", "en": "Becoming human" },
+        { "es": "Que se quede sin colores", "en": "Running out of colors" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Como actúa solo, un error de decisión se traduce en una acción real. Conviene supervisar.",
+        "en": "Since it acts on its own, a bad decision turns into a real action. Supervision helps."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué hace un agente frente a un objetivo grande", "en": "Build what an agent does with a big goal" },
+      "solution": {
+        "es": ["Divide el objetivo en pasos", "usa herramientas para cada uno", "y avanza hasta lograrlo."],
+        "en": ["Splits the goal into steps", "uses tools for each one", "and moves until it's done."]
+      },
+      "distractors": {
+        "es": ["ignora el objetivo", "y cambia de tema"],
+        "en": ["ignores the goal", "and changes topic"]
+      },
+      "explanation": {
+        "es": "Partir en pasos + herramientas + avanzar: así un agente ataca una tarea grande.",
+        "en": "Split into steps + tools + progress: that's how an agent tackles a big task."
+      }
+    }
+  ]
+}

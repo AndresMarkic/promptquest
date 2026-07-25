@@ -1,0 +1,146 @@
+{
+  "id": "u8l06",
+  "title": { "es": "Build vs buy", "en": "Build vs buy" },
+  "byte_intro": {
+    "es": "No todo se construye. A veces lo hecho es mejor y más barato. Aprendamos a decidir qué construir y qué usar ya listo.",
+    "en": "Not everything gets built. Sometimes off-the-shelf is better and cheaper. Let's learn to decide what to build and what to use ready-made."
+  },
+  "byte_outro": {
+    "es": "¡Bien pensado! Construí lo que te diferencia, comprá lo que es commodity. Así no reinventás la rueda.",
+    "en": "Well reasoned! Build what makes you different, buy what's a commodity. That way you don't reinvent the wheel."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La decisión 'build vs buy' se trata de...", "en": "The 'build vs buy' decision is about..." },
+      "options": [
+        { "es": "Elegir qué partes construir vos y qué partes usar ya hechas", "en": "Choosing which parts you build yourself and which you use ready-made" },
+        { "es": "Comprar siempre lo más caro", "en": "Always buying the most expensive option" },
+        { "es": "Construir todo desde cero por principio", "en": "Building everything from scratch on principle" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es repartir esfuerzo: algunas piezas conviene construirlas y otras conviene tomarlas ya resueltas de un proveedor. No es todo o nada.",
+        "en": "It's about allocating effort: some pieces are worth building and others are worth taking already solved from a provider. It's not all or nothing."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué conviene, en general, CONSTRUIR vos?", "en": "What is generally worth BUILDING yourself?" },
+      "options": [
+        { "es": "Lo que te diferencia de la competencia, tu ventaja única", "en": "What sets you apart from competitors, your unique edge" },
+        { "es": "El modelo de lenguaje base, desde cero", "en": "The base language model, from scratch" },
+        { "es": "La infraestructura de servidores estándar", "en": "The standard server infrastructure" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Construí lo que es tu diferencial: ahí ponés tu conocimiento del negocio. Lo genérico (modelos, infra) casi siempre conviene comprarlo hecho.",
+        "en": "Build what's your differentiator: that's where your business knowledge goes. The generic stuff (models, infra) is almost always better bought ready-made."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué casi nunca conviene entrenar tu propio modelo base desde cero?", "en": "Why is training your own base model from scratch almost never worth it?" },
+      "options": [
+        { "es": "Cuesta muchísima plata, datos y tiempo, y ya existen buenos modelos", "en": "It costs a fortune in money, data and time, and good models already exist" },
+        { "es": "Está prohibido por ley", "en": "It's forbidden by law" },
+        { "es": "Los modelos propios siempre son ilegales", "en": "Custom models are always illegal" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Entrenar un modelo base cuesta una fortuna en cómputo, datos y equipo. Salvo casos muy especiales, usás uno existente y lo adaptás a tu caso.",
+        "en": "Training a base model costs a fortune in compute, data and team. Except in very special cases, you use an existing one and adapt it to your case."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un proveedor te da una solución 'llave en mano' que hace el 90% de lo que necesitás. ¿Qué mirás?", "en": "A vendor offers a turnkey solution that does 90% of what you need. What do you check?" },
+      "options": [
+        { "es": "Si el 10% que falta es justo tu diferencial y cuánto te atás al proveedor", "en": "Whether the missing 10% is exactly your edge, and how locked-in you get" },
+        { "es": "Solo el color del logo del proveedor", "en": "Only the color of the vendor's logo" },
+        { "es": "Nada, si es hecho siempre conviene", "en": "Nothing, ready-made is always better" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si ese 10% que falta es lo que te distingue, quizá tengas que construirlo. Y ojo con el 'lock-in': quedar atado a un proveedor tiene su costo.",
+        "en": "If that missing 10% is what distinguishes you, you may need to build it. And beware 'lock-in': getting tied to a vendor has its cost."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es el 'costo total' que hay que comparar, no solo el precio?", "en": "What is the 'total cost' to compare, beyond the sticker price?" },
+      "options": [
+        { "es": "Construir suma mantenimiento, tiempo del equipo y soporte a futuro", "en": "Building adds maintenance, team time and future support" },
+        { "es": "Solo importa el precio del primer mes", "en": "Only the first month's price matters" },
+        { "es": "El costo total es siempre cero", "en": "Total cost is always zero" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Construir no termina cuando funciona: hay que mantenerlo, arreglarlo y actualizarlo por años. Ese costo escondido a veces vuelve más barato comprar.",
+        "en": "Building doesn't end when it works: you must maintain, fix and update it for years. That hidden cost sometimes makes buying cheaper."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para validar rápido una idea nueva de producto con IA, ¿qué conviene primero?", "en": "To quickly validate a new AI product idea, what's best first?" },
+      "options": [
+        { "es": "Usar herramientas ya hechas para probar la idea antes de construir nada", "en": "Use ready-made tools to test the idea before building anything" },
+        { "es": "Construir toda la infraestructura desde cero primero", "en": "Build all the infrastructure from scratch first" },
+        { "es": "Contratar 20 personas antes de probar", "en": "Hire 20 people before testing" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Para validar, velocidad gana: armá algo con piezas hechas y probá si la idea sirve. Recién cuando funciona pensás qué vale la pena construir a medida.",
+        "en": "To validate, speed wins: assemble something with ready-made pieces and test if the idea works. Only once it works do you decide what's worth custom-building."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la regla de build vs buy", "en": "Build the build vs buy rule" },
+      "solution": {
+        "es": ["Construí lo que te diferencia", "y comprá lo que es commodity,", "para no reinventar lo que ya está resuelto."],
+        "en": ["Build what sets you apart", "and buy what's a commodity,", "so you don't reinvent what's already solved."]
+      },
+      "distractors": {
+        "es": ["construí absolutamente todo", "desde cero siempre"],
+        "en": ["build absolutely everything", "from scratch always"]
+      },
+      "explanation": {
+        "es": "Diferencial se construye; commodity se compra. Esa es la brújula.",
+        "en": "The differentiator is built; the commodity is bought. That's the compass."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué mirar además del precio", "en": "Build what to weigh beyond price" },
+      "solution": {
+        "es": ["Antes de decidir miro el costo total:", "mantenimiento, tiempo del equipo", "y cuánto me ato a un proveedor."],
+        "en": ["Before deciding I look at the total cost:", "maintenance, team time", "and how locked-in I get to a vendor."]
+      },
+      "distractors": {
+        "es": ["solo comparo el precio", "del primer mes"],
+        "en": ["I only compare the price", "of the first month"]
+      },
+      "explanation": {
+        "es": "Costo total = mantenimiento + tiempo + riesgo de lock-in, no solo el precio inicial.",
+        "en": "Total cost = maintenance + time + lock-in risk, not just the sticker price."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la estrategia para validar una idea rápido", "en": "Build the strategy to validate an idea fast" },
+      "solution": {
+        "es": ["Para validar la idea uso piezas ya hechas,", "pruebo si funciona con usuarios reales,", "y recién después construyo lo que me diferencia."],
+        "en": ["To validate the idea I use ready-made pieces,", "test if it works with real users,", "and only then build what sets me apart."]
+      },
+      "distractors": {
+        "es": ["construyo todo a medida", "antes de saber si sirve"],
+        "en": ["I custom-build everything", "before knowing if it works"]
+      },
+      "explanation": {
+        "es": "Validá primero con lo hecho; construí a medida recién cuando sabés que vale la pena.",
+        "en": "Validate first with off-the-shelf; custom-build only once you know it's worth it."
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "u4l01",
+  "title": { "es": "Las familias de IA", "en": "The AI families" },
+  "byte_intro": {
+    "es": "Bienvenido al Observatorio. Desde acá miro el cielo de la IA: hay varias familias de modelos, cada una con su casa. Vamos a conocerlas sin marketing.",
+    "en": "Welcome to the Observatory. From here I watch the AI sky: there are several families of models, each with its own home. Let's meet them without the marketing."
+  },
+  "byte_outro": {
+    "es": "Ya sabés quién es quién: Claude, GPT, Gemini, Llama, Mistral y más. No hay uno 'mejor' para todo; hay familias con estilos distintos.",
+    "en": "Now you know who's who: Claude, GPT, Gemini, Llama, Mistral and more. There's no single 'best' for everything; there are families with different styles."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es una 'familia' de modelos de IA?", "en": "What is a 'family' of AI models?" },
+      "options": [
+        { "es": "Un grupo de modelos hechos por la misma organización, con un enfoque común", "en": "A group of models made by the same organization, with a shared approach" },
+        { "es": "Un único modelo que nunca cambia", "en": "A single model that never changes" },
+        { "es": "El nombre de una app de chat", "en": "The name of a chat app" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cada familia (por ejemplo Claude, GPT o Gemini) reúne varios modelos de una misma organización, con criterios de diseño parecidos.",
+        "en": "Each family (for example Claude, GPT or Gemini) groups several models from the same organization, with similar design criteria."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué organización desarrolla la familia Claude?", "en": "Which organization develops the Claude family?" },
+      "options": [
+        { "es": "Anthropic", "en": "Anthropic" },
+        { "es": "Una universidad pública", "en": "A public university" },
+        { "es": "Un fabricante de teléfonos", "en": "A phone manufacturer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Claude es la familia de modelos de Anthropic. Cada familia tiene su organización detrás.",
+        "en": "Claude is the model family from Anthropic. Each family has its organization behind it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Emparejá bien: ¿qué familia corresponde a OpenAI?", "en": "Match correctly: which family belongs to OpenAI?" },
+      "options": [
+        { "es": "La familia GPT", "en": "The GPT family" },
+        { "es": "La familia Llama", "en": "The Llama family" },
+        { "es": "La familia Gemini", "en": "The Gemini family" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "GPT es de OpenAI, Llama es de Meta y Gemini es de Google. Conviene no mezclarlos.",
+        "en": "GPT is from OpenAI, Llama is from Meta and Gemini is from Google. Best not to mix them up."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Gemini y Llama, ¿de qué organizaciones son?", "en": "Gemini and Llama, which organizations are they from?" },
+      "options": [
+        { "es": "Gemini de Google y Llama de Meta", "en": "Gemini from Google and Llama from Meta" },
+        { "es": "Gemini de Meta y Llama de Google", "en": "Gemini from Meta and Llama from Google" },
+        { "es": "Las dos de la misma empresa", "en": "Both from the same company" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Gemini pertenece a Google; Llama, a Meta. Son familias distintas de organizaciones distintas.",
+        "en": "Gemini belongs to Google; Llama, to Meta. They are different families from different organizations."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué NO conviene decir que una familia es 'la mejor' para todo?", "en": "Why is it NOT a good idea to say one family is 'the best' at everything?" },
+      "options": [
+        { "es": "Porque cada una tiene fortalezas distintas según la tarea", "en": "Because each has different strengths depending on the task" },
+        { "es": "Porque todas son exactamente iguales", "en": "Because they are all exactly the same" },
+        { "es": "Porque ninguna sirve para nada", "en": "Because none of them are useful for anything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El resultado depende de la tarea, el idioma y el contexto. No hay un ganador único para todo.",
+        "en": "The result depends on the task, the language and the context. There's no single winner for everything."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Mistral es...", "en": "Mistral is..." },
+      "options": [
+        { "es": "Otra familia de modelos, con foco en eficiencia", "en": "Another model family, focused on efficiency" },
+        { "es": "Un tipo de token", "en": "A kind of token" },
+        { "es": "Una función dentro de GPT", "en": "A feature inside GPT" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Mistral es una familia propia, conocida por modelos eficientes; varios de ellos son abiertos.",
+        "en": "Mistral is its own family, known for efficient models; several of them are open."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la idea central sobre las familias de IA", "en": "Build the core idea about AI families" },
+      "solution": {
+        "es": ["Cada familia de IA", "es de una organización distinta", "y tiene su propio estilo."],
+        "en": ["Each AI family", "comes from a different organization", "and has its own style."]
+      },
+      "distractors": {
+        "es": ["es toda igual", "y da lo mismo cuál usás"],
+        "en": ["is all the same", "and it doesn't matter which you use"]
+      },
+      "explanation": {
+        "es": "Reconocer las familias te ayuda a elegir con criterio, no por moda.",
+        "en": "Recognizing the families helps you choose wisely, not by trend."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Emparejá familia y organización", "en": "Match family and organization" },
+      "solution": {
+        "es": ["Claude es de Anthropic,", "GPT es de OpenAI", "y Gemini es de Google."],
+        "en": ["Claude is from Anthropic,", "GPT is from OpenAI", "and Gemini is from Google."]
+      },
+      "distractors": {
+        "es": ["Claude es de Google", "y GPT es de Meta"],
+        "en": ["Claude is from Google", "and GPT is from Meta"]
+      },
+      "explanation": {
+        "es": "Saber quién hace cada familia te orienta cuando comparás opciones.",
+        "en": "Knowing who makes each family orients you when comparing options."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un buen criterio para observar el ecosistema", "en": "Build a good criterion to observe the ecosystem" },
+      "solution": {
+        "es": ["Mirá las capacidades", "de cada familia", "según lo que necesitás hacer."],
+        "en": ["Look at the capabilities", "of each family", "based on what you need to do."]
+      },
+      "distractors": {
+        "es": ["Elegí por la publicidad", "más ruidosa"],
+        "en": ["Choose by the loudest", "advertising"]
+      },
+      "explanation": {
+        "es": "En el Observatorio observamos capacidades reales, no promesas de marketing.",
+        "en": "In the Observatory we observe real capabilities, not marketing promises."
+      }
+    }
+  ]
+}

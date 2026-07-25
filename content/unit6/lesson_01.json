@@ -1,0 +1,146 @@
+{
+  "id": "u6l01",
+  "title": { "es": "System prompt", "en": "System prompt" },
+  "byte_intro": {
+    "es": "Bienvenido al Crisol, donde se forjan los prompts de verdad. Empiezo por el cimiento: el system prompt, la instrucción de fondo que define quién soy antes de que me hables.",
+    "en": "Welcome to the Crucible, where real prompts are forged. Let's start with the foundation: the system prompt, the background instruction that defines who I am before you even speak."
+  },
+  "byte_outro": {
+    "es": "Con un buen system prompt tengo rol, reglas y estilo claros desde el arranque. Primer lingote forjado.",
+    "en": "With a good system prompt I have a clear role, rules and style from the start. First ingot forged."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un system prompt?", "en": "What is a system prompt?" },
+      "options": [
+        { "es": "La instrucción de fondo que fija rol, reglas y estilo de todo el sistema", "en": "The background instruction that sets the role, rules and style of the whole system" },
+        { "es": "El primer mensaje que escribe el usuario en el chat", "en": "The first message the user types in the chat" },
+        { "es": "Un botón para reiniciar la conversación", "en": "A button to restart the conversation" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El system prompt se define aparte del chat y condiciona cómo responde el modelo en toda la conversación, no en un solo mensaje.",
+        "en": "The system prompt is set apart from the chat and shapes how the model answers across the whole conversation, not just one message."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿En qué se diferencia del mensaje normal del usuario?", "en": "How does it differ from the normal user message?" },
+      "options": [
+        { "es": "El system prompt manda sobre el comportamiento general; el mensaje del usuario es un pedido puntual", "en": "The system prompt governs overall behavior; the user message is a one-off request" },
+        { "es": "Son exactamente lo mismo con otro nombre", "en": "They are exactly the same thing with a different name" },
+        { "es": "El system prompt lo escribe siempre el modelo solo", "en": "The system prompt is always written by the model itself" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El system prompt fija el marco (rol, límites, tono). Sobre ese marco, cada mensaje del usuario pide algo concreto.",
+        "en": "The system prompt sets the frame (role, limits, tone). Within that frame, each user message asks for something specific."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos es un buen contenido para un system prompt?", "en": "Which of these is good content for a system prompt?" },
+      "options": [
+        { "es": "Sos un asistente de soporte de una tienda. Respondé breve, en tono amable, y no inventes datos de pedidos.", "en": "You are a store support assistant. Answer briefly, in a friendly tone, and do not invent order data." },
+        { "es": "Hola, ¿cómo estás hoy?", "en": "Hi, how are you today?" },
+        { "es": "Contame un chiste cualquiera", "en": "Tell me any random joke" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un buen system prompt define rol (asistente de soporte), estilo (breve y amable) y una regla dura (no inventar datos).",
+        "en": "A good system prompt defines role (support assistant), style (short and friendly) and a hard rule (don't invent data)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué tres cosas conviene que fije un system prompt?", "en": "Which three things should a system prompt set?" },
+      "options": [
+        { "es": "Rol, reglas y estilo", "en": "Role, rules and style" },
+        { "es": "Color, fuente y tamaño de letra", "en": "Color, font and text size" },
+        { "es": "La marca del teléfono del usuario", "en": "The user's phone brand" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Rol (quién es), reglas (qué debe y qué no) y estilo (cómo escribe) son la base de cualquier system prompt sólido.",
+        "en": "Role (who it is), rules (what it must and must not do) and style (how it writes) are the base of any solid system prompt."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El usuario pide algo que rompe una regla del system prompt. ¿Qué debería pasar?", "en": "The user asks for something that breaks a system prompt rule. What should happen?" },
+      "options": [
+        { "es": "El system prompt tiene prioridad: el modelo debería respetar la regla", "en": "The system prompt has priority: the model should respect the rule" },
+        { "es": "El último mensaje siempre gana y borra el system prompt", "en": "The latest message always wins and erases the system prompt" },
+        { "es": "El modelo se apaga", "en": "The model shuts down" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El system prompt está pensado para tener más peso que un pedido puntual; por eso ahí se ponen las reglas que no se deben saltar.",
+        "en": "The system prompt is meant to outweigh a one-off request; that's why the rules that must not be skipped go there."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene poner el estilo en el system prompt y no repetirlo en cada mensaje?", "en": "Why put the style in the system prompt instead of repeating it in every message?" },
+      "options": [
+        { "es": "Se aplica a toda la conversación sin tener que recordarlo cada vez", "en": "It applies to the whole conversation without having to restate it each time" },
+        { "es": "Porque así el modelo lo ignora", "en": "Because that way the model ignores it" },
+        { "es": "Porque el estilo no importa nunca", "en": "Because style never matters" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Definir el estilo una vez en el system prompt mantiene consistencia y te ahorra repetirlo en cada pedido.",
+        "en": "Defining the style once in the system prompt keeps consistency and saves you from repeating it in every request."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un system prompt que fije rol, estilo y una regla", "en": "Build a system prompt that sets role, style and a rule" },
+      "solution": {
+        "es": ["Sos un tutor de matemática paciente.", "Explicá paso a paso y en tono simple.", "Si no estás seguro, decilo en vez de inventar."],
+        "en": ["You are a patient math tutor.", "Explain step by step in a simple tone.", "If you are unsure, say so instead of making things up."]
+      },
+      "distractors": {
+        "es": ["Respondé cualquier cosa", "aunque no venga al caso."],
+        "en": ["Answer anything", "even if it's off topic."]
+      },
+      "explanation": {
+        "es": "Rol (tutor paciente), estilo (paso a paso y simple) y regla (admitir cuando no sabe): un system prompt completo.",
+        "en": "Role (patient tutor), style (step by step and simple) and rule (admit when unsure): a complete system prompt."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la idea clave sobre la prioridad del system prompt", "en": "Build the key idea about system prompt priority" },
+      "solution": {
+        "es": ["El system prompt", "define el marco de conducta", "por encima de cada pedido suelto."],
+        "en": ["The system prompt", "defines the behavior frame", "above each single request."]
+      },
+      "distractors": {
+        "es": ["depende del humor", "del usuario del momento."],
+        "en": ["depends on the mood", "of the current user."]
+      },
+      "explanation": {
+        "es": "El marco lo pone el system prompt; los pedidos trabajan adentro de ese marco.",
+        "en": "The frame is set by the system prompt; requests operate inside that frame."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una regla dura útil para un asistente de soporte", "en": "Build a useful hard rule for a support assistant" },
+      "solution": {
+        "es": ["No compartas datos personales de otros clientes", "y no inventes números de pedido:", "si no lo tenés, pedí el dato."],
+        "en": ["Do not share other customers' personal data", "and do not invent order numbers:", "if you don't have it, ask for it."]
+      },
+      "distractors": {
+        "es": ["Prometé reembolsos", "sin verificar nada."],
+        "en": ["Promise refunds", "without verifying anything."]
+      },
+      "explanation": {
+        "es": "Las reglas duras protegen datos y evitan inventos; prometer sin verificar sería lo contrario.",
+        "en": "Hard rules protect data and prevent made-up facts; promising without verifying would be the opposite."
+      }
+    }
+  ]
+}

@@ -4,14 +4,14 @@ extends Node
 # Registro de las 8 zonas del camino "de cero a ingeniero". El mapa muestra solo
 # las unidades que ya tienen contenido (se van sumando por tandas).
 const UNIDADES := [
-	{"num": 1, "zona": "EL NÚCLEO", "sub": "Fundamentos de IA", "lecciones": 10},
-	{"num": 2, "zona": "LA FORJA", "sub": "Prompting Intermedio", "lecciones": 10},
-	{"num": 3, "zona": "EL TALLER", "sub": "Casos de Uso", "lecciones": 10},
-	{"num": 4, "zona": "EL OBSERVATORIO", "sub": "Comparar Modelos", "lecciones": 10},
-	{"num": 5, "zona": "LA RED", "sub": "Herramientas y Ecosistema", "lecciones": 10},
-	{"num": 6, "zona": "EL CRISOL", "sub": "Prompt Engineering Avanzado", "lecciones": 10},
-	{"num": 7, "zona": "LA FÁBRICA", "sub": "IA en Flujos Reales", "lecciones": 10},
-	{"num": 8, "zona": "LA CIMA", "sub": "Ingeniería de IA", "lecciones": 10, "final": true},
+	{"num": 1, "zona": "EL NÚCLEO", "sub": "Fundamentos de IA", "lecciones": 10, "color": "22c9ff"},
+	{"num": 2, "zona": "LA FORJA", "sub": "Prompting Intermedio", "lecciones": 10, "color": "ff8a3c"},
+	{"num": 3, "zona": "EL TALLER", "sub": "Casos de Uso", "lecciones": 10, "color": "46e661"},
+	{"num": 4, "zona": "EL OBSERVATORIO", "sub": "Comparar Modelos", "lecciones": 10, "color": "a06bff"},
+	{"num": 5, "zona": "LA RED", "sub": "Herramientas y Ecosistema", "lecciones": 10, "color": "3d7bff"},
+	{"num": 6, "zona": "EL CRISOL", "sub": "Prompt Engineering Avanzado", "lecciones": 10, "color": "ff4d6d"},
+	{"num": 7, "zona": "LA FÁBRICA", "sub": "IA en Flujos Reales", "lecciones": 10, "color": "ffb02e"},
+	{"num": 8, "zona": "LA CIMA", "sub": "Ingeniería de IA", "lecciones": 10, "color": "ffcf3f", "final": true},
 ]
 
 func idioma() -> String:
@@ -34,6 +34,16 @@ func get_lesson(id: String) -> Dictionary:
 func _lesson_id(unidad: int, num: int) -> String:
 	return "u%dl%02d" % [unidad, num]
 
+## ¿Es el boss de la última unidad (la marcada "final")? Dispara la certificación.
+func es_leccion_final(id: String) -> bool:
+	var partes := id.substr(1).split("l")  # "8l10" → ["8","10"]
+	var num := int(partes[0])
+	var lec := int(partes[1])
+	for u in UNIDADES:
+		if int(u["num"]) == num:
+			return u.get("final", false) and lec == int(u["lecciones"])
+	return false
+
 ## Unidades con contenido existente: [{num, zona, sub, final, lecciones:[{id,title,boss}]}]
 func get_unidades() -> Array:
 	var salida := []
@@ -53,7 +63,8 @@ func get_unidades() -> Array:
 		if lecciones.is_empty():
 			continue  # unidad todavía sin contenido: no se muestra
 		salida.append({"num": u["num"], "zona": u["zona"], "sub": u["sub"],
-			"final": u.get("final", false), "lecciones": lecciones})
+			"color": u.get("color", "22c9ff"), "final": u.get("final", false),
+			"lecciones": lecciones})
 	return salida
 
 ## Lista plana de ids de todas las lecciones existentes, en orden (para el

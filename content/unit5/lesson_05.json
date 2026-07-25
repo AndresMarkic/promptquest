@@ -1,0 +1,134 @@
+{
+  "id": "u5l05",
+  "title": { "es": "Ordenar el flujo de un agente", "en": "Ordering an agent's flow" },
+  "byte_intro": {
+    "es": "Vi a un agente trabajar y siempre repite el mismo ciclo: planifica qué hacer, actúa, observa el resultado y, si falta, repite. Vamos a armar esos flujos en orden.",
+    "en": "I watched an agent work and it always repeats the same loop: plan what to do, act, observe the result and, if needed, repeat. Let's build those flows in order."
+  },
+  "byte_outro": {
+    "es": "¡Lo domino! Planificar → actuar → observar → repetir. Ese ciclo es el motor de todo agente. Si algo sale mal, vuelve a planificar con lo que aprendió.",
+    "en": "I've got it! Plan → act → observe → repeat. That loop is the engine of every agent. If something goes wrong, it plans again with what it learned."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es el ciclo básico de un agente?", "en": "What is an agent's basic loop?" },
+      "options": [
+        { "es": "Planificar → actuar → observar → repetir", "en": "Plan → act → observe → repeat" },
+        { "es": "Dormir → soñar → despertar", "en": "Sleep → dream → wake up" },
+        { "es": "Copiar → pegar → borrar", "en": "Copy → paste → delete" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Piensa el paso, lo ejecuta, mira qué pasó y sigue. Ese bucle se repite hasta cumplir la meta.",
+        "en": "It thinks a step, runs it, sees what happened and continues. That loop repeats until the goal is met."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená el ciclo de un agente", "en": "Order the agent loop" },
+      "solution": {
+        "es": ["Planificar el próximo paso", "actuar usando una herramienta", "observar el resultado", "repetir si falta."],
+        "en": ["Plan the next step", "act using a tool", "observe the result", "repeat if needed."]
+      },
+      "distractors": {
+        "es": ["ignorar el objetivo", "apagarse sin avisar"],
+        "en": ["ignore the goal", "shut down without notice"]
+      },
+      "explanation": {
+        "es": "Planificar, actuar, observar y repetir: el orden importa porque cada paso alimenta al siguiente.",
+        "en": "Plan, act, observe and repeat: order matters because each step feeds the next."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El agente actuó y el resultado fue un error. ¿Qué hace en un buen ciclo?", "en": "The agent acted and the result was an error. In a good loop, what does it do?" },
+      "options": [
+        { "es": "Observa el error y planifica un paso corregido", "en": "Observes the error and plans a corrected step" },
+        { "es": "Repite el mismo paso idéntico para siempre", "en": "Repeats the exact same step forever" },
+        { "es": "Se queja y abandona", "en": "Complains and quits" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Observar sirve para eso: con el error a la vista, replanifica en vez de repetir a ciegas.",
+        "en": "That's what observing is for: with the error in view, it re-plans instead of repeating blindly."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená los pasos de un agente que responde una consulta de soporte", "en": "Order the steps of an agent answering a support query" },
+      "solution": {
+        "es": ["Leer el pedido del cliente", "buscar la info en la base", "redactar la respuesta", "enviarla al cliente."],
+        "en": ["Read the customer's request", "search the info in the database", "write the answer", "send it to the customer."]
+      },
+      "distractors": {
+        "es": ["borrar la cuenta del cliente", "sin leer nada"],
+        "en": ["delete the customer's account", "without reading anything"]
+      },
+      "explanation": {
+        "es": "Primero entender, después buscar, luego redactar y por último enviar: flujo lógico de soporte.",
+        "en": "First understand, then search, then write and finally send: a logical support flow."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué el agente 'planifica' antes de actuar?", "en": "Why does the agent 'plan' before acting?" },
+      "options": [
+        { "es": "Para elegir el paso más útil en vez de improvisar", "en": "To pick the most useful step instead of improvising" },
+        { "es": "Para perder tiempo", "en": "To waste time" },
+        { "es": "Porque le pagan por planificar", "en": "Because it gets paid to plan" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Planificar le da un rumbo: decide qué herramienta y con qué datos, antes de gastar la acción.",
+        "en": "Planning gives it direction: it decides which tool and what data before spending the action."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená un agente que reserva una mesa en un restaurante", "en": "Order an agent booking a restaurant table" },
+      "solution": {
+        "es": ["Entender la fecha y cantidad", "buscar disponibilidad", "confirmar la reserva", "avisar al usuario."],
+        "en": ["Understand the date and party size", "check availability", "confirm the booking", "notify the user."]
+      },
+      "distractors": {
+        "es": ["cancelar todas las mesas", "sin preguntar"],
+        "en": ["cancel every table", "without asking"]
+      },
+      "explanation": {
+        "es": "Entender → chequear → confirmar → avisar: cada paso depende del anterior.",
+        "en": "Understand → check → confirm → notify: each step depends on the previous one."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuándo deja de repetir el ciclo un agente?", "en": "When does an agent stop repeating the loop?" },
+      "options": [
+        { "es": "Cuando cumplió el objetivo (o decidió que no puede seguir)", "en": "When it met the goal (or decided it can't go on)" },
+        { "es": "Nunca, sigue por siempre", "en": "Never, it goes on forever" },
+        { "es": "Cuando se aburre", "en": "When it gets bored" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El bucle termina al lograr la meta o al concluir que no hay más pasos útiles.",
+        "en": "The loop ends when the goal is reached or it concludes there are no more useful steps."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué pasa cuando un paso falla", "en": "Build what happens when a step fails" },
+      "solution": {
+        "es": ["Observa que el paso falló", "aprende del error", "y planifica un nuevo intento."],
+        "en": ["It observes the step failed", "learns from the error", "and plans a new attempt."]
+      },
+      "distractors": {
+        "es": ["repite igual sin mirar", "hasta romperse"],
+        "en": ["repeats blindly", "until it breaks"]
+      },
+      "explanation": {
+        "es": "Observar el fallo y replanificar es lo que hace robusto a un agente.",
+        "en": "Observing the failure and re-planning is what makes an agent robust."
+      }
+    }
+  ]
+}

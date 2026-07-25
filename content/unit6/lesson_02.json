@@ -1,0 +1,146 @@
+{
+  "id": "u6l02",
+  "title": { "es": "Formatos estructurados", "en": "Structured formats" },
+  "byte_intro": {
+    "es": "A veces mi respuesta no la lee una persona: la lee un programa. Para eso aprendí a devolver la salida en formatos como JSON, que una máquina puede procesar sin adivinar.",
+    "en": "Sometimes my answer isn't read by a person: it's read by a program. For that I learned to return output in formats like JSON that a machine can process without guessing."
+  },
+  "byte_outro": {
+    "es": "Cuando la salida tiene una estructura fija, el software la toma sin romperse. Otro lingote listo.",
+    "en": "When the output has a fixed structure, software takes it without breaking. Another ingot ready."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué pedir la salida en JSON o con un esquema fijo?", "en": "Why ask for output in JSON or a fixed schema?" },
+      "options": [
+        { "es": "Para que un programa pueda leer y usar la respuesta de forma confiable", "en": "So a program can read and use the answer reliably" },
+        { "es": "Porque JSON se ve más bonito para el usuario", "en": "Because JSON looks prettier for the user" },
+        { "es": "Porque hace que el modelo piense mejor", "en": "Because it makes the model think better" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El texto libre es difícil de procesar por software. Una estructura fija (campos con nombre) se parsea sin ambigüedad.",
+        "en": "Free text is hard for software to process. A fixed structure (named fields) can be parsed with no ambiguity."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estas salidas puede leer un programa sin ambigüedad?", "en": "Which of these outputs can a program read without ambiguity?" },
+      "options": [
+        { "es": "{\"nombre\": \"Ana\", \"edad\": 30}", "en": "{\"name\": \"Ana\", \"age\": 30}" },
+        { "es": "Ana tiene como treinta y pico, creo", "en": "Ana is like thirty-something, I think" },
+        { "es": "La edad de Ana es un misterio hermoso", "en": "Ana's age is a beautiful mystery" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El JSON tiene campos con nombre y tipos claros. Las otras dos son texto libre, imposibles de procesar de forma fiable.",
+        "en": "The JSON has named fields and clear types. The other two are free text, impossible to process reliably."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Al pedir JSON, ¿qué instrucción ayuda más al parser?", "en": "When asking for JSON, which instruction helps the parser most?" },
+      "options": [
+        { "es": "Devolvé SOLO el JSON, sin texto extra ni explicaciones alrededor", "en": "Return ONLY the JSON, with no extra text or explanations around it" },
+        { "es": "Escribí un párrafo y en algún lado meté el JSON", "en": "Write a paragraph and put the JSON somewhere in it" },
+        { "es": "Agregá emojis antes y después del JSON", "en": "Add emojis before and after the JSON" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si el modelo agrega texto antes o después, el parser puede fallar. Pedir 'solo el JSON' evita ese problema.",
+        "en": "If the model adds text before or after, the parser can fail. Asking for 'only the JSON' avoids that problem."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa darle un esquema al modelo?", "en": "What does giving the model a schema mean?" },
+      "options": [
+        { "es": "Decirle qué campos debe tener la salida y de qué tipo (texto, número, lista)", "en": "Telling it which fields the output must have and of what type (text, number, list)" },
+        { "es": "Pedirle que dibuje un diagrama", "en": "Asking it to draw a diagram" },
+        { "es": "Cambiarle el idioma", "en": "Changing its language" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un esquema define la forma esperada: los nombres de los campos y sus tipos. El modelo llena esa plantilla.",
+        "en": "A schema defines the expected shape: the field names and their types. The model fills that template."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Para qué sirve mostrarle un ejemplo del JSON que querés?", "en": "What is showing an example of the JSON you want good for?" },
+      "options": [
+        { "es": "Le fija el formato exacto y reduce que se desvíe", "en": "It fixes the exact format and reduces drift" },
+        { "es": "Lo confunde y empeora la salida", "en": "It confuses it and worsens the output" },
+        { "es": "No cambia nada", "en": "It changes nothing" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un ejemplo concreto del formato (una plantilla) hace que el modelo copie esa estructura con más precisión.",
+        "en": "A concrete example of the format (a template) makes the model copy that structure more precisely."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué conviene hacer siempre con el JSON que devuelve la IA antes de usarlo?", "en": "What should you always do with the JSON the AI returns before using it?" },
+      "options": [
+        { "es": "Validarlo: chequear que sea JSON válido y tenga los campos esperados", "en": "Validate it: check it's valid JSON and has the expected fields" },
+        { "es": "Confiar a ciegas y usarlo directo", "en": "Trust blindly and use it directly" },
+        { "es": "Borrarlo por las dudas", "en": "Delete it just in case" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo puede equivocarse en la forma. Validar la estructura antes de usarla evita que tu programa se rompa.",
+        "en": "The model can get the shape wrong. Validating the structure before using it keeps your program from breaking."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una instrucción para obtener JSON limpio", "en": "Build an instruction to get clean JSON" },
+      "solution": {
+        "es": ["Devolvé SOLO un JSON", "con los campos nombre y edad,", "sin texto adicional."],
+        "en": ["Return ONLY a JSON", "with the fields name and age,", "with no additional text."]
+      },
+      "distractors": {
+        "es": ["y contame además", "cómo te fue el día."],
+        "en": ["and also tell me", "how your day went."]
+      },
+      "explanation": {
+        "es": "Pedir 'solo JSON', nombrar los campos y prohibir texto extra da una salida lista para parsear.",
+        "en": "Asking for 'only JSON', naming the fields and banning extra text yields output ready to parse."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un esquema simple para una tarea", "en": "Build a simple schema for a task" },
+      "solution": {
+        "es": ["Esquema:", "{ \"titulo\": texto,", "\"prioridad\": número del 1 al 3 }"],
+        "en": ["Schema:", "{ \"title\": text,", "\"priority\": number from 1 to 3 }"]
+      },
+      "distractors": {
+        "es": ["poné lo que quieras", "en cualquier orden."],
+        "en": ["put whatever you want", "in any order."]
+      },
+      "explanation": {
+        "es": "Un esquema nombra los campos y su tipo, y hasta limita valores (prioridad de 1 a 3).",
+        "en": "A schema names the fields and their type, and can even limit values (priority from 1 to 3)."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el paso de seguridad antes de usar la salida", "en": "Build the safety step before using the output" },
+      "solution": {
+        "es": ["Validá que la respuesta", "sea JSON válido", "y tenga todos los campos requeridos."],
+        "en": ["Validate that the response", "is valid JSON", "and has all the required fields."]
+      },
+      "distractors": {
+        "es": ["Usala directo", "sin revisar nada."],
+        "en": ["Use it directly", "without checking anything."]
+      },
+      "explanation": {
+        "es": "Validar forma y campos evita que un JSON mal formado rompa tu programa.",
+        "en": "Validating shape and fields keeps a malformed JSON from breaking your program."
+      }
+    }
+  ]
+}

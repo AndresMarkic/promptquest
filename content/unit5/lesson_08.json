@@ -1,0 +1,130 @@
+{
+  "id": "u5l08",
+  "title": { "es": "MCP: conectar la IA a tus datos", "en": "MCP: connecting the AI to your data" },
+  "byte_intro": {
+    "es": "Cada herramienta se conectaba a la IA de una forma distinta: un lío. Entonces apareció MCP, un enchufe estándar. Con un mismo formato, la IA se conecta a tus datos y herramientas sin inventar un cable nuevo cada vez.",
+    "en": "Every tool connected to the AI in its own way: a mess. Then came MCP, a standard plug. With one shared format, the AI connects to your data and tools without inventing a new cable each time."
+  },
+  "byte_outro": {
+    "es": "¡Qué alivio! MCP es un protocolo estándar para conectar la IA con herramientas y datos. Como el USB: un mismo enchufe sirve para muchas cosas.",
+    "en": "What a relief! MCP is a standard protocol to connect the AI with tools and data. Like USB: one plug fits many things."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es MCP, en criollo?", "en": "What is MCP, in plain terms?" },
+      "options": [
+        { "es": "Un protocolo estándar para conectar la IA con herramientas y datos", "en": "A standard protocol to connect the AI with tools and data" },
+        { "es": "Un modelo de IA nuevo", "en": "A brand-new AI model" },
+        { "es": "Un tipo de token", "en": "A kind of token" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "MCP define una forma común de conectar. Así muchas herramientas hablan con la IA con el mismo formato.",
+        "en": "MCP defines a common way to connect. So many tools talk to the AI using the same format."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Con qué se parece MCP?", "en": "What's a good analogy for MCP?" },
+      "options": [
+        { "es": "Con el USB: un enchufe estándar que sirve para muchos aparatos", "en": "With USB: a standard plug that fits many devices" },
+        { "es": "Con una pintura", "en": "With a painting" },
+        { "es": "Con una canción", "en": "With a song" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Igual que el USB unificó conexiones, MCP unifica cómo la IA se enchufa a herramientas y datos.",
+        "en": "Just as USB unified connections, MCP unifies how the AI plugs into tools and data."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué problema resuelve tener un estándar como MCP?", "en": "What problem does having a standard like MCP solve?" },
+      "options": [
+        { "es": "No hay que armar una conexión distinta para cada herramienta", "en": "You don't build a different connection for each tool" },
+        { "es": "Hace que la IA escriba más rápido", "en": "It makes the AI write faster" },
+        { "es": "Elimina la necesidad de electricidad", "en": "It removes the need for electricity" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Sin estándar, cada integración es a medida. Con MCP, una misma forma sirve para todas.",
+        "en": "Without a standard, each integration is custom. With MCP, one shared shape works for all."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Con MCP, la IA puede conectarse a...", "en": "With MCP, the AI can connect to..." },
+      "options": [
+        { "es": "Tus archivos, una base de datos o una herramienta, de forma estándar", "en": "Your files, a database or a tool, in a standard way" },
+        { "es": "Solo a sí misma", "en": "Only to itself" },
+        { "es": "A nada nuevo", "en": "To nothing new" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "MCP es el puente: expone tus datos y herramientas para que la IA los use con un formato común.",
+        "en": "MCP is the bridge: it exposes your data and tools so the AI can use them with a common format."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "MCP, ¿reemplaza al modelo de IA?", "en": "Does MCP replace the AI model?" },
+      "options": [
+        { "es": "No: es la forma de conectarlo con datos y herramientas", "en": "No: it's the way to connect it with data and tools" },
+        { "es": "Sí, es un modelo más potente", "en": "Yes, it's a more powerful model" },
+        { "es": "Sí, lo apaga", "en": "Yes, it shuts it down" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "MCP no piensa ni genera: solo estandariza la conexión entre la IA y el mundo externo.",
+        "en": "MCP doesn't think or generate: it just standardizes the connection between the AI and the outside world."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá para qué sirve MCP", "en": "Build what MCP is for" },
+      "solution": {
+        "es": ["MCP es un protocolo estándar", "para conectar la IA", "con tus datos y herramientas."],
+        "en": ["MCP is a standard protocol", "to connect the AI", "with your data and tools."]
+      },
+      "distractors": {
+        "es": ["para reentrenar el modelo", "cada noche"],
+        "en": ["to retrain the model", "every night"]
+      },
+      "explanation": {
+        "es": "Protocolo estándar de conexión: ese es el rol de MCP.",
+        "en": "A standard connection protocol: that's MCP's role."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Ventaja de que MCP sea un estándar abierto:", "en": "Advantage of MCP being an open standard:" },
+      "options": [
+        { "es": "Cualquier herramienta que lo siga se conecta sin trabajo extra", "en": "Any tool that follows it connects with no extra work" },
+        { "es": "Solo funciona con una única empresa", "en": "It only works with a single company" },
+        { "es": "Obliga a reescribir el modelo", "en": "It forces rewriting the model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Al ser un estándar común, muchas herramientas distintas encajan sin integraciones a medida.",
+        "en": "Being a common standard, many different tools fit without custom integrations."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la analogía de MCP", "en": "Build the MCP analogy" },
+      "solution": {
+        "es": ["MCP es como un USB:", "un mismo enchufe estándar", "para conectar muchas herramientas."],
+        "en": ["MCP is like a USB:", "one standard plug", "to connect many tools."]
+      },
+      "distractors": {
+        "es": ["un cable distinto", "para cada aparato"],
+        "en": ["a different cable", "for each device"]
+      },
+      "explanation": {
+        "es": "Un enchufe estándar para todo, como el USB: esa es la idea de MCP.",
+        "en": "One standard plug for everything, like USB: that's the idea behind MCP."
+      }
+    }
+  ]
+}

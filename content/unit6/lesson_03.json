@@ -1,0 +1,146 @@
+{
+  "id": "u6l03",
+  "title": { "es": "Grounding", "en": "Grounding" },
+  "byte_intro": {
+    "es": "Cuando respondo de memoria, a veces invento. Por eso aprendí a anclarme: me das los datos y yo respondo SOLO con eso. A esto le dicen grounding.",
+    "en": "When I answer from memory, I sometimes make things up. So I learned to anchor myself: you give me the data and I answer ONLY from that. This is called grounding."
+  },
+  "byte_outro": {
+    "es": "Anclado a tus datos, invento mucho menos y puedo señalar de dónde saqué cada cosa. Lingote forjado.",
+    "en": "Anchored to your data, I invent far less and can point to where each thing came from. Ingot forged."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es el grounding en un prompt?", "en": "What is grounding in a prompt?" },
+      "options": [
+        { "es": "Anclar la respuesta a datos que vos le proporcionás, en vez de que responda de memoria", "en": "Anchoring the answer to data you provide, instead of answering from memory" },
+        { "es": "Hacer que el modelo hable más lento", "en": "Making the model speak more slowly" },
+        { "es": "Conectarlo a un enchufe con toma a tierra", "en": "Connecting it to a grounded power outlet" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Grounding es darle el material (documentos, datos) y pedirle que responda basándose en eso, no en lo que 'recuerda'.",
+        "en": "Grounding means giving it the material (documents, data) and asking it to answer based on that, not on what it 'remembers'."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué problema ayuda a reducir el grounding?", "en": "Which problem does grounding help reduce?" },
+      "options": [
+        { "es": "Las alucinaciones: que invente datos que suenan bien pero son falsos", "en": "Hallucinations: making up facts that sound good but are false" },
+        { "es": "Que el texto sea muy largo", "en": "That the text is too long" },
+        { "es": "Que use demasiados emojis", "en": "That it uses too many emojis" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si limitás la respuesta a los datos provistos, hay menos margen para que invente cosas que no están ahí.",
+        "en": "If you limit the answer to the provided data, there's less room to invent things that aren't there."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es un prompt bien anclado?", "en": "Which is a well-grounded prompt?" },
+      "options": [
+        { "es": "Respondé usando SOLO el texto de abajo. Si la respuesta no está ahí, decí 'no está en el documento'.", "en": "Answer using ONLY the text below. If the answer isn't there, say 'it's not in the document'." },
+        { "es": "Respondé lo que sepas sobre el tema, como quieras", "en": "Answer whatever you know about the topic, however you like" },
+        { "es": "Inventá una respuesta que suene profesional", "en": "Make up an answer that sounds professional" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Restringir la fuente ('solo el texto de abajo') y dar una salida para cuando no está el dato es el corazón del grounding.",
+        "en": "Restricting the source ('only the text below') and giving an escape hatch when the data is missing is the heart of grounding."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué debería hacer el modelo si la respuesta NO está en los datos provistos?", "en": "What should the model do if the answer is NOT in the provided data?" },
+      "options": [
+        { "es": "Avisar que no está en la fuente, en vez de inventar", "en": "Warn that it's not in the source, instead of making it up" },
+        { "es": "Inventar algo parecido para no quedar mal", "en": "Make up something similar so it doesn't look bad" },
+        { "es": "Repetir la pregunta sin responder", "en": "Repeat the question without answering" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una buena instrucción de grounding incluye qué decir cuando el dato falta: 'no está en el documento' es honesto y útil.",
+        "en": "A good grounding instruction includes what to say when the data is missing: 'it's not in the document' is honest and useful."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Además de anclar, ¿qué conviene pedirle para poder verificar?", "en": "Beyond anchoring, what should you ask to be able to verify?" },
+      "options": [
+        { "es": "Que cite de qué parte del texto sacó cada respuesta", "en": "That it cites which part of the text each answer came from" },
+        { "es": "Que responda siempre en mayúsculas", "en": "That it always answers in uppercase" },
+        { "es": "Que no use la palabra 'documento'", "en": "That it never uses the word 'document'" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pedir la cita o el fragmento de origen te deja chequear rápido si la respuesta realmente está respaldada.",
+        "en": "Asking for the quote or source fragment lets you quickly check whether the answer is actually backed up."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué el grounding no elimina el 100% de los errores?", "en": "Why doesn't grounding eliminate 100% of errors?" },
+      "options": [
+        { "es": "El modelo todavía puede interpretar mal el texto o mezclar datos", "en": "The model can still misread the text or mix up data" },
+        { "es": "Porque el grounding no sirve para nada", "en": "Because grounding is useless" },
+        { "es": "Porque siempre borra la fuente", "en": "Because it always deletes the source" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Reduce mucho las invenciones, pero el modelo aún puede malinterpretar. Por eso conviene combinarlo con verificación.",
+        "en": "It greatly reduces made-up facts, but the model can still misinterpret. That's why you combine it with verification."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una instrucción de grounding completa", "en": "Build a complete grounding instruction" },
+      "solution": {
+        "es": ["Respondé usando solo el texto de abajo.", "Si el dato no aparece,", "decí que no está en el documento."],
+        "en": ["Answer using only the text below.", "If the fact isn't there,", "say it's not in the document."]
+      },
+      "distractors": {
+        "es": ["Completá con lo que supongas", "aunque no esté en el texto."],
+        "en": ["Fill in with what you assume", "even if it's not in the text."]
+      },
+      "explanation": {
+        "es": "Fuente única + salida honesta cuando falta el dato: eso es grounding bien hecho.",
+        "en": "Single source + honest fallback when the data is missing: that's grounding done right."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido de citas para poder verificar", "en": "Build the request for citations to enable verification" },
+      "solution": {
+        "es": ["Por cada respuesta,", "citá el fragmento del texto", "que la respalda."],
+        "en": ["For each answer,", "cite the fragment of the text", "that supports it."]
+      },
+      "distractors": {
+        "es": ["No muestres de dónde", "salió la información."],
+        "en": ["Don't show where", "the information came from."]
+      },
+      "explanation": {
+        "es": "Citar el fragmento de origen hace la respuesta verificable de un vistazo.",
+        "en": "Citing the source fragment makes the answer verifiable at a glance."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la idea de por qué el grounding ayuda", "en": "Build the idea of why grounding helps" },
+      "solution": {
+        "es": ["Limitar la respuesta", "a los datos provistos", "reduce las alucinaciones."],
+        "en": ["Limiting the answer", "to the provided data", "reduces hallucinations."]
+      },
+      "distractors": {
+        "es": ["Responder de memoria", "es siempre más seguro."],
+        "en": ["Answering from memory", "is always safer."]
+      },
+      "explanation": {
+        "es": "Cuanto más acotás la fuente, menos espacio hay para inventar.",
+        "en": "The more you narrow the source, the less room there is to invent."
+      }
+    }
+  ]
+}

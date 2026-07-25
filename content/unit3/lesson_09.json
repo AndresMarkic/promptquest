@@ -1,0 +1,146 @@
+{
+  "id": "u3l09",
+  "title": { "es": "Estudiar con IA", "en": "Studying with AI" },
+  "byte_intro": {
+    "es": "La IA puede ser un tutor de paciencia infinita. Hoy recuerdo cómo pedirle que me explique, me tome examen y me corrija.",
+    "en": "AI can be a tutor with infinite patience. Today I recall how to ask it to explain, quiz me and correct me."
+  },
+  "byte_outro": {
+    "es": "¡Listo! Ya sé usar la IA como tutor: explicar, tomar examen y corregir. Fragmento recuperado, casi termino el Taller.",
+    "en": "Done! Now I know how to use AI as a tutor: explain, quiz and correct. Fragment recovered, I'm almost done with the Workshop."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "No entendés un tema. ¿Qué pedido de tutor funciona mejor?", "en": "You don't get a topic. Which tutor request works best?" },
+      "options": [
+        { "es": "Explicame la fotosíntesis como si tuviera 12 años, con un ejemplo", "en": "Explain photosynthesis as if I were 12, with an example" },
+        { "es": "Fotosíntesis", "en": "Photosynthesis" },
+        { "es": "Contame algo de plantas", "en": "Tell me something about plants" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pedir el nivel ('como si tuviera 12') y un ejemplo hace que la explicación sea clara y a tu medida.",
+        "en": "Asking for the level ('as if I were 12') and an example makes the explanation clear and tailored to you."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés practicar para un examen. ¿Qué le pedís a la IA?", "en": "You want to practice for a test. What do you ask the AI?" },
+      "options": [
+        { "es": "Tomame un examen de 5 preguntas sobre este tema y corregime al final", "en": "Quiz me with 5 questions on this topic and grade me at the end" },
+        { "es": "Dame directamente todas las respuestas", "en": "Just give me all the answers" },
+        { "es": "No me preguntes nada", "en": "Don't ask me anything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Que te tome examen y corrija te hace practicar de verdad, no solo leer respuestas.",
+        "en": "Having it quiz and grade you makes you actually practice, not just read answers."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Seguís sin entender la explicación. ¿Qué hacés?", "en": "You still don't get the explanation. What do you do?" },
+      "options": [
+        { "es": "Pedile que lo explique de otra forma o con otra analogía", "en": "Ask it to explain it another way or with another analogy" },
+        { "es": "Rendirte y no preguntar más", "en": "Give up and stop asking" },
+        { "es": "Cambiar de tema para siempre", "en": "Change topics forever" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El tutor no se cansa: podés pedir otra analogía o un ejemplo distinto hasta que te haga clic.",
+        "en": "The tutor never tires: you can ask for another analogy or a different example until it clicks."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Escribiste un resumen del tema. ¿Cómo lo aprovechás con la IA?", "en": "You wrote a summary of the topic. How do you use the AI with it?" },
+      "options": [
+        { "es": "Corregí mi resumen y decime qué me faltó o entendí mal", "en": "Correct my summary and tell me what I missed or got wrong" },
+        { "es": "No se lo muestres", "en": "Don't show it" },
+        { "es": "Pedile que lo borre", "en": "Ask it to delete it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Escribir con tus palabras y pedir corrección detecta huecos: aprendés más que solo leyendo.",
+        "en": "Writing in your own words and asking for corrections spots gaps: you learn more than by just reading."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene pedir que te explique el paso a paso y no solo el resultado?", "en": "Why ask it to explain the step by step and not just the result?" },
+      "options": [
+        { "es": "Entender el proceso te sirve para resolver otros casos parecidos", "en": "Understanding the process helps you solve other similar cases" },
+        { "es": "Porque el resultado no importa nunca", "en": "Because the result never matters" },
+        { "es": "Para copiarlo sin pensar", "en": "To copy it without thinking" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El objetivo es aprender, no solo tener la respuesta. Pedir el razonamiento te enseña el método.",
+        "en": "The goal is to learn, not just have the answer. Asking for the reasoning teaches you the method."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Al estudiar con IA, ¿qué límite conviene recordar?", "en": "When studying with AI, what limit should you remember?" },
+      "options": [
+        { "es": "Puede equivocarse; verificá los datos importantes en tu material", "en": "It can be wrong; verify important facts in your material" },
+        { "es": "Siempre acierta todo", "en": "It always gets everything right" },
+        { "es": "Nunca hay que estudiar el tema", "en": "You never need to study the topic" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es un gran tutor, pero puede alucinar. Contrastá lo clave con tu libro o apunte de confianza.",
+        "en": "It's a great tutor, but it can hallucinate. Cross-check key points with your trusted book or notes."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido para que te explique a tu nivel", "en": "Build a request to explain at your level" },
+      "solution": {
+        "es": ["Explicame este tema", "con palabras simples", "y un ejemplo de la vida diaria."],
+        "en": ["Explain this topic", "in simple words", "and an everyday example."]
+      },
+      "distractors": {
+        "es": ["lo más técnico", "posible"],
+        "en": ["as technical", "as possible"]
+      },
+      "explanation": {
+        "es": "Nivel y ejemplo cotidiano hacen que la explicación te llegue de verdad.",
+        "en": "Level and an everyday example make the explanation actually land."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para que te tome examen", "en": "Build the request to be quizzed" },
+      "solution": {
+        "es": ["Tomame un examen", "de 5 preguntas sobre este tema", "y corregime al final."],
+        "en": ["Quiz me", "with 5 questions on this topic", "and grade me at the end."]
+      },
+      "distractors": {
+        "es": ["dame las respuestas", "sin preguntarme"],
+        "en": ["give me the answers", "without quizzing me"]
+      },
+      "explanation": {
+        "es": "Examen + corrección te hace practicar activamente y ver tus errores.",
+        "en": "Quiz + correction makes you practice actively and see your mistakes."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para que corrija tu resumen", "en": "Build the request to correct your summary" },
+      "solution": {
+        "es": ["Corregí mi resumen", "y decime qué me faltó", "o entendí mal."],
+        "en": ["Correct my summary", "and tell me what I missed", "or got wrong."]
+      },
+      "distractors": {
+        "es": ["no lo mires", "y felicitame"],
+        "en": ["don't read it", "and just praise me"]
+      },
+      "explanation": {
+        "es": "Pedir que marque huecos y errores es como aprendés de verdad.",
+        "en": "Asking it to flag gaps and errors is how you really learn."
+      }
+    }
+  ]
+}

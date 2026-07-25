@@ -1,0 +1,146 @@
+{
+  "id": "u8l02",
+  "title": { "es": "Pipelines multi-modelo", "en": "Multi-model pipelines" },
+  "byte_intro": {
+    "es": "No hace falta el modelo más caro para TODO. Un buen sistema usa el modelo correcto en cada paso. Te muestro.",
+    "en": "You don't need the most expensive model for EVERYTHING. A good system uses the right model at each step. Let me show you."
+  },
+  "byte_outro": {
+    "es": "¡Genial! Barato y rápido para filtrar, potente para razonar lo difícil. Así se cuida el costo sin perder calidad.",
+    "en": "Great! Cheap and fast to filter, powerful to reason the hard part. That's how you save cost without losing quality."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un pipeline multi-modelo?", "en": "What is a multi-model pipeline?" },
+      "options": [
+        { "es": "Una cadena de pasos donde cada uno usa el modelo más adecuado", "en": "A chain of steps where each one uses the most suitable model" },
+        { "es": "Usar el mismo modelo gigante para todo", "en": "Using the same giant model for everything" },
+        { "es": "Entrenar tu propio modelo desde cero", "en": "Training your own model from scratch" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En vez de un solo modelo para todo, combinás varios: cada paso usa el que mejor equilibra costo, velocidad y capacidad para ESA tarea.",
+        "en": "Instead of one model for everything, you combine several: each step uses the one that best balances cost, speed and capability for THAT task."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para descartar rápido miles de comentarios irrelevantes, ¿qué conviene?", "en": "To quickly discard thousands of irrelevant comments, what's best?" },
+      "options": [
+        { "es": "Un modelo chico y barato que filtre primero", "en": "A small, cheap model that filters first" },
+        { "es": "El modelo más potente y caro en cada comentario", "en": "The most powerful, expensive model on every comment" },
+        { "es": "No filtrar y procesar todo con el más grande", "en": "Skip filtering and process it all with the biggest one" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Filtrar es una tarea fácil: un modelo chico y barato la hace bien. Reservás el potente solo para lo que realmente lo necesita.",
+        "en": "Filtering is an easy task: a small, cheap model does it well. You save the powerful one only for what truly needs it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuándo justifica usar el modelo más potente (y caro)?", "en": "When does using the most powerful (and expensive) model pay off?" },
+      "options": [
+        { "es": "En los pasos de razonamiento difícil o análisis fino", "en": "In steps of hard reasoning or fine analysis" },
+        { "es": "En cada paso, por las dudas", "en": "In every step, just in case" },
+        { "es": "Solo para saludar al usuario", "en": "Only to greet the user" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo grande brilla en lo complejo: razonar, analizar matices, decidir. Ahí su costo se justifica; en tareas triviales, no.",
+        "en": "The big model shines on complex work: reasoning, analyzing nuance, deciding. There its cost pays off; on trivial tasks, it doesn't."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es la principal ventaja de un pipeline bien armado?", "en": "What is the main advantage of a well-built pipeline?" },
+      "options": [
+        { "es": "Baja el costo total sin resignar calidad donde importa", "en": "It lowers total cost without sacrificing quality where it matters" },
+        { "es": "Elimina la necesidad de probar el sistema", "en": "It removes the need to test the system" },
+        { "es": "Hace que el modelo nunca se equivoque", "en": "It makes the model never fail" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Poner el modelo justo en cada paso baja mucho el costo total y mantiene la calidad en los pasos que de verdad la necesitan.",
+        "en": "Putting the right model at each step cuts total cost a lot while keeping quality in the steps that truly need it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un patrón típico de pipeline de clasificación es...", "en": "A typical classification pipeline pattern is..." },
+      "options": [
+        { "es": "Modelo barato filtra → modelo potente analiza lo que quedó", "en": "Cheap model filters → powerful model analyzes what's left" },
+        { "es": "Modelo potente descarta todo → nadie analiza nada", "en": "Powerful model discards everything → no one analyzes anything" },
+        { "es": "Se tira una moneda para decidir", "en": "You flip a coin to decide" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Primero el barato reduce el volumen; después el potente trabaja fino sobre lo poco que quedó. Escala y precisión juntas.",
+        "en": "First the cheap one cuts the volume; then the powerful one works finely on the little that's left. Scale and precision together."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Además del modelo, ¿qué otra 'herramienta' puede ser el paso más barato?", "en": "Beyond the model, what other 'tool' can be the cheapest step?" },
+      "options": [
+        { "es": "Código común: una regla o filtro simple sin IA", "en": "Plain code: a simple rule or filter without AI" },
+        { "es": "Siempre tiene que ser un modelo, nunca código", "en": "It always has to be a model, never code" },
+        { "es": "Un modelo aún más grande", "en": "An even bigger model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si una regla simple (por ejemplo, descartar por longitud o palabra clave) resuelve el paso, usá código: es gratis, instantáneo y no falla.",
+        "en": "If a simple rule (say, discarding by length or keyword) solves the step, use code: it's free, instant and doesn't fail."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el principio del pipeline multi-modelo", "en": "Build the multi-model pipeline principle" },
+      "solution": {
+        "es": ["Usá el modelo correcto en cada paso:", "barato para filtrar,", "potente para razonar lo difícil."],
+        "en": ["Use the right model at each step:", "cheap to filter,", "powerful to reason the hard part."]
+      },
+      "distractors": {
+        "es": ["el más caro siempre,", "en todos los pasos"],
+        "en": ["the most expensive always,", "in every step"]
+      },
+      "explanation": {
+        "es": "El principio central: modelo barato donde alcanza, potente donde de verdad hace falta.",
+        "en": "The core principle: cheap model where it's enough, powerful where it's truly needed."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pipeline de clasificación de tickets de soporte", "en": "Build a support-ticket classification pipeline" },
+      "solution": {
+        "es": ["Un modelo chico ordena y filtra los tickets,", "un modelo potente resuelve los casos complejos,", "y una regla simple descarta el spam."],
+        "en": ["A small model sorts and filters the tickets,", "a powerful model handles the complex cases,", "and a simple rule discards the spam."]
+      },
+      "distractors": {
+        "es": ["el modelo más caro lee cada ticket dos veces,", "sin filtrar nada antes"],
+        "en": ["the most expensive model reads every ticket twice,", "with no filtering first"]
+      },
+      "explanation": {
+        "es": "Cada paso con la herramienta justa: regla para spam, modelo chico para ordenar, potente solo para lo complejo.",
+        "en": "Each step with the right tool: a rule for spam, a small model to sort, powerful only for the complex."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá por qué conviene un pipeline y no un solo modelo grande", "en": "Build why a pipeline beats a single big model" },
+      "solution": {
+        "es": ["Repartir la tarea entre varios modelos", "baja el costo total", "sin perder calidad donde importa."],
+        "en": ["Splitting the task across several models", "lowers total cost", "without losing quality where it matters."]
+      },
+      "distractors": {
+        "es": ["usar el más grande para todo", "es siempre la mejor idea"],
+        "en": ["using the biggest for everything", "is always the best idea"]
+      },
+      "explanation": {
+        "es": "Repartir bien la tarea es más barato y no resigna calidad en los pasos críticos.",
+        "en": "Splitting the task well is cheaper and doesn't sacrifice quality in the critical steps."
+      }
+    }
+  ]
+}

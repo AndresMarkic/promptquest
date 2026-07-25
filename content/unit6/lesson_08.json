@@ -1,0 +1,146 @@
+{
+  "id": "u6l08",
+  "title": { "es": "Reducir alucinaciones en serio", "en": "Reducing hallucinations for real" },
+  "byte_intro": {
+    "es": "Contra los inventos no hay una bala de plata, sino una receta que combina varias cosas: anclarme a datos, pedirme fuentes y verificar lo importante. Te la enseño.",
+    "en": "Against made-up facts there's no silver bullet, but a recipe that combines several things: grounding me to data, asking for sources, and verifying what matters. Let me teach it."
+  },
+  "byte_outro": {
+    "es": "Grounding + fuentes + verificación: la combinación que baja las alucinaciones de verdad. Lingote forjado.",
+    "en": "Grounding + sources + verification: the combo that truly lowers hallucinations. Ingot forged."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es la mejor estrategia contra las alucinaciones?", "en": "What's the best strategy against hallucinations?" },
+      "options": [
+        { "es": "Combinar varias defensas: grounding, pedir fuentes y verificar", "en": "Combine several defenses: grounding, requesting sources, and verifying" },
+        { "es": "Confiar en que un buen modelo nunca inventa", "en": "Trusting that a good model never invents" },
+        { "es": "Pedirle que 'no alucine' y listo", "en": "Just telling it 'don't hallucinate' and that's it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "No hay una sola solución mágica. La combinación de anclar, exigir fuentes y verificar es lo que da resultados reales.",
+        "en": "There's no single magic fix. Combining grounding, demanding sources, and verifying is what gives real results."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Sirve pedirle 'no inventes nada' como única defensa?", "en": "Is asking it 'don't make anything up' enough as the only defense?" },
+      "options": [
+        { "es": "Ayuda un poco, pero no alcanza: puede inventar igual con seguridad", "en": "It helps a bit, but isn't enough: it can still invent confidently" },
+        { "es": "Sí, con eso el modelo ya no falla nunca", "en": "Yes, with that the model never fails again" },
+        { "es": "No, y además empeora todo", "en": "No, and it also makes everything worse" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pedir que no invente reduce algo, pero el modelo puede alucinar con total confianza. Hace falta más que una frase.",
+        "en": "Asking it not to invent helps some, but the model can hallucinate with full confidence. It takes more than a phrase."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo ayuda pedir fuentes o citas?", "en": "How does asking for sources or citations help?" },
+      "options": [
+        { "es": "Te permite verificar si cada afirmación está respaldada de verdad", "en": "It lets you verify whether each claim is actually backed up" },
+        { "es": "Hace la respuesta más corta", "en": "It makes the answer shorter" },
+        { "es": "Evita que uses el modelo", "en": "It stops you from using the model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Con la cita a mano podés chequear la afirmación. Ojo: el modelo también puede inventar una fuente, así que verificá que exista.",
+        "en": "With the citation at hand you can check the claim. Careful: the model can also fake a source, so verify it exists."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El modelo cita una fuente que respalda su respuesta. ¿Qué conviene hacer?", "en": "The model cites a source backing its answer. What should you do?" },
+      "options": [
+        { "es": "Verificar que la fuente exista y diga realmente eso", "en": "Verify the source exists and really says that" },
+        { "es": "Confiar: si citó, seguro es verdad", "en": "Trust it: if it cited, it must be true" },
+        { "es": "Borrar la fuente y quedarte con el texto", "en": "Delete the source and keep the text" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una cita puede ser inventada. La defensa se completa comprobando que la fuente es real y respalda lo dicho.",
+        "en": "A citation can be fabricated. The defense is completed by checking the source is real and supports the claim."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué el grounding es la base de esta receta?", "en": "Why is grounding the base of this recipe?" },
+      "options": [
+        { "es": "Si la respuesta sale de datos provistos, hay menos margen para inventar", "en": "If the answer comes from provided data, there's less room to invent" },
+        { "es": "Porque hace que responda más lento", "en": "Because it makes it answer more slowly" },
+        { "es": "Porque cambia el idioma", "en": "Because it changes the language" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Anclar la respuesta a un material concreto limita de entrada lo que el modelo puede afirmar sin respaldo.",
+        "en": "Anchoring the answer to concrete material limits from the start what the model can claim without backing."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para datos críticos (salud, dinero, legal), ¿qué conviene siempre?", "en": "For critical facts (health, money, legal), what should you always do?" },
+      "options": [
+        { "es": "Verificación humana antes de actuar sobre la respuesta", "en": "Human verification before acting on the answer" },
+        { "es": "Actuar directo, la IA no se equivoca en eso", "en": "Act directly, AI doesn't err on that" },
+        { "es": "Pedir la respuesta en mayúsculas", "en": "Ask for the answer in uppercase" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En temas sensibles, ninguna técnica reemplaza el control humano final antes de tomar una decisión.",
+        "en": "On sensitive topics, no technique replaces final human review before making a decision."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la receta combinada contra alucinaciones", "en": "Build the combined recipe against hallucinations" },
+      "solution": {
+        "es": ["Anclá la respuesta a los datos,", "pedí que cite las fuentes", "y verificá lo importante."],
+        "en": ["Anchor the answer to the data,", "ask it to cite sources", "and verify what matters."]
+      },
+      "distractors": {
+        "es": ["Confiá en la primera respuesta", "sin revisar nada."],
+        "en": ["Trust the first answer", "without checking anything."]
+      },
+      "explanation": {
+        "es": "Grounding + fuentes + verificación: las tres capas juntas bajan mucho los inventos.",
+        "en": "Grounding + sources + verification: the three layers together greatly reduce made-up facts."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el paso extra de verificar la cita", "en": "Build the extra step of verifying the citation" },
+      "solution": {
+        "es": ["No alcanza con que cite:", "comprobá que la fuente exista", "y respalde la afirmación."],
+        "en": ["A citation isn't enough:", "check the source exists", "and supports the claim."]
+      },
+      "distractors": {
+        "es": ["Si hay una cita,", "ya está todo verificado."],
+        "en": ["If there's a citation,", "everything is already verified."]
+      },
+      "explanation": {
+        "es": "El modelo puede inventar hasta la fuente; verificar que sea real cierra el hueco.",
+        "en": "The model can even fake the source; checking it's real closes the gap."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá por qué 'no inventes' no basta", "en": "Build why 'don't make things up' isn't enough" },
+      "solution": {
+        "es": ["Pedir 'no inventes' ayuda poco:", "el modelo puede alucinar", "con total seguridad igual."],
+        "en": ["Asking 'don't make things up' helps little:", "the model can hallucinate", "with full confidence anyway."]
+      },
+      "distractors": {
+        "es": ["Con esa frase", "el problema desaparece."],
+        "en": ["With that phrase", "the problem disappears."]
+      },
+      "explanation": {
+        "es": "Una instrucción sola no frena las alucinaciones; por eso se combinan varias defensas.",
+        "en": "A single instruction won't stop hallucinations; that's why several defenses are combined."
+      }
+    }
+  ]
+}

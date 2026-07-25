@@ -1,0 +1,146 @@
+{
+  "id": "u3l05",
+  "title": { "es": "Analizar datos", "en": "Analyzing data" },
+  "byte_intro": {
+    "es": "Una tabla llena de números me mareaba. Hoy recuerdo cómo pedirle a la IA que los interprete y me saque conclusiones útiles.",
+    "en": "A table full of numbers made me dizzy. Today I recall how to ask the AI to interpret them and draw useful conclusions."
+  },
+  "byte_outro": {
+    "es": "¡Listo! Ya sé pedir análisis, conclusiones y el formato que me sirve, y verificar los números. Fragmento recuperado.",
+    "en": "Done! Now I know how to ask for analysis, conclusions and the format I need, and to check the numbers. Fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tenés una tabla de ventas por mes. ¿Qué le pedís a la IA?", "en": "You have a table of sales by month. What do you ask the AI?" },
+      "options": [
+        { "es": "Analizá estos datos y decime en qué mes vendí más y en cuál menos", "en": "Analyze this data and tell me which month I sold most and least" },
+        { "es": "Miralos y no me digas nada", "en": "Look at them and tell me nothing" },
+        { "es": "Inventá otras ventas", "en": "Make up other sales" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pedir una pregunta concreta ('mes con más y menos ventas') convierte números sueltos en algo que entendés.",
+        "en": "Asking a concrete question ('month with most and least sales') turns loose numbers into something you understand."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés detectar una tendencia. ¿Qué pedido es mejor?", "en": "You want to spot a trend. Which request is better?" },
+      "options": [
+        { "es": "¿Las ventas suben, bajan o se mantienen a lo largo del año?", "en": "Do sales go up, down or stay flat over the year?" },
+        { "es": "Datos", "en": "Data" },
+        { "es": "Decime algo", "en": "Tell me something" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Preguntar por la tendencia (sube, baja, se mantiene) enfoca el análisis en lo que te importa.",
+        "en": "Asking about the trend (up, down, flat) focuses the analysis on what matters to you."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés comparar dos productos. ¿Qué formato pedís?", "en": "You want to compare two products. What format do you ask for?" },
+      "options": [
+        { "es": "Armá una tabla con ventas, costo y ganancia de cada uno", "en": "Build a table with sales, cost and profit for each" },
+        { "es": "Escribilo en un párrafo enorme sin cortes", "en": "Write it in one huge paragraph with no breaks" },
+        { "es": "No me lo muestres", "en": "Don't show me" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una tabla deja comparar de un vistazo. Pedir el formato útil es parte del análisis.",
+        "en": "A table lets you compare at a glance. Asking for a useful format is part of the analysis."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA dice 'las ventas subieron 300%'. ¿Qué conviene hacer?", "en": "The AI says 'sales rose 300%'. What should you do?" },
+      "options": [
+        { "es": "Verificar la cuenta con los datos originales antes de creerlo", "en": "Check the math against the original data before believing it" },
+        { "es": "Publicarlo de inmediato", "en": "Publish it immediately" },
+        { "es": "Asumir que siempre acierta con números", "en": "Assume it's always right with numbers" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Las IA pueden equivocarse en cuentas. Con datos importantes, verificá el número vos mismo.",
+        "en": "AIs can get math wrong. With important data, check the number yourself."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene pegar los datos y no solo describirlos?", "en": "Why paste the data instead of just describing it?" },
+      "options": [
+        { "es": "Sin los números reales, la IA no puede calcular ni concluir bien", "en": "Without the real numbers, the AI can't calculate or conclude well" },
+        { "es": "Porque le encantan las tablas", "en": "Because it loves tables" },
+        { "es": "Para gastar más batería", "en": "To use more battery" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si no ve los datos, adivina. Con la tabla pegada, el análisis se apoya en tus números reales.",
+        "en": "If it can't see the data, it guesses. With the table pasted, the analysis rests on your real numbers."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Además del número, ¿qué es útil pedir?", "en": "Besides the number, what's useful to ask for?" },
+      "options": [
+        { "es": "Una conclusión y una recomendación concreta que pueda accionar", "en": "A conclusion and a concrete recommendation I can act on" },
+        { "es": "Solo más números sin explicar", "en": "Just more numbers with no explanation" },
+        { "es": "Que no concluya nada", "en": "To conclude nothing" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un dato solo no decide; pedir conclusión y recomendación te acerca a la acción.",
+        "en": "A number alone doesn't decide; asking for a conclusion and recommendation gets you closer to action."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido de análisis con una pregunta concreta", "en": "Build an analysis request with a concrete question" },
+      "solution": {
+        "es": ["Analizá esta tabla", "y decime qué mes", "tuvo más ventas y por qué."],
+        "en": ["Analyze this table", "and tell me which month", "had the most sales and why."]
+      },
+      "distractors": {
+        "es": ["mirá los números", "y ya"],
+        "en": ["look at the numbers", "and that's it"]
+      },
+      "explanation": {
+        "es": "Una pregunta específica dirige el análisis a una respuesta útil.",
+        "en": "A specific question steers the analysis toward a useful answer."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para recibir el resultado en tabla", "en": "Build the request to get the result as a table" },
+      "solution": {
+        "es": ["Mostrame el resultado", "en una tabla", "con 3 columnas: mes, ventas y variación."],
+        "en": ["Show me the result", "in a table", "with 3 columns: month, sales and change."]
+      },
+      "distractors": {
+        "es": ["en un párrafo", "larguísimo"],
+        "en": ["in one huge", "paragraph"]
+      },
+      "explanation": {
+        "es": "Pedir columnas exactas te da un resultado listo para leer y comparar.",
+        "en": "Asking for exact columns gives you a result ready to read and compare."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para cerrar con una conclusión accionable", "en": "Build the request to close with an actionable conclusion" },
+      "solution": {
+        "es": ["Cerrá con una conclusión", "y una recomendación", "para mejorar las ventas."],
+        "en": ["Close with a conclusion", "and a recommendation", "to improve sales."]
+      },
+      "distractors": {
+        "es": ["no concluyas", "nada útil"],
+        "en": ["don't conclude", "anything useful"]
+      },
+      "explanation": {
+        "es": "Conclusión + recomendación convierte el análisis en una decisión posible.",
+        "en": "Conclusion + recommendation turns the analysis into a possible decision."
+      }
+    }
+  ]
+}

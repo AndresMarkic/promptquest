@@ -1,0 +1,146 @@
+{
+  "id": "u3l03",
+  "title": { "es": "Programar 1: pedir y entender código", "en": "Coding 1: ask for and understand code" },
+  "byte_intro": {
+    "es": "No hace falta ser programador para pedirle código a la IA. Hoy recuerdo cómo pedir un script y hacer que me lo explique en criollo.",
+    "en": "You don't need to be a programmer to ask AI for code. Today I recall how to ask for a script and have it explain it in plain words."
+  },
+  "byte_outro": {
+    "es": "¡Buenísimo! Ya sé pedir código con lenguaje y objetivo claros, y pedir que me lo expliquen. Fragmento recuperado.",
+    "en": "Awesome! Now I know how to ask for code with a clear language and goal, and to ask for an explanation. Fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés un script para renombrar fotos. ¿Qué conviene aclarar?", "en": "You want a script to rename photos. What should you clarify?" },
+      "options": [
+        { "es": "En qué lenguaje, en qué sistema y qué tienen que hacer exactamente", "en": "Which language, which system, and exactly what it should do" },
+        { "es": "Solo la palabra 'script'", "en": "Just the word 'script'" },
+        { "es": "Nada, que adivine", "en": "Nothing, let it guess" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El mismo pedido cambia según el lenguaje (Python) y el sistema (Windows). Cuanto más claro, mejor el código.",
+        "en": "The same request changes with the language (Python) and system (Windows). The clearer you are, the better the code."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "No sabés programar. ¿Cómo pedís el código para poder usarlo?", "en": "You can't code. How do you ask for the code so you can use it?" },
+      "options": [
+        { "es": "Dame el código y explicame paso a paso cómo ejecutarlo", "en": "Give me the code and explain step by step how to run it" },
+        { "es": "Dame solo el código sin ninguna explicación", "en": "Give me only the code with no explanation" },
+        { "es": "No pidas explicación, ya la sabés", "en": "Don't ask for an explanation, you already know it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pedir el código Y las instrucciones para correrlo te deja usarlo aunque no seas programador.",
+        "en": "Asking for the code AND the steps to run it lets you use it even if you're not a programmer."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Te devuelve un código lleno de términos raros. ¿Qué le pedís?", "en": "It gives you code full of strange terms. What do you ask?" },
+      "options": [
+        { "es": "Explicame línea por línea qué hace, en palabras simples", "en": "Explain line by line what it does, in simple words" },
+        { "es": "Que lo escriba más complicado", "en": "Have it write it more complicated" },
+        { "es": "Que lo borre", "en": "Have it delete it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA es un gran profesor: puede explicar cada línea en criollo hasta que lo entiendas.",
+        "en": "The AI is a great teacher: it can explain each line in plain words until you get it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene pedir código simple si recién arrancás?", "en": "Why ask for simple code if you're just starting?" },
+      "options": [
+        { "es": "Es más fácil de entender, probar y arreglar si algo falla", "en": "It's easier to understand, test and fix if something breaks" },
+        { "es": "Porque el código simple nunca funciona", "en": "Because simple code never works" },
+        { "es": "Para que ocupe más espacio", "en": "So it takes up more space" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Podés pedir 'lo más simple posible, con comentarios': así lo seguís y lo modificás sin perderte.",
+        "en": "You can ask for 'as simple as possible, with comments': that way you follow it and change it without getting lost."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es bueno hacer antes de correr un código que te dio la IA?", "en": "What's good to do before running code the AI gave you?" },
+      "options": [
+        { "es": "Entender qué hace y probarlo con datos de prueba, no importantes", "en": "Understand what it does and test it with sample, non-important data" },
+        { "es": "Correrlo directo sobre tus archivos importantes", "en": "Run it straight on your important files" },
+        { "es": "Publicarlo en internet", "en": "Publish it online" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un script que borra o renombra puede hacer lío. Probalo con copias primero: la IA puede equivocarse.",
+        "en": "A script that deletes or renames can cause trouble. Test it on copies first: the AI can be wrong."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El código te da un resultado raro. ¿Qué le pedís a la IA?", "en": "The code gives a weird result. What do you ask the AI?" },
+      "options": [
+        { "es": "Explicame por qué pasa esto y cómo lo corrijo", "en": "Explain why this happens and how to fix it" },
+        { "es": "Que te felicite", "en": "To congratulate you" },
+        { "es": "Que cambie de tema", "en": "To change the subject" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA no solo escribe: te acompaña a entender y corregir. Contale qué esperabas y qué pasó.",
+        "en": "The AI doesn't just write: it helps you understand and fix. Tell it what you expected and what happened."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido de código bien especificado", "en": "Build a well-specified code request" },
+      "solution": {
+        "es": ["Escribí un script en Python", "que renombre todas las fotos de una carpeta", "agregándoles la fecha adelante."],
+        "en": ["Write a Python script", "that renames all photos in a folder", "adding the date in front."]
+      },
+      "distractors": {
+        "es": ["hacé algo", "con archivos"],
+        "en": ["do something", "with files"]
+      },
+      "explanation": {
+        "es": "Lenguaje (Python), tarea (renombrar fotos) y detalle (fecha adelante): la IA sabe qué construir.",
+        "en": "Language (Python), task (rename photos) and detail (date in front): the AI knows what to build."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para entender el código", "en": "Build the request to understand the code" },
+      "solution": {
+        "es": ["Explicame este código", "línea por línea", "en palabras simples."],
+        "en": ["Explain this code", "line by line", "in simple words."]
+      },
+      "distractors": {
+        "es": ["hacelo más difícil", "de leer"],
+        "en": ["make it harder", "to read"]
+      },
+      "explanation": {
+        "es": "Pedir la explicación línea por línea y en criollo te enseña mientras usás la IA.",
+        "en": "Asking for a line-by-line, plain-word explanation teaches you while you use the AI."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para poder ejecutar el script", "en": "Build the request to be able to run the script" },
+      "solution": {
+        "es": ["Decime paso a paso", "cómo ejecutar este script", "en Windows."],
+        "en": ["Tell me step by step", "how to run this script", "on Windows."]
+      },
+      "distractors": {
+        "es": ["no expliques nada", "y listo"],
+        "en": ["explain nothing", "and that's it"]
+      },
+      "explanation": {
+        "es": "Pedir los pasos para tu sistema te deja usar el código sin ser programador.",
+        "en": "Asking for the steps for your system lets you use the code without being a programmer."
+      }
+    }
+  ]
+}

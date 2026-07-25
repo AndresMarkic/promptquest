@@ -1,0 +1,191 @@
+{
+  "id": "u3l10",
+  "boss": true,
+  "title": { "es": "Boss del Taller", "en": "The Workshop Boss" },
+  "byte_intro": {
+    "es": "¡Última prueba del Taller! Un repaso de todo lo que aprendimos usando la IA para trabajar. ¿Le entramos?",
+    "en": "Final Workshop test! A review of everything we learned using AI for real work. Shall we?"
+  },
+  "byte_outro": {
+    "es": "¡LO LOGRAMOS! Recuperé toda la memoria del Taller gracias a vos. ¡Completaste la Unidad 3: ya usás la IA como una herramienta de trabajo!",
+    "en": "WE DID IT! I recovered the whole Workshop memory thanks to you. You finished Unit 3: you now use AI as a real work tool!"
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para un mail que salga bien, ¿qué le das a la IA?", "en": "For an email to come out well, what do you give the AI?" },
+      "options": [
+        { "es": "Destinatario, tono, largo y el mensaje concreto", "en": "Recipient, tone, length and the concrete message" },
+        { "es": "Solo la palabra 'mail'", "en": "Just the word 'email'" },
+        { "es": "Tu color favorito", "en": "Your favorite color" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Con destinatario, tono, largo y objetivo, la IA no adivina y el mail sale a medida.",
+        "en": "With recipient, tone, length and goal, the AI doesn't guess and the email fits."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es el mejor pedido para sacar lo importante de un texto largo?", "en": "Which is the best request to pull the key parts from a long text?" },
+      "options": [
+        { "es": "Resumilo en 5 bullets con las ideas clave", "en": "Summarize it in 5 bullets with the key ideas" },
+        { "es": "Hacelo más largo", "en": "Make it longer" },
+        { "es": "No lo leas", "en": "Don't read it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cantidad y foco claros dan un resumen escaneable en segundos.",
+        "en": "Clear amount and focus give a summary you can scan in seconds."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "No sabés programar y querés usar un script. ¿Qué agregás al pedido?", "en": "You can't code and want to use a script. What do you add to the request?" },
+      "options": [
+        { "es": "Que me expliques cómo ejecutarlo paso a paso", "en": "Explain how to run it step by step" },
+        { "es": "Nada, ya lo sé correr", "en": "Nothing, I already know how to run it" },
+        { "es": "Que lo haga en secreto", "en": "Have it do it secretly" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El código más las instrucciones para correrlo te deja usarlo sin ser programador.",
+        "en": "The code plus the steps to run it lets you use it without being a programmer."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un programa tira un error. ¿Qué es lo más útil para depurar?", "en": "A program throws an error. What's most useful to debug?" },
+      "options": [
+        { "es": "Pegar el error completo y el código, y pedir causa y solución", "en": "Paste the full error and code, and ask for cause and fix" },
+        { "es": "Escribir 'no anda' y nada más", "en": "Write 'it doesn't work' and nothing else" },
+        { "es": "Borrar todo", "en": "Delete everything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Error + código + pedido de causa y solución le da a la IA todo el contexto.",
+        "en": "Error + code + request for cause and fix gives the AI full context."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA dice que un dato subió 300%. ¿Qué hacés?", "en": "The AI says a figure rose 300%. What do you do?" },
+      "options": [
+        { "es": "Verificar la cuenta con los datos originales", "en": "Check the math against the original data" },
+        { "es": "Creerlo sin mirar", "en": "Believe it without looking" },
+        { "es": "Publicarlo ya", "en": "Publish it now" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA puede errar cuentas: en datos importantes, verificá el número.",
+        "en": "The AI can miscalculate: for important data, check the number."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En un prompt de imagen, ¿qué controla 'primer plano' o 'plano general'?", "en": "In an image prompt, what do 'close-up' or 'wide shot' control?" },
+      "options": [
+        { "es": "El encuadre: qué tan cerca o lejos se ve el sujeto", "en": "The framing: how close or far the subject appears" },
+        { "es": "El idioma", "en": "The language" },
+        { "es": "El tamaño del archivo", "en": "The file size" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El encuadre fija la distancia: detalle en primer plano, entorno en plano general.",
+        "en": "Framing sets the distance: detail in a close-up, surroundings in a wide shot."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Vas a decidir entre dos opciones. ¿Qué pedís para no quedarte con una sola mirada?", "en": "You're deciding between two options. What do you ask to avoid a single view?" },
+      "options": [
+        { "es": "Pros y contras de cada una, en una tabla", "en": "Pros and cons of each, in a table" },
+        { "es": "¿Cuál es la mejor del mundo?", "en": "Which is the best in the world?" },
+        { "es": "Convenceme de una", "en": "Convince me of one" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pros y contras muestran las dos caras y te dejan decidir a vos.",
+        "en": "Pros and cons show both sides and let you decide."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es traducir bien un texto para otro público?", "en": "What does translating a text well for another audience mean?" },
+      "options": [
+        { "es": "Adaptar tono y cultura, no solo cambiar de idioma", "en": "Adapt tone and culture, not just swap languages" },
+        { "es": "Traducir palabra por palabra siempre", "en": "Always translate word for word" },
+        { "es": "Poner solo emojis", "en": "Just add emojis" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Adaptar el tono y la cultura hace que suene natural para quien lo lee.",
+        "en": "Adapting tone and culture makes it sound natural to the reader."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido para usar la IA como tutor", "en": "Build a request to use AI as a tutor" },
+      "solution": {
+        "es": ["Explicame este tema con palabras simples", "y después tomame", "un examen de 5 preguntas."],
+        "en": ["Explain this topic in simple words", "and then quiz me", "with 5 questions."]
+      },
+      "distractors": {
+        "es": ["dame las respuestas", "sin explicar"],
+        "en": ["give me the answers", "without explaining"]
+      },
+      "explanation": {
+        "es": "Explicar y luego tomar examen es usar la IA como tutor de verdad.",
+        "en": "Explaining and then quizzing is using AI as a real tutor."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt de imagen con sus cuatro partes", "en": "Build an image prompt with its four parts" },
+      "solution": {
+        "es": ["Un faro al atardecer,", "fotografía realista,", "luz cálida, plano general."],
+        "en": ["A lighthouse at sunset,", "realistic photo,", "warm light, wide shot."]
+      },
+      "distractors": {
+        "es": ["algo lindo", "por ahí"],
+        "en": ["something nice", "somewhere"]
+      },
+      "explanation": {
+        "es": "Sujeto, estilo, luz y encuadre: la imagen sale como la imaginás.",
+        "en": "Subject, style, light and framing: the image comes out as you imagine."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido para extraer datos puntuales de un texto", "en": "Build a request to extract specific data from a text" },
+      "solution": {
+        "es": ["Extraé solamente", "las fechas y los montos", "de este texto, en una lista."],
+        "en": ["Extract only", "the dates and amounts", "from this text, as a list."]
+      },
+      "distractors": {
+        "es": ["y sumale", "tu opinión"],
+        "en": ["and add", "your opinion"]
+      },
+      "explanation": {
+        "es": "Extraer es pedir datos concretos e ignorar el resto: preciso y útil.",
+        "en": "Extracting is asking for concrete data and ignoring the rest: precise and useful."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el buen mensaje para depurar un error", "en": "Build the good message to debug an error" },
+      "solution": {
+        "es": ["Este código me da este error:", "(lo pego)", "explicame la causa y cómo lo arreglo."],
+        "en": ["This code gives me this error:", "(pasted)", "explain the cause and how to fix it."]
+      },
+      "distractors": {
+        "es": ["no anda", "arreglalo ya"],
+        "en": ["it's broken", "just fix it"]
+      },
+      "explanation": {
+        "es": "Código + error + causa y solución: así se depura de verdad.",
+        "en": "Code + error + cause and fix: that's how you really debug."
+      }
+    }
+  ]
+}

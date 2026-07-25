@@ -1,0 +1,130 @@
+{
+  "id": "u5l01",
+  "title": { "es": "¿Qué es una API?", "en": "What is an API?" },
+  "byte_intro": {
+    "es": "Entramos a La Red. Acá las IAs no están solas: hablan con otros servicios. La primera palabra que recuperé es 'API': la puerta para pedirle algo a un servicio y recibir respuesta.",
+    "en": "We're entering The Network. Here AIs aren't alone: they talk to other services. The first word I recovered is 'API': the door to ask a service for something and get an answer."
+  },
+  "byte_outro": {
+    "es": "¡Fragmento recuperado! Una API es como un mostrador: vos pedís algo con un formato claro y te devuelven la respuesta. No hace falta saber cómo funciona por dentro.",
+    "en": "Fragment recovered! An API is like a counter: you request something in a clear format and get the answer back. You don't need to know how it works inside."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es, en criollo, una API?", "en": "In plain terms, what is an API?" },
+      "options": [
+        { "es": "Una forma de pedirle algo a un servicio y recibir una respuesta", "en": "A way to ask a service for something and receive an answer" },
+        { "es": "Un tipo de virus informático", "en": "A kind of computer virus" },
+        { "es": "Una batería para el celular", "en": "A phone battery" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "API = interfaz para pedir algo a un servicio. Vos mandás un pedido y te devuelve un resultado.",
+        "en": "API = an interface to ask a service for something. You send a request and get a result back."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Con qué se parece mejor una API?", "en": "What's the best analogy for an API?" },
+      "options": [
+        { "es": "Un mozo: le pedís del menú y te trae el plato", "en": "A waiter: you order from the menu and they bring the dish" },
+        { "es": "Un espejo que te copia", "en": "A mirror that copies you" },
+        { "es": "Una radio que solo emite", "en": "A radio that only broadcasts" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Le pedís algo del 'menú' (lo que el servicio ofrece) y te trae el resultado. No cocinás vos: pedís.",
+        "en": "You order from the 'menu' (what the service offers) and it brings the result. You don't cook: you order."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para usar la IA de una empresa desde tu app, ¿qué usás normalmente?", "en": "To use a company's AI from your app, what do you normally use?" },
+      "options": [
+        { "es": "Su API: le mandás el pedido y te devuelve la respuesta del modelo", "en": "Its API: you send the request and it returns the model's answer" },
+        { "es": "Le mandás una carta por correo", "en": "You mail them a letter" },
+        { "es": "Nada, la IA aparece sola", "en": "Nothing, the AI just appears" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La API es el canal técnico: tu programa le pide al modelo y recibe el texto generado.",
+        "en": "The API is the technical channel: your program asks the model and receives the generated text."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué necesita casi siempre una API para saber quién sos?", "en": "What does an API almost always need to know who you are?" },
+      "options": [
+        { "es": "Una clave (API key), como una llave personal", "en": "A key (API key), like a personal password" },
+        { "es": "Tu foto de perfil", "en": "Your profile picture" },
+        { "es": "Tu signo del zodíaco", "en": "Your zodiac sign" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La API key te identifica y controla tu acceso. Es como una llave: no la compartas.",
+        "en": "The API key identifies you and controls your access. It's like a key: don't share it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué usar la API de un servicio en vez de armar todo vos?", "en": "Why use a service's API instead of building it all yourself?" },
+      "options": [
+        { "es": "Aprovechás algo ya hecho sin reinventarlo", "en": "You reuse something already built without reinventing it" },
+        { "es": "Porque las APIs son gratis siempre", "en": "Because APIs are always free" },
+        { "es": "Porque así nadie sabe qué hacés", "en": "So nobody knows what you're doing" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Le pedís al que ya sabe hacerlo. No tenés que entrenar un modelo entero para usarlo.",
+        "en": "You ask the one who already knows how. You don't have to train a whole model to use it."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el flujo básico de una llamada a una API", "en": "Build the basic flow of an API call" },
+      "solution": {
+        "es": ["Mandás un pedido", "el servicio lo procesa", "y te devuelve una respuesta."],
+        "en": ["You send a request", "the service processes it", "and returns a response."]
+      },
+      "distractors": {
+        "es": ["el servicio te ignora", "para siempre"],
+        "en": ["the service ignores you", "forever"]
+      },
+      "explanation": {
+        "es": "Pedido → procesamiento → respuesta. Ese ida y vuelta es el corazón de una API.",
+        "en": "Request → processing → response. That round trip is the heart of an API."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Una API te devuelve un 'error' cuando...", "en": "An API returns an 'error' when..." },
+      "options": [
+        { "es": "El pedido está mal armado o no tenés permiso", "en": "The request is malformed or you lack permission" },
+        { "es": "El servidor está de buen humor", "en": "The server is in a good mood" },
+        { "es": "Escribiste con mayúsculas", "en": "You typed in uppercase" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El error avisa que algo del pedido no cerró: formato, permiso o datos faltantes.",
+        "en": "The error signals something in the request didn't add up: format, permission or missing data."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué es una API en una frase", "en": "Build what an API is in one sentence" },
+      "solution": {
+        "es": ["Una API es un mostrador", "donde pedís algo con un formato claro", "y recibís una respuesta."],
+        "en": ["An API is a counter", "where you request something in a clear format", "and receive a response."]
+      },
+      "distractors": {
+        "es": ["donde adivinás la respuesta", "sin pedir nada"],
+        "en": ["where you guess the answer", "without asking anything"]
+      },
+      "explanation": {
+        "es": "Formato claro para pedir + respuesta a cambio: esa es la idea central de una API.",
+        "en": "A clear format to ask + a response in return: that's the core idea of an API."
+      }
+    }
+  ]
+}

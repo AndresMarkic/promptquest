@@ -1,0 +1,146 @@
+{
+  "id": "u4l08",
+  "title": { "es": "Elegir el modelo para la tarea", "en": "Choosing the model for the task" },
+  "byte_intro": {
+    "es": "Llegó el momento clave del Observatorio: dado un caso, elegir bien. No existe 'el mejor modelo'; existe el mejor para ESTA tarea. Vamos a practicarlo.",
+    "en": "Here's the key moment in the Observatory: given a case, choose well. There's no 'best model'; there's the best for THIS task. Let's practice it."
+  },
+  "byte_outro": {
+    "es": "¡Genial! Ya sabés cruzar la tarea con las capacidades: volumen, dificultad, si hay imágenes, si necesitás datos frescos. Eso es elegir bien.",
+    "en": "Great! You can now match the task to the capabilities: volume, difficulty, whether there are images, whether you need fresh data. That's choosing well."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es el primer paso para elegir un modelo?", "en": "What's the first step to choose a model?" },
+      "options": [
+        { "es": "Definir bien qué tarea necesitás resolver", "en": "Clearly define what task you need to solve" },
+        { "es": "Elegir el de nombre más lindo", "en": "Pick the one with the nicest name" },
+        { "es": "Usar siempre el más caro", "en": "Always use the most expensive one" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Primero entendés la tarea (qué, cuánto, con qué datos); recién ahí cruzás con las capacidades del modelo.",
+        "en": "First you understand the task (what, how much, with which data); only then you match it with the model's capabilities."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tarea: clasificar 100.000 comentarios cortos por sentimiento. ¿Qué priorizás?", "en": "Task: classify 100,000 short comments by sentiment. What do you prioritize?" },
+      "options": [
+        { "es": "Un modelo rápido y económico, porque el volumen es alto y la tarea es simple", "en": "A fast, cheap model, because volume is high and the task is simple" },
+        { "es": "El modelo más grande y caro que exista", "en": "The biggest, most expensive model there is" },
+        { "es": "Uno multimodal, aunque no haya imágenes", "en": "A multimodal one, even without images" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Volumen alto + tarea simple = velocidad y costo mandan. Un modelo liviano rinde muy bien acá.",
+        "en": "High volume + simple task = speed and cost rule. A light model does great here."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tarea: resolver un problema legal complejo de varios pasos. ¿Qué priorizás?", "en": "Task: solve a complex multi-step legal problem. What do you prioritize?" },
+      "options": [
+        { "es": "Capacidad de razonamiento, y revisión humana experta", "en": "Reasoning capacity, plus expert human review" },
+        { "es": "El modelo más rápido, sin importar la calidad", "en": "The fastest model, regardless of quality" },
+        { "es": "Confiar 100% en la IA sin revisar", "en": "Trust the AI 100% without review" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Problema difícil y sensible: elegí un modelo capaz de razonar, pero la decisión final la valida una persona experta.",
+        "en": "A hard, sensitive problem: pick a model able to reason, but a human expert validates the final decision."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tarea: describir el contenido de fotos de productos. ¿Qué capacidad es imprescindible?", "en": "Task: describe the content of product photos. Which capability is essential?" },
+      "options": [
+        { "es": "Que el modelo sea multimodal (entienda imágenes)", "en": "The model being multimodal (understands images)" },
+        { "es": "Que tenga temperatura alta", "en": "That it has high temperature" },
+        { "es": "Que sea el más barato", "en": "That it's the cheapest" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si la entrada es una imagen, sí o sí necesitás un modelo multimodal. Lo demás es secundario.",
+        "en": "If the input is an image, you absolutely need a multimodal model. The rest is secondary."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tarea: responder sobre noticias de hoy. ¿Qué necesitás además del modelo?", "en": "Task: answer about today's news. What do you need besides the model?" },
+      "options": [
+        { "es": "Una herramienta que traiga datos actuales, por la fecha de corte", "en": "A tool that fetches current data, because of the cutoff date" },
+        { "es": "Nada, todos los modelos saben las noticias de hoy", "en": "Nothing, all models know today's news" },
+        { "es": "Solo subir la temperatura", "en": "Just raise the temperature" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Como el modelo tiene fecha de corte, para datos frescos necesitás darle la información o una herramienta que busque en vivo.",
+        "en": "Since the model has a cutoff, for fresh data you need to feed it the information or a tool that searches live."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué conviene hacer cuando no estás seguro de cuál modelo rinde mejor para tu caso?", "en": "What's wise when you're unsure which model performs best for your case?" },
+      "options": [
+        { "es": "Probar dos o tres con tus propios ejemplos y comparar", "en": "Try two or three with your own examples and compare" },
+        { "es": "Elegir por la fama y listo", "en": "Choose by fame and be done" },
+        { "es": "No probar nunca nada", "en": "Never test anything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La mejor evidencia es tu propia tarea: probá con tus ejemplos reales y compará resultados, costo y velocidad.",
+        "en": "The best evidence is your own task: test with your real examples and compare results, cost and speed."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el criterio central para elegir modelo", "en": "Build the core criterion to choose a model" },
+      "solution": {
+        "es": ["Elegí el modelo", "que mejor encaja con tu tarea,", "no el más famoso."],
+        "en": ["Choose the model", "that best fits your task,", "not the most famous one."]
+      },
+      "distractors": {
+        "es": ["que tenga el nombre", "más conocido"],
+        "en": ["with the most", "well-known name"]
+      },
+      "explanation": {
+        "es": "El ajuste tarea-capacidad manda por encima de la fama.",
+        "en": "The task-capability fit matters more than fame."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la elección para volumen alto y tarea simple", "en": "Build the choice for high volume, simple task" },
+      "solution": {
+        "es": ["Con mucho volumen y tarea simple,", "priorizá velocidad y costo", "con un modelo liviano."],
+        "en": ["With high volume and a simple task,", "prioritize speed and cost", "with a light model."]
+      },
+      "distractors": {
+        "es": ["usá el modelo más grande", "aunque sea lento y caro"],
+        "en": ["use the biggest model", "even if slow and costly"]
+      },
+      "explanation": {
+        "es": "El volumen alto premia la eficiencia por sobre la potencia máxima.",
+        "en": "High volume rewards efficiency over maximum power."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo decidir cuando dudás", "en": "Build how to decide when unsure" },
+      "solution": {
+        "es": ["Si dudás,", "probá varios modelos", "con tus propios ejemplos."],
+        "en": ["If unsure,", "test several models", "with your own examples."]
+      },
+      "distractors": {
+        "es": ["quedate con el primero", "sin comparar nada"],
+        "en": ["stick with the first one", "without comparing anything"]
+      },
+      "explanation": {
+        "es": "Comparar con tus casos reales es la forma más honesta de decidir.",
+        "en": "Comparing with your real cases is the most honest way to decide."
+      }
+    }
+  ]
+}

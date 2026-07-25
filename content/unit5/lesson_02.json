@@ -1,0 +1,130 @@
+{
+  "id": "u5l02",
+  "title": { "es": "Tokens, costos y límites", "en": "Tokens, costs and limits" },
+  "byte_intro": {
+    "es": "En La Red todo pedido tiene un precio. Y no se cobra por 'pregunta', sino por tokens: los pedacitos de texto que entran y salen. Cuanto más largo, más cuesta.",
+    "en": "In The Network every request has a price. And it's not charged per 'question', but per token: the little chunks of text going in and out. The longer it is, the more it costs."
+  },
+  "byte_outro": {
+    "es": "¡Ahora lo entiendo! Pago por tokens de entrada y de salida. Ser breve y claro no solo se lee mejor: también sale más barato.",
+    "en": "Now I get it! I pay for input and output tokens. Being brief and clear isn't just easier to read: it's also cheaper."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un token?", "en": "What is a token?" },
+      "options": [
+        { "es": "Un pedacito de texto (parte de una palabra o una palabra corta)", "en": "A little chunk of text (part of a word or a short word)" },
+        { "es": "Una moneda física de la empresa", "en": "A physical coin from the company" },
+        { "es": "Un botón de la pantalla", "en": "A button on the screen" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo trocea el texto en tokens. Se miden y se cobran por cantidad de tokens.",
+        "en": "The model splits text into tokens. Usage is measured and charged by number of tokens."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué se cobra normalmente al usar una IA por API?", "en": "What's normally charged when using an AI via API?" },
+      "options": [
+        { "es": "Los tokens que entran (tu pedido) y los que salen (la respuesta)", "en": "The tokens going in (your request) and out (the answer)" },
+        { "es": "Solo la primera palabra", "en": "Only the first word" },
+        { "es": "La cantidad de veces que parpadeás", "en": "How many times you blink" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Se suman tokens de entrada y de salida. Un texto largo de ida y de vuelta cuesta más.",
+        "en": "Input and output tokens add up. A long text both ways costs more."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés bajar el costo de una consulta. ¿Qué conviene?", "en": "You want to lower a query's cost. What helps?" },
+      "options": [
+        { "es": "Pedir lo justo y necesario, sin relleno", "en": "Ask for just what's needed, no filler" },
+        { "es": "Escribir párrafos gigantes por las dudas", "en": "Write giant paragraphs just in case" },
+        { "es": "Repetir la pregunta cinco veces", "en": "Repeat the question five times" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Menos tokens de entrada y salida = menos costo. Claro y breve gana.",
+        "en": "Fewer input and output tokens = lower cost. Clear and brief wins."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué un texto larguísimo puede no entrar?", "en": "Why might a very long text not fit?" },
+      "options": [
+        { "es": "Hay un límite de tokens (la ventana de contexto)", "en": "There's a token limit (the context window)" },
+        { "es": "Al modelo le da vergüenza", "en": "The model gets shy" },
+        { "es": "El teclado se cansa", "en": "The keyboard gets tired" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Todo lo que entra tiene que caber en la ventana de contexto, que tiene un tope de tokens.",
+        "en": "Everything you send must fit in the context window, which has a token cap."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Además del costo, ¿qué otro límite suele haber?", "en": "Besides cost, what other limit usually exists?" },
+      "options": [
+        { "es": "Un límite de pedidos por minuto (rate limit)", "en": "A limit of requests per minute (rate limit)" },
+        { "es": "Un límite de colores", "en": "A limit of colors" },
+        { "es": "Un límite de emojis por vida", "en": "A lifetime emoji limit" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El rate limit frena cuántos pedidos podés hacer en un rato, para no saturar el servicio.",
+        "en": "The rate limit caps how many requests you can make in a period, to avoid overloading the service."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo se calcula el costo de una consulta", "en": "Build how a query's cost is calculated" },
+      "solution": {
+        "es": ["Se suman los tokens de entrada", "más los tokens de salida", "y eso define el costo."],
+        "en": ["You add the input tokens", "plus the output tokens", "and that sets the cost."]
+      },
+      "distractors": {
+        "es": ["se cobra por hora", "sin contar el texto"],
+        "en": ["it's charged by the hour", "ignoring the text"]
+      },
+      "explanation": {
+        "es": "Entrada + salida en tokens = costo total de la consulta.",
+        "en": "Input + output in tokens = the query's total cost."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Dos consultas dan la misma respuesta útil. ¿Cuál conviene?", "en": "Two queries give the same useful answer. Which is better?" },
+      "options": [
+        { "es": "La que usa menos tokens para lograr lo mismo", "en": "The one using fewer tokens for the same result" },
+        { "es": "La más larga, siempre", "en": "The longest one, always" },
+        { "es": "Da igual, nunca importa", "en": "It doesn't matter, ever" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Mismo resultado con menos tokens es más barato y más rápido. Eficiencia pura.",
+        "en": "Same result with fewer tokens is cheaper and faster. Pure efficiency."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el consejo clave para gastar menos", "en": "Build the key tip to spend less" },
+      "solution": {
+        "es": ["Escribí pedidos claros y breves", "para usar menos tokens", "y bajar el costo."],
+        "en": ["Write clear, brief requests", "to use fewer tokens", "and lower the cost."]
+      },
+      "distractors": {
+        "es": ["repetí todo tres veces", "para asegurarte"],
+        "en": ["repeat everything three times", "to be sure"]
+      },
+      "explanation": {
+        "es": "Claridad y brevedad reducen tokens sin perder calidad: gastás menos.",
+        "en": "Clarity and brevity cut tokens without losing quality: you spend less."
+      }
+    }
+  ]
+}

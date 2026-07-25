@@ -1,0 +1,146 @@
+{
+  "id": "u4l07",
+  "title": { "es": "Límites, sesgos y seguridad", "en": "Limits, biases and safety" },
+  "byte_intro": {
+    "es": "En el Observatorio también aprendo a ser humilde. Tengo límites: puedo equivocarme, puedo repetir sesgos de mis datos. Saber qué NO delegarme es parte de usarme bien.",
+    "en": "In the Observatory I also learn to be humble. I have limits: I can be wrong, I can repeat biases from my data. Knowing what NOT to delegate to me is part of using me well."
+  },
+  "byte_outro": {
+    "es": "Ya sabés detectar sesgos y qué no conviene delegar del todo. Decisiones sensibles: la IA ayuda, pero la responsabilidad final es humana.",
+    "en": "Now you can spot biases and know what not to fully delegate. Sensitive decisions: AI helps, but the final responsibility is human."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿De dónde puede venir un sesgo en un modelo de IA?", "en": "Where can a bias in an AI model come from?" },
+      "options": [
+        { "es": "De los datos con los que se entrenó, que reflejan sesgos humanos", "en": "From the data it was trained on, which reflects human biases" },
+        { "es": "De que el modelo tenga opiniones propias", "en": "From the model having its own opinions" },
+        { "es": "Del color de la pantalla", "en": "From the screen color" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo aprende patrones de textos hechos por personas; si esos textos traen sesgos, puede reproducirlos.",
+        "en": "The model learns patterns from human-made texts; if those texts carry biases, it can reproduce them."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estas tareas NO conviene delegar del todo a una IA sin supervisión?", "en": "Which of these tasks should NOT be fully delegated to an AI without supervision?" },
+      "options": [
+        { "es": "Una decisión médica, legal o financiera importante", "en": "An important medical, legal or financial decision" },
+        { "es": "Sugerir ideas para un título", "en": "Suggesting ideas for a title" },
+        { "es": "Resumir un texto que ya tenés", "en": "Summarizing a text you already have" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En temas sensibles con consecuencias serias, la IA puede ayudar, pero la decisión final debería revisarla una persona (o un profesional).",
+        "en": "In sensitive topics with serious consequences, AI can help, but the final decision should be reviewed by a person (or a professional)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Una buena forma de detectar un sesgo en una respuesta es...", "en": "A good way to detect a bias in an answer is..." },
+      "options": [
+        { "es": "Preguntarte si generaliza o trata distinto a un grupo sin razón", "en": "Ask yourself whether it generalizes or treats a group differently for no reason" },
+        { "es": "Asumir que la IA nunca se equivoca", "en": "Assume the AI is never wrong" },
+        { "es": "Creerle más si responde rápido", "en": "Trust it more if it answers fast" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Prestá atención a generalizaciones o tratos desiguales sin justificación. Ahí suele asomar un sesgo.",
+        "en": "Watch for generalizations or unequal treatment without justification. That's where a bias tends to show up."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué el filtro de seguridad de un modelo a veces se niega a responder?", "en": "Why does a model's safety filter sometimes refuse to answer?" },
+      "options": [
+        { "es": "Para evitar contenidos dañinos o peligrosos", "en": "To avoid harmful or dangerous content" },
+        { "es": "Porque está descompuesto", "en": "Because it's broken" },
+        { "es": "Porque no le pagaste", "en": "Because you didn't pay it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los modelos tienen mecanismos para no ayudar con cosas peligrosas o dañinas. A veces son demasiado cautos, pero el objetivo es cuidar.",
+        "en": "Models have mechanisms to avoid helping with dangerous or harmful things. Sometimes they're overly cautious, but the goal is to protect."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Antes de usar datos personales sensibles en un prompt, conviene...", "en": "Before putting sensitive personal data in a prompt, it's best to..." },
+      "options": [
+        { "es": "Pensar si es necesario y cuidar la privacidad", "en": "Consider whether it's necessary and protect privacy" },
+        { "es": "Pegar todo siempre, por las dudas", "en": "Always paste everything, just in case" },
+        { "es": "Compartir contraseñas para que ayude mejor", "en": "Share passwords so it helps better" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "No hace falta compartir más de lo necesario. Cuidá datos personales y nunca pegues contraseñas o secretos.",
+        "en": "There's no need to share more than necessary. Protect personal data and never paste passwords or secrets."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Frente a un dato importante que te da la IA, lo correcto es...", "en": "For an important fact the AI gives you, the right move is..." },
+      "options": [
+        { "es": "Verificarlo antes de tomar una decisión seria", "en": "Verify it before making a serious decision" },
+        { "es": "Usarlo sin mirar, gana tiempo", "en": "Use it without checking, saves time" },
+        { "es": "Reenviarlo a todos como verdad", "en": "Forward it to everyone as truth" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA es asistente, no autoridad final. Verificar lo importante evita arrastrar errores o sesgos.",
+        "en": "AI is an assistant, not a final authority. Verifying what matters prevents carrying errors or biases forward."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá de dónde vienen los sesgos", "en": "Build where biases come from" },
+      "solution": {
+        "es": ["Los sesgos vienen", "de los datos de entrenamiento,", "que reflejan sesgos humanos."],
+        "en": ["Biases come", "from the training data,", "which reflects human biases."]
+      },
+      "distractors": {
+        "es": ["de las opiniones propias", "que tiene el modelo"],
+        "en": ["from the model's own", "personal opinions"]
+      },
+      "explanation": {
+        "es": "El modelo no opina; reproduce patrones de sus datos, sesgos incluidos.",
+        "en": "The model doesn't opine; it reproduces patterns from its data, biases included."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué no delegar del todo", "en": "Build what not to fully delegate" },
+      "solution": {
+        "es": ["Las decisiones sensibles", "las revisa una persona;", "la IA solo ayuda."],
+        "en": ["Sensitive decisions", "are reviewed by a person;", "AI only helps."]
+      },
+      "distractors": {
+        "es": ["las decide la IA sola", "sin supervisión humana"],
+        "en": ["are decided by the AI alone", "with no human oversight"]
+      },
+      "explanation": {
+        "es": "En temas serios, la responsabilidad final es humana.",
+        "en": "In serious matters, the final responsibility is human."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el cuidado con datos personales", "en": "Build the care with personal data" },
+      "solution": {
+        "es": ["Compartí solo lo necesario", "y nunca pegues contraseñas", "ni secretos."],
+        "en": ["Share only what's necessary", "and never paste passwords", "or secrets."]
+      },
+      "distractors": {
+        "es": ["pegá todos tus datos", "por las dudas"],
+        "en": ["paste all your data", "just in case"]
+      },
+      "explanation": {
+        "es": "Menos exposición de datos = más privacidad y seguridad.",
+        "en": "Less data exposure = more privacy and safety."
+      }
+    }
+  ]
+}

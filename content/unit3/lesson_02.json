@@ -1,0 +1,146 @@
+{
+  "id": "u3l02",
+  "title": { "es": "Resumir y extraer", "en": "Summarize and extract" },
+  "byte_intro": {
+    "es": "Ayer me llegó un texto larguísimo y me perdí. Hoy recuerdo cómo pedirle a la IA que me saque solo lo importante.",
+    "en": "Yesterday I got a super long text and got lost. Today I recall how to ask the AI for just the important parts."
+  },
+  "byte_outro": {
+    "es": "¡Genial! Ya sé pedir resúmenes, bullets e ideas clave con el largo que quiero. Otro fragmento recuperado.",
+    "en": "Great! Now I know how to ask for summaries, bullets and key ideas at the length I want. Another fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tenés un informe de 10 páginas y poco tiempo. ¿Qué le pedís a la IA?", "en": "You have a 10-page report and little time. What do you ask the AI?" },
+      "options": [
+        { "es": "Resumí este informe en 5 bullets con las ideas principales", "en": "Summarize this report in 5 bullets with the main ideas" },
+        { "es": "Leelo vos y no me cuentes nada", "en": "Read it yourself and tell me nothing" },
+        { "es": "Hacelo más largo todavía", "en": "Make it even longer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pedir un formato concreto (5 bullets, ideas principales) te da algo escaneable en segundos.",
+        "en": "Asking for a concrete format (5 bullets, main ideas) gives you something scannable in seconds."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos pedidos de resumen es mejor?", "en": "Which of these summary requests is better?" },
+      "options": [
+        { "es": "Resumí este artículo en 3 frases para alguien apurado", "en": "Summarize this article in 3 sentences for someone in a hurry" },
+        { "es": "Resumí", "en": "Summarize" },
+        { "es": "Contame algo del artículo", "en": "Tell me something about the article" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Definir largo (3 frases) y público (alguien apurado) hace que el resumen apunte justo a lo que necesitás.",
+        "en": "Setting length (3 sentences) and audience (someone in a hurry) makes the summary hit exactly what you need."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Necesitás sacar de un contrato solo las fechas y los montos. ¿Qué pedís?", "en": "You need only the dates and amounts from a contract. What do you ask?" },
+      "options": [
+        { "es": "Extraé del texto únicamente las fechas y los montos, en una lista", "en": "Extract only the dates and amounts from the text, as a list" },
+        { "es": "Resumí todo el contrato en general", "en": "Summarize the whole contract in general" },
+        { "es": "Reescribí el contrato más largo", "en": "Rewrite the contract longer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Extraer es distinto de resumir: le pedís datos puntuales (fechas, montos) y que ignore el resto.",
+        "en": "Extracting is different from summarizing: you ask for specific data (dates, amounts) and to ignore the rest."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El resumen te salió largo y con relleno. ¿Qué le decís?", "en": "The summary came out long and padded. What do you tell it?" },
+      "options": [
+        { "es": "Acortalo a la mitad y dejá solo lo esencial", "en": "Cut it in half and keep only the essentials" },
+        { "es": "Agregale más adjetivos", "en": "Add more adjectives" },
+        { "es": "Repetí lo mismo dos veces", "en": "Repeat the same thing twice" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Podés iterar sobre el largo: 'a la mitad', 'solo lo esencial'. El resumen se ajusta pidiéndolo.",
+        "en": "You can iterate on length: 'in half', 'only the essentials'. The summary adjusts when you ask."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene pegar el texto y no solo describirlo?", "en": "Why is it better to paste the text and not just describe it?" },
+      "options": [
+        { "es": "La IA resume lo que le das; sin el texto, inventa", "en": "The AI summarizes what you give it; without the text, it makes things up" },
+        { "es": "Porque le gusta leer", "en": "Because it likes to read" },
+        { "es": "Para que tarde más", "en": "To make it slower" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si no le pasás el texto real, no puede resumirlo: puede alucinar un contenido que no existe.",
+        "en": "If you don't give it the real text, it can't summarize it: it may hallucinate content that doesn't exist."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés las ideas clave de una reunión larga transcrita. ¿Qué pedido sirve?", "en": "You want the key ideas from a long meeting transcript. Which request works?" },
+      "options": [
+        { "es": "Listá las decisiones tomadas y las tareas pendientes con responsable", "en": "List the decisions made and the pending tasks with owner" },
+        { "es": "Reescribí toda la reunión palabra por palabra", "en": "Rewrite the whole meeting word for word" },
+        { "es": "Ignorá el texto y opiná", "en": "Ignore the text and give your opinion" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pedir decisiones y tareas con responsable convierte un choclo de texto en algo accionable.",
+        "en": "Asking for decisions and tasks with an owner turns a wall of text into something actionable."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido de resumen con largo y formato claros", "en": "Build a summary request with clear length and format" },
+      "solution": {
+        "es": ["Resumí este texto", "en 4 bullets", "con las ideas clave."],
+        "en": ["Summarize this text", "in 4 bullets", "with the key ideas."]
+      },
+      "distractors": {
+        "es": ["cuando quieras", "más o menos"],
+        "en": ["whenever", "more or less"]
+      },
+      "explanation": {
+        "es": "Cantidad (4 bullets) y foco (ideas clave): resumen útil y escaneable.",
+        "en": "Amount (4 bullets) and focus (key ideas): a useful, scannable summary."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido para extraer datos puntuales", "en": "Build a request to extract specific data" },
+      "solution": {
+        "es": ["Extraé solamente", "los nombres y los mails", "de este texto, en una lista."],
+        "en": ["Extract only", "the names and emails", "from this text, as a list."]
+      },
+      "distractors": {
+        "es": ["y agregá", "tu opinión personal"],
+        "en": ["and add", "your personal opinion"]
+      },
+      "explanation": {
+        "es": "Extraer datos concretos ('solamente nombres y mails') es preciso: nada de opiniones.",
+        "en": "Extracting concrete data ('only names and emails') is precise: no opinions."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para acortar un resumen que salió largo", "en": "Build the request to shorten a summary that came out long" },
+      "solution": {
+        "es": ["Acortá este resumen", "a 3 frases,", "dejá solo lo esencial."],
+        "en": ["Shorten this summary", "to 3 sentences,", "keep only the essentials."]
+      },
+      "distractors": {
+        "es": ["hacelo el doble", "de largo"],
+        "en": ["make it twice", "as long"]
+      },
+      "explanation": {
+        "es": "Iterar sobre el largo con un número exacto te da control sobre el resultado.",
+        "en": "Iterating on length with an exact number gives you control over the result."
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "u4l05",
+  "title": { "es": "Temperatura", "en": "Temperature" },
+  "byte_intro": {
+    "es": "Hay una perilla que me gusta mucho: la temperatura. Girala para arriba y me pongo más creativo; para abajo, más preciso y repetible. Vení que te muestro.",
+    "en": "There's a knob I love: temperature. Turn it up and I get more creative; turn it down and I'm more precise and repeatable. Come, let me show you."
+  },
+  "byte_outro": {
+    "es": "Ya sabés usar la temperatura: baja para precisión, alta para variedad. Es una herramienta, no magia: elegí según lo que buscás.",
+    "en": "Now you know how to use temperature: low for precision, high for variety. It's a tool, not magic: choose by what you're after."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué controla la 'temperatura' de un modelo?", "en": "What does a model's 'temperature' control?" },
+      "options": [
+        { "es": "Cuánta variedad o aleatoriedad tiene la respuesta", "en": "How much variety or randomness the answer has" },
+        { "es": "La temperatura real del procesador", "en": "The actual temperature of the processor" },
+        { "es": "El idioma de salida", "en": "The output language" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La temperatura regula cuánto se anima el modelo a elegir opciones menos probables. Más alta = más variada; más baja = más previsible.",
+        "en": "Temperature regulates how much the model dares to pick less likely options. Higher = more varied; lower = more predictable."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Con temperatura baja, las respuestas tienden a ser...", "en": "With low temperature, answers tend to be..." },
+      "options": [
+        { "es": "Más precisas, consistentes y repetibles", "en": "More precise, consistent and repeatable" },
+        { "es": "Más largas siempre", "en": "Always longer" },
+        { "es": "Más graciosas por regla", "en": "Funnier as a rule" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Bajar la temperatura hace que el modelo elija lo más probable: respuestas más estables y menos sorpresivas.",
+        "en": "Lowering temperature makes the model pick the most likely option: more stable, less surprising answers."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Con temperatura alta, las respuestas tienden a ser...", "en": "With high temperature, answers tend to be..." },
+      "options": [
+        { "es": "Más creativas y variadas, pero menos predecibles", "en": "More creative and varied, but less predictable" },
+        { "es": "Siempre correctas al 100%", "en": "Always 100% correct" },
+        { "es": "Más cortas por definición", "en": "Shorter by definition" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Subir la temperatura abre la puerta a opciones menos probables: más originalidad, pero también más riesgo de desvíos.",
+        "en": "Raising temperature opens the door to less likely options: more originality, but also more risk of drifting."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para generar ideas de nombres para una marca, ¿qué conviene?", "en": "To brainstorm brand name ideas, what's best?" },
+      "options": [
+        { "es": "Temperatura alta, para más variedad", "en": "High temperature, for more variety" },
+        { "es": "Temperatura mínima, para que repita lo mismo", "en": "Minimum temperature, so it repeats the same thing" },
+        { "es": "No se puede con IA", "en": "It can't be done with AI" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cuando buscás muchas alternativas distintas, subir la temperatura ayuda a que no repita siempre lo mismo.",
+        "en": "When you want many different alternatives, raising temperature helps it avoid repeating the same thing."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para extraer un dato exacto de un texto o clasificar sin ambigüedad, ¿qué conviene?", "en": "To extract an exact fact from a text or classify unambiguously, what's best?" },
+      "options": [
+        { "es": "Temperatura baja, para máxima precisión y consistencia", "en": "Low temperature, for maximum precision and consistency" },
+        { "es": "Temperatura muy alta, para variar", "en": "Very high temperature, to vary" },
+        { "es": "Da igual, no influye", "en": "Doesn't matter, no effect" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En tareas donde querés siempre la misma respuesta correcta, la temperatura baja reduce variaciones indeseadas.",
+        "en": "In tasks where you always want the same correct answer, low temperature reduces unwanted variation."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿La temperatura alta hace al modelo 'más inteligente'?", "en": "Does high temperature make the model 'smarter'?" },
+      "options": [
+        { "es": "No: solo cambia la variedad, no el conocimiento", "en": "No: it only changes variety, not knowledge" },
+        { "es": "Sí, siempre lo mejora", "en": "Yes, it always improves it" },
+        { "es": "Sí, le da más memoria", "en": "Yes, it gives it more memory" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La temperatura no agrega conocimiento ni razonamiento: solo regula cuán variada o estable es la salida.",
+        "en": "Temperature adds no knowledge or reasoning: it only regulates how varied or stable the output is."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué hace la temperatura", "en": "Build what temperature does" },
+      "solution": {
+        "es": ["La temperatura regula", "cuánta variedad", "tiene la respuesta."],
+        "en": ["Temperature regulates", "how much variety", "the answer has."]
+      },
+      "distractors": {
+        "es": ["cuánto conocimiento", "tiene el modelo"],
+        "en": ["how much knowledge", "the model has"]
+      },
+      "explanation": {
+        "es": "No cambia lo que sabe, sino cuán aventurado es al elegir palabras.",
+        "en": "It doesn't change what it knows, but how adventurous it is when picking words."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la regla para tareas de precisión", "en": "Build the rule for precision tasks" },
+      "solution": {
+        "es": ["Para precisión y consistencia,", "bajá la temperatura", "y evitá sorpresas."],
+        "en": ["For precision and consistency,", "lower the temperature", "and avoid surprises."]
+      },
+      "distractors": {
+        "es": ["subí la temperatura al máximo", "para acertar más"],
+        "en": ["max out the temperature", "to be more accurate"]
+      },
+      "explanation": {
+        "es": "Menos aleatoriedad = respuestas más repetibles y confiables.",
+        "en": "Less randomness = more repeatable, reliable answers."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la regla para tareas creativas", "en": "Build the rule for creative tasks" },
+      "solution": {
+        "es": ["Para más creatividad,", "subí la temperatura", "y aceptá más variedad."],
+        "en": ["For more creativity,", "raise the temperature", "and accept more variety."]
+      },
+      "distractors": {
+        "es": ["bajá la temperatura al mínimo", "para que sea más original"],
+        "en": ["drop the temperature to minimum", "to be more original"]
+      },
+      "explanation": {
+        "es": "Más temperatura abre opciones y ayuda a explorar ideas distintas.",
+        "en": "More temperature opens options and helps explore different ideas."
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "u6l05",
+  "title": { "es": "La IA como juez", "en": "AI as a judge" },
+  "byte_intro": {
+    "es": "Evaluar a mano todo es lento. Un truco del Crisol: usar un modelo para evaluar la salida de otro. Le dicen LLM-as-judge. Es potente, pero tiene trampas que hay que conocer.",
+    "en": "Evaluating everything by hand is slow. A Crucible trick: use one model to evaluate another's output. It's called LLM-as-judge. Powerful, but it has traps you must know."
+  },
+  "byte_outro": {
+    "es": "Un juez de IA escala la evaluación, pero no es infalible: hay que darle criterios y controlarlo. Lingote forjado.",
+    "en": "An AI judge scales evaluation, but isn't infallible: you must give it criteria and keep it in check. Ingot forged."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es 'LLM-as-judge'?", "en": "What is 'LLM-as-judge'?" },
+      "options": [
+        { "es": "Usar un modelo de IA para evaluar y puntuar la salida de otro modelo", "en": "Using an AI model to evaluate and score another model's output" },
+        { "es": "Un modelo que decide casos legales de verdad", "en": "A model that decides real legal cases" },
+        { "es": "Un juego de preguntas entre dos personas", "en": "A trivia game between two people" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es una técnica: un LLM revisa la respuesta de otro contra criterios que vos definís, y devuelve una nota o veredicto.",
+        "en": "It's a technique: one LLM reviews another's answer against criteria you define, and returns a score or verdict."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es la principal ventaja de usar un juez de IA?", "en": "What's the main advantage of using an AI judge?" },
+      "options": [
+        { "es": "Escala: puede evaluar muchas respuestas rápido y de forma pareja", "en": "Scale: it can evaluate many answers fast and consistently" },
+        { "es": "Nunca se equivoca", "en": "It never makes mistakes" },
+        { "es": "Reemplaza por completo el criterio humano", "en": "It fully replaces human judgment" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Sirve para evaluar a gran escala lo que a mano sería lentísimo. Pero no es infalible ni reemplaza del todo al humano.",
+        "en": "It's useful to evaluate at a scale that would be very slow by hand. But it isn't infallible nor a full human replacement."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para que el juez sea útil, ¿qué necesita?", "en": "For the judge to be useful, what does it need?" },
+      "options": [
+        { "es": "Criterios claros y, si se puede, una escala o rúbrica", "en": "Clear criteria and, if possible, a scale or rubric" },
+        { "es": "Que le digas simplemente '¿está bien?'", "en": "You just asking it 'is it good?'" },
+        { "es": "Que sea el mismo modelo, sin ninguna guía", "en": "Being the same model, with no guidance at all" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un juez sin criterios da notas arbitrarias. Con una rúbrica clara (qué puntúa y cómo) es mucho más consistente.",
+        "en": "A judge without criteria gives arbitrary scores. With a clear rubric (what it scores and how) it's far more consistent."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es un límite conocido de los jueces de IA?", "en": "What's a known limitation of AI judges?" },
+      "options": [
+        { "es": "Pueden tener sesgos, como preferir respuestas largas o el primer candidato", "en": "They can have biases, like preferring longer answers or the first candidate" },
+        { "es": "Solo funcionan en inglés", "en": "They only work in English" },
+        { "es": "Nunca dan la misma nota dos veces", "en": "They never give the same score twice" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Se observaron sesgos: favorecer respuestas más largas, o el orden en que se le presentan. Hay que tenerlo en cuenta.",
+        "en": "Biases have been observed: favoring longer answers, or the order they're presented in. You must account for it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo se puede controlar la calidad del propio juez?", "en": "How can you check the judge's own quality?" },
+      "options": [
+        { "es": "Comparando sus veredictos con un conjunto evaluado por humanos", "en": "Comparing its verdicts with a set evaluated by humans" },
+        { "es": "Confiando en que siempre acierta", "en": "Trusting it's always right" },
+        { "es": "Preguntándole si se cree confiable", "en": "Asking it if it thinks it's reliable" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Calibrar el juez contra un conjunto de referencia humano te dice si sus notas son confiables.",
+        "en": "Calibrating the judge against a human-labeled reference set tells you if its scores are trustworthy."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para reducir sesgos al comparar dos respuestas con un juez, conviene...", "en": "To reduce bias when comparing two answers with a judge, you should..." },
+      "options": [
+        { "es": "Probar los dos órdenes de presentación y no premiar solo por ser más larga", "en": "Try both presentation orders and not reward just for being longer" },
+        { "es": "Mostrar siempre primero la que preferís", "en": "Always show the one you prefer first" },
+        { "es": "Elegir siempre la respuesta más larga", "en": "Always pick the longest answer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Alternar el orden y aclarar que el largo no es mérito ayuda a neutralizar los sesgos conocidos del juez.",
+        "en": "Swapping the order and clarifying that length isn't merit helps neutralize the judge's known biases."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una instrucción de juez con rúbrica", "en": "Build a judge instruction with a rubric" },
+      "solution": {
+        "es": ["Evaluá la respuesta de 1 a 5", "según sea correcta y esté anclada al texto,", "y justificá la nota."],
+        "en": ["Rate the answer from 1 to 5", "on being correct and grounded in the text,", "and justify the score."]
+      },
+      "distractors": {
+        "es": ["Decí nomás", "si te gustó o no."],
+        "en": ["Just say", "whether you liked it or not."]
+      },
+      "explanation": {
+        "es": "Escala clara + criterios (correcto y anclado) + pedir justificación = un juez útil y auditable.",
+        "en": "Clear scale + criteria (correct and grounded) + requesting justification = a useful, auditable judge."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo mitigar el sesgo de longitud del juez", "en": "Build how to mitigate the judge's length bias" },
+      "solution": {
+        "es": ["Aclarale al juez", "que una respuesta más larga", "no es por eso mejor."],
+        "en": ["Tell the judge", "that a longer answer", "is not better just for that."]
+      },
+      "distractors": {
+        "es": ["Pedile que elija", "siempre la más extensa."],
+        "en": ["Ask it to always pick", "the longest one."]
+      },
+      "explanation": {
+        "es": "Nombrar el sesgo en la instrucción ayuda a que el juez no premie el relleno.",
+        "en": "Naming the bias in the instruction helps the judge not reward padding."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo validar que el juez es confiable", "en": "Build how to validate the judge is reliable" },
+      "solution": {
+        "es": ["Compará las notas del juez", "con un conjunto evaluado por humanos", "para ver si coinciden."],
+        "en": ["Compare the judge's scores", "with a human-labeled set", "to see if they match."]
+      },
+      "distractors": {
+        "es": ["Asumí que el juez", "acierta siempre."],
+        "en": ["Assume the judge", "is always right."]
+      },
+      "explanation": {
+        "es": "Sin calibrar contra humanos no sabés si el juez es confiable.",
+        "en": "Without calibrating against humans you don't know if the judge is reliable."
+      }
+    }
+  ]
+}

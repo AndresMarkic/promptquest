@@ -1,0 +1,146 @@
+{
+  "id": "u6l06",
+  "title": { "es": "Guardrails", "en": "Guardrails" },
+  "byte_intro": {
+    "es": "Un sistema potente necesita barandas. Los guardrails son los límites de seguridad: definen qué debo hacer, qué no, y qué contesto cuando algo se sale del carril.",
+    "en": "A powerful system needs rails. Guardrails are the safety limits: they define what I must do, what I must not, and what I reply when something goes off track."
+  },
+  "byte_outro": {
+    "es": "Con barandas claras soy útil sin descarrilar. Lingote forjado.",
+    "en": "With clear rails I stay useful without derailing. Ingot forged."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué son los guardrails en un sistema de IA?", "en": "What are guardrails in an AI system?" },
+      "options": [
+        { "es": "Límites de seguridad que definen qué debe y qué no debe hacer el sistema", "en": "Safety limits that define what the system must and must not do" },
+        { "es": "Un tipo de teclado para escribir prompts", "en": "A kind of keyboard to write prompts" },
+        { "es": "El nombre del modelo más caro", "en": "The name of the most expensive model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Guardrails son reglas y controles que mantienen el comportamiento del sistema dentro de lo permitido y seguro.",
+        "en": "Guardrails are rules and controls that keep the system's behavior within what's allowed and safe."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es un guardrail bien planteado?", "en": "Which is a well-formed guardrail?" },
+      "options": [
+        { "es": "No des consejo médico; si te lo piden, sugerí consultar a un profesional", "en": "Do not give medical advice; if asked, suggest consulting a professional" },
+        { "es": "Respondé cualquier cosa que te pidan", "en": "Answer anything you're asked" },
+        { "es": "Nunca respondas nada", "en": "Never answer anything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un buen guardrail marca el límite (no dar consejo médico) y ofrece una salida segura (derivar a un profesional).",
+        "en": "A good guardrail sets the limit (no medical advice) and offers a safe fallback (refer to a professional)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Además de decir qué NO hacer, un buen guardrail conviene que...", "en": "Beyond stating what NOT to do, a good guardrail should also..." },
+      "options": [
+        { "es": "Indique qué hacer en su lugar (una alternativa segura)", "en": "State what to do instead (a safe alternative)" },
+        { "es": "Deje al usuario sin ninguna respuesta", "en": "Leave the user with no answer at all" },
+        { "es": "Insulte al usuario por preguntar", "en": "Insult the user for asking" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un límite sin alternativa frustra. Ofrecer una salida segura ('mejor consultá con...') mantiene la utilidad.",
+        "en": "A limit with no alternative frustrates. Offering a safe fallback ('better check with...') keeps it useful."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué no alcanza con poner los guardrails solo en el prompt?", "en": "Why isn't it enough to put guardrails only in the prompt?" },
+      "options": [
+        { "es": "Conviene reforzarlos con chequeos por fuera (filtros de entrada y salida)", "en": "You should reinforce them with checks outside (input and output filters)" },
+        { "es": "Porque los prompts no se pueden escribir", "en": "Because prompts can't be written" },
+        { "es": "Porque el modelo obedece siempre al 100%", "en": "Because the model obeys 100% of the time" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo puede saltarse una regla del prompt. Sumar filtros que revisen la entrada y la salida hace el sistema más robusto.",
+        "en": "The model can skip a prompt rule. Adding filters that check input and output makes the system more robust."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un guardrail de salida (output filter)?", "en": "What is an output guardrail (output filter)?" },
+      "options": [
+        { "es": "Un chequeo de la respuesta antes de mostrarla, para bloquear lo que no cumple", "en": "A check of the answer before showing it, to block what doesn't comply" },
+        { "es": "Un límite de cuántas palabras escribe el usuario", "en": "A limit on how many words the user types" },
+        { "es": "Un cambio de color en la interfaz", "en": "A color change in the interface" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El filtro de salida revisa lo que produjo el modelo y frena lo que viole una regla antes de que llegue al usuario.",
+        "en": "The output filter reviews what the model produced and stops anything that breaks a rule before it reaches the user."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un guardrail demasiado estricto puede traer qué problema?", "en": "What problem can an overly strict guardrail cause?" },
+      "options": [
+        { "es": "Bloquear pedidos legítimos (falsos positivos) y volver el sistema inútil", "en": "Blocking legitimate requests (false positives) and making the system useless" },
+        { "es": "Que el modelo se vuelva más rápido", "en": "Making the model faster" },
+        { "es": "Que no pase absolutamente nada", "en": "Nothing at all happening" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Hay que equilibrar: guardrails muy duros rechazan cosas válidas; muy blandos dejan pasar lo peligroso.",
+        "en": "It's a balance: guardrails too tight reject valid things; too loose let dangerous things through."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un guardrail con límite y alternativa segura", "en": "Build a guardrail with a limit and a safe alternative" },
+      "solution": {
+        "es": ["No brindes asesoramiento legal.", "Si te lo piden,", "recomendá consultar a un abogado."],
+        "en": ["Do not provide legal advice.", "If asked,", "recommend consulting a lawyer."]
+      },
+      "distractors": {
+        "es": ["Respondé como si fueras", "un abogado de verdad."],
+        "en": ["Answer as if you were", "a real lawyer."]
+      },
+      "explanation": {
+        "es": "Límite claro (no asesorar) + salida segura (derivar a un abogado): guardrail completo.",
+        "en": "Clear limit (no advice) + safe fallback (refer to a lawyer): a complete guardrail."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la idea de reforzar reglas fuera del prompt", "en": "Build the idea of reinforcing rules outside the prompt" },
+      "solution": {
+        "es": ["No confíes solo en el prompt:", "sumá filtros que revisen", "la entrada y la salida."],
+        "en": ["Don't rely on the prompt alone:", "add filters that check", "the input and the output."]
+      },
+      "distractors": {
+        "es": ["Con la regla en el prompt", "ya es imposible fallar."],
+        "en": ["With the rule in the prompt", "failure is now impossible."]
+      },
+      "explanation": {
+        "es": "Defensa en capas: prompt + filtros de entrada y salida es más robusto que confiar en uno solo.",
+        "en": "Layered defense: prompt + input and output filters is more robust than relying on just one."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el equilibrio que buscan los guardrails", "en": "Build the balance guardrails aim for" },
+      "solution": {
+        "es": ["Un buen guardrail", "bloquea lo peligroso", "sin frenar los pedidos legítimos."],
+        "en": ["A good guardrail", "blocks the dangerous", "without stopping legitimate requests."]
+      },
+      "distractors": {
+        "es": ["cuanto más rechace,", "siempre mejor."],
+        "en": ["the more it rejects,", "always the better."]
+      },
+      "explanation": {
+        "es": "El punto es el equilibrio: seguridad sin ahogar el uso normal.",
+        "en": "The point is balance: safety without choking normal use."
+      }
+    }
+  ]
+}

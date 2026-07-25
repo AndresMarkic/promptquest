@@ -1,0 +1,146 @@
+{
+  "id": "u4l04",
+  "title": { "es": "Velocidad, costo y tamaño", "en": "Speed, cost and size" },
+  "byte_intro": {
+    "es": "En el Observatorio hay un triángulo que siempre vuelve: rápido, barato y potente. Casi nunca tenés los tres al máximo a la vez. Te enseño a elegir.",
+    "en": "In the Observatory there's a triangle that keeps coming back: fast, cheap and powerful. You almost never get all three maxed out at once. Let me teach you to choose."
+  },
+  "byte_outro": {
+    "es": "Ya manejás el triángulo de trade-offs. Un modelo grande es potente pero más lento y caro; uno chico es rápido y barato. Elegís según la tarea.",
+    "en": "You've got the trade-off triangle down. A big model is powerful but slower and costlier; a small one is fast and cheap. You choose by the task."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En general, un modelo más grande tiende a ser...", "en": "In general, a bigger model tends to be..." },
+      "options": [
+        { "es": "Más capaz, pero más lento y más caro", "en": "More capable, but slower and costlier" },
+        { "es": "Más rápido y más barato siempre", "en": "Always faster and cheaper" },
+        { "es": "Idéntico a uno chico", "en": "Identical to a small one" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Más tamaño suele dar más capacidad, a cambio de más tiempo de respuesta y mayor costo por uso.",
+        "en": "More size usually means more capability, in exchange for more response time and higher cost per use."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para una tarea simple y de mucho volumen (por ejemplo, clasificar miles de mensajes cortos), conviene...", "en": "For a simple, high-volume task (say, classifying thousands of short messages), it's best to..." },
+      "options": [
+        { "es": "Un modelo más chico y rápido", "en": "A smaller, faster model" },
+        { "es": "El modelo más grande disponible", "en": "The largest model available" },
+        { "es": "No usar IA jamás", "en": "Never use AI" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si la tarea es sencilla y se repite mucho, un modelo liviano te da velocidad y costo bajo sin perder calidad útil.",
+        "en": "If the task is simple and repeats a lot, a light model gives you speed and low cost without losing useful quality."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para un problema difícil de varios pasos con alto valor, conviene...", "en": "For a hard, high-value multi-step problem, it's best to..." },
+      "options": [
+        { "es": "Un modelo más grande y capaz, aunque sea más lento y caro", "en": "A larger, more capable model, even if slower and costlier" },
+        { "es": "El más chico posible siempre", "en": "Always the smallest possible" },
+        { "es": "Cualquiera al azar", "en": "Any one at random" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cuando la calidad importa mucho y el volumen es bajo, pagar más por un modelo capaz vale la pena.",
+        "en": "When quality matters a lot and volume is low, paying more for a capable model is worth it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué suele medir el 'costo' de usar un modelo por servicio?", "en": "What usually measures the 'cost' of using a model as a service?" },
+      "options": [
+        { "es": "La cantidad de tokens procesados (entrada y salida)", "en": "The amount of tokens processed (input and output)" },
+        { "es": "La cantidad de veces que decís 'gracias'", "en": "How many times you say 'thank you'" },
+        { "es": "El color del texto", "en": "The color of the text" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En muchos servicios el costo se calcula por tokens: cuanto más largo el prompt y la respuesta, más gasta.",
+        "en": "In many services cost is computed per token: the longer the prompt and answer, the more it costs."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Una forma de bajar costo sin cambiar de modelo es...", "en": "One way to lower cost without changing the model is..." },
+      "options": [
+        { "es": "Escribir prompts más concisos y pedir respuestas del largo justo", "en": "Writing more concise prompts and asking for right-sized answers" },
+        { "es": "Repetir la pregunta muchas veces", "en": "Repeating the question many times" },
+        { "es": "Pedir siempre respuestas larguísimas", "en": "Always asking for very long answers" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Menos tokens innecesarios = menos costo y, muchas veces, más velocidad. La claridad ayuda al bolsillo.",
+        "en": "Fewer unnecessary tokens = lower cost and, often, more speed. Clarity helps your wallet."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué se habla de 'trade-off' (compensación)?", "en": "Why do we call it a 'trade-off'?" },
+      "options": [
+        { "es": "Porque ganar en un lado (potencia) suele costar en otro (velocidad o precio)", "en": "Because gaining on one side (power) usually costs on another (speed or price)" },
+        { "es": "Porque es un tipo de modelo", "en": "Because it's a kind of model" },
+        { "es": "Porque no hay que elegir nada", "en": "Because you don't have to choose anything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Casi siempre hay que balancear: subir una cualidad baja otra. Elegir es encontrar el equilibrio para tu caso.",
+        "en": "You almost always have to balance: raising one quality lowers another. Choosing means finding the balance for your case."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el triángulo de trade-offs", "en": "Build the trade-off triangle" },
+      "solution": {
+        "es": ["Un modelo más grande", "es más potente,", "pero más lento y más caro."],
+        "en": ["A bigger model", "is more powerful,", "but slower and more expensive."]
+      },
+      "distractors": {
+        "es": ["es más rápido", "y más barato a la vez"],
+        "en": ["is faster", "and cheaper at the same time"]
+      },
+      "explanation": {
+        "es": "Más potencia se paga con tiempo y dinero: ese es el trade-off.",
+        "en": "More power is paid with time and money: that's the trade-off."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la elección para tareas simples de mucho volumen", "en": "Build the choice for high-volume simple tasks" },
+      "solution": {
+        "es": ["Para tareas simples y repetidas,", "elegí un modelo chico", "por su velocidad y bajo costo."],
+        "en": ["For simple, repeated tasks,", "pick a small model", "for its speed and low cost."]
+      },
+      "distractors": {
+        "es": ["elegí siempre el más grande", "sin importar el volumen"],
+        "en": ["always pick the biggest", "regardless of volume"]
+      },
+      "explanation": {
+        "es": "El volumen alto premia la eficiencia; ahí brilla el modelo liviano.",
+        "en": "High volume rewards efficiency; that's where the light model shines."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo reducir costo sin cambiar de modelo", "en": "Build how to reduce cost without changing model" },
+      "solution": {
+        "es": ["Escribí prompts concisos", "y pedí el largo justo", "para gastar menos tokens."],
+        "en": ["Write concise prompts", "and ask for the right length", "to spend fewer tokens."]
+      },
+      "distractors": {
+        "es": ["repetí todo varias veces", "para asegurarte"],
+        "en": ["repeat everything several times", "just to be sure"]
+      },
+      "explanation": {
+        "es": "Cada token cuenta: la concisión baja costo y suele acelerar la respuesta.",
+        "en": "Every token counts: conciseness lowers cost and often speeds the answer."
+      }
+    }
+  ]
+}

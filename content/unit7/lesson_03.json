@@ -1,0 +1,132 @@
+{
+  "id": "u7l03",
+  "title": { "es": "Humano en el bucle", "en": "Human in the loop" },
+  "byte_intro": {
+    "es": "En La Fábrica hay un control de calidad antes de que la pieza salga. Con la IA, ese control es una persona: el humano en el bucle.",
+    "en": "In The Factory there's a quality check before the part ships. With AI, that check is a person: the human in the loop."
+  },
+  "byte_outro": {
+    "es": "¡Genial! Ya sabés dónde poner una revisión humana: donde el error cuesta caro o la decisión es sensible.",
+    "en": "Great! Now you know where to place a human review: where an error is costly or the decision is sensitive."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa 'humano en el bucle'?", "en": "What does 'human in the loop' mean?" },
+      "options": [
+        { "es": "Una persona revisa o aprueba antes de que la IA actúe sobre algo importante", "en": "A person reviews or approves before the AI acts on something important" },
+        { "es": "Que un humano hace todo el trabajo y la IA mira", "en": "A human does all the work and the AI just watches" },
+        { "es": "Que la IA reemplaza a todos los humanos", "en": "The AI replaces all humans" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es poner un punto de control humano en el flujo, justo donde una revisión evita un problema serio.",
+        "en": "It's placing a human checkpoint in the flow, right where a review prevents a serious problem."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Dónde conviene MÁS poner una revisión humana?", "en": "Where is a human review MOST worth placing?" },
+      "options": [
+        { "es": "Antes de una acción irreversible o de alto impacto", "en": "Before an irreversible or high-impact action" },
+        { "es": "Antes de mostrar un chiste generado por IA", "en": "Before showing an AI-generated joke" },
+        { "es": "En cada palabra que escribe la IA", "en": "On every single word the AI writes" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cuanto más grave o difícil de deshacer es la acción, más se justifica que un humano la apruebe antes.",
+        "en": "The more serious or hard to undo the action is, the more it justifies a human approving it first."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA clasifica correos y uno queda 'dudoso'. ¿Qué diseño es mejor?", "en": "AI sorts emails and one comes out 'uncertain'. Which design is better?" },
+      "options": [
+        { "es": "Mandar solo los casos dudosos a un humano; el resto sigue automático", "en": "Send only the uncertain cases to a human; the rest stays automatic" },
+        { "es": "Mandar todo a un humano, no sirvió de nada la IA", "en": "Send everything to a human, the AI was pointless" },
+        { "es": "Nunca involucrar a un humano, aunque dude", "en": "Never involve a human, even when it's unsure" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Lo eficiente es que el humano solo vea lo dudoso. Así aprovechás la IA y reservás a la persona para lo difícil.",
+        "en": "The efficient move is a human seeing only the uncertain. You leverage the AI and save the person for the hard cases."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué señal indica que un caso debería ir a revisión humana?", "en": "What signal indicates a case should go to human review?" },
+      "options": [
+        { "es": "La IA muestra baja confianza o el caso es una excepción", "en": "The AI shows low confidence or the case is an exception" },
+        { "es": "El caso es idéntico a otros mil ya resueltos", "en": "The case is identical to a thousand already solved" },
+        { "es": "Es viernes a la tarde", "en": "It's Friday afternoon" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Baja confianza o un caso raro son buenas señales para escalar a una persona. Lo rutinario puede seguir automático.",
+        "en": "Low confidence or an odd case are good signals to escalate to a person. Routine stuff can stay automatic."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Poner un humano a revisar TODO, siempre, ¿qué problema trae?", "en": "Having a human review EVERYTHING, always, causes what problem?" },
+      "options": [
+        { "es": "Se pierde la ventaja de velocidad y el revisor se satura", "en": "You lose the speed advantage and the reviewer gets swamped" },
+        { "es": "Ninguno, revisar todo siempre es lo ideal", "en": "None, reviewing everything is always ideal" },
+        { "es": "La IA se ofende", "en": "The AI gets offended" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Revisar el 100% mata el beneficio de automatizar. La clave es enfocar al humano donde su criterio suma.",
+        "en": "Reviewing 100% kills the benefit of automating. The key is to focus the human where their judgment adds value."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el criterio para escalar un caso a un humano", "en": "Build the criterion for escalating a case to a human" },
+      "solution": {
+        "es": ["Si la IA duda", "o el caso es de alto impacto,", "escalalo a una persona antes de actuar."],
+        "en": ["If the AI is unsure", "or the case is high-impact,", "escalate it to a person before acting."]
+      },
+      "distractors": {
+        "es": ["Si el caso es rutinario,", "frená todo y llamá al jefe."],
+        "en": ["If the case is routine,", "stop everything and call the boss."]
+      },
+      "explanation": {
+        "es": "Duda de la IA o alto impacto: dos disparadores claros para meter a un humano en el bucle.",
+        "en": "AI uncertainty or high impact: two clear triggers to put a human in the loop."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ubicá la revisión humana en un flujo de facturación", "en": "Place the human review in a billing flow" },
+      "solution": {
+        "es": ["La IA arma la factura", "→ un humano revisa montos y datos", "→ recién ahí se envía al cliente."],
+        "en": ["The AI drafts the invoice", "→ a human reviews amounts and details", "→ only then it's sent to the client."]
+      },
+      "distractors": {
+        "es": ["→ se cobra automáticamente", "sin que nadie mire el monto."],
+        "en": ["→ it charges automatically", "with no one checking the amount."]
+      },
+      "explanation": {
+        "es": "Cobrar es de alto impacto: el humano revisa montos y datos antes de que salga la factura.",
+        "en": "Charging is high-impact: the human checks amounts and details before the invoice goes out."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un flujo con revisión solo para lo dudoso", "en": "Build a flow with review only for the uncertain" },
+      "solution": {
+        "es": ["La IA resuelve los casos claros sola", "→ marca los dudosos", "→ un humano decide solo esos."],
+        "en": ["The AI handles clear cases on its own", "→ flags the uncertain ones", "→ a human decides just those."]
+      },
+      "distractors": {
+        "es": ["→ un humano rehace", "todos los casos desde cero."],
+        "en": ["→ a human redoes", "every case from scratch."]
+      },
+      "explanation": {
+        "es": "Automatizás lo claro y reservás a la persona para lo dudoso: rápido y seguro a la vez.",
+        "en": "You automate the clear and save the person for the uncertain: fast and safe at once."
+      }
+    }
+  ]
+}

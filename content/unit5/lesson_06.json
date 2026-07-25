@@ -1,0 +1,130 @@
+{
+  "id": "u5l06",
+  "title": { "es": "RAG: traer info al contexto", "en": "RAG: bringing info into context" },
+  "byte_intro": {
+    "es": "Un modelo no sabe tus documentos ni las noticias de hoy. Pero descubrí un truco: buscar la info que hace falta y pegársela en el contexto justo antes de responder. Eso es RAG.",
+    "en": "A model doesn't know your documents or today's news. But I found a trick: search the needed info and paste it into the context right before answering. That's RAG."
+  },
+  "byte_outro": {
+    "es": "¡Clarísimo! RAG = recuperar información y meterla en el contexto para responder con datos frescos o propios. No se reentrena el modelo: se le pasa la info en el momento.",
+    "en": "Crystal clear! RAG = retrieve information and put it in the context to answer with fresh or private data. The model isn't retrained: the info is handed over on the spot."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué hace RAG, en criollo?", "en": "What does RAG do, in plain terms?" },
+      "options": [
+        { "es": "Busca información y la mete en el contexto antes de responder", "en": "It searches information and puts it into the context before answering" },
+        { "es": "Reentrena el modelo desde cero cada vez", "en": "It retrains the model from scratch each time" },
+        { "es": "Borra la memoria del modelo", "en": "It wipes the model's memory" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "RAG recupera datos relevantes y los agrega al contexto. El modelo responde usando esa info fresca.",
+        "en": "RAG retrieves relevant data and adds it to the context. The model answers using that fresh info."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿RAG cambia los pesos del modelo (lo reentrena)?", "en": "Does RAG change the model's weights (retrain it)?" },
+      "options": [
+        { "es": "No: le pasa la info en el contexto, sin tocar el modelo", "en": "No: it passes the info in the context, without touching the model" },
+        { "es": "Sí, lo reentrena en cada pregunta", "en": "Yes, it retrains it on every question" },
+        { "es": "Sí, le borra lo que sabía", "en": "Yes, it erases what it knew" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Esa es la clave de RAG: no reentrena nada; solo agrega texto relevante al pedido.",
+        "en": "That's the key to RAG: it retrains nothing; it just adds relevant text to the request."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés que la IA responda sobre el manual interno de tu empresa. ¿Qué conviene?", "en": "You want the AI to answer about your company's internal manual. What's best?" },
+      "options": [
+        { "es": "Usar RAG: buscar el fragmento del manual y pasárselo en el contexto", "en": "Use RAG: find the manual's chunk and pass it in the context" },
+        { "es": "Esperar que lo adivine de memoria", "en": "Hope it guesses from memory" },
+        { "es": "Pedirle que invente la respuesta", "en": "Ask it to make up the answer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo no vio tu manual privado. Con RAG le acercás el fragmento exacto y responde con datos reales.",
+        "en": "The model never saw your private manual. With RAG you hand it the exact chunk and it answers with real data."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué gran problema ayuda a reducir RAG?", "en": "What big problem does RAG help reduce?" },
+      "options": [
+        { "es": "Las alucinaciones: responde apoyado en info real, no inventada", "en": "Hallucinations: it answers grounded in real info, not made up" },
+        { "es": "El brillo de la pantalla", "en": "The screen brightness" },
+        { "es": "La velocidad de tu wifi", "en": "Your wifi speed" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Al darle fuentes reales en el contexto, hay menos margen para que invente.",
+        "en": "By giving it real sources in the context, there's less room to make things up."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená el flujo de RAG", "en": "Order the RAG flow" },
+      "solution": {
+        "es": ["Recibir la pregunta", "buscar los fragmentos relevantes", "meterlos en el contexto", "responder con esa info."],
+        "en": ["Receive the question", "search the relevant chunks", "put them in the context", "answer with that info."]
+      },
+      "distractors": {
+        "es": ["reentrenar el modelo", "durante horas"],
+        "en": ["retrain the model", "for hours"]
+      },
+      "explanation": {
+        "es": "Pregunta → buscar → agregar al contexto → responder. Nunca reentrena: recupera y usa.",
+        "en": "Question → search → add to context → answer. It never retrains: it retrieves and uses."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿De dónde saca RAG los fragmentos que agrega?", "en": "Where does RAG get the chunks it adds?" },
+      "options": [
+        { "es": "De una fuente de datos (tus documentos, una base, la web)", "en": "From a data source (your documents, a database, the web)" },
+        { "es": "De la imaginación del modelo", "en": "From the model's imagination" },
+        { "es": "De la nada", "en": "From nowhere" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "RAG consulta una fuente real y trae de ahí los pedazos más relevantes para la pregunta.",
+        "en": "RAG queries a real source and pulls from it the most relevant pieces for the question."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Ventaja de RAG frente a reentrenar el modelo:", "en": "Advantage of RAG over retraining the model:" },
+      "options": [
+        { "es": "Actualizás la info cambiando la fuente, sin tocar el modelo", "en": "You update info by changing the source, without touching the model" },
+        { "es": "Hace al modelo más pesado", "en": "It makes the model heavier" },
+        { "es": "Borra tus documentos", "en": "It deletes your documents" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si cambian los datos, actualizás la fuente y listo. Reentrenar sería mucho más caro y lento.",
+        "en": "If the data changes, you update the source and you're done. Retraining would be far costlier and slower."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la definición de RAG en una frase", "en": "Build the definition of RAG in one sentence" },
+      "solution": {
+        "es": ["RAG recupera información relevante", "y la agrega al contexto", "para responder con datos reales."],
+        "en": ["RAG retrieves relevant information", "and adds it to the context", "to answer with real data."]
+      },
+      "distractors": {
+        "es": ["y reentrena el modelo", "cada vez"],
+        "en": ["and retrains the model", "every time"]
+      },
+      "explanation": {
+        "es": "Recuperar + agregar al contexto = RAG. Sin reentrenar nada.",
+        "en": "Retrieve + add to context = RAG. Without retraining anything."
+      }
+    }
+  ]
+}

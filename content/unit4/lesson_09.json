@@ -1,0 +1,146 @@
+{
+  "id": "u4l09",
+  "title": { "es": "Multimodal", "en": "Multimodal" },
+  "byte_intro": {
+    "es": "Última parada antes del boss. Algunos modelos no solo leen texto: también 'ven' imágenes, 'escuchan' audio y hasta hablan. Te muestro qué se puede combinar.",
+    "en": "Last stop before the boss. Some models don't just read text: they also 'see' images, 'hear' audio and even speak. Let me show you what can be combined."
+  },
+  "byte_outro": {
+    "es": "¡Listo! Ya entendés lo multimodal: texto, imagen, audio y voz. Cada modelo soporta algunas modalidades; elegí según lo que necesites combinar.",
+    "en": "Done! Now you get multimodal: text, image, audio and voice. Each model supports some modalities; choose by what you need to combine."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es una 'modalidad' en IA?", "en": "What is a 'modality' in AI?" },
+      "options": [
+        { "es": "Un tipo de dato, como texto, imagen, audio o video", "en": "A type of data, like text, image, audio or video" },
+        { "es": "Un estilo de escritura", "en": "A writing style" },
+        { "es": "Una marca de teléfono", "en": "A phone brand" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cada modalidad es un tipo de dato distinto. Un modelo multimodal maneja más de una a la vez.",
+        "en": "Each modality is a different data type. A multimodal model handles more than one at once."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un modelo que recibe una imagen y devuelve una descripción en texto es un ejemplo de...", "en": "A model that takes an image and returns a text description is an example of..." },
+      "options": [
+        { "es": "Pasar de una modalidad (imagen) a otra (texto)", "en": "Going from one modality (image) to another (text)" },
+        { "es": "Cambiar de idioma solamente", "en": "Only changing language" },
+        { "es": "Subir la temperatura", "en": "Raising temperature" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Tomar imagen y producir texto es combinar modalidades: entra una cosa, sale otra.",
+        "en": "Taking an image and producing text is combining modalities: one thing goes in, another comes out."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "'Texto a voz' (que la IA lea un texto en voz alta) convierte...", "en": "'Text to speech' (the AI reads a text aloud) converts..." },
+      "options": [
+        { "es": "Texto en audio de voz", "en": "Text into voice audio" },
+        { "es": "Audio en imagen", "en": "Audio into image" },
+        { "es": "Video en texto", "en": "Video into text" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Texto a voz toma texto y genera audio hablado. Su opuesto, voz a texto, transcribe lo que decís.",
+        "en": "Text to speech takes text and generates spoken audio. Its opposite, speech to text, transcribes what you say."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés transcribir una reunión grabada a texto. Necesitás capacidad de...", "en": "You want to transcribe a recorded meeting to text. You need the ability to..." },
+      "options": [
+        { "es": "Audio a texto (reconocimiento de voz)", "en": "Audio to text (speech recognition)" },
+        { "es": "Texto a imagen", "en": "Text to image" },
+        { "es": "Solo texto a texto", "en": "Text to text only" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Para pasar de una grabación a texto necesitás una modalidad de audio a texto. Un modelo de solo texto no alcanza.",
+        "en": "To turn a recording into text you need an audio-to-text modality. A text-only model isn't enough."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Todos los modelos soportan todas las modalidades?", "en": "Do all models support every modality?" },
+      "options": [
+        { "es": "No: cada uno soporta las modalidades para las que fue diseñado", "en": "No: each supports the modalities it was designed for" },
+        { "es": "Sí, todos hacen todo", "en": "Yes, all of them do everything" },
+        { "es": "Sí, pero solo los martes", "en": "Yes, but only on Tuesdays" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Conviene chequear qué modalidades acepta y produce cada modelo antes de asumir que puede con imágenes o audio.",
+        "en": "It's worth checking which modalities each model accepts and produces before assuming it can handle images or audio."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Ventaja de un asistente multimodal frente a uno de solo texto:", "en": "Advantage of a multimodal assistant over a text-only one:" },
+      "options": [
+        { "es": "Podés mezclar entradas, como mostrarle una foto y preguntar por texto", "en": "You can mix inputs, like showing it a photo and asking in text" },
+        { "es": "Escribe siempre más rápido", "en": "It always writes faster" },
+        { "es": "Nunca se equivoca", "en": "It never makes mistakes" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Lo multimodal te deja combinar formatos en un mismo pedido, algo imposible para un modelo de solo texto.",
+        "en": "Multimodal lets you combine formats in a single request, impossible for a text-only model."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué es un modelo multimodal", "en": "Build what a multimodal model is" },
+      "solution": {
+        "es": ["Un modelo multimodal", "trabaja con varios tipos de dato,", "como texto, imagen y audio."],
+        "en": ["A multimodal model", "works with several data types,", "like text, image and audio."]
+      },
+      "distractors": {
+        "es": ["trabaja solo con texto", "y nada más"],
+        "en": ["works only with text", "and nothing else"]
+      },
+      "explanation": {
+        "es": "Multi = varias; modal = modalidades. Combina más de un tipo de dato.",
+        "en": "Multi = several; modal = modalities. It combines more than one data type."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué necesitás para transcribir audio", "en": "Build what you need to transcribe audio" },
+      "solution": {
+        "es": ["Para transcribir una grabación,", "necesitás una capacidad", "de audio a texto."],
+        "en": ["To transcribe a recording,", "you need a capability", "of audio to text."]
+      },
+      "distractors": {
+        "es": ["alcanza con un modelo", "de solo texto"],
+        "en": ["a text-only model", "is enough"]
+      },
+      "explanation": {
+        "es": "Sin modalidad de audio, no puede 'escuchar' la grabación.",
+        "en": "Without an audio modality, it can't 'hear' the recording."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el chequeo antes de asumir capacidades", "en": "Build the check before assuming capabilities" },
+      "solution": {
+        "es": ["Antes de usarlo,", "revisá qué modalidades acepta", "y cuáles produce."],
+        "en": ["Before using it,", "check which modalities it accepts", "and which it produces."]
+      },
+      "distractors": {
+        "es": ["asumí que hace todo", "sin fijarte"],
+        "en": ["assume it does everything", "without checking"]
+      },
+      "explanation": {
+        "es": "No todos los modelos hacen todo; verificá antes de asumir.",
+        "en": "Not every model does everything; verify before assuming."
+      }
+    }
+  ]
+}

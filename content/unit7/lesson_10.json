@@ -1,0 +1,191 @@
+{
+  "id": "u7l10",
+  "boss": true,
+  "title": { "es": "Boss de La Fábrica", "en": "The Factory Boss" },
+  "byte_intro": {
+    "es": "¡Prueba final de La Fábrica! Repasamos todo: elegir tareas, encadenar pasos, controles, errores, costo, privacidad y mantenimiento. ¿Arrancamos?",
+    "en": "Final test of The Factory! We review it all: choosing tasks, chaining steps, checks, errors, cost, privacy and maintenance. Shall we start?"
+  },
+  "byte_outro": {
+    "es": "¡LO LOGRASTE! Terminaste la Unidad 7. Ya sabés integrar IA en un proceso real: con criterio, controles y medición. Sos un obrero de La Fábrica hecho y derecho.",
+    "en": "YOU DID IT! You finished Unit 7. You now know how to integrate AI into a real process: with judgment, checks and measurement. You're a full-fledged Factory worker."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué tarea es la MEJOR candidata a automatizar con IA?", "en": "Which task is the BEST candidate to automate with AI?" },
+      "options": [
+        { "es": "Una repetitiva, con patrón claro y de bajo riesgo si falla", "en": "A repetitive one, with a clear pattern and low risk if it fails" },
+        { "es": "Una decisión única, delicada y sin reglas", "en": "A unique, delicate decision with no rules" },
+        { "es": "Una que solo se hace una vez al año", "en": "One done only once a year" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Repetitiva, con patrón y bajo riesgo: la receta de una buena primera automatización.",
+        "en": "Repetitive, patterned and low-risk: the recipe for a good first automation."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En un pipeline, el paso 3 recibe basura. ¿Dónde buscás la causa?", "en": "In a pipeline, step 3 gets garbage. Where do you look for the cause?" },
+      "options": [
+        { "es": "En la salida del paso 2, que alimenta al 3", "en": "In step 2's output, which feeds step 3" },
+        { "es": "Siempre en el último paso", "en": "Always in the last step" },
+        { "es": "En ningún lado, es normal", "en": "Nowhere, it's normal" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cada paso se alimenta del anterior: la basura del 3 viene de la salida del 2.",
+        "en": "Each step feeds off the prior one: step 3's garbage comes from step 2's output."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Dónde conviene poner una revisión humana?", "en": "Where is it best to place a human review?" },
+      "options": [
+        { "es": "Antes de una acción irreversible o cuando la IA duda", "en": "Before an irreversible action or when the AI is unsure" },
+        { "es": "En cada palabra que escribe la IA", "en": "On every word the AI writes" },
+        { "es": "Nunca, para no frenar nada", "en": "Never, so nothing slows down" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El humano suma donde el error cuesta caro o la IA no está segura; no en todo, o pierde sentido automatizar.",
+        "en": "The human adds value where errors are costly or the AI is unsure; not everywhere, or automating loses its point."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un usuario manda un texto vacío al sistema. ¿Qué debería pasar?", "en": "A user sends an empty text. What should happen?" },
+      "options": [
+        { "es": "Detectarlo antes de llamar a la IA y pedir un texto válido", "en": "Detect it before calling the AI and ask for a valid text" },
+        { "es": "Mandarlo igual y ver qué inventa la IA", "en": "Send it anyway and see what the AI makes up" },
+        { "es": "Cobrarle una multa", "en": "Fine them" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Validar la entrada antes de gastar una llamada evita respuestas inventadas: basura entra, basura sale.",
+        "en": "Validating input before spending a call avoids made-up answers: garbage in, garbage out."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para una tarea simple de clasificar, ¿qué modelo conviene?", "en": "For a simple classification task, which model is best?" },
+      "options": [
+        { "es": "Uno chico y rápido: alcanza y sale más barato", "en": "A small, fast one: it's enough and cheaper" },
+        { "es": "El más grande y caro, siempre", "en": "The biggest and priciest, always" },
+        { "es": "Tres modelos a la vez", "en": "Three models at once" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Ajustar el modelo a la dificultad equilibra costo, velocidad y calidad. Lo simple no necesita el más caro.",
+        "en": "Matching the model to the difficulty balances cost, speed and quality. Simple tasks don't need the priciest."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué dato NO deberías mandar tal cual a un servicio externo de IA?", "en": "Which data should you NOT send as-is to an external AI service?" },
+      "options": [
+        { "es": "El DNI o el número de tarjeta de un cliente", "en": "A client's ID number or card number" },
+        { "es": "El texto genérico de una pregunta frecuente", "en": "The generic text of a FAQ" },
+        { "es": "La fecha de hoy", "en": "Today's date" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los datos personales o financieros son sensibles: anonimizalos o no los mandes.",
+        "en": "Personal or financial data is sensitive: anonymize it or don't send it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA responde rapidísimo pero la mitad de las respuestas están mal. ¿Conclusión?", "en": "The AI answers super fast but half the answers are wrong. Conclusion?" },
+      "options": [
+        { "es": "La velocidad no alcanza: hay que mirar también la calidad", "en": "Speed isn't enough: you must also look at quality" },
+        { "es": "Es un éxito porque es rápida", "en": "It's a success because it's fast" },
+        { "es": "La calidad no importa", "en": "Quality doesn't matter" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una sola métrica engaña. Rápido pero incorrecto no sirve: velocidad y calidad se miran juntas.",
+        "en": "A single metric misleads. Fast but wrong is useless: speed and quality are looked at together."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Antes de meter IA en un proceso, ¿qué entendés primero?", "en": "Before putting AI into a process, what do you understand first?" },
+      "options": [
+        { "es": "Cómo se hace hoy la tarea, paso a paso, a mano", "en": "How the task is done today, step by step, by hand" },
+        { "es": "Qué modelo está de moda este mes", "en": "Which model is trending this month" },
+        { "es": "El nombre del CEO del proveedor", "en": "The provider's CEO name" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Entender el proceso manual real te dice qué paso automatizar y dónde poner controles.",
+        "en": "Understanding the real manual process tells you which step to automate and where to add checks."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pipeline genérico de procesamiento con IA", "en": "Build a generic AI processing pipeline" },
+      "solution": {
+        "es": ["Entrada", "→ validar los datos", "→ procesar con IA", "→ revisar el resultado", "→ salida."],
+        "en": ["Input", "→ validate the data", "→ process with AI", "→ review the result", "→ output."]
+      },
+      "distractors": {
+        "es": ["→ borrar la entrada", "→ ignorar el resultado."],
+        "en": ["→ delete the input", "→ ignore the result."]
+      },
+      "explanation": {
+        "es": "Entrada, validar, procesar, revisar y salida: el esqueleto de casi cualquier flujo con IA.",
+        "en": "Input, validate, process, review and output: the skeleton of almost any AI flow."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el manejo de error cuando la salida viene mal", "en": "Build the error handling when the output comes out wrong" },
+      "solution": {
+        "es": ["Revisá que la salida cumpla el formato,", "si no cumple reintentá una vez,", "y si sigue mal derivá a un humano."],
+        "en": ["Check the output matches the format,", "if not, retry once,", "and if still wrong route to a human."]
+      },
+      "distractors": {
+        "es": ["publicá la salida rota igual", "y olvidate del tema."],
+        "en": ["publish the broken output anyway", "and forget about it."]
+      },
+      "explanation": {
+        "es": "Revisar, reintentar una vez y, si insiste, derivar: así el error no se propaga.",
+        "en": "Check, retry once and, if it persists, route: that way the error doesn't spread."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el paso de anonimización antes de llamar a la IA", "en": "Build the anonymization step before calling the AI" },
+      "solution": {
+        "es": ["Antes de enviar el texto,", "reemplazá nombres y documentos", "por etiquetas como [NOMBRE] y [DNI]."],
+        "en": ["Before sending the text,", "replace names and IDs", "with labels like [NAME] and [ID]."]
+      },
+      "distractors": {
+        "es": ["enviá el texto tal cual,", "con todos los datos personales visibles."],
+        "en": ["send the text as is,", "with all personal data visible."]
+      },
+      "explanation": {
+        "es": "Cambiar los datos que identifican por etiquetas deja el texto útil sin exponer a la persona.",
+        "en": "Swapping identifying data for labels keeps the text useful without exposing the person."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená cómo aplicar un cambio a un prompt de producción", "en": "Order how to apply a change to a production prompt" },
+      "solution": {
+        "es": ["Guardá la versión actual,", "probá el nuevo prompt con tus casos de prueba,", "y si mejora, publicalo anotando el cambio."],
+        "en": ["Save the current version,", "test the new prompt with your test cases,", "and if it improves, publish it noting the change."]
+      },
+      "distractors": {
+        "es": ["cambiá el prompt en vivo", "sin probar ni guardar el anterior."],
+        "en": ["change the prompt live", "without testing or saving the previous one."]
+      },
+      "explanation": {
+        "es": "Guardar la versión previa, probar y anotar el cambio: podés volver atrás si algo sale mal.",
+        "en": "Save the prior version, test and note the change: you can roll back if something goes wrong."
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "u3l07",
+  "title": { "es": "Investigar y comparar", "en": "Research and compare" },
+  "byte_intro": {
+    "es": "Antes me quedaba con la primera respuesta y listo. Hoy recuerdo cómo pedir pros y contras, contrastar opciones y verificar.",
+    "en": "I used to keep the first answer and stop. Today I recall how to ask for pros and cons, compare options and verify."
+  },
+  "byte_outro": {
+    "es": "¡Buenísimo! Ya sé pedir varias miradas, comparar y no tragarme la respuesta única. Fragmento recuperado.",
+    "en": "Awesome! Now I know how to ask for several views, compare and not swallow the single answer. Fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Vas a decidir entre dos celulares. ¿Qué pedido ayuda más?", "en": "You're deciding between two phones. Which request helps most?" },
+      "options": [
+        { "es": "Compará estos dos modelos con pros y contras de cada uno", "en": "Compare these two models with pros and cons of each" },
+        { "es": "¿Cuál es el mejor celular del mundo?", "en": "What's the best phone in the world?" },
+        { "es": "Decime cualquier cosa de celulares", "en": "Tell me anything about phones" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pedir pros y contras de cada opción te muestra los dos lados en vez de una única respuesta cerrada.",
+        "en": "Asking for pros and cons of each option shows you both sides instead of one closed answer."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene evitar preguntas con una sola respuesta 'correcta'?", "en": "Why avoid questions with a single 'correct' answer?" },
+      "options": [
+        { "es": "Muchas decisiones dependen de tu caso; ver opciones es más honesto", "en": "Many decisions depend on your case; seeing options is more honest" },
+        { "es": "Porque la IA no sabe nada", "en": "Because the AI knows nothing" },
+        { "es": "Para hacer la charla más larga", "en": "To make the chat longer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "'El mejor' depende de tu presupuesto y uso. Pedir alternativas con criterios te deja decidir a vos.",
+        "en": "'The best' depends on your budget and use. Asking for alternatives with criteria lets you decide."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA afirma un dato clave para tu decisión. ¿Qué hacés?", "en": "The AI states a key fact for your decision. What do you do?" },
+      "options": [
+        { "es": "Verificarlo en una fuente confiable antes de decidir", "en": "Verify it in a reliable source before deciding" },
+        { "es": "Creerlo sin más", "en": "Believe it without question" },
+        { "es": "Decidir al azar", "en": "Decide at random" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA puede alucinar precios, fechas o especificaciones. En decisiones importantes, verificá siempre.",
+        "en": "The AI can hallucinate prices, dates or specs. For important decisions, always verify."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés no quedarte con un solo punto de vista. ¿Qué pedís?", "en": "You don't want just one point of view. What do you ask?" },
+      "options": [
+        { "es": "Dame argumentos a favor y en contra de esta idea", "en": "Give me arguments for and against this idea" },
+        { "es": "Convenceme de que tengo razón", "en": "Convince me I'm right" },
+        { "es": "Decime solo lo que quiero escuchar", "en": "Tell me only what I want to hear" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Pedir a favor y en contra evita que la IA te dé la razón por complacerte. Ves el panorama completo.",
+        "en": "Asking for both sides keeps the AI from just agreeing to please you. You see the full picture."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Comparás tres opciones. ¿Qué formato conviene pedir?", "en": "You compare three options. What format should you ask for?" },
+      "options": [
+        { "es": "Una tabla con criterios en filas y las opciones en columnas", "en": "A table with criteria in rows and options in columns" },
+        { "es": "Un texto larguísimo mezclando todo", "en": "One huge text mixing everything" },
+        { "es": "Solo un número al azar", "en": "Just a random number" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una tabla de criterios vs. opciones deja comparar de un vistazo y decidir con la info ordenada.",
+        "en": "A table of criteria vs. options lets you compare at a glance and decide with tidy info."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué límite conviene recordar al investigar con IA?", "en": "What limit should you remember when researching with AI?" },
+      "options": [
+        { "es": "Puede no tener lo más reciente y puede equivocarse: contrastá con fuentes", "en": "It may lack the latest info and can be wrong: cross-check with sources" },
+        { "es": "Siempre tiene la verdad absoluta", "en": "It always has the absolute truth" },
+        { "es": "Nunca hay que dudar de ella", "en": "You must never doubt it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El entrenamiento tiene fecha de corte y puede alucinar. Úsala para explorar, pero contrastá lo importante.",
+        "en": "Training has a cutoff and it can hallucinate. Use it to explore, but cross-check what matters."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido de comparación con pros y contras", "en": "Build a comparison request with pros and cons" },
+      "solution": {
+        "es": ["Compará estas dos opciones", "con pros y contras de cada una", "en una tabla."],
+        "en": ["Compare these two options", "with pros and cons of each", "in a table."]
+      },
+      "distractors": {
+        "es": ["decime cuál", "es la mejor del mundo"],
+        "en": ["tell me which", "is the best in the world"]
+      },
+      "explanation": {
+        "es": "Pros y contras en tabla te dan las dos caras, ordenadas para decidir.",
+        "en": "Pros and cons in a table give you both sides, organized to decide."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para ver argumentos de los dos lados", "en": "Build the request to see both sides' arguments" },
+      "solution": {
+        "es": ["Dame argumentos", "a favor y en contra", "de mudarme a otra ciudad."],
+        "en": ["Give me arguments", "for and against", "moving to another city."]
+      },
+      "distractors": {
+        "es": ["dame la razón", "sin dudar"],
+        "en": ["just agree with me", "no doubts"]
+      },
+      "explanation": {
+        "es": "Pedir ambos lados evita la respuesta única y complaciente.",
+        "en": "Asking for both sides avoids the single, people-pleasing answer."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el recordatorio de verificar antes de decidir", "en": "Build the reminder to verify before deciding" },
+      "solution": {
+        "es": ["Antes de decidir,", "verificá los datos clave", "en una fuente confiable."],
+        "en": ["Before deciding,", "verify the key facts", "in a reliable source."]
+      },
+      "distractors": {
+        "es": ["creé todo", "sin chequear"],
+        "en": ["believe everything", "without checking"]
+      },
+      "explanation": {
+        "es": "Verificar lo importante es el hábito que te protege de datos inventados.",
+        "en": "Verifying what matters is the habit that protects you from made-up facts."
+      }
+    }
+  ]
+}

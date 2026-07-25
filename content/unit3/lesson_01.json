@@ -1,0 +1,146 @@
+{
+  "id": "u3l01",
+  "title": { "es": "Escribir con IA", "en": "Writing with AI" },
+  "byte_intro": {
+    "es": "Bienvenido al Taller, donde uso la IA para trabajar de verdad. Hoy recuerdo cómo escribir mails y textos que suenen a vos, no a robot.",
+    "en": "Welcome to the Workshop, where I use AI for real work. Today I recall how to write emails and texts that sound like you, not like a robot."
+  },
+  "byte_outro": {
+    "es": "¡Listo! Ya sé pedir un texto con destinatario, tono y largo claros. Recuperé un fragmento del Taller.",
+    "en": "Done! Now I know how to ask for a text with a clear recipient, tone and length. I recovered a Workshop fragment."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés que la IA te escriba un mail. ¿Qué le conviene saber primero?", "en": "You want the AI to write you an email. What should it know first?" },
+      "options": [
+        { "es": "A quién va dirigido, con qué tono y para qué", "en": "Who it's for, in what tone and for what purpose" },
+        { "es": "Solo la palabra 'mail'", "en": "Just the word 'email'" },
+        { "es": "Tu color favorito", "en": "Your favorite color" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un mail al jefe no se escribe igual que uno a un amigo. Destinatario, tono y objetivo cambian todo el texto.",
+        "en": "An email to your boss isn't written like one to a friend. Recipient, tone and goal change the whole text."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos pedidos da mejor resultado?", "en": "Which of these requests gives a better result?" },
+      "options": [
+        { "es": "Escribí un mail formal y breve a mi casero avisando que pago el alquiler el día 5, no el 1", "en": "Write a short formal email to my landlord saying I'll pay rent on the 5th, not the 1st" },
+        { "es": "Hacé un mail", "en": "Make an email" },
+        { "es": "Mail casero alquiler", "en": "Email landlord rent" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El primero define tono (formal), largo (breve), destinatario (casero) y el mensaje exacto. La IA no tiene que adivinar nada.",
+        "en": "The first one defines tone (formal), length (short), recipient (landlord) and the exact message. The AI has nothing to guess."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Le pedís un posteo para Instagram y otro para LinkedIn del mismo tema. ¿Deberían ser iguales?", "en": "You ask for an Instagram post and a LinkedIn post on the same topic. Should they be the same?" },
+      "options": [
+        { "es": "No: cada red tiene su público y su tono", "en": "No: each network has its own audience and tone" },
+        { "es": "Sí, copiar y pegar el mismo texto", "en": "Yes, copy and paste the same text" },
+        { "es": "Da igual, nadie los lee", "en": "It doesn't matter, nobody reads them" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Instagram suele ser más cercano y con emojis; LinkedIn, más profesional. Pedí que adapte el tono a cada plataforma.",
+        "en": "Instagram is usually warmer and with emojis; LinkedIn, more professional. Ask it to adapt the tone to each platform."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA te devuelve un texto que suena muy acartonado. ¿Qué le pedís?", "en": "The AI gives you a text that sounds too stiff. What do you ask for?" },
+      "options": [
+        { "es": "Reescribilo más cercano y natural, como si le hablaras a un amigo", "en": "Rewrite it warmer and more natural, like talking to a friend" },
+        { "es": "Que lo haga aún más formal", "en": "Make it even more formal" },
+        { "es": "Que lo borre y no escriba nada", "en": "Delete it and write nothing" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El tono se ajusta pidiéndolo con ejemplos ('como si le hablaras a un amigo'). Podés iterar hasta que suene a vos.",
+        "en": "Tone is adjusted by asking with examples ('like talking to a friend'). You can iterate until it sounds like you."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés que el texto suene a tu estilo. ¿Qué ayuda más?", "en": "You want the text to sound like your style. What helps most?" },
+      "options": [
+        { "es": "Pegarle un texto tuyo de ejemplo y pedir que imite ese tono", "en": "Paste one of your own texts as an example and ask it to match that tone" },
+        { "es": "Pedirle que invente tu estilo", "en": "Ask it to invent your style" },
+        { "es": "No darle ninguna referencia", "en": "Give it no reference at all" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Con un ejemplo tuyo, la IA copia el patrón de tu forma de escribir. Es el mismo truco 'few-shot' aplicado al tono.",
+        "en": "With an example of yours, the AI copies the pattern of how you write. It's the same 'few-shot' trick applied to tone."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Antes de mandar el mail que escribió la IA, ¿qué conviene hacer?", "en": "Before sending the email the AI wrote, what should you do?" },
+      "options": [
+        { "es": "Leerlo y ajustar datos o frases que no encajen", "en": "Read it and fix any facts or phrases that don't fit" },
+        { "es": "Mandarlo sin leer, seguro está perfecto", "en": "Send it without reading, it's surely perfect" },
+        { "es": "Reenviarlo a todos tus contactos", "en": "Forward it to all your contacts" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA es un borrador rápido, no la última palabra. Vos ponés el nombre, verificás datos y le das el toque final.",
+        "en": "The AI is a fast draft, not the final word. You put your name on it, check facts and add the final touch."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido para un mail bien definido", "en": "Build a request for a well-defined email" },
+      "solution": {
+        "es": ["Escribí un mail formal y corto", "a un cliente", "disculpándote por una demora en la entrega."],
+        "en": ["Write a short formal email", "to a client", "apologizing for a delivery delay."]
+      },
+      "distractors": {
+        "es": ["y contale", "un chiste"],
+        "en": ["and tell them", "a joke"]
+      },
+      "explanation": {
+        "es": "Tono (formal, corto), destinatario (cliente) y objetivo (disculpa) bien definidos: mail listo.",
+        "en": "Tone (short, formal), recipient (client) and goal (apology) well defined: email ready."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para adaptar un texto a otra red social", "en": "Build the request to adapt a text to another social network" },
+      "solution": {
+        "es": ["Adaptá este posteo", "para LinkedIn:", "más profesional y sin emojis."],
+        "en": ["Adapt this post", "for LinkedIn:", "more professional and no emojis."]
+      },
+      "distractors": {
+        "es": ["dejalo igual", "para todas las redes"],
+        "en": ["leave it the same", "for every network"]
+      },
+      "explanation": {
+        "es": "Le decís la plataforma y el ajuste de tono concreto: adapta, no repite.",
+        "en": "You tell it the platform and the concrete tone change: it adapts, doesn't repeat."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido para que imite tu estilo", "en": "Build a request to match your style" },
+      "solution": {
+        "es": ["Escribí el texto", "imitando el tono", "de este ejemplo mío: \"...\""],
+        "en": ["Write the text", "matching the tone", "of this example of mine: \"...\""]
+      },
+      "distractors": {
+        "es": ["inventá un tono", "cualquiera"],
+        "en": ["invent any tone", "you like"]
+      },
+      "explanation": {
+        "es": "Dar un ejemplo tuyo guía a la IA a copiar tu forma de escribir.",
+        "en": "Giving your own example guides the AI to copy how you write."
+      }
+    }
+  ]
+}

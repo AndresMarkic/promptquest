@@ -1,0 +1,146 @@
+{
+  "id": "u8l04",
+  "title": { "es": "Evaluación y testing de sistemas de IA", "en": "Evaluating and testing AI systems" },
+  "byte_intro": {
+    "es": "'Me parece que mejoró' no es medir. Un ingeniero arma un set de pruebas y mide de verdad. Vamos con eso.",
+    "en": "'I think it got better' isn't measuring. An engineer builds a test set and measures for real. Let's get into it."
+  },
+  "byte_outro": {
+    "es": "¡Excelente! Con un set de pruebas fijo medís mejoras y detectás regresiones. Ya no cambiás a ciegas.",
+    "en": "Excellent! With a fixed test set you measure improvements and catch regressions. No more changing blind."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un 'set de evaluación' (eval set) para un sistema de IA?", "en": "What is an 'eval set' for an AI system?" },
+      "options": [
+        { "es": "Un conjunto fijo de casos con la respuesta esperada, para medir el sistema", "en": "A fixed set of cases with the expected answer, to measure the system" },
+        { "es": "El manual de usuario del producto", "en": "The product's user manual" },
+        { "es": "La lista de precios de los modelos", "en": "The model price list" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Es un conjunto de casos representativos con lo que esperás que salga. Lo corrés siempre igual para comparar versiones con la misma vara.",
+        "en": "It's a set of representative cases with what you expect to come out. You run it the same way every time to compare versions with the same yardstick."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué no alcanza con 'probar a ojo' unos pocos casos?", "en": "Why isn't 'eyeballing' a few cases enough?" },
+      "options": [
+        { "es": "Es subjetivo y no detecta si mejoraste una cosa y rompiste otra", "en": "It's subjective and won't catch if you improved one thing and broke another" },
+        { "es": "Porque probar está prohibido", "en": "Because testing is forbidden" },
+        { "es": "Porque el modelo se ofende", "en": "Because the model gets offended" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "A ojo ves lo que querés ver. Un set fijo y medido revela regresiones: mejoras en un caso mientras rompés otro sin darte cuenta.",
+        "en": "By eye you see what you want to see. A fixed, measured set reveals regressions: you improve one case while breaking another without noticing."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es una 'regresión' en este contexto?", "en": "What is a 'regression' in this context?" },
+      "options": [
+        { "es": "Un cambio que arregla algo pero empeora otra cosa que antes andaba", "en": "A change that fixes one thing but breaks another that used to work" },
+        { "es": "Un tipo de gráfico de barras", "en": "A kind of bar chart" },
+        { "es": "Volver a entrenar el modelo entero", "en": "Retraining the whole model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Tocás un prompt para mejorar un caso y, sin querer, empeorás otros. Eso es una regresión, y solo la ves si medís el set completo.",
+        "en": "You tweak a prompt to improve one case and, unintentionally, worsen others. That's a regression, and you only see it if you measure the whole set."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para evaluar tareas abiertas (sin una única respuesta correcta), una opción es...", "en": "To evaluate open-ended tasks (with no single correct answer), one option is..." },
+      "options": [
+        { "es": "Usar un modelo como juez con criterios claros (LLM-as-judge)", "en": "Use a model as a judge with clear criteria (LLM-as-judge)" },
+        { "es": "Suponer que siempre está bien", "en": "Assume it's always fine" },
+        { "es": "No evaluar nunca esas tareas", "en": "Never evaluate those tasks" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cuando no hay una respuesta exacta, podés pedirle a un modelo que puntúe según criterios definidos. No es perfecto, pero es consistente y escala.",
+        "en": "When there's no exact answer, you can ask a model to score against defined criteria. Not perfect, but consistent and it scales."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuándo conviene correr el set de evaluación?", "en": "When should you run the eval set?" },
+      "options": [
+        { "es": "Cada vez que cambiás el prompt, el modelo o el pipeline", "en": "Every time you change the prompt, the model or the pipeline" },
+        { "es": "Solo el día del lanzamiento", "en": "Only on launch day" },
+        { "es": "Nunca, si el primer test salió bien", "en": "Never, if the first test went well" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El set es tu red de seguridad ante cambios. Correrlo en cada cambio te avisa al toque si mejoraste o rompiste algo.",
+        "en": "The set is your safety net against changes. Running it on every change tells you right away if you improved or broke something."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué casos deberían estar sí o sí en tu set de evaluación?", "en": "Which cases must absolutely be in your eval set?" },
+      "options": [
+        { "es": "Los casos reales frecuentes y los casos borde donde suele fallar", "en": "The frequent real cases and the edge cases where it tends to fail" },
+        { "es": "Solo los casos donde ya sabés que anda perfecto", "en": "Only the cases where you already know it works perfectly" },
+        { "es": "Casos inventados que nunca van a pasar", "en": "Made-up cases that will never happen" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El set debe parecerse al uso real: lo común (que no se rompa) y lo difícil (los bordes donde más se equivoca). Ahí está el valor.",
+        "en": "The set must resemble real use: the common (so it doesn't break) and the hard (the edges where it errs most). That's where the value is."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué es un set de evaluación", "en": "Build what an eval set is" },
+      "solution": {
+        "es": ["Un set de evaluación es un conjunto fijo de casos", "con la respuesta esperada,", "que corro igual en cada cambio para comparar."],
+        "en": ["An eval set is a fixed set of cases", "with the expected answer,", "that I run the same on every change to compare."]
+      },
+      "distractors": {
+        "es": ["una impresión general", "de que todo anda bien"],
+        "en": ["a general feeling", "that everything is fine"]
+      },
+      "explanation": {
+        "es": "Fijo, con respuesta esperada y corrido siempre igual: eso te da una vara honesta.",
+        "en": "Fixed, with expected answers and run the same way: that gives you an honest yardstick."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo detectar una regresión", "en": "Build how to catch a regression" },
+      "solution": {
+        "es": ["Corro el set completo antes y después del cambio;", "si un caso que andaba ahora falla,", "detecté una regresión."],
+        "en": ["I run the full set before and after the change;", "if a case that worked now fails,", "I caught a regression."]
+      },
+      "distractors": {
+        "es": ["pruebo un solo caso nuevo", "y asumo que lo demás sigue igual"],
+        "en": ["I test one new case", "and assume the rest is unchanged"]
+      },
+      "explanation": {
+        "es": "Comparar el set completo antes y después es la única forma de ver qué rompiste sin querer.",
+        "en": "Comparing the full set before and after is the only way to see what you broke by accident."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo evaluar una tarea sin respuesta única", "en": "Build how to evaluate a task with no single answer" },
+      "solution": {
+        "es": ["Defino criterios claros de qué es una buena respuesta", "y uso un modelo como juez", "para puntuar cada caso igual."],
+        "en": ["I define clear criteria for a good answer", "and use a model as a judge", "to score each case the same way."]
+      },
+      "distractors": {
+        "es": ["decido a ojo cada vez", "sin criterios fijos"],
+        "en": ["I decide by eye each time", "with no fixed criteria"]
+      },
+      "explanation": {
+        "es": "Criterios claros + un juez consistente te dan una medición repetible incluso en tareas abiertas.",
+        "en": "Clear criteria + a consistent judge give you a repeatable measurement even on open tasks."
+      }
+    }
+  ]
+}

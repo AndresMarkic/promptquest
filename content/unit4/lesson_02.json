@@ -1,0 +1,146 @@
+{
+  "id": "u4l02",
+  "title": { "es": "Abiertos vs cerrados", "en": "Open vs closed" },
+  "byte_intro": {
+    "es": "Desde el Observatorio veo dos tipos de estrellas: algunas podés bajarlas y tenerlas en tu propia máquina; otras solo se usan como servicio. Te muestro la diferencia.",
+    "en": "From the Observatory I see two kinds of stars: some you can download and keep on your own machine; others are used only as a service. Let me show you the difference."
+  },
+  "byte_outro": {
+    "es": "Ahora distinguís modelos abiertos de cerrados, y sus pros y contras. No hay uno bueno y otro malo: depende de lo que necesites.",
+    "en": "Now you can tell open models from closed ones, and their pros and cons. Neither is good or bad: it depends on what you need."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un modelo 'abierto' (open)?", "en": "What is an 'open' model?" },
+      "options": [
+        { "es": "Uno cuyos pesos podés descargar y correr en tu propia infraestructura", "en": "One whose weights you can download and run on your own infrastructure" },
+        { "es": "Uno que responde cualquier cosa sin límites", "en": "One that answers anything with no limits" },
+        { "es": "Uno gratis para siempre y sin condiciones", "en": "One that's free forever with no conditions" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Abierto se refiere a que el modelo (sus pesos) está disponible para descargar y ejecutar por tu cuenta, según su licencia.",
+        "en": "Open means the model (its weights) is available to download and run yourself, subject to its license."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo se usa típicamente un modelo 'cerrado'?", "en": "How is a 'closed' model typically used?" },
+      "options": [
+        { "es": "A través de un servicio (API o app) del proveedor", "en": "Through the provider's service (API or app)" },
+        { "es": "Instalándolo siempre en tu teléfono", "en": "By always installing it on your phone" },
+        { "es": "Imprimiéndolo en papel", "en": "By printing it on paper" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "En un modelo cerrado no descargás los pesos: lo consumís como servicio, normalmente por una API o una app.",
+        "en": "With a closed model you don't download the weights: you consume it as a service, usually via an API or app."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Una ventaja de correr un modelo abierto en tu propia máquina es...", "en": "One advantage of running an open model on your own machine is..." },
+      "options": [
+        { "es": "Más control sobre los datos y el funcionamiento", "en": "More control over your data and how it runs" },
+        { "es": "Que nunca necesita hardware", "en": "That it never needs hardware" },
+        { "es": "Que siempre es más potente que cualquier cerrado", "en": "That it's always more powerful than any closed model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Al tenerlo vos, controlás dónde viven los datos y cómo corre. A cambio, tenés que poner el hardware y el mantenimiento.",
+        "en": "By hosting it yourself, you control where the data lives and how it runs. In exchange, you provide the hardware and maintenance."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Una ventaja típica de usar un modelo cerrado por servicio es...", "en": "A typical advantage of using a closed model as a service is..." },
+      "options": [
+        { "es": "No tenés que gestionar la infraestructura vos mismo", "en": "You don't have to manage the infrastructure yourself" },
+        { "es": "Que no depende de nadie", "en": "That it depends on no one" },
+        { "es": "Que siempre es gratis", "en": "That it's always free" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El proveedor se ocupa de servidores, actualizaciones y escala. A cambio, dependés de ese servicio y sus condiciones.",
+        "en": "The provider handles servers, updates and scaling. In exchange, you depend on that service and its terms."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es una desventaja de correr un modelo abierto vos mismo?", "en": "What's a downside of running an open model yourself?" },
+      "options": [
+        { "es": "Necesitás hardware y conocimientos para instalarlo y mantenerlo", "en": "You need hardware and know-how to set it up and maintain it" },
+        { "es": "Que jamás vas a ver el modelo", "en": "That you'll never see the model" },
+        { "es": "Que no podés cambiar nada nunca", "en": "That you can never change anything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La libertad de tenerlo trae responsabilidad: equipo capaz, actualizaciones y soporte corren por tu cuenta.",
+        "en": "The freedom of hosting it brings responsibility: capable equipment, updates and support are on you."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Familias como Llama y Mistral son conocidas por...", "en": "Families like Llama and Mistral are known for..." },
+      "options": [
+        { "es": "Ofrecer modelos abiertos que podés descargar", "en": "Offering open models you can download" },
+        { "es": "No existir todavía", "en": "Not existing yet" },
+        { "es": "Ser solo apps de mensajería", "en": "Being just messaging apps" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Tienen modelos abiertos populares. Aun así, cada modelo tiene su licencia: conviene leerla antes de usarlo.",
+        "en": "They have popular open models. Even so, each model has its license: worth reading before using it."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la diferencia clave entre abierto y cerrado", "en": "Build the key difference between open and closed" },
+      "solution": {
+        "es": ["Un modelo abierto", "lo podés descargar y correr;", "uno cerrado se usa como servicio."],
+        "en": ["An open model", "you can download and run;", "a closed one is used as a service."]
+      },
+      "distractors": {
+        "es": ["siempre es gratis", "y sin ninguna condición"],
+        "en": ["is always free", "with no conditions at all"]
+      },
+      "explanation": {
+        "es": "La diferencia central es el acceso a los pesos, no el precio.",
+        "en": "The core difference is access to the weights, not the price."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cuándo conviene un modelo abierto", "en": "Build when an open model is a good fit" },
+      "solution": {
+        "es": ["Si necesitás control total de tus datos", "y podés poner el hardware,", "un modelo abierto encaja."],
+        "en": ["If you need full control of your data", "and can provide the hardware,", "an open model fits."]
+      },
+      "distractors": {
+        "es": ["y no querés instalar nada,", "elegí siempre abierto"],
+        "en": ["and don't want to install anything,", "always pick open"]
+      },
+      "explanation": {
+        "es": "El abierto brilla cuando priorizás control y podés sostener la infraestructura.",
+        "en": "Open shines when you prioritize control and can sustain the infrastructure."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cuándo conviene un modelo por servicio", "en": "Build when a service model is a good fit" },
+      "solution": {
+        "es": ["Si querés empezar rápido", "sin gestionar servidores,", "un modelo por servicio conviene."],
+        "en": ["If you want to start fast", "without managing servers,", "a service model is convenient."]
+      },
+      "distractors": {
+        "es": ["y necesitás los pesos descargados,", "usá un servicio cerrado"],
+        "en": ["and you need the weights downloaded,", "use a closed service"]
+      },
+      "explanation": {
+        "es": "El servicio te saca la carga de infraestructura; a cambio dependés del proveedor.",
+        "en": "The service removes the infrastructure burden; in exchange you depend on the provider."
+      }
+    }
+  ]
+}

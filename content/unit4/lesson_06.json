@@ -1,0 +1,146 @@
+{
+  "id": "u4l06",
+  "title": { "es": "Fechas de corte y versiones", "en": "Cutoff dates and versions" },
+  "byte_intro": {
+    "es": "Desde el Observatorio veo estrellas viejas y nuevas. Yo también tengo una 'fecha de corte': lo que pasó después de mi entrenamiento no lo sé... salvo que me lo cuentes.",
+    "en": "From the Observatory I see old and new stars. I also have a 'cutoff date': anything after my training I don't know... unless you tell me."
+  },
+  "byte_outro": {
+    "es": "Ya entendés por qué a veces no sé algo reciente, y sabés leer una versión. Ante datos frescos: dáselos vos o usá una herramienta que busque.",
+    "en": "Now you get why I sometimes don't know recent things, and you can read a version. For fresh facts: give them to it or use a tool that searches."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es la 'fecha de corte' (knowledge cutoff) de un modelo?", "en": "What is a model's 'knowledge cutoff'?" },
+      "options": [
+        { "es": "El momento hasta el cual llega su información de entrenamiento", "en": "The point up to which its training information reaches" },
+        { "es": "La fecha en que se apaga el modelo", "en": "The date the model shuts down" },
+        { "es": "El día que vence tu suscripción", "en": "The day your subscription expires" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo aprendió con datos hasta cierta fecha. Lo que ocurrió después no forma parte de lo que sabe por sí solo.",
+        "en": "The model learned from data up to a certain date. Anything after that isn't part of what it knows on its own."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Le preguntás por un evento de la semana pasada y no lo conoce. ¿Por qué puede pasar?", "en": "You ask about last week's event and it doesn't know it. Why might that happen?" },
+      "options": [
+        { "es": "Porque es posterior a su fecha de corte", "en": "Because it's after its cutoff date" },
+        { "es": "Porque se olvidó a propósito", "en": "Because it forgot on purpose" },
+        { "es": "Porque no le caés bien", "en": "Because it doesn't like you" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si el hecho es más nuevo que su entrenamiento, el modelo no lo tiene. No es mala voluntad: es un límite de datos.",
+        "en": "If the fact is newer than its training, the model doesn't have it. It's not ill will: it's a data limit."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo puede el modelo responder sobre algo posterior a su corte?", "en": "How can the model answer about something after its cutoff?" },
+      "options": [
+        { "es": "Si le das vos la información o usa una herramienta que busca datos actuales", "en": "If you give it the information or it uses a tool that fetches current data" },
+        { "es": "Nunca, es imposible de todas formas", "en": "Never, it's impossible either way" },
+        { "es": "Adivinando siempre bien", "en": "By always guessing correctly" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Podés pegarle el dato actualizado en el prompt, o usar un sistema que consulte fuentes en vivo (búsqueda o documentos).",
+        "en": "You can paste the updated fact into the prompt, or use a system that queries live sources (search or documents)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un modelo dice datos muy seguros sobre algo reciente que no debería conocer. ¿Qué hacés?", "en": "A model states very confident facts about something recent it shouldn't know. What do you do?" },
+      "options": [
+        { "es": "Verificar en una fuente confiable antes de creerle", "en": "Verify in a reliable source before believing it" },
+        { "es": "Aceptarlo porque suena seguro", "en": "Accept it because it sounds confident" },
+        { "es": "Pedirle que jure que es verdad", "en": "Ask it to swear it's true" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Sonar seguro no garantiza que sea cierto, sobre todo pasada su fecha de corte. Verificar es el hábito clave.",
+        "en": "Sounding confident doesn't guarantee it's true, especially past its cutoff. Verifying is the key habit."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Para qué sirve conocer la 'versión' de un modelo?", "en": "Why is it useful to know a model's 'version'?" },
+      "options": [
+        { "es": "Para saber qué variante estás usando y comparar de forma justa", "en": "To know which variant you're using and compare fairly" },
+        { "es": "Para nada, todas las versiones son iguales", "en": "For nothing, all versions are the same" },
+        { "es": "Solo para decorar el nombre", "en": "Only to decorate the name" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Dentro de una familia hay varias versiones y tamaños. Saber cuál usás evita comparar peras con manzanas.",
+        "en": "Within a family there are several versions and sizes. Knowing which you use avoids comparing apples to oranges."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un nombre de modelo suele combinar...", "en": "A model name usually combines..." },
+      "options": [
+        { "es": "La familia y una indicación de versión o tamaño", "en": "The family and a hint of version or size" },
+        { "es": "Tu nombre y tu edad", "en": "Your name and your age" },
+        { "es": "El clima del día", "en": "The weather of the day" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los nombres suelen decir a qué familia pertenecen y algo de su versión o tamaño. No hace falta memorizar números que envejecen.",
+        "en": "Names usually tell which family they belong to and something about version or size. No need to memorize numbers that age."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué es la fecha de corte", "en": "Build what the cutoff date is" },
+      "solution": {
+        "es": ["La fecha de corte", "marca hasta cuándo", "llega lo que el modelo aprendió."],
+        "en": ["The cutoff date", "marks up to when", "the model's learning reaches."]
+      },
+      "distractors": {
+        "es": ["marca el día", "en que se apaga el modelo"],
+        "en": ["marks the day", "the model shuts down"]
+      },
+      "explanation": {
+        "es": "Lo posterior a esa fecha no lo sabe por sí solo.",
+        "en": "Anything after that date it doesn't know on its own."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo darle información reciente", "en": "Build how to give it recent information" },
+      "solution": {
+        "es": ["Para datos recientes,", "dáselos en el prompt", "o usá una herramienta que busque."],
+        "en": ["For recent data,", "give it in the prompt", "or use a tool that searches."]
+      },
+      "distractors": {
+        "es": ["esperá a que adivine", "por su cuenta"],
+        "en": ["wait for it to guess", "on its own"]
+      },
+      "explanation": {
+        "es": "El modelo trabaja con lo que le das; sumale la información fresca.",
+        "en": "The model works with what you give it; add the fresh information."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el hábito con datos post-corte", "en": "Build the habit for post-cutoff facts" },
+      "solution": {
+        "es": ["Si el dato es más nuevo que el corte,", "verificalo", "en una fuente confiable."],
+        "en": ["If the fact is newer than the cutoff,", "verify it", "in a reliable source."]
+      },
+      "distractors": {
+        "es": ["confiá igual", "porque suena seguro"],
+        "en": ["trust it anyway", "because it sounds confident"]
+      },
+      "explanation": {
+        "es": "Pasada la fecha de corte, verificar te protege de datos inventados.",
+        "en": "Past the cutoff, verifying protects you from made-up facts."
+      }
+    }
+  ]
+}

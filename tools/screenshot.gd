@@ -63,6 +63,9 @@ func _correr() -> void:
 
 	await _capturar("ajustes", "res://scenes/ui/SettingsPanel.tscn", func(): pass)
 
+	await _capturar("certificacion", "res://scenes/ui/CertScreen.tscn", func():
+		_game.params = {"xp": 1580, "boss": true})
+
 	# captura del mapa scrolleado a la transición EL NÚCLEO → LA FORJA
 	await _cap_mapa_transicion()
 

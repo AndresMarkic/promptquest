@@ -1,0 +1,132 @@
+{
+  "id": "u7l08",
+  "title": { "es": "Integrar en un proceso de negocio", "en": "Integrating into a business process" },
+  "byte_intro": {
+    "es": "Hora de armar la línea completa: tomar una tarea que hoy se hace a mano y convertirla en un flujo con IA, de punta a punta.",
+    "en": "Time to build the full line: take a task done by hand today and turn it into an end-to-end AI flow."
+  },
+  "byte_outro": {
+    "es": "¡La línea quedó armada! Viste el caso completo: de la tarea manual al flujo con IA, con controles donde hacen falta.",
+    "en": "The line is built! You saw the full case: from the manual task to the AI flow, with checks where they're needed."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Antes de meter IA en un proceso, ¿qué conviene entender primero?", "en": "Before putting AI into a process, what should you understand first?" },
+      "options": [
+        { "es": "Cómo se hace hoy la tarea, paso a paso, a mano", "en": "How the task is done today, step by step, by hand" },
+        { "es": "Qué modelo es el más famoso este mes", "en": "Which model is the most famous this month" },
+        { "es": "El nombre del CEO del proveedor de IA", "en": "The name of the AI provider's CEO" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Primero entendés el proceso manual real: solo así sabés qué paso conviene automatizar y dónde poner controles.",
+        "en": "First you understand the real manual process: only then do you know which step to automate and where to add checks."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Una inmobiliaria carga a mano los datos de cada contrato en una planilla. ¿Cómo integrar IA?", "en": "A real estate agency manually enters each contract's data into a spreadsheet. How to integrate AI?" },
+      "options": [
+        { "es": "La IA extrae los datos del contrato → una persona los valida → se cargan en la planilla", "en": "AI extracts the contract data → a person validates them → they load into the spreadsheet" },
+        { "es": "La IA firma los contratos por los clientes", "en": "AI signs the contracts on behalf of clients" },
+        { "es": "Se elimina la planilla y listo", "en": "Delete the spreadsheet and done" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA hace el trabajo pesado de extraer; una persona valida por el riesgo; y recién ahí entra a la planilla.",
+        "en": "AI does the heavy lifting of extracting; a person validates due to the risk; and only then it enters the spreadsheet."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo conviene lanzar la integración a producción?", "en": "How should you roll the integration into production?" },
+      "options": [
+        { "es": "Primero en un grupo chico o en paralelo al proceso viejo, y si anda, escalar", "en": "First on a small group or alongside the old process, and if it works, scale" },
+        { "es": "Reemplazando todo de golpe el primer día", "en": "Replacing everything at once on day one" },
+        { "es": "Sin avisarle a nadie del equipo", "en": "Without telling anyone on the team" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un lanzamiento gradual (piloto o en paralelo) te deja detectar problemas sin arriesgar todo el proceso de un saque.",
+        "en": "A gradual rollout (pilot or parallel) lets you catch problems without risking the whole process at once."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El equipo que hacía la tarea a mano, ¿qué rol pasa a tener?", "en": "The team that did the task by hand, what role do they take on?" },
+      "options": [
+        { "es": "Supervisar, validar los casos difíciles y mejorar el sistema", "en": "Supervise, validate the hard cases and improve the system" },
+        { "es": "Ninguno, se los ignora por completo", "en": "None, they're completely ignored" },
+        { "es": "Solo mirar sin poder tocar nada", "en": "Just watch without touching anything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA no borra al equipo: lo mueve a supervisar, resolver excepciones y afinar el flujo. Su conocimiento sigue siendo clave.",
+        "en": "AI doesn't erase the team: it shifts them to supervising, handling exceptions and refining the flow. Their know-how stays key."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué error es común al integrar IA en un negocio?", "en": "What's a common mistake when integrating AI into a business?" },
+      "options": [
+        { "es": "Automatizar sin controles y sin medir, y confiar a ciegas", "en": "Automating with no checks, no measuring, and trusting blindly" },
+        { "es": "Empezar con un piloto chico y medido", "en": "Starting with a small, measured pilot" },
+        { "es": "Dejar un humano validando lo sensible", "en": "Keeping a human validating the sensitive parts" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Lanzar sin controles ni métricas, confiando a ciegas, es la receta del desastre. Lo otro son buenas prácticas.",
+        "en": "Launching with no checks or metrics, trusting blindly, is a recipe for disaster. The rest are good practices."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el flujo completo de clasificar mails entrantes con IA", "en": "Build the full flow to classify incoming emails with AI" },
+      "solution": {
+        "es": ["Entra el mail", "→ validar que tenga texto", "→ la IA lo clasifica por tema", "→ un humano revisa los dudosos", "→ se deriva al área correcta."],
+        "en": ["Email arrives", "→ validate it has text", "→ AI classifies it by topic", "→ a human checks the uncertain ones", "→ it's routed to the right team."]
+      },
+      "distractors": {
+        "es": ["→ se borra el mail", "→ y se responde antes de leerlo."],
+        "en": ["→ delete the email", "→ and reply before reading it."]
+      },
+      "explanation": {
+        "es": "Entrada, validación, IA, revisión de lo dudoso y derivación: el caso completo, con control donde importa.",
+        "en": "Input, validation, AI, review of the uncertain and routing: the full case, with a check where it matters."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená cómo pasar de una tarea manual a un flujo con IA", "en": "Order how to go from a manual task to an AI flow" },
+      "solution": {
+        "es": ["Documentá cómo se hace a mano,", "identificá el paso más repetitivo,", "automatizá ese paso con IA,", "y dejá controles humanos donde el error cuesta caro."],
+        "en": ["Document how it's done by hand,", "identify the most repetitive step,", "automate that step with AI,", "and keep human checks where errors are costly."]
+      },
+      "distractors": {
+        "es": ["automatizá todo de una", "sin entender el proceso."],
+        "en": ["automate everything at once", "without understanding the process."]
+      },
+      "explanation": {
+        "es": "Documentar, elegir el paso repetitivo, automatizarlo y controlar lo riesgoso: integración ordenada y segura.",
+        "en": "Document, pick the repetitive step, automate it and control the risky parts: an orderly, safe integration."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un lanzamiento prudente de la integración", "en": "Build a prudent rollout of the integration" },
+      "solution": {
+        "es": ["Corré el flujo con IA en paralelo al viejo,", "compará resultados un tiempo,", "y recién si supera al viejo, reemplazalo."],
+        "en": ["Run the AI flow alongside the old one,", "compare results for a while,", "and only if it beats the old one, replace it."]
+      },
+      "distractors": {
+        "es": ["apagá el proceso viejo el día uno,", "sin comparar nada."],
+        "en": ["shut off the old process on day one,", "without comparing anything."]
+      },
+      "explanation": {
+        "es": "Correr en paralelo y comparar antes de reemplazar te protege de un cambio que empeora las cosas.",
+        "en": "Running in parallel and comparing before replacing protects you from a change that makes things worse."
+      }
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "id": "u4l10",
+  "boss": true,
+  "title": { "es": "Boss del Observatorio", "en": "The Observatory Boss" },
+  "byte_intro": {
+    "es": "Prueba final del Observatorio. Vamos a repasar todo lo que vimos sobre el ecosistema de modelos: familias, capacidades, trade-offs y cómo elegir. ¿Vamos?",
+    "en": "Final Observatory test. We'll review everything we saw about the model ecosystem: families, capabilities, trade-offs and how to choose. Ready?"
+  },
+  "byte_outro": {
+    "es": "¡Increíble! Completaste la Unidad 4. Ya no mirás la IA como una caja mágica: entendés el ecosistema y elegís con criterio. ¡Gran trabajo, observador!",
+    "en": "Amazing! You completed Unit 4. You no longer see AI as a magic box: you understand the ecosystem and choose wisely. Great job, observer!"
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estas parejas familia-organización es correcta?", "en": "Which family-organization pair is correct?" },
+      "options": [
+        { "es": "Llama pertenece a Meta", "en": "Llama belongs to Meta" },
+        { "es": "Gemini pertenece a OpenAI", "en": "Gemini belongs to OpenAI" },
+        { "es": "Claude pertenece a Google", "en": "Claude belongs to Google" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Llama es de Meta. Gemini es de Google y Claude es de Anthropic.",
+        "en": "Llama is from Meta. Gemini is from Google and Claude is from Anthropic."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La diferencia central entre un modelo abierto y uno cerrado es...", "en": "The core difference between an open and a closed model is..." },
+      "options": [
+        { "es": "Si podés descargar sus pesos o solo usarlo como servicio", "en": "Whether you can download its weights or only use it as a service" },
+        { "es": "Si es gratis o pago", "en": "Whether it's free or paid" },
+        { "es": "Si habla inglés o no", "en": "Whether it speaks English or not" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Lo que define abierto vs cerrado es el acceso a los pesos, no el precio ni el idioma.",
+        "en": "What defines open vs closed is access to the weights, not price or language."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tenés un texto de 300 páginas y querés que la IA lo tenga presente entero. ¿Qué mirás?", "en": "You have a 300-page text and want the AI to keep all of it in mind. What do you look at?" },
+      "options": [
+        { "es": "El tamaño de la ventana de contexto", "en": "The size of the context window" },
+        { "es": "La temperatura", "en": "The temperature" },
+        { "es": "El color de la interfaz", "en": "The interface color" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Para material largo importa el contexto: cuánta información puede considerar a la vez.",
+        "en": "For long material, context matters: how much information it can consider at once."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Necesitás que la IA analice el contenido de una radiografía en imagen. La capacidad clave es...", "en": "You need the AI to analyze the content of an X-ray image. The key capability is..." },
+      "options": [
+        { "es": "Ser multimodal", "en": "Being multimodal" },
+        { "es": "Tener temperatura alta", "en": "Having high temperature" },
+        { "es": "Ser el modelo más barato", "en": "Being the cheapest model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si la entrada es una imagen, hace falta un modelo multimodal que pueda 'verla'.",
+        "en": "If the input is an image, you need a multimodal model that can 'see' it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En el triángulo velocidad-costo-potencia, un modelo grande normalmente...", "en": "In the speed-cost-power triangle, a big model usually..." },
+      "options": [
+        { "es": "Sube la potencia a costa de velocidad y precio", "en": "Raises power at the expense of speed and price" },
+        { "es": "Mejora las tres cosas a la vez", "en": "Improves all three at once" },
+        { "es": "Baja las tres cosas a la vez", "en": "Lowers all three at once" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Casi siempre hay compensación: más potencia se paga con más tiempo y dinero.",
+        "en": "There's almost always a trade-off: more power is paid with more time and money."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para clasificar sin ambigüedad y obtener siempre la misma respuesta, la temperatura conviene...", "en": "To classify unambiguously and always get the same answer, temperature should be..." },
+      "options": [
+        { "es": "Baja", "en": "Low" },
+        { "es": "Lo más alta posible", "en": "As high as possible" },
+        { "es": "No influye en nada", "en": "It has no effect" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La temperatura baja da respuestas consistentes y repetibles, ideales para clasificar.",
+        "en": "Low temperature gives consistent, repeatable answers, ideal for classifying."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA no conoce un hecho ocurrido ayer. La razón más probable es...", "en": "The AI doesn't know a fact that happened yesterday. The most likely reason is..." },
+      "options": [
+        { "es": "El hecho es posterior a su fecha de corte", "en": "The fact is after its cutoff date" },
+        { "es": "La IA decidió no contarlo", "en": "The AI chose not to tell it" },
+        { "es": "El hecho es demasiado fácil", "en": "The fact is too easy" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Su conocimiento llega hasta la fecha de corte; lo posterior no lo tiene salvo que se lo des.",
+        "en": "Its knowledge reaches up to the cutoff; anything later it lacks unless you provide it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un modelo repite una idea que trata injustamente a un grupo. Eso es...", "en": "A model repeats an idea that unfairly treats a group. That is..." },
+      "options": [
+        { "es": "Un sesgo aprendido de sus datos", "en": "A bias learned from its data" },
+        { "es": "Una opinión personal del modelo", "en": "A personal opinion of the model" },
+        { "es": "Un error de tu teclado", "en": "An error from your keyboard" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los sesgos vienen de los datos de entrenamiento, no de opiniones propias del modelo.",
+        "en": "Biases come from training data, not from the model's own opinions."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el criterio para elegir modelo según la tarea", "en": "Build the criterion to choose a model by task" },
+      "solution": {
+        "es": ["Cruzá lo que pide la tarea", "con las capacidades del modelo", "y elegí el que mejor encaja."],
+        "en": ["Match what the task requires", "with the model's capabilities", "and pick the one that fits best."]
+      },
+      "distractors": {
+        "es": ["quedate con el más famoso", "sin mirar la tarea"],
+        "en": ["stick with the most famous", "without looking at the task"]
+      },
+      "explanation": {
+        "es": "Elegir bien es ajustar tarea y capacidades, no seguir la fama.",
+        "en": "Choosing well is fitting task and capabilities, not following fame."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo trabajar con datos más nuevos que el corte", "en": "Build how to work with data newer than the cutoff" },
+      "solution": {
+        "es": ["Para información fresca,", "dásela en el prompt", "o usá una herramienta que la busque."],
+        "en": ["For fresh information,", "give it in the prompt", "or use a tool that fetches it."]
+      },
+      "distractors": {
+        "es": ["confiá en que la adivine", "sin verificar"],
+        "en": ["trust it to guess it", "without verifying"]
+      },
+      "explanation": {
+        "es": "Pasada la fecha de corte, aportá el dato o usá búsqueda en vivo.",
+        "en": "Past the cutoff, supply the data or use live search."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué priorizar con volumen alto y tarea simple", "en": "Build what to prioritize with high volume and a simple task" },
+      "solution": {
+        "es": ["Con mucho volumen y baja dificultad,", "priorizá un modelo rápido y económico", "para no gastar de más."],
+        "en": ["With high volume and low difficulty,", "prioritize a fast, cheap model", "to avoid overspending."]
+      },
+      "distractors": {
+        "es": ["usá siempre el más potente", "aunque sea lento y caro"],
+        "en": ["always use the most powerful", "even if slow and costly"]
+      },
+      "explanation": {
+        "es": "El volumen alto premia la eficiencia por sobre la potencia máxima.",
+        "en": "High volume rewards efficiency over maximum power."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el límite de qué delegar en decisiones sensibles", "en": "Build the limit of what to delegate in sensitive decisions" },
+      "solution": {
+        "es": ["En temas médicos, legales o financieros,", "la IA ayuda,", "pero decide una persona responsable."],
+        "en": ["In medical, legal or financial matters,", "AI helps,", "but a responsible person decides."]
+      },
+      "distractors": {
+        "es": ["dejá que la IA decida sola", "sin ninguna revisión"],
+        "en": ["let the AI decide alone", "with no review at all"]
+      },
+      "explanation": {
+        "es": "En lo sensible, la responsabilidad final siempre es humana.",
+        "en": "In sensitive matters, the final responsibility is always human."
+      }
+    }
+  ]
+}

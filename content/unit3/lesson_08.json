@@ -1,0 +1,146 @@
+{
+  "id": "u3l08",
+  "title": { "es": "Traducir y adaptar", "en": "Translate and adapt" },
+  "byte_intro": {
+    "es": "Traducir palabra por palabra a veces suena raro. Hoy recuerdo cómo pedir que además adapte el tono y la cultura al público.",
+    "en": "Translating word for word sometimes sounds odd. Today I recall how to ask it to also adapt tone and culture to the audience."
+  },
+  "byte_outro": {
+    "es": "¡Excelente! Ya sé que traducir bien es adaptar: tono, cultura y contexto, no solo cambiar de idioma. Fragmento recuperado.",
+    "en": "Excellent! Now I know that translating well is adapting: tone, culture and context, not just swapping languages. Fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué diferencia hay entre traducir y adaptar?", "en": "What's the difference between translating and adapting?" },
+      "options": [
+        { "es": "Traducir cambia el idioma; adaptar ajusta tono y cultura al público", "en": "Translating changes the language; adapting adjusts tone and culture to the audience" },
+        { "es": "Son exactamente lo mismo", "en": "They are exactly the same" },
+        { "es": "Adaptar es solo poner emojis", "en": "Adapting is just adding emojis" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una traducción literal puede sonar rara o fría. Adaptar hace que suene natural para quien lo lee.",
+        "en": "A literal translation can sound odd or cold. Adapting makes it sound natural to the reader."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Traducís un mail informal al inglés para un cliente formal. ¿Qué pedís?", "en": "You translate an informal email to English for a formal client. What do you ask?" },
+      "options": [
+        { "es": "Traducilo al inglés y ajustá el tono a algo más formal y profesional", "en": "Translate it to English and shift the tone to something more formal and professional" },
+        { "es": "Traducilo palabra por palabra sin tocar el tono", "en": "Translate it word for word without touching the tone" },
+        { "es": "Dejalo en español", "en": "Leave it in Spanish" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El tono importa tanto como el idioma. Pedí el ajuste (más formal) según a quién le hablás.",
+        "en": "Tone matters as much as language. Ask for the shift (more formal) based on who you're addressing."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un chiste o refrán no tiene equivalente directo. ¿Qué conviene pedir?", "en": "A joke or saying has no direct equivalent. What should you ask?" },
+      "options": [
+        { "es": "Adaptalo a algo que se entienda en la cultura del que lee", "en": "Adapt it to something that makes sense in the reader's culture" },
+        { "es": "Traducilo literal aunque no se entienda", "en": "Translate it literally even if it makes no sense" },
+        { "es": "Borralo siempre", "en": "Always delete it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los refranes rara vez se traducen literal. Adaptarlos a la cultura del público mantiene el sentido.",
+        "en": "Sayings rarely translate literally. Adapting them to the audience's culture keeps the meaning."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene decirle a la IA para quién es la traducción?", "en": "Why tell the AI who the translation is for?" },
+      "options": [
+        { "es": "El mismo texto se adapta distinto para un niño, un cliente o un técnico", "en": "The same text adapts differently for a child, a client or an expert" },
+        { "es": "No cambia nada", "en": "It changes nothing" },
+        { "es": "Para que use más palabras", "en": "So it uses more words" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El público define el vocabulario y el tono. Decir 'para un niño' o 'para un cliente' guía la adaptación.",
+        "en": "The audience sets the vocabulary and tone. Saying 'for a child' or 'for a client' guides the adaptation."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés medir la longitud para un subtítulo. ¿Qué pedís?", "en": "You want to control length for a subtitle. What do you ask?" },
+      "options": [
+        { "es": "Traducí y adaptá, pero que quede corto para que entre en pantalla", "en": "Translate and adapt, but keep it short so it fits on screen" },
+        { "es": "Que sea lo más largo posible", "en": "Make it as long as possible" },
+        { "es": "Que no importe el largo", "en": "Length doesn't matter" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Adaptar también es respetar restricciones: un subtítulo corto se lee a tiempo. Pedí el límite.",
+        "en": "Adapting also means respecting constraints: a short subtitle can be read in time. Ask for the limit."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Sabés algo del idioma destino. ¿Qué conviene hacer con la traducción?", "en": "You know some of the target language. What should you do with the translation?" },
+      "options": [
+        { "es": "Revisar que suene natural y corregir lo que no cierre", "en": "Check it sounds natural and fix anything that's off" },
+        { "es": "Usarla sin leerla nunca", "en": "Use it without ever reading it" },
+        { "es": "Confiar ciegamente siempre", "en": "Always trust it blindly" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA traduce muy bien, pero puede errar matices. Una lectura tuya le da el toque final.",
+        "en": "The AI translates very well, but can miss nuances. Your read gives it the final touch."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un pedido de traducción con ajuste de tono", "en": "Build a translation request with a tone shift" },
+      "solution": {
+        "es": ["Traducí este texto al inglés", "y adaptá el tono", "a algo formal para un cliente."],
+        "en": ["Translate this text to English", "and adapt the tone", "to something formal for a client."]
+      },
+      "distractors": {
+        "es": ["palabra por palabra", "sin cambiar nada"],
+        "en": ["word for word", "changing nothing"]
+      },
+      "explanation": {
+        "es": "Idioma + tono + destinatario: una traducción que suena bien, no literal.",
+        "en": "Language + tone + recipient: a translation that reads well, not literal."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido para adaptar un refrán a otra cultura", "en": "Build the request to adapt a saying to another culture" },
+      "solution": {
+        "es": ["Adaptá este refrán", "a una expresión equivalente", "que se entienda en inglés."],
+        "en": ["Adapt this saying", "to an equivalent expression", "that makes sense in English."]
+      },
+      "distractors": {
+        "es": ["traducilo literal", "aunque no se entienda"],
+        "en": ["translate it literally", "even if it makes no sense"]
+      },
+      "explanation": {
+        "es": "Buscar una expresión equivalente conserva el sentido en la otra cultura.",
+        "en": "Finding an equivalent expression keeps the meaning in the other culture."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el pedido indicando el público de destino", "en": "Build the request specifying the target audience" },
+      "solution": {
+        "es": ["Traducí este texto", "para un público de niños,", "con palabras simples y cercanas."],
+        "en": ["Translate this text", "for a children's audience,", "with simple, friendly words."]
+      },
+      "distractors": {
+        "es": ["para cualquiera", "no importa quién"],
+        "en": ["for anyone", "doesn't matter who"]
+      },
+      "explanation": {
+        "es": "Decir el público guía el vocabulario y el tono de la adaptación.",
+        "en": "Stating the audience guides the vocabulary and tone of the adaptation."
+      }
+    }
+  ]
+}

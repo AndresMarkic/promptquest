@@ -1,0 +1,146 @@
+{
+  "id": "u6l04",
+  "title": { "es": "Evaluar salidas", "en": "Evaluating outputs" },
+  "byte_intro": {
+    "es": "Que una respuesta suene bien no quiere decir que esté bien. En el Crisol aprendí a definir criterios claros de 'aprobado' y a chequear cada salida contra ellos.",
+    "en": "An answer sounding good doesn't mean it is good. In the Crucible I learned to define clear 'pass' criteria and check each output against them."
+  },
+  "byte_outro": {
+    "es": "Con criterios explícitos dejo de confiar en la intuición y empiezo a medir. Lingote forjado.",
+    "en": "With explicit criteria I stop trusting intuition and start measuring. Ingot forged."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa evaluar la salida de una IA?", "en": "What does evaluating an AI's output mean?" },
+      "options": [
+        { "es": "Definir criterios de qué es 'estar bien' y chequear la respuesta contra ellos", "en": "Defining criteria for what 'good' means and checking the answer against them" },
+        { "es": "Leerla rápido y confiar en que está bien", "en": "Skimming it and trusting it's fine" },
+        { "es": "Contar cuántas palabras tiene", "en": "Counting how many words it has" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Evaluar es medir contra criterios definidos de antemano, no una impresión general.",
+        "en": "Evaluating means measuring against criteria defined in advance, not a general impression."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es un buen criterio de evaluación, concreto y chequeable?", "en": "Which is a good evaluation criterion, concrete and checkable?" },
+      "options": [
+        { "es": "La respuesta debe estar en JSON válido y tener los 3 campos pedidos", "en": "The answer must be valid JSON and have the 3 requested fields" },
+        { "es": "La respuesta tiene que ser buena", "en": "The answer has to be good" },
+        { "es": "La respuesta tiene que gustarme", "en": "The answer has to please me" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un buen criterio es objetivo y verificable ('JSON válido', 'tiene los 3 campos'), no vago como 'buena'.",
+        "en": "A good criterion is objective and verifiable ('valid JSON', 'has the 3 fields'), not vague like 'good'."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene definir los criterios ANTES de ver las respuestas?", "en": "Why define the criteria BEFORE seeing the answers?" },
+      "options": [
+        { "es": "Para no acomodar el criterio a lo que salió y engañarte solo", "en": "So you don't bend the criterion to fit what came out and fool yourself" },
+        { "es": "Porque después ya no se puede evaluar", "en": "Because afterward you can't evaluate at all" },
+        { "es": "Porque los criterios caducan", "en": "Because criteria expire" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si fijás los criterios antes, evaluás de forma pareja. Ajustarlos después es hacerte trampa.",
+        "en": "If you set the criteria beforehand, you evaluate consistently. Adjusting them afterward is cheating yourself."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un conjunto de casos de prueba (test set) para un prompt?", "en": "What is a test set for a prompt?" },
+      "options": [
+        { "es": "Una lista de entradas con la salida esperada, para comparar de forma repetible", "en": "A list of inputs with the expected output, to compare repeatably" },
+        { "es": "Un único ejemplo que se prueba una vez", "en": "A single example tried once" },
+        { "es": "Una charla informal con el modelo", "en": "A casual chat with the model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Con varias entradas y sus salidas esperadas podés medir si un cambio en el prompt mejora o empeora, y repetirlo.",
+        "en": "With several inputs and their expected outputs you can measure whether a prompt change helps or hurts, and repeat it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Cambiás el prompt para mejorarlo. ¿Cómo sabés si mejoró de verdad?", "en": "You change the prompt to improve it. How do you know it actually improved?" },
+      "options": [
+        { "es": "Corriendo el mismo test set antes y después y comparando resultados", "en": "Running the same test set before and after and comparing results" },
+        { "es": "Por intuición, si me suena mejor", "en": "By intuition, if it sounds better to me" },
+        { "es": "Preguntándole al modelo si mejoró", "en": "By asking the model if it improved" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Comparar contra los mismos casos antes y después te da evidencia real de la mejora, no una corazonada.",
+        "en": "Comparing against the same cases before and after gives real evidence of improvement, not a hunch."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué tipo de criterios conviene tener?", "en": "What kinds of criteria are worth having?" },
+      "options": [
+        { "es": "De forma (formato, largo) y de fondo (que sea correcto y relevante)", "en": "Form ones (format, length) and substance ones (correct and relevant)" },
+        { "es": "Solo de forma; el contenido no importa", "en": "Only form ones; content doesn't matter" },
+        { "es": "Ninguno, mejor no medir", "en": "None, better not to measure" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una salida puede tener formato perfecto y contenido erróneo. Hacen falta criterios de forma y de fondo.",
+        "en": "An output can have perfect format and wrong content. You need both form and substance criteria."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un criterio de evaluación chequeable", "en": "Build a checkable evaluation criterion" },
+      "solution": {
+        "es": ["La respuesta aprueba si:", "está en JSON válido", "y cita el fragmento fuente."],
+        "en": ["The answer passes if:", "it is valid JSON", "and cites the source fragment."]
+      },
+      "distractors": {
+        "es": ["si me da", "buena onda."],
+        "en": ["if it gives me", "good vibes."]
+      },
+      "explanation": {
+        "es": "Criterios objetivos (JSON válido, cita presente) se pueden chequear siempre igual.",
+        "en": "Objective criteria (valid JSON, citation present) can always be checked the same way."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el método para comparar dos versiones de un prompt", "en": "Build the method to compare two prompt versions" },
+      "solution": {
+        "es": ["Corré el mismo conjunto de casos", "con las dos versiones", "y compará los resultados."],
+        "en": ["Run the same set of cases", "with both versions", "and compare the results."]
+      },
+      "distractors": {
+        "es": ["Elegí la que", "te suene mejor de oído."],
+        "en": ["Pick the one", "that sounds better by ear."]
+      },
+      "explanation": {
+        "es": "Mismo test set en ambas versiones = comparación justa y repetible.",
+        "en": "Same test set on both versions = a fair, repeatable comparison."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá por qué se fijan criterios antes de mirar", "en": "Build why criteria are set before looking" },
+      "solution": {
+        "es": ["Definí los criterios de aprobado", "antes de ver las respuestas", "para no acomodarlos a gusto."],
+        "en": ["Define the pass criteria", "before seeing the answers", "so you don't bend them to taste."]
+      },
+      "distractors": {
+        "es": ["Inventá el criterio", "después, según convenga."],
+        "en": ["Invent the criterion", "afterward, as convenient."]
+      },
+      "explanation": {
+        "es": "Fijar el criterio antes evita el sesgo de justificar lo que ya salió.",
+        "en": "Setting the criterion beforehand avoids the bias of justifying whatever came out."
+      }
+    }
+  ]
+}

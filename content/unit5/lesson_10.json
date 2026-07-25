@@ -1,0 +1,189 @@
+{
+  "id": "u5l10",
+  "boss": true,
+  "title": { "es": "Boss de La Red", "en": "The Network Boss" },
+  "byte_intro": {
+    "es": "¡Llegamos al centro de La Red! Acá se junta todo: APIs, tokens, herramientas, agentes, RAG, embeddings, MCP y memoria. Repaso final. Si lo pasamos, La Red queda reconectada. ¿Vamos?",
+    "en": "We reached the core of The Network! Everything comes together here: APIs, tokens, tools, agents, RAG, embeddings, MCP and memory. Final review. If we pass, The Network is back online. Ready?"
+  },
+  "byte_outro": {
+    "es": "¡LA RED ESTÁ VIVA! Reconectamos todo gracias a vos. Terminaste la Unidad 5: ya entendés cómo la IA se conecta al mundo real. ¡Sos un crack del ecosistema!",
+    "en": "THE NETWORK IS ALIVE! We reconnected everything thanks to you. You finished Unit 5: you now understand how AI connects to the real world. You're an ecosystem pro!"
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es una API?", "en": "What is an API?" },
+      "options": [
+        { "es": "Una forma de pedirle algo a un servicio y recibir respuesta", "en": "A way to ask a service for something and get an answer" },
+        { "es": "Un tipo de batería", "en": "A kind of battery" },
+        { "es": "Un color de pantalla", "en": "A screen color" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "API = mostrador para pedir y recibir. Pedido → procesamiento → respuesta.",
+        "en": "API = a counter to ask and receive. Request → processing → response."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo se mide y cobra el uso de una IA por API?", "en": "How is AI usage measured and charged via API?" },
+      "options": [
+        { "es": "Por tokens de entrada y de salida", "en": "By input and output tokens" },
+        { "es": "Por cantidad de emojis", "en": "By number of emojis" },
+        { "es": "Por hora de sol", "en": "By hours of sunshine" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Se suman los tokens que entran y salen: por eso ser breve sale más barato.",
+        "en": "Input and output tokens add up: that's why being brief is cheaper."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es 'uso de herramientas' en una IA?", "en": "What is 'tool use' in an AI?" },
+      "options": [
+        { "es": "La IA pide usar una herramienta externa que no puede hacer sola", "en": "The AI asks to use an external tool it can't do alone" },
+        { "es": "La IA compra herramientas", "en": "The AI buys tools" },
+        { "es": "La IA se reinicia", "en": "The AI reboots" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo pide la herramienta; el sistema la ejecuta y le devuelve el resultado.",
+        "en": "The model asks for the tool; the system runs it and returns the result."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué distingue a un agente?", "en": "What sets an agent apart?" },
+      "options": [
+        { "es": "Decide pasos y actúa para lograr un objetivo, no solo responde", "en": "It decides steps and acts to reach a goal, not just answers" },
+        { "es": "Solo repite lo que le decís", "en": "It only repeats what you say" },
+        { "es": "No usa herramientas nunca", "en": "It never uses tools" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un agente persigue una meta partiéndola en pasos y actuando con herramientas.",
+        "en": "An agent chases a goal by splitting it into steps and acting with tools."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená el ciclo de un agente", "en": "Order the agent loop" },
+      "solution": {
+        "es": ["Planificar el paso", "actuar con una herramienta", "observar el resultado", "repetir si falta."],
+        "en": ["Plan the step", "act with a tool", "observe the result", "repeat if needed."]
+      },
+      "distractors": {
+        "es": ["apagarse", "sin motivo"],
+        "en": ["shut down", "for no reason"]
+      },
+      "explanation": {
+        "es": "Planificar → actuar → observar → repetir: el motor de todo agente.",
+        "en": "Plan → act → observe → repeat: the engine of every agent."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué hace RAG?", "en": "What does RAG do?" },
+      "options": [
+        { "es": "Recupera info y la mete en el contexto para responder con datos reales", "en": "Retrieves info and puts it in the context to answer with real data" },
+        { "es": "Reentrena el modelo desde cero", "en": "Retrains the model from scratch" },
+        { "es": "Borra la memoria del modelo", "en": "Wipes the model's memory" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "RAG no reentrena: recupera fragmentos y los agrega al contexto en el momento.",
+        "en": "RAG doesn't retrain: it retrieves chunks and adds them to the context on the spot."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená el flujo de RAG", "en": "Order the RAG flow" },
+      "solution": {
+        "es": ["Recibir la pregunta", "buscar los fragmentos relevantes", "meterlos en el contexto", "responder con esa info."],
+        "en": ["Receive the question", "search the relevant chunks", "put them in the context", "answer with that info."]
+      },
+      "distractors": {
+        "es": ["reentrenar el modelo", "por horas"],
+        "en": ["retrain the model", "for hours"]
+      },
+      "explanation": {
+        "es": "Pregunta → buscar → agregar al contexto → responder. Recuperar y usar, sin reentrenar.",
+        "en": "Question → search → add to context → answer. Retrieve and use, no retraining."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un embedding?", "en": "What is an embedding?" },
+      "options": [
+        { "es": "El significado de un texto representado como números", "en": "A text's meaning represented as numbers" },
+        { "es": "Una foto del texto", "en": "A photo of the text" },
+        { "es": "Un tipo de letra", "en": "A font" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Con embeddings se compara por significado: textos parecidos quedan cerca.",
+        "en": "With embeddings you compare by meaning: similar texts sit close together."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Buscar por significado (con embeddings) sirve para...", "en": "Searching by meaning (with embeddings) is for..." },
+      "options": [
+        { "es": "Encontrar textos con sentido parecido aunque usen otras palabras", "en": "Finding texts with similar meaning even with other words" },
+        { "es": "Buscar solo la palabra idéntica", "en": "Searching only the identical word" },
+        { "es": "Ordenar por color", "en": "Sorting by color" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "'Auto' encuentra 'coche' porque sus embeddings están cerca. Es la base de la búsqueda en RAG.",
+        "en": "'Car' finds 'automobile' because their embeddings are close. It's the basis of search in RAG."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es MCP?", "en": "What is MCP?" },
+      "options": [
+        { "es": "Un protocolo estándar para conectar la IA con herramientas y datos", "en": "A standard protocol to connect the AI with tools and data" },
+        { "es": "Un modelo de IA nuevo", "en": "A new AI model" },
+        { "es": "Un tipo de token", "en": "A kind of token" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "MCP es como el USB de la IA: un mismo enchufe estándar para muchas herramientas.",
+        "en": "MCP is like the AI's USB: one standard plug for many tools."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Por defecto, ¿qué recuerda un modelo entre pedidos separados?", "en": "By default, what does a model remember between separate requests?" },
+      "options": [
+        { "es": "Nada: lo que 'recuerda' es lo que le vuelvas a pasar en el contexto", "en": "Nothing: what it 'remembers' is whatever you feed back into the context" },
+        { "es": "Todo, para siempre", "en": "Everything, forever" },
+        { "es": "Solo tu nombre", "en": "Only your name" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Sin reinyectar la info, cada pedido arranca en blanco. La memoria se le da con el contexto.",
+        "en": "Without re-injecting the info, each request starts blank. Memory is given through the context."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo se le da memoria de largo plazo a una IA", "en": "Build how long-term memory is given to an AI" },
+      "solution": {
+        "es": ["Guardar lo importante afuera", "recuperarlo cuando hace falta", "y volver a ponerlo en el contexto."],
+        "en": ["Save what matters outside", "retrieve it when needed", "and put it back in the context."]
+      },
+      "distractors": {
+        "es": ["esperar que lo recuerde", "solo por magia"],
+        "en": ["hope it remembers", "by magic alone"]
+      },
+      "explanation": {
+        "es": "Guardar → recuperar → reinyectar: así se simula memoria, muy parecido a RAG.",
+        "en": "Save → retrieve → re-inject: that's how memory is simulated, a lot like RAG."
+      }
+    }
+  ]
+}

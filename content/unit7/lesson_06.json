@@ -1,0 +1,132 @@
+{
+  "id": "u7l06",
+  "title": { "es": "Privacidad y datos sensibles", "en": "Privacy and sensitive data" },
+  "byte_intro": {
+    "es": "En La Fábrica hay materiales que no salen del galpón. Con la IA pasa igual: hay datos que NO se le mandan a un servicio externo.",
+    "en": "In The Factory some materials never leave the warehouse. With AI it's the same: some data is NOT sent to an external service."
+  },
+  "byte_outro": {
+    "es": "¡Muy bien! Anonimizar, mandar lo mínimo y conocer las reglas: así trabajás con IA sin exponer a nadie.",
+    "en": "Well done! Anonymize, send the minimum and know the rules: that's how you work with AI without exposing anyone."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué dato es sensible y hay que cuidar antes de mandarlo a una IA?", "en": "Which data is sensitive and must be handled carefully before sending to an AI?" },
+      "options": [
+        { "es": "El DNI, la tarjeta de crédito o la historia médica de una persona", "en": "A person's ID number, credit card or medical history" },
+        { "es": "El nombre genérico de un color", "en": "The generic name of a color" },
+        { "es": "La fecha de hoy", "en": "Today's date" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Datos personales, financieros o de salud son sensibles: identifican a alguien y su filtración hace daño real.",
+        "en": "Personal, financial or health data is sensitive: it identifies someone and leaking it causes real harm."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa 'anonimizar' los datos antes de procesarlos?", "en": "What does it mean to 'anonymize' data before processing it?" },
+      "options": [
+        { "es": "Quitar o reemplazar los datos que identifican a la persona", "en": "Remove or replace the data that identifies the person" },
+        { "es": "Escribir todo en mayúsculas", "en": "Write everything in uppercase" },
+        { "es": "Traducir el texto a otro idioma", "en": "Translate the text to another language" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Anonimizar es sacar nombre, DNI, teléfono y demás, o cambiarlos por etiquetas, para que no se pueda identificar a nadie.",
+        "en": "Anonymizing is stripping name, ID, phone and so on, or swapping them for labels, so no one can be identified."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Necesitás que la IA resuma reclamos de clientes. ¿Qué conviene?", "en": "You need AI to summarize customer complaints. What's best?" },
+      "options": [
+        { "es": "Mandar el texto del reclamo sin el nombre ni datos de contacto", "en": "Send the complaint text without the name or contact details" },
+        { "es": "Mandar todo, incluidos DNI y número de tarjeta", "en": "Send everything, including ID and card number" },
+        { "es": "No resumir nunca ningún reclamo", "en": "Never summarize any complaint" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Para resumir el problema no hace falta el nombre ni la tarjeta. Mandá solo lo necesario y anonimizá el resto.",
+        "en": "To summarize the issue you don't need the name or card. Send only what's needed and anonymize the rest."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Principio de 'minimización de datos'. ¿Qué dice?", "en": "The 'data minimization' principle. What does it say?" },
+      "options": [
+        { "es": "Mandá solo los datos imprescindibles para la tarea, nada más", "en": "Send only the data essential to the task, nothing more" },
+        { "es": "Mandá todos los datos que tengas, por las dudas", "en": "Send all the data you have, just in case" },
+        { "es": "No mandes nunca ningún dato", "en": "Never send any data at all" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cuanto menos dato sensible sale de tu sistema, menor el riesgo. Mandá lo justo para que la tarea funcione.",
+        "en": "The less sensitive data leaves your system, the lower the risk. Send just enough for the task to work."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Antes de usar un servicio de IA con datos de clientes, ¿qué revisás?", "en": "Before using an AI service with client data, what do you check?" },
+      "options": [
+        { "es": "Qué hace el proveedor con tus datos y si cumple la ley de protección de datos", "en": "What the provider does with your data and whether it meets data-protection law" },
+        { "es": "Si el logo del servicio es lindo", "en": "Whether the service's logo is pretty" },
+        { "es": "Nada, siempre es seguro", "en": "Nothing, it's always safe" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Hay que saber si el proveedor guarda o entrena con tus datos y si el uso cumple la ley. No todo servicio sirve para datos sensibles.",
+        "en": "You must know if the provider stores or trains on your data and if the use meets the law. Not every service fits sensitive data."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el paso de anonimización antes de llamar a la IA", "en": "Build the anonymization step before calling the AI" },
+      "solution": {
+        "es": ["Antes de enviar el texto,", "reemplazá nombres y números de documento", "por etiquetas como [NOMBRE] y [DNI]."],
+        "en": ["Before sending the text,", "replace names and ID numbers", "with labels like [NAME] and [ID]."]
+      },
+      "distractors": {
+        "es": ["enviá el texto tal cual,", "con todos los datos personales visibles."],
+        "en": ["send the text as is,", "with all personal data visible."]
+      },
+      "explanation": {
+        "es": "Cambiar los datos que identifican por etiquetas deja el texto útil pero sin exponer a la persona.",
+        "en": "Swapping identifying data for labels keeps the text useful without exposing the person."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená un flujo que cuida los datos sensibles", "en": "Order a flow that protects sensitive data" },
+      "solution": {
+        "es": ["Recibí el dato,", "anonimizá lo sensible,", "procesá con la IA,", "y volvé a poner los datos solo de tu lado."],
+        "en": ["Receive the data,", "anonymize the sensitive parts,", "process with the AI,", "and re-attach the data only on your side."]
+      },
+      "distractors": {
+        "es": ["mandá todo sin filtrar,", "y publicá los datos personales."],
+        "en": ["send everything unfiltered,", "and publish the personal data."]
+      },
+      "explanation": {
+        "es": "La IA trabaja con el texto anonimizado; los datos reales solo se reponen puertas adentro.",
+        "en": "The AI works on the anonymized text; the real data is restored only in-house."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la regla de oro sobre datos y servicios externos", "en": "Build the golden rule about data and external services" },
+      "solution": {
+        "es": ["No le mandes a un servicio externo", "ningún dato que no querrías ver filtrado,", "y si es necesario, anonimizalo primero."],
+        "en": ["Don't send an external service", "any data you wouldn't want leaked,", "and if needed, anonymize it first."]
+      },
+      "distractors": {
+        "es": ["mandá contraseñas y tarjetas", "sin pensarlo dos veces."],
+        "en": ["send passwords and cards", "without a second thought."]
+      },
+      "explanation": {
+        "es": "Si no querrías ver ese dato en la tapa del diario, no lo mandes sin anonimizar.",
+        "en": "If you wouldn't want that data on the front page, don't send it without anonymizing."
+      }
+    }
+  ]
+}

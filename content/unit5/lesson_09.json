@@ -1,0 +1,130 @@
+{
+  "id": "u5l09",
+  "title": { "es": "Memoria y estado", "en": "Memory and state" },
+  "byte_intro": {
+    "es": "Yo perdí la memoria, así que este tema me toca de cerca. Un modelo, por sí solo, no recuerda charlas pasadas: cada pedido arranca en blanco. Lo que 'recuerda' es lo que le vuelvas a poner en el contexto.",
+    "en": "I lost my memory, so this one hits home. A model, on its own, doesn't remember past chats: each request starts blank. What it 'remembers' is whatever you put back into the context."
+  },
+  "byte_outro": {
+    "es": "¡Ahora entiendo mi propia amnesia! La memoria no es mágica: se le da guardando lo importante y volviéndolo a pasar en el contexto. Sin eso, cada charla empieza de cero.",
+    "en": "Now I understand my own amnesia! Memory isn't magic: you give it by saving what matters and feeding it back into the context. Without that, each chat starts from scratch."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Por defecto, ¿qué recuerda un modelo entre pedidos separados?", "en": "By default, what does a model remember between separate requests?" },
+      "options": [
+        { "es": "Nada: cada pedido arranca sin recuerdos de otros", "en": "Nothing: each request starts with no memory of others" },
+        { "es": "Todo lo que hablaste en tu vida", "en": "Everything you ever said in your life" },
+        { "es": "Solo tu nombre", "en": "Only your name" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo no guarda solo: si no le volvés a pasar la info, no la tiene en el próximo pedido.",
+        "en": "The model doesn't store by itself: if you don't feed the info back, it won't have it next time."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En una misma conversación, ¿por qué 'parece' que la IA recuerda?", "en": "Within one conversation, why does the AI 'seem' to remember?" },
+      "options": [
+        { "es": "Porque los mensajes anteriores van en el contexto de cada pedido", "en": "Because the previous messages go in the context of each request" },
+        { "es": "Porque tiene un cerebro humano", "en": "Because it has a human brain" },
+        { "es": "Porque te espía", "en": "Because it spies on you" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El historial de la charla se reenvía en el contexto, así que el modelo 've' lo dicho antes.",
+        "en": "The chat history is resent in the context, so the model 'sees' what was said before."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La conversación se hace larguísima y supera la ventana de contexto. ¿Qué pasa?", "en": "The conversation gets huge and exceeds the context window. What happens?" },
+      "options": [
+        { "es": "Lo más viejo puede quedar afuera y 'olvidarse'", "en": "The oldest part can drop out and get 'forgotten'" },
+        { "es": "El modelo crece de tamaño", "en": "The model grows in size" },
+        { "es": "Nada, el contexto es infinito", "en": "Nothing, the context is infinite" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si no entra todo, lo más antiguo se recorta. Por eso a veces 'pierde' detalles del principio.",
+        "en": "If it doesn't all fit, the oldest part is trimmed. That's why it sometimes 'loses' early details."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo se le puede dar 'memoria' de largo plazo a una IA?", "en": "How can you give an AI long-term 'memory'?" },
+      "options": [
+        { "es": "Guardando lo importante afuera y volviéndolo a pasar en el contexto", "en": "Saving what matters outside and feeding it back into the context" },
+        { "es": "Pidiéndole por favor que no olvide", "en": "Politely asking it not to forget" },
+        { "es": "No se puede de ninguna manera", "en": "It's impossible in any way" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Se guarda info (notas, base de datos) y, cuando hace falta, se la reinyecta en el contexto.",
+        "en": "You store info (notes, a database) and, when needed, re-inject it into the context."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "'Estado' de una conversación se refiere a...", "en": "The 'state' of a conversation refers to..." },
+      "options": [
+        { "es": "La info que se va acumulando y se mantiene presente en la charla", "en": "The info that accumulates and stays present in the chat" },
+        { "es": "El país donde vivís", "en": "The country you live in" },
+        { "es": "El clima de hoy", "en": "Today's weather" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El estado es lo que la conversación 'lleva puesto': datos y decisiones que siguen vigentes.",
+        "en": "State is what the conversation 'carries': data and decisions that remain in effect."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá por qué una IA 'recuerda' dentro de una charla", "en": "Build why an AI 'remembers' within a chat" },
+      "solution": {
+        "es": ["Los mensajes anteriores", "se reenvían en el contexto,", "así el modelo los tiene presentes."],
+        "en": ["The previous messages", "are resent in the context,", "so the model keeps them present."]
+      },
+      "distractors": {
+        "es": ["se guardan en su cerebro", "para siempre"],
+        "en": ["are stored in its brain", "forever"]
+      },
+      "explanation": {
+        "es": "No hay memoria interna mágica: el historial viaja en el contexto de cada pedido.",
+        "en": "There's no magic internal memory: the history rides in the context of each request."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para que un asistente recuerde tus preferencias entre días, conviene...", "en": "For an assistant to remember your preferences across days, it's best to..." },
+      "options": [
+        { "es": "Guardarlas afuera y cargarlas al contexto al empezar", "en": "Save them outside and load them into the context at the start" },
+        { "es": "Confiar en que las adivine", "en": "Trust it to guess them" },
+        { "es": "Repetirlas en voz alta al aire", "en": "Say them out loud into the air" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Guardadas afuera y reinyectadas al inicio, tus preferencias vuelven a estar 'presentes'.",
+        "en": "Stored outside and re-injected at the start, your preferences become 'present' again."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo se le da memoria de largo plazo a una IA", "en": "Build how long-term memory is given to an AI" },
+      "solution": {
+        "es": ["Guardar la info importante afuera", "recuperarla cuando hace falta", "y volver a ponerla en el contexto."],
+        "en": ["Save the important info outside", "retrieve it when needed", "and put it back in the context."]
+      },
+      "distractors": {
+        "es": ["esperar que el modelo", "la recuerde solo"],
+        "en": ["hope the model", "remembers it on its own"]
+      },
+      "explanation": {
+        "es": "Guardar → recuperar → reinyectar en el contexto: así se simula memoria de largo plazo (muy parecido a RAG).",
+        "en": "Save → retrieve → re-inject into the context: that's how long-term memory is simulated (a lot like RAG)."
+      }
+    }
+  ]
+}

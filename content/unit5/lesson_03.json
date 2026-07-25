@@ -1,0 +1,130 @@
+{
+  "id": "u5l03",
+  "title": { "es": "La IA que usa herramientas", "en": "The AI that uses tools" },
+  "byte_intro": {
+    "es": "Descubrí algo grande: la IA no tiene que saberlo todo. Cuando le falta un dato, puede decir 'usá esta herramienta': una calculadora, el clima, una búsqueda. A eso se le dice uso de herramientas.",
+    "en": "I found something big: the AI doesn't have to know everything. When it's missing data, it can say 'use this tool': a calculator, the weather, a search. That's called tool use."
+  },
+  "byte_outro": {
+    "es": "¡Genial! La IA no ejecuta la herramienta sola: pide usarla, alguien la corre y le devuelve el resultado. Con eso arma la respuesta final.",
+    "en": "Great! The AI doesn't run the tool by itself: it asks to use it, something runs it and returns the result. With that it builds the final answer."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es 'uso de herramientas' (tool use / function calling)?", "en": "What is 'tool use' (function calling)?" },
+      "options": [
+        { "es": "Que la IA pida usar una herramienta externa para algo que no puede hacer sola", "en": "The AI asking to use an external tool for something it can't do alone" },
+        { "es": "Que la IA compre herramientas en una ferretería", "en": "The AI buying tools at a hardware store" },
+        { "es": "Que la IA se apague sola", "en": "The AI shutting itself off" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo detecta que necesita ayuda externa y pide usar una herramienta concreta.",
+        "en": "The model realizes it needs outside help and asks to use a specific tool."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Para qué sirve darle herramientas a una IA?", "en": "Why give an AI tools?" },
+      "options": [
+        { "es": "Para que haga cosas exactas o actuales que sola no puede", "en": "So it can do exact or up-to-date things it can't do alone" },
+        { "es": "Para que hable más lindo", "en": "So it talks more nicely" },
+        { "es": "Para que ocupe más memoria", "en": "So it uses more memory" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Con herramientas accede a cálculos exactos, datos frescos o acciones reales que el texto solo no da.",
+        "en": "With tools it gets exact math, fresh data or real actions that plain text can't provide."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Le preguntás a la IA el clima de hoy. Sin herramientas, ¿qué pasa?", "en": "You ask the AI today's weather. Without tools, what happens?" },
+      "options": [
+        { "es": "No lo sabe: necesita una herramienta que consulte el clima", "en": "It doesn't know: it needs a tool to check the weather" },
+        { "es": "Lo ve por la ventana", "en": "It looks out the window" },
+        { "es": "Siempre lo adivina perfecto", "en": "It always guesses it perfectly" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El clima de hoy es dato actual: sin una herramienta que lo consulte, el modelo no lo tiene.",
+        "en": "Today's weather is live data: without a tool to check it, the model doesn't have it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Quién ejecuta realmente la herramienta?", "en": "Who actually runs the tool?" },
+      "options": [
+        { "es": "El sistema que rodea a la IA; el modelo solo pide usarla", "en": "The system around the AI; the model only asks to use it" },
+        { "es": "El modelo la ejecuta físicamente", "en": "The model runs it physically" },
+        { "es": "Nadie, es magia", "en": "Nobody, it's magic" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo indica 'quiero esta herramienta con estos datos'. El sistema la corre y le pasa el resultado.",
+        "en": "The model says 'I want this tool with this data'. The system runs it and hands back the result."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Necesitás sumar 8.394 × 271 sin errores. ¿Qué conviene?", "en": "You need 8,394 × 271 with no mistakes. What's best?" },
+      "options": [
+        { "es": "Que la IA use una herramienta de cálculo", "en": "Have the AI use a calculator tool" },
+        { "es": "Que lo escriba de memoria y listo", "en": "Have it write it from memory and done" },
+        { "es": "Que lo evite y cambie de tema", "en": "Have it dodge it and change topic" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Para cuentas exactas, una calculadora como herramienta es más confiable que la memoria del modelo.",
+        "en": "For exact math, a calculator tool is more reliable than the model's memory."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el ciclo de una herramienta", "en": "Build the tool cycle" },
+      "solution": {
+        "es": ["La IA pide usar una herramienta", "el sistema la ejecuta", "y le devuelve el resultado."],
+        "en": ["The AI asks to use a tool", "the system runs it", "and returns the result."]
+      },
+      "distractors": {
+        "es": ["la IA se olvida", "de la pregunta"],
+        "en": ["the AI forgets", "the question"]
+      },
+      "explanation": {
+        "es": "Pide → se ejecuta → recibe resultado. Con ese dato, la IA responde.",
+        "en": "Ask → run → receive result. With that data, the AI answers."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Después de recibir el resultado de la herramienta, la IA...", "en": "After getting the tool's result, the AI..." },
+      "options": [
+        { "es": "Lo usa para armar la respuesta final para vos", "en": "Uses it to build the final answer for you" },
+        { "es": "Lo tira a la basura", "en": "Throws it away" },
+        { "es": "Se lo queda en secreto", "en": "Keeps it secret" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El resultado vuelve al modelo, que lo integra en una respuesta clara para el usuario.",
+        "en": "The result goes back to the model, which folds it into a clear answer for the user."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cuándo conviene usar una herramienta", "en": "Build when a tool is worth using" },
+      "solution": {
+        "es": ["Cuando hace falta un dato actual", "o un cálculo exacto,", "la IA usa una herramienta."],
+        "en": ["When live data is needed", "or an exact calculation,", "the AI uses a tool."]
+      },
+      "distractors": {
+        "es": ["cuando quiere lucirse", "sin motivo"],
+        "en": ["when it wants to show off", "for no reason"]
+      },
+      "explanation": {
+        "es": "Datos frescos y precisión son justo lo que el modelo solo no garantiza: ahí entra la herramienta.",
+        "en": "Fresh data and precision are exactly what the model alone can't guarantee: that's where a tool comes in."
+      }
+    }
+  ]
+}

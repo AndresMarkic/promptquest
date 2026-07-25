@@ -1,0 +1,132 @@
+{
+  "id": "u7l09",
+  "title": { "es": "Documentar y mantener", "en": "Documenting and maintaining" },
+  "byte_intro": {
+    "es": "Una máquina sin manual, cuando se rompe, es un dolor de cabeza. Lo que armamos con IA hay que dejarlo entendible y fácil de actualizar.",
+    "en": "A machine with no manual is a headache when it breaks. What we build with AI must be left understandable and easy to update."
+  },
+  "byte_outro": {
+    "es": "¡Última pieza! Documentar los prompts, versionar los cambios y monitorear: así el sistema sobrevive sin vos.",
+    "en": "Last piece! Documenting the prompts, versioning changes and monitoring: that's how the system survives without you."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué documentar un sistema con IA?", "en": "Why document an AI system?" },
+      "options": [
+        { "es": "Para que otro (o vos en 6 meses) entienda cómo funciona y pueda mantenerlo", "en": "So someone else (or you in 6 months) understands how it works and can maintain it" },
+        { "es": "Para llenar carpetas que nadie lee", "en": "To fill folders no one reads" },
+        { "es": "Porque la IA lo exige", "en": "Because the AI demands it" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Sin documentación, cada cambio es adivinar. Documentar deja el sistema mantenible por cualquiera del equipo.",
+        "en": "Without docs, every change is guesswork. Documenting keeps the system maintainable by anyone on the team."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En un sistema con IA, ¿qué es especialmente importante documentar?", "en": "In an AI system, what's especially important to document?" },
+      "options": [
+        { "es": "Los prompts usados, qué modelo, y por qué se eligió cada cosa", "en": "The prompts used, which model, and why each choice was made" },
+        { "es": "El clima del día en que se programó", "en": "The weather the day it was coded" },
+        { "es": "Nada, los prompts se recuerdan de memoria", "en": "Nothing, prompts are remembered by heart" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El prompt y el modelo son el corazón del comportamiento. Anotarlos, junto al porqué, evita romper todo al tocarlos.",
+        "en": "The prompt and model are the heart of the behavior. Recording them, with the why, avoids breaking everything when tweaked."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué conviene 'versionar' los prompts?", "en": "Why is it worth 'versioning' prompts?" },
+      "options": [
+        { "es": "Para saber qué cambió y poder volver atrás si una versión empeora los resultados", "en": "To know what changed and roll back if a version worsens results" },
+        { "es": "Para gastar más espacio en el disco", "en": "To use up more disk space" },
+        { "es": "Los prompts nunca cambian, no hace falta", "en": "Prompts never change, no need" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Guardar versiones de los prompts te deja comparar, entender qué cambió y volver a una que funcionaba.",
+        "en": "Keeping prompt versions lets you compare, see what changed and revert to one that worked."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El proveedor actualiza el modelo y las respuestas cambian. ¿Qué hacer?", "en": "The provider updates the model and answers change. What to do?" },
+      "options": [
+        { "es": "Volver a probar el sistema con tus casos de prueba antes de confiar en el nuevo modelo", "en": "Re-test the system with your test cases before trusting the new model" },
+        { "es": "Asumir que si andaba antes, anda igual", "en": "Assume that if it worked before, it works the same" },
+        { "es": "Apagar el sistema para siempre", "en": "Shut the system down forever" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un modelo nuevo puede responder distinto. Correr tus casos de prueba te avisa si algo se rompió antes de que lo note el cliente.",
+        "en": "A new model can answer differently. Running your test cases warns you if something broke before the client notices."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es 'monitorear' un sistema con IA en producción?", "en": "What is 'monitoring' an AI system in production?" },
+      "options": [
+        { "es": "Vigilar sus métricas y errores en el tiempo para detectar si empeora", "en": "Watching its metrics and errors over time to catch if it degrades" },
+        { "es": "Mirarlo una sola vez el día del lanzamiento", "en": "Looking at it once on launch day" },
+        { "es": "Nunca revisarlo después de lanzarlo", "en": "Never checking it after launch" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Monitorear es seguir de cerca cómo rinde con el tiempo: si las métricas caen o crecen los errores, actuás a tiempo.",
+        "en": "Monitoring is tracking how it performs over time: if metrics drop or errors rise, you act in time."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué documentar de un sistema con IA", "en": "Build what to document about an AI system" },
+      "solution": {
+        "es": ["Anotá qué modelo se usa,", "los prompts y su versión,", "y por qué se tomó cada decisión."],
+        "en": ["Note which model is used,", "the prompts and their version,", "and why each decision was made."]
+      },
+      "distractors": {
+        "es": ["dejá todo en tu cabeza,", "sin escribir nada."],
+        "en": ["keep it all in your head,", "writing nothing down."]
+      },
+      "explanation": {
+        "es": "Modelo, prompts versionados y el porqué de cada decisión: lo mínimo para que otro pueda mantenerlo.",
+        "en": "Model, versioned prompts and the why of each decision: the minimum for someone else to maintain it."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená cómo aplicar un cambio a un prompt de producción", "en": "Order how to apply a change to a production prompt" },
+      "solution": {
+        "es": ["Guardá la versión actual,", "probá el nuevo prompt con tus casos de prueba,", "y si mejora, publicalo anotando el cambio."],
+        "en": ["Save the current version,", "test the new prompt with your test cases,", "and if it improves, publish it noting the change."]
+      },
+      "distractors": {
+        "es": ["cambiá el prompt en vivo", "sin probar ni guardar el anterior."],
+        "en": ["change the prompt live", "without testing or saving the previous one."]
+      },
+      "explanation": {
+        "es": "Guardar la versión previa, probar y anotar el cambio: podés volver atrás si algo sale mal.",
+        "en": "Save the prior version, test and note the change: you can roll back if something goes wrong."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá una rutina de mantenimiento del sistema", "en": "Build a system maintenance routine" },
+      "solution": {
+        "es": ["Monitoreá las métricas seguido,", "revisá una muestra de resultados,", "y ajustá los prompts cuando algo empeora."],
+        "en": ["Monitor the metrics regularly,", "review a sample of results,", "and tune the prompts when something degrades."]
+      },
+      "distractors": {
+        "es": ["ignorá el sistema para siempre", "una vez que ya lo lanzaste."],
+        "en": ["ignore the system forever", "once you've launched it."]
+      },
+      "explanation": {
+        "es": "Monitorear, revisar muestras y ajustar cuando cae la calidad: un sistema vivo se mantiene, no se abandona.",
+        "en": "Monitor, review samples and tune when quality drops: a live system is maintained, not abandoned."
+      }
+    }
+  ]
+}

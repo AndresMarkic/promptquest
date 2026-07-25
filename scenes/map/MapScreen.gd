@@ -55,7 +55,8 @@ func _abrir_ajustes() -> void:
 func _header_zona(u: Dictionary) -> Control:
 	var cont := Control.new()
 	cont.custom_minimum_size = Vector2(720, 82)
-	var t := UiTheme.titulo(str(u["zona"]), 28, UiTheme.ACENTO)
+	var color := Color(str(u.get("color", "22c9ff")))
+	var t := UiTheme.titulo(str(u["zona"]), 28, color)
 	t.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	t.autowrap_mode = TextServer.AUTOWRAP_OFF
 	t.set_anchors_preset(Control.PRESET_TOP_WIDE)

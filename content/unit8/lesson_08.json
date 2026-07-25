@@ -1,0 +1,146 @@
+{
+  "id": "u8l08",
+  "title": { "es": "Del prototipo a producción", "en": "From prototype to production" },
+  "byte_intro": {
+    "es": "Que ande en la demo es fácil. Que aguante miles de usuarios reales, con datos raros y a toda hora, es otra historia.",
+    "en": "Working in the demo is easy. Holding up with thousands of real users, weird data and around the clock is another story."
+  },
+  "byte_outro": {
+    "es": "¡Tremendo! Errores, costos, monitoreo y casos borde. Ya sabés qué separa un jueguito de un sistema en producción.",
+    "en": "Awesome! Errors, costs, monitoring and edge cases. You now know what separates a toy from a production system."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué diferencia clave hay entre una demo y producción?", "en": "What's the key difference between a demo and production?" },
+      "options": [
+        { "es": "En producción aparecen entradas raras, picos de uso y errores que hay que manejar", "en": "In production you get weird inputs, usage spikes and errors you must handle" },
+        { "es": "Ninguna, si anda en la demo anda en producción", "en": "None, if it works in the demo it works in production" },
+        { "es": "Producción usa siempre un modelo más chico", "en": "Production always uses a smaller model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La demo la manejás vos con casos lindos. En producción entra de todo: textos rotos, picos de tráfico, fallas de red. Hay que preverlo.",
+        "en": "You control the demo with nice cases. In production everything comes in: broken text, traffic spikes, network failures. You must plan for it."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El modelo o la API falla en medio de una respuesta. En producción, ¿qué hacés?", "en": "The model or API fails mid-response. In production, what do you do?" },
+      "options": [
+        { "es": "Tener un plan: reintentar, degradar con elegancia o dar un mensaje claro", "en": "Have a plan: retry, degrade gracefully or show a clear message" },
+        { "es": "Que se rompa toda la aplicación", "en": "Let the whole app crash" },
+        { "es": "Ignorar el error y mostrar pantalla en blanco", "en": "Ignore the error and show a blank screen" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Las cosas fallan: la red, la API, el modelo. Un sistema serio reintenta, tiene un plan B o al menos avisa con claridad, sin dejar al usuario colgado.",
+        "en": "Things fail: the network, the API, the model. A serious system retries, has a plan B or at least warns clearly, without leaving the user hanging."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué el costo se vuelve crítico en producción y no tanto en la demo?", "en": "Why does cost become critical in production but not so much in the demo?" },
+      "options": [
+        { "es": "Porque cada llamada se multiplica por miles de usuarios", "en": "Because each call multiplies by thousands of users" },
+        { "es": "Porque en la demo la IA es más cara", "en": "Because AI is more expensive in demos" },
+        { "es": "El costo no importa nunca", "en": "Cost never matters" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Una llamada barata por usuario, multiplicada por miles y todo el día, se vuelve una factura enorme. En producción, el costo por llamada importa muchísimo.",
+        "en": "A cheap call per user, times thousands, all day, becomes a huge bill. In production, cost per call matters a lot."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa 'monitorear' un sistema de IA en producción?", "en": "What does 'monitoring' an AI system in production mean?" },
+      "options": [
+        { "es": "Medir en vivo calidad, costos, latencia y errores para actuar a tiempo", "en": "Measure quality, cost, latency and errors live to act in time" },
+        { "es": "Mirar la pantalla fijo todo el día", "en": "Stare at the screen all day" },
+        { "es": "Apagar el sistema por las noches", "en": "Turn the system off at night" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "No podés arreglar lo que no ves. Monitorear es tener alarmas y métricas en vivo: si la calidad baja o los costos suben, te enterás y reaccionás.",
+        "en": "You can't fix what you can't see. Monitoring means live alarms and metrics: if quality drops or costs spike, you find out and react."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un 'caso borde' que en producción sí o sí vas a recibir?", "en": "What's an 'edge case' you WILL get in production?" },
+      "options": [
+        { "es": "Entradas vacías, larguísimas, en otro idioma o con caracteres raros", "en": "Empty, huge, other-language or weird-character inputs" },
+        { "es": "Solo entradas perfectas y prolijas", "en": "Only perfect, tidy inputs" },
+        { "es": "Nunca hay casos borde", "en": "There are never edge cases" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los usuarios reales mandan cualquier cosa: campos vacíos, textos enormes, emojis, otro idioma. Si no lo previste, el sistema se rompe justo ahí.",
+        "en": "Real users send anything: empty fields, huge texts, emojis, another language. If you didn't plan for it, the system breaks right there."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Antes de lanzar a todos, una práctica prudente es...", "en": "Before launching to everyone, a prudent practice is..." },
+      "options": [
+        { "es": "Lanzar de a poco (a un grupo chico) y observar antes de abrir a todos", "en": "Roll out gradually (to a small group) and observe before opening to all" },
+        { "es": "Prender todo de golpe para todos sin mirar", "en": "Turn it all on for everyone at once without watching" },
+        { "es": "No lanzar nunca", "en": "Never launch" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un lanzamiento gradual te deja ver problemas reales con poco riesgo. Si algo falla, afecta a pocos y podés frenar antes de que escale.",
+        "en": "A gradual rollout lets you see real problems with low risk. If something fails, it hits few users and you can stop before it scales."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué cambia al pasar a producción", "en": "Build what changes when going to production" },
+      "solution": {
+        "es": ["En producción manejo errores y picos de uso,", "controlo el costo por llamada", "y monitoreo calidad y latencia en vivo."],
+        "en": ["In production I handle errors and usage spikes,", "control the cost per call", "and monitor quality and latency live."]
+      },
+      "distractors": {
+        "es": ["asumo que todo va a salir bien", "como en la demo"],
+        "en": ["I assume everything will go fine", "like in the demo"]
+      },
+      "explanation": {
+        "es": "Producción = manejar fallas, cuidar el costo real y monitorear todo el tiempo.",
+        "en": "Production = handle failures, watch real cost and monitor all the time."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el plan ante una falla de la API", "en": "Build the plan for an API failure" },
+      "solution": {
+        "es": ["Si la API falla,", "reintento o uso un plan B,", "y si no, aviso al usuario con un mensaje claro."],
+        "en": ["If the API fails,", "I retry or fall back to a plan B,", "and if not, I warn the user with a clear message."]
+      },
+      "distractors": {
+        "es": ["dejo que se caiga toda la app", "y muestro una pantalla en blanco"],
+        "en": ["I let the whole app crash", "and show a blank screen"]
+      },
+      "explanation": {
+        "es": "Ante fallas: reintentar, degradar con elegancia o avisar claro. Nunca dejar al usuario colgado.",
+        "en": "On failures: retry, degrade gracefully or warn clearly. Never leave the user hanging."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo lanzar con menos riesgo", "en": "Build how to launch with less risk" },
+      "solution": {
+        "es": ["Lanzo primero a un grupo chico,", "monitoreo calidad, costos y errores,", "y recién si va bien abro a todos."],
+        "en": ["I launch first to a small group,", "monitor quality, cost and errors,", "and only if it goes well I open to everyone."]
+      },
+      "distractors": {
+        "es": ["abro para todos de golpe", "sin observar nada"],
+        "en": ["I open to everyone at once", "without observing anything"]
+      },
+      "explanation": {
+        "es": "Lanzamiento gradual + monitoreo: ves los problemas reales con poco riesgo antes de escalar.",
+        "en": "Gradual rollout + monitoring: you see real problems at low risk before scaling."
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "u5l07",
+  "title": { "es": "Embeddings: búsqueda por significado", "en": "Embeddings: search by meaning" },
+  "byte_intro": {
+    "es": "¿Cómo hace RAG para encontrar el fragmento correcto? Con embeddings: convierte el significado de un texto en números. Textos con sentido parecido quedan cerca. Así se busca por idea, no por palabra exacta.",
+    "en": "How does RAG find the right chunk? With embeddings: it turns a text's meaning into numbers. Texts with similar meaning end up close together. That's how you search by idea, not exact word."
+  },
+  "byte_outro": {
+    "es": "¡Qué elegante! Un embedding representa el significado como números. Buscar 'auto' encuentra 'coche' porque están cerquita, aunque sean palabras distintas.",
+    "en": "So elegant! An embedding represents meaning as numbers. Searching 'car' finds 'automobile' because they sit close together, even though the words differ."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un embedding?", "en": "What is an embedding?" },
+      "options": [
+        { "es": "Una forma de representar el significado de un texto como números", "en": "A way to represent a text's meaning as numbers" },
+        { "es": "Una foto del texto", "en": "A photo of the text" },
+        { "es": "Un tipo de letra", "en": "A font style" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El embedding traduce el sentido de un texto a números para poder compararlo con otros.",
+        "en": "The embedding turns a text's meaning into numbers so it can be compared with others."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es la 'búsqueda por significado'?", "en": "What is 'search by meaning'?" },
+      "options": [
+        { "es": "Encontrar textos con sentido parecido, aunque usen otras palabras", "en": "Finding texts with similar meaning, even if they use other words" },
+        { "es": "Buscar solo la palabra idéntica letra por letra", "en": "Searching only the identical word letter by letter" },
+        { "es": "Ordenar textos por color", "en": "Sorting texts by color" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Busca por idea. 'Perro' puede traer 'cachorro' o 'mascota', porque significan algo cercano.",
+        "en": "It searches by idea. 'Dog' can bring up 'puppy' or 'pet', because they mean something close."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Buscás 'auto barato'. Una búsqueda por significado también encuentra...", "en": "You search 'cheap car'. A meaning-based search also finds..." },
+      "options": [
+        { "es": "'coche económico', aunque no diga las mismas palabras", "en": "'affordable automobile', even without the same words" },
+        { "es": "Solo textos con las palabras exactas 'auto barato'", "en": "Only texts with the exact words 'cheap car'" },
+        { "es": "Textos sobre cocina", "en": "Texts about cooking" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "'Coche económico' significa casi lo mismo: su embedding queda cerca del de 'auto barato'.",
+        "en": "'Affordable automobile' means almost the same: its embedding sits near that of 'cheap car'."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Dos textos con embeddings 'cercanos' significan que...", "en": "Two texts with 'close' embeddings mean that..." },
+      "options": [
+        { "es": "Tienen un significado parecido", "en": "They have a similar meaning" },
+        { "es": "Tienen la misma cantidad de letras", "en": "They have the same number of letters" },
+        { "es": "Fueron escritos el mismo día", "en": "They were written the same day" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Cercanía entre embeddings = cercanía de significado. Es la base de la búsqueda por sentido.",
+        "en": "Closeness between embeddings = closeness in meaning. It's the basis of meaning search."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué la búsqueda por palabra exacta a veces falla?", "en": "Why does exact-word search sometimes fail?" },
+      "options": [
+        { "es": "Porque la misma idea se dice con palabras distintas", "en": "Because the same idea is said with different words" },
+        { "es": "Porque las palabras se rompen", "en": "Because words break" },
+        { "es": "Porque el teclado falla", "en": "Because the keyboard fails" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si el documento dice 'coche' y vos buscás 'auto', la búsqueda literal no lo encuentra. Los embeddings sí.",
+        "en": "If the document says 'automobile' and you search 'car', literal search misses it. Embeddings don't."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo funciona la búsqueda por significado", "en": "Build how meaning-based search works" },
+      "solution": {
+        "es": ["Se convierte cada texto en un embedding", "se compara qué embeddings están cerca", "y se traen los de significado parecido."],
+        "en": ["Each text is turned into an embedding", "close embeddings are compared", "and the ones with similar meaning are returned."]
+      },
+      "distractors": {
+        "es": ["se ordenan por tamaño de archivo", "y se ignora el sentido"],
+        "en": ["they're sorted by file size", "ignoring the meaning"]
+      },
+      "explanation": {
+        "es": "Texto → embedding → comparar cercanía → traer los parecidos. Todo por significado.",
+        "en": "Text → embedding → compare closeness → return the similar ones. All by meaning."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Dónde se usan mucho los embeddings?", "en": "Where are embeddings used a lot?" },
+      "options": [
+        { "es": "En RAG, para encontrar los fragmentos relevantes a una pregunta", "en": "In RAG, to find the chunks relevant to a question" },
+        { "es": "Para cambiar el brillo del monitor", "en": "To change the monitor brightness" },
+        { "es": "Para cargar la batería", "en": "To charge the battery" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "RAG usa embeddings para localizar, por significado, qué pedazos de tus datos responden mejor.",
+        "en": "RAG uses embeddings to locate, by meaning, which pieces of your data answer best."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la definición de embedding", "en": "Build the definition of embedding" },
+      "solution": {
+        "es": ["Un embedding representa el significado", "como números", "para comparar textos por sentido."],
+        "en": ["An embedding represents meaning", "as numbers", "to compare texts by sense."]
+      },
+      "distractors": {
+        "es": ["guarda el color del texto", "y su tamaño"],
+        "en": ["stores the text color", "and its size"]
+      },
+      "explanation": {
+        "es": "Significado convertido en números para comparar: eso es un embedding.",
+        "en": "Meaning turned into numbers to compare: that's an embedding."
+      }
+    }
+  ]
+}

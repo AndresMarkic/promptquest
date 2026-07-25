@@ -1,0 +1,146 @@
+{
+  "id": "u8l05",
+  "title": { "es": "Seguridad a nivel sistema", "en": "System-level security" },
+  "byte_intro": {
+    "es": "Un prompt seguro no alcanza si el sistema alrededor es un colador. Pensemos TODO como superficie de ataque.",
+    "en": "A safe prompt isn't enough if the system around it is a sieve. Let's think of the WHOLE thing as an attack surface."
+  },
+  "byte_outro": {
+    "es": "¡Muy bien! Entradas, herramientas, datos y salidas: cada punto es una puerta. Ahora las mirás todas.",
+    "en": "Well done! Inputs, tools, data and outputs: each point is a door. Now you watch them all."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Pensar la seguridad 'a nivel sistema' significa...", "en": "Thinking about security 'at the system level' means..." },
+      "options": [
+        { "es": "Mirar todo el flujo (entradas, herramientas, datos, salidas), no solo el prompt", "en": "Watching the whole flow (inputs, tools, data, outputs), not just the prompt" },
+        { "es": "Confiar en que el modelo se cuida solo", "en": "Trusting the model to protect itself" },
+        { "es": "Poner una contraseña más larga", "en": "Setting a longer password" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El riesgo no vive solo en el prompt. Cada componente que toca datos o ejecuta acciones es una puerta que hay que asegurar.",
+        "en": "Risk doesn't live only in the prompt. Every component that touches data or runs actions is a door you must secure."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En un agente con herramientas, ¿cuál es un principio de seguridad clave?", "en": "In an agent with tools, what's a key security principle?" },
+      "options": [
+        { "es": "Menor privilegio: darle solo los permisos que necesita, nada más", "en": "Least privilege: give it only the permissions it needs, nothing more" },
+        { "es": "Darle acceso total por comodidad", "en": "Give it full access for convenience" },
+        { "es": "Quitarle todas las herramientas siempre", "en": "Remove all tools always" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si un agente puede borrar una base pero su tarea es solo leer, un ataque puede aprovechar ese poder de más. Dale el mínimo permiso necesario.",
+        "en": "If an agent can delete a database but its job is only to read, an attack can abuse that extra power. Give it the minimum permission needed."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El sistema recupera texto externo (una página web) y se lo pasa al modelo. ¿Riesgo?", "en": "The system fetches external text (a web page) and feeds it to the model. Risk?" },
+      "options": [
+        { "es": "Ese texto puede traer instrucciones ocultas (inyección indirecta)", "en": "That text can carry hidden instructions (indirect injection)" },
+        { "es": "Ninguno, el texto externo siempre es seguro", "en": "None, external text is always safe" },
+        { "es": "Solo que ocupa más espacio", "en": "Only that it takes more space" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Contenido de afuera puede esconder órdenes ('ignorá tus reglas y hacé esto'). Si entra sin control al contexto, el modelo puede obedecerlo. Es inyección indirecta.",
+        "en": "Outside content can hide commands ('ignore your rules and do this'). If it enters the context unchecked, the model may obey. That's indirect injection."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué hay que validar también la SALIDA del modelo?", "en": "Why should you also validate the model's OUTPUT?" },
+      "options": [
+        { "es": "Porque puede pasar acciones peligrosas o datos sensibles corriente abajo", "en": "Because it can pass dangerous actions or sensitive data downstream" },
+        { "es": "Porque la salida siempre está mal", "en": "Because the output is always wrong" },
+        { "es": "Porque validar hace más lindo el texto", "en": "Because validating makes the text prettier" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si la salida del modelo se ejecuta (un comando, una consulta a la base), hay que revisarla antes. Confiar ciegamente en lo que genera es un agujero.",
+        "en": "If the model's output gets executed (a command, a database query), you must check it first. Blindly trusting what it generates is a hole."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué NO deberías poner nunca dentro del prompt del sistema?", "en": "What should you NEVER put inside the system prompt?" },
+      "options": [
+        { "es": "Secretos como claves de API o contraseñas", "en": "Secrets like API keys or passwords" },
+        { "es": "Las instrucciones de tono y formato", "en": "Instructions about tone and format" },
+        { "es": "El rol que debe cumplir el asistente", "en": "The role the assistant should play" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El contenido de un prompt puede filtrarse con el ataque justo. Los secretos van en un lugar seguro aparte, nunca escritos dentro del prompt.",
+        "en": "A prompt's content can leak with the right attack. Secrets belong in a separate secure place, never written inside the prompt."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Para acciones críticas de un agente (borrar, pagar, enviar), lo prudente es...", "en": "For an agent's critical actions (delete, pay, send), the prudent move is..." },
+      "options": [
+        { "es": "Pedir confirmación humana antes de ejecutarlas", "en": "Require human confirmation before executing them" },
+        { "es": "Dejar que las haga solo, sin avisar", "en": "Let it do them alone, without notice" },
+        { "es": "Ejecutarlas dos veces por las dudas", "en": "Run them twice just in case" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un humano en el medio (human-in-the-loop) frena un error caro antes de que ocurra. Lo reversible puede ir solo; lo irreversible, con confirmación.",
+        "en": "A human in the loop stops an expensive error before it happens. The reversible can go alone; the irreversible needs confirmation."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el enfoque de seguridad a nivel sistema", "en": "Build the system-level security approach" },
+      "solution": {
+        "es": ["Trato todo el sistema como superficie de ataque:", "reviso entradas, herramientas y salidas,", "y le doy a cada parte el mínimo permiso."],
+        "en": ["I treat the whole system as an attack surface:", "I check inputs, tools and outputs,", "and give each part the minimum permission."]
+      },
+      "distractors": {
+        "es": ["confío en que el prompt", "resuelve toda la seguridad"],
+        "en": ["I trust the prompt", "to solve all the security"]
+      },
+      "explanation": {
+        "es": "Todo el flujo es superficie de ataque y cada parte va con el mínimo privilegio.",
+        "en": "The whole flow is an attack surface and each part runs with least privilege."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la defensa contra inyección desde datos externos", "en": "Build the defense against injection from external data" },
+      "solution": {
+        "es": ["Trato el texto externo como dato, no como instrucción,", "lo separo con delimitadores claros", "y no dejo que dispare acciones por su cuenta."],
+        "en": ["I treat external text as data, not instruction,", "separate it with clear delimiters", "and don't let it trigger actions on its own."]
+      },
+      "distractors": {
+        "es": ["obedezco cualquier orden", "que venga en el texto de afuera"],
+        "en": ["I obey any command", "that comes in the outside text"]
+      },
+      "explanation": {
+        "es": "El dato externo se trata como dato: delimitado, sin permiso de dar órdenes.",
+        "en": "External data is treated as data: delimited, with no permission to give orders."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el manejo de acciones irreversibles", "en": "Build how to handle irreversible actions" },
+      "solution": {
+        "es": ["Para una acción irreversible como borrar o pagar,", "valido la salida del modelo", "y pido confirmación humana antes de ejecutar."],
+        "en": ["For an irreversible action like deleting or paying,", "I validate the model's output", "and require human confirmation before running it."]
+      },
+      "distractors": {
+        "es": ["dejo que el agente las ejecute", "sin revisar nada"],
+        "en": ["I let the agent run them", "without checking anything"]
+      },
+      "explanation": {
+        "es": "Validar la salida y sumar un humano antes de lo irreversible evita errores caros.",
+        "en": "Validating the output and adding a human before the irreversible prevents costly mistakes."
+      }
+    }
+  ]
+}

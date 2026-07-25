@@ -1,0 +1,146 @@
+{
+  "id": "u4l03",
+  "title": { "es": "Razonamiento, contexto y multimodal", "en": "Reasoning, context and multimodal" },
+  "byte_intro": {
+    "es": "Cada modelo tiene 'superpoderes' distintos. Hoy miro tres luces importantes: cuánto razona, cuánto contexto aguanta y si entiende más que texto.",
+    "en": "Each model has different 'superpowers'. Today I watch three important lights: how much it reasons, how much context it holds, and whether it understands more than text."
+  },
+  "byte_outro": {
+    "es": "Ya entendés razonamiento, contexto y multimodal. Son capacidades: cuáles importan depende de tu tarea.",
+    "en": "Now you get reasoning, context and multimodal. They're capabilities: which ones matter depends on your task."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Cuando decimos que un modelo 'razona más', nos referimos a que...", "en": "When we say a model 'reasons more', we mean that..." },
+      "options": [
+        { "es": "Puede resolver mejor problemas de varios pasos, pensando antes de responder", "en": "It can better solve multi-step problems, thinking before answering" },
+        { "es": "Siente emociones humanas", "en": "It feels human emotions" },
+        { "es": "Escribe siempre más largo", "en": "It always writes longer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Más capacidad de razonamiento suele ayudar en tareas con varios pasos, como problemas lógicos o de matemática.",
+        "en": "More reasoning capacity usually helps with multi-step tasks, like logic or math problems."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es la 'ventana de contexto' de un modelo?", "en": "What is a model's 'context window'?" },
+      "options": [
+        { "es": "Cuánta información puede tener presente a la vez", "en": "How much information it can keep in mind at once" },
+        { "es": "El tamaño de la pantalla del chat", "en": "The size of the chat screen" },
+        { "es": "La velocidad de tu internet", "en": "Your internet speed" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El contexto es su memoria de trabajo: todo lo que entra ahí es lo que puede considerar para responder.",
+        "en": "The context is its working memory: everything that fits there is what it can consider to answer."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un contexto más grande es útil sobre todo cuando...", "en": "A larger context is most useful when..." },
+      "options": [
+        { "es": "Trabajás con documentos largos o conversaciones extensas", "en": "You work with long documents or long conversations" },
+        { "es": "Solo decís 'hola'", "en": "You only say 'hi'" },
+        { "es": "Querés que responda más rápido siempre", "en": "You always want a faster answer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si necesitás que 'recuerde' mucho material a la vez, un contexto amplio ayuda. Para tareas cortas casi no cambia nada.",
+        "en": "If you need it to 'remember' a lot of material at once, a big context helps. For short tasks it barely matters."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué significa que un modelo sea 'multimodal'?", "en": "What does it mean for a model to be 'multimodal'?" },
+      "options": [
+        { "es": "Puede trabajar con más de un tipo de dato, como texto e imágenes", "en": "It can work with more than one data type, like text and images" },
+        { "es": "Tiene varios modos de color", "en": "It has several color modes" },
+        { "es": "Funciona en varios idiomas solamente", "en": "It only works in several languages" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Multimodal = varias 'modalidades'. Por ejemplo, entender texto y también imágenes (y a veces audio).",
+        "en": "Multimodal = several 'modalities'. For example, understanding text and also images (and sometimes audio)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés que la IA describa qué hay en una foto. Necesitás un modelo que sea...", "en": "You want the AI to describe what's in a photo. You need a model that is..." },
+      "options": [
+        { "es": "Multimodal, capaz de entender imágenes", "en": "Multimodal, able to understand images" },
+        { "es": "Solo de texto", "en": "Text-only" },
+        { "es": "El más rápido, sin importar qué entiende", "en": "The fastest, no matter what it understands" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si el dato de entrada es una imagen, el modelo tiene que poder 'verla'; para eso hace falta que sea multimodal.",
+        "en": "If the input is an image, the model must be able to 'see' it; for that it needs to be multimodal."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Por qué NO conviene pedir siempre 'el que más razona y más contexto tiene'?", "en": "Why is it NOT wise to always pick 'the one that reasons most and has the biggest context'?" },
+      "options": [
+        { "es": "Porque suele ser más lento y caro; a veces no lo necesitás", "en": "Because it tends to be slower and costlier; sometimes you don't need it" },
+        { "es": "Porque razonar es malo", "en": "Because reasoning is bad" },
+        { "es": "Porque el contexto grande rompe el modelo", "en": "Because a big context breaks the model" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Más capacidad suele costar más tiempo y dinero. Para tareas simples, un modelo más liviano alcanza.",
+        "en": "More capability usually costs more time and money. For simple tasks, a lighter model is enough."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué es la ventana de contexto", "en": "Build what the context window is" },
+      "solution": {
+        "es": ["La ventana de contexto", "es la información", "que el modelo tiene presente a la vez."],
+        "en": ["The context window", "is the information", "the model keeps in mind at once."]
+      },
+      "distractors": {
+        "es": ["es el tamaño", "de la pantalla del chat"],
+        "en": ["is the size", "of the chat screen"]
+      },
+      "explanation": {
+        "es": "Todo lo que entra en el contexto es lo que puede considerar para responder.",
+        "en": "Everything in the context is what it can consider to answer."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cuándo importa el razonamiento", "en": "Build when reasoning matters" },
+      "solution": {
+        "es": ["El razonamiento importa", "en tareas de varios pasos,", "como lógica o matemática."],
+        "en": ["Reasoning matters", "in multi-step tasks,", "like logic or math."]
+      },
+      "distractors": {
+        "es": ["no sirve para nada", "y solo hace lento al modelo"],
+        "en": ["is useless", "and only slows the model down"]
+      },
+      "explanation": {
+        "es": "Para pasos encadenados, razonar bien marca la diferencia.",
+        "en": "For chained steps, reasoning well makes the difference."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá qué necesitás para trabajar con imágenes", "en": "Build what you need to work with images" },
+      "solution": {
+        "es": ["Para entender imágenes", "necesitás un modelo", "multimodal."],
+        "en": ["To understand images", "you need a model", "that is multimodal."]
+      },
+      "distractors": {
+        "es": ["alcanza con uno", "de solo texto"],
+        "en": ["a text-only one", "is enough"]
+      },
+      "explanation": {
+        "es": "Sin capacidad multimodal, el modelo no puede procesar la imagen.",
+        "en": "Without multimodal capability, the model can't process the image."
+      }
+    }
+  ]
+}

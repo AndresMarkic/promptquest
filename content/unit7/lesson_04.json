@@ -1,0 +1,132 @@
+{
+  "id": "u7l04",
+  "title": { "es": "Errores y casos borde", "en": "Errors and edge cases" },
+  "byte_intro": {
+    "es": "En toda fábrica algo falla: se traba una máquina, entra una pieza mal cortada. Con la IA hay que prever qué hacer cuando falla o entra basura.",
+    "en": "In every factory something breaks: a machine jams, a badly cut part comes in. With AI you must plan what to do when it fails or garbage comes in."
+  },
+  "byte_outro": {
+    "es": "¡Bien! Un sistema serio no asume que todo sale perfecto: valida la entrada y tiene un plan B para cuando la IA se equivoca.",
+    "en": "Nice! A serious system doesn't assume everything goes perfectly: it validates input and has a plan B for when the AI slips."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "'Basura entra, basura sale' significa que...", "en": "'Garbage in, garbage out' means that..." },
+      "options": [
+        { "es": "Si la entrada es mala, la salida de la IA también será mala", "en": "If the input is bad, the AI's output will be bad too" },
+        { "es": "La IA convierte cualquier basura en oro", "en": "AI turns any garbage into gold" },
+        { "es": "Nunca hay que revisar la entrada", "en": "You never need to check the input" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA depende de lo que le das. Datos incompletos o sucios producen respuestas malas: por eso se valida la entrada.",
+        "en": "AI depends on what you feed it. Incomplete or dirty data yields bad answers: that's why you validate the input."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un 'caso borde'?", "en": "What is an 'edge case'?" },
+      "options": [
+        { "es": "Una situación rara o extrema que se sale de lo habitual", "en": "A rare or extreme situation outside the usual" },
+        { "es": "El caso más común de todos", "en": "The most common case of all" },
+        { "es": "Un error de tipeo", "en": "A typo" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Los casos borde son las excepciones: un campo vacío, un idioma inesperado, un número enorme. Ahí suele fallar el sistema.",
+        "en": "Edge cases are the exceptions: an empty field, an unexpected language, a huge number. That's where systems tend to fail."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La IA devuelve una respuesta con formato roto que rompe el paso siguiente. ¿Qué conviene?", "en": "The AI returns a broken-format answer that breaks the next step. What's best?" },
+      "options": [
+        { "es": "Validar la salida y, si no cumple el formato, reintentar o marcar el caso", "en": "Validate the output and, if it doesn't match the format, retry or flag the case" },
+        { "es": "Seguir adelante como si nada", "en": "Carry on as if nothing happened" },
+        { "es": "Apagar todo el sistema para siempre", "en": "Shut the whole system down forever" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Chequear que la salida cumpla el formato esperado te deja reintentar o derivar el caso antes de que rompa lo que sigue.",
+        "en": "Checking the output meets the expected format lets you retry or route the case before it breaks what follows."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un usuario manda un texto vacío al sistema. ¿Qué debería pasar?", "en": "A user sends an empty text to the system. What should happen?" },
+      "options": [
+        { "es": "Detectarlo antes de llamar a la IA y pedir un texto válido", "en": "Detect it before calling the AI and ask for a valid text" },
+        { "es": "Mandarlo igual a la IA y ver qué inventa", "en": "Send it to the AI anyway and see what it makes up" },
+        { "es": "Cobrarle una multa al usuario", "en": "Fine the user" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Validar la entrada antes de gastar una llamada a la IA evita respuestas inventadas y errores más adelante.",
+        "en": "Validating input before spending an AI call avoids made-up answers and errors down the line."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es un buen 'plan B' cuando la IA no puede resolver un caso?", "en": "What's a good 'plan B' when the AI can't resolve a case?" },
+      "options": [
+        { "es": "Derivarlo a un humano o dar una respuesta segura por defecto", "en": "Route it to a human or give a safe default answer" },
+        { "es": "Inventar cualquier respuesta con tal de responder", "en": "Make up any answer just to respond" },
+        { "es": "Repetir el mismo error infinitas veces", "en": "Repeat the same error infinitely" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un buen sistema falla con gracia: si no puede, deriva a una persona o responde algo seguro, no inventa.",
+        "en": "A good system fails gracefully: if it can't, it routes to a person or gives a safe reply, it doesn't make things up."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la defensa contra 'basura entra, basura sale'", "en": "Build the defense against 'garbage in, garbage out'" },
+      "solution": {
+        "es": ["Validá la entrada", "antes de llamar a la IA", "y rechazá los datos incompletos."],
+        "en": ["Validate the input", "before calling the AI", "and reject incomplete data."]
+      },
+      "distractors": {
+        "es": ["Mandá cualquier cosa", "y confiá en que la IA lo arregle."],
+        "en": ["Send anything", "and trust the AI to fix it."]
+      },
+      "explanation": {
+        "es": "Validar y rechazar lo incompleto antes de llamar a la IA es la primera línea de defensa.",
+        "en": "Validating and rejecting the incomplete before calling the AI is the first line of defense."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un manejo de error para cuando la salida viene mal", "en": "Build an error handler for when the output comes out wrong" },
+      "solution": {
+        "es": ["Revisá que la salida cumpla el formato,", "si no cumple reintentá una vez,", "y si sigue mal derivá a un humano."],
+        "en": ["Check the output matches the format,", "if not, retry once,", "and if still wrong route to a human."]
+      },
+      "distractors": {
+        "es": ["publicá la salida rota igual", "y olvidate del tema."],
+        "en": ["publish the broken output anyway", "and forget about it."]
+      },
+      "explanation": {
+        "es": "Revisar, reintentar una vez y, si insiste el fallo, derivar: así el error no se propaga.",
+        "en": "Check, retry once, and if the failure persists, route: that way the error doesn't spread."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená cómo tratar un caso borde en un clasificador de mails", "en": "Order how to handle an edge case in an email classifier" },
+      "solution": {
+        "es": ["Si el mail está vacío o en otro idioma,", "no lo fuerces en una categoría,", "marcalo como 'revisar a mano'."],
+        "en": ["If the email is empty or in another language,", "don't force it into a category,", "flag it as 'review manually'."]
+      },
+      "distractors": {
+        "es": ["metelo en cualquier categoría al azar", "y seguí como si nada."],
+        "en": ["dump it in any random category", "and carry on as usual."]
+      },
+      "explanation": {
+        "es": "Ante un caso raro, mejor marcarlo para revisión que forzar una categoría equivocada.",
+        "en": "For an odd case, better to flag it for review than force a wrong category."
+      }
+    }
+  ]
+}

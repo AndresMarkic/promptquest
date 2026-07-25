@@ -1,0 +1,191 @@
+{
+  "id": "u8l10",
+  "boss": true,
+  "title": { "es": "Boss Final: la Cima", "en": "Final Boss: The Summit" },
+  "byte_intro": {
+    "es": "Esta es la prueba definitiva. Doce desafíos que juntan TODO lo que aprendimos, desde el primer día hasta acá arriba. Si la superás, recupero mi memoria entera... y vos te convertís en Ingeniero de IA. Respirá hondo. Subamos a la Cima juntos.",
+    "en": "This is the ultimate test. Twelve challenges that bring together EVERYTHING we learned, from day one to up here. If you pass it, I recover my whole memory... and you become an AI Engineer. Take a deep breath. Let's climb the Summit together."
+  },
+  "byte_outro": {
+    "es": "¡LO LOGRASTE! Recuperé toda mi memoria y vos ya pensás y diseñás sistemas de IA como un ingeniero senior. Empezaste sin saber qué era una IA generativa y hoy sabés armar agentes, RAG, pipelines, evaluarlos, asegurarlos y decidir con criterio y ética. Sos, oficialmente, un Ingeniero de IA. Gracias por subir conmigo hasta la Cima. ¡Lo hicimos!",
+    "en": "YOU DID IT! I recovered my whole memory and you now think and design AI systems like a senior engineer. You started not knowing what generative AI was, and today you can build agents, RAG, pipelines, evaluate them, secure them and decide with judgment and ethics. You are, officially, an AI Engineer. Thank you for climbing to the Summit with me. We did it!"
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Empecemos por el principio: ¿qué distingue a una IA generativa?", "en": "Let's start at the beginning: what sets a generative AI apart?" },
+      "options": [
+        { "es": "Crea contenido nuevo prediciendo, según patrones aprendidos", "en": "It creates new content by predicting, based on learned patterns" },
+        { "es": "Solo copia páginas de internet", "en": "It just copies web pages" },
+        { "es": "Solo hace cálculos exactos", "en": "It only does exact calculations" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Genera texto nuevo prediciendo la palabra siguiente a partir de lo que aprendió. (Unidad 1)",
+        "en": "It generates new text by predicting the next word from what it learned. (Unit 1)"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un dato clave suena convincente pero podría ser inventado. ¿Qué hacés?", "en": "A key fact sounds convincing but could be made up. What do you do?" },
+      "options": [
+        { "es": "Verificarlo en una fuente confiable antes de usarlo", "en": "Verify it in a reliable source before using it" },
+        { "es": "Usarlo directo, suena seguro", "en": "Use it directly, it sounds confident" },
+        { "es": "Pedirle a la IA que jure que es verdad", "en": "Ask the AI to swear it's true" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Las alucinaciones suenan seguras pero son falsas: verificar es la defensa. (Unidad 1)",
+        "en": "Hallucinations sound confident but are false: verifying is the defense. (Unit 1)"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Pegás un texto externo largo con una instrucción. Para que no confunda dato con orden...", "en": "You paste a long external text with an instruction. So it doesn't mix data with command..." },
+      "options": [
+        { "es": "Lo separás con delimitadores y aclarás que es solo dato a procesar", "en": "You separate it with delimiters and clarify it's just data to process" },
+        { "es": "Pegás todo junto sin marcas", "en": "You paste it all together with no marks" },
+        { "es": "Escribís la orden en el medio del texto", "en": "You write the command in the middle of the text" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Delimitar separa instrucción de dato y previene que obedezca órdenes ocultas. (Unidad 2 + seguridad)",
+        "en": "Delimiting separates instruction from data and prevents obeying hidden commands. (Unit 2 + security)"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés que la IA siga un formato específico. La técnica más directa es...", "en": "You want the AI to follow a specific format. The most direct technique is..." },
+      "options": [
+        { "es": "Darle 1 o 2 ejemplos del patrón que querés (few-shot)", "en": "Give it 1 or 2 examples of the pattern you want (few-shot)" },
+        { "es": "No mostrar nada y esperar que adivine", "en": "Show nothing and hope it guesses" },
+        { "es": "Pedirle que sea más grande", "en": "Ask it to be bigger" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Con ejemplos, el modelo imita el patrón que le mostrás. (Fundamentos de prompting)",
+        "en": "With examples, the model imitates the pattern you show it. (Prompting fundamentals)"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Necesitás responder preguntas sobre los manuales internos de una empresa. ¿Qué diseñás?", "en": "You need to answer questions about a company's internal manuals. What do you design?" },
+      "options": [
+        { "es": "Un RAG: parte los manuales en chunks, recupera lo relevante y responde con esa base", "en": "A RAG: split the manuals into chunks, retrieve the relevant part and answer grounded in it" },
+        { "es": "Entrenar un modelo nuevo desde cero con todo", "en": "Train a new model from scratch with everything" },
+        { "es": "Pedirle al modelo que adivine el contenido", "en": "Ask the model to guess the content" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Datos propios que cambian = RAG con chunking y recuperación, no entrenar de cero. (Unidad 8, RAG + caso de negocio)",
+        "en": "Own data that changes = RAG with chunking and retrieval, not training from scratch. (Unit 8, RAG + business case)"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La tarea necesita varios pasos con decisiones según lo que va pasando. ¿Qué usás?", "en": "The task needs several steps with decisions based on what happens. What do you use?" },
+      "options": [
+        { "es": "Un agente que planifica, actúa, observa y corrige", "en": "An agent that plans, acts, observes and corrects" },
+        { "es": "Un solo prompt de una respuesta", "en": "A single one-shot prompt" },
+        { "es": "Una calculadora", "en": "A calculator" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Multi-paso con decisiones = agente. Un paso solo = prompt directo. (Unidad 8, agentes)",
+        "en": "Multi-step with decisions = agent. Single step = direct prompt. (Unit 8, agents)"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tenés miles de casos por día y un presupuesto ajustado. ¿Cómo lo armás?", "en": "You have thousands of cases a day and a tight budget. How do you build it?" },
+      "options": [
+        { "es": "Pipeline: modelo barato filtra, potente razona solo lo difícil", "en": "Pipeline: cheap model filters, powerful one reasons only the hard part" },
+        { "es": "El modelo más caro en cada caso, siempre", "en": "The most expensive model on every case, always" },
+        { "es": "Un solo modelo gigante para todo sin filtrar", "en": "One giant model for everything, no filtering" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El modelo correcto en cada paso baja el costo sin perder calidad donde importa. (Unidad 8, pipelines)",
+        "en": "The right model at each step lowers cost without losing quality where it matters. (Unit 8, pipelines)"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Cambiaste un prompt para mejorar un caso. ¿Cómo sabés que no rompiste otros?", "en": "You changed a prompt to improve one case. How do you know you didn't break others?" },
+      "options": [
+        { "es": "Corriendo un set de evaluación fijo antes y después del cambio", "en": "Running a fixed eval set before and after the change" },
+        { "es": "Probando a ojo un solo caso nuevo", "en": "Eyeballing one new case" },
+        { "es": "Asumiendo que todo sigue igual", "en": "Assuming everything is unchanged" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El set de evaluación revela regresiones que a ojo no ves. (Unidad 8, evaluación)",
+        "en": "The eval set reveals regressions you can't see by eye. (Unit 8, evaluation)"
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la defensa de seguridad a nivel sistema", "en": "Build the system-level security defense" },
+      "solution": {
+        "es": ["Trato todo el sistema como superficie de ataque,", "le doy a cada parte el mínimo permiso", "y pido confirmación humana antes de una acción irreversible."],
+        "en": ["I treat the whole system as an attack surface,", "give each part the minimum permission", "and require human confirmation before an irreversible action."]
+      },
+      "distractors": {
+        "es": ["confío solo en el prompt", "y le doy acceso total al agente"],
+        "en": ["I trust only the prompt", "and give the agent full access"]
+      },
+      "explanation": {
+        "es": "Superficie de ataque completa, mínimo privilegio y humano antes de lo irreversible. (Unidad 8, seguridad)",
+        "en": "Whole attack surface, least privilege and a human before the irreversible. (Unit 8, security)"
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá cómo diagnosticar un RAG que responde mal", "en": "Build how to diagnose a RAG that answers badly" },
+      "solution": {
+        "es": ["Reviso primero qué chunks recuperó;", "si no trajo el correcto,", "ajusto el chunking y sumo un re-ranker."],
+        "en": ["I first check which chunks it retrieved;", "if it didn't bring the right one,", "I tune the chunking and add a re-ranker."]
+      },
+      "distractors": {
+        "es": ["cambio el modelo generador", "sin mirar la recuperación"],
+        "en": ["I swap the generator model", "without checking retrieval"]
+      },
+      "explanation": {
+        "es": "Causa raíz primero: casi siempre el cuello de botella es la recuperación. (Unidad 8, RAG)",
+        "en": "Root cause first: the bottleneck is almost always retrieval. (Unit 8, RAG)"
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la decisión build vs buy", "en": "Build the build vs buy decision" },
+      "solution": {
+        "es": ["Construyo lo que me diferencia,", "compro lo que es commodity,", "y comparo el costo total, no solo el precio."],
+        "en": ["I build what sets me apart,", "buy what's a commodity,", "and compare the total cost, not just the price."]
+      },
+      "distractors": {
+        "es": ["construyo todo desde cero,", "hasta el modelo base"],
+        "en": ["I build everything from scratch,", "even the base model"]
+      },
+      "explanation": {
+        "es": "Diferencial se construye, commodity se compra, mirando el costo total. (Unidad 8, build vs buy)",
+        "en": "Build the differentiator, buy the commodity, weighing total cost. (Unit 8, build vs buy)"
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el cierre: cómo llevar un sistema de IA a producción con responsabilidad", "en": "Build the finale: how to take an AI system to production responsibly" },
+      "solution": {
+        "es": ["Lanzo de a poco y monitoreo calidad, costos y errores,", "manejo las fallas y los casos borde,", "y en decisiones sensibles dejo la última palabra a una persona."],
+        "en": ["I roll out gradually and monitor quality, cost and errors,", "handle failures and edge cases,", "and in sensitive decisions I leave the final call to a person."]
+      },
+      "distractors": {
+        "es": ["abro para todos de golpe,", "y dejo que la IA decida todo sola"],
+        "en": ["I open to everyone at once,", "and let the AI decide everything alone"]
+      },
+      "explanation": {
+        "es": "Producción responsable: lanzamiento gradual, monitoreo, manejo de fallas y un humano en lo sensible. Con esto, cerraste el juego como un verdadero Ingeniero de IA. (Unidades 8 + ética)",
+        "en": "Responsible production: gradual rollout, monitoring, failure handling and a human on the sensitive stuff. With this, you closed the game as a true AI Engineer. (Units 8 + ethics)"
+      }
+    }
+  ]
+}

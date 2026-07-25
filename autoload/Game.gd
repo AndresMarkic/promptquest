@@ -6,6 +6,7 @@ const PANTALLAS := {
 	"map": "res://scenes/map/MapScreen.tscn",
 	"lesson": "res://scenes/lesson/LessonScreen.tscn",
 	"result": "res://scenes/ui/ResultScreen.tscn",
+	"cert": "res://scenes/ui/CertScreen.tscn",
 }
 
 var params: Dictionary = {}  # parámetros para la pantalla entrante

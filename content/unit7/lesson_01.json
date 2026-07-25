@@ -1,0 +1,132 @@
+{
+  "id": "u7l01",
+  "title": { "es": "Automatizar lo repetitivo", "en": "Automating the repetitive" },
+  "byte_intro": {
+    "es": "¡Bienvenido a La Fábrica! Acá la IA no es un juguete: es un obrero más en la línea. Primero: ¿qué tarea repetitiva le delegamos?",
+    "en": "Welcome to The Factory! Here AI isn't a toy: it's another worker on the line. First: which repetitive task do we hand it?"
+  },
+  "byte_outro": {
+    "es": "Aprendiste a elegir la tarea justa. La IA rinde cuando lo que delegás es repetitivo, claro y de bajo riesgo.",
+    "en": "You learned to pick the right task. AI pays off when what you delegate is repetitive, clear and low-risk."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué tipo de tarea conviene automatizar con IA?", "en": "What kind of task is worth automating with AI?" },
+      "options": [
+        { "es": "Una que se repite muchas veces y sigue un patrón parecido", "en": "One that repeats many times and follows a similar pattern" },
+        { "es": "Una decisión única, delicada y sin reglas claras", "en": "A one-off, delicate decision with no clear rules" },
+        { "es": "Cualquiera, no importa cuál", "en": "Any of them, doesn't matter which" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La IA brilla en volumen: tareas repetitivas y con patrón. Lo único y delicado conviene dejarlo en manos humanas.",
+        "en": "AI shines at volume: repetitive, patterned tasks. The unique and delicate stuff is better left to humans."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En una tienda online, ¿cuál es un buen primer candidato a automatizar?", "en": "In an online store, which is a good first candidate to automate?" },
+      "options": [
+        { "es": "Redactar las respuestas a las 200 preguntas frecuentes que llegan por día", "en": "Drafting replies to the 200 FAQs that come in per day" },
+        { "es": "Decidir si despedir a un empleado", "en": "Deciding whether to fire an employee" },
+        { "es": "Firmar el balance anual de la empresa", "en": "Signing the company's annual balance sheet" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Las preguntas frecuentes son repetitivas y de bajo riesgo: ideales para un primer borrador con IA. Las decisiones sensibles, no.",
+        "en": "FAQs are repetitive and low-risk: ideal for an AI first draft. Sensitive decisions are not."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Antes de automatizar una tarea, ¿qué conviene chequear?", "en": "Before automating a task, what's worth checking?" },
+      "options": [
+        { "es": "Que se pueda explicar en instrucciones claras y que un error no sea grave", "en": "That it can be explained in clear instructions and that an error isn't serious" },
+        { "es": "Que sea la tarea más difícil de toda la empresa", "en": "That it's the hardest task in the whole company" },
+        { "es": "Que a nadie le importe el resultado", "en": "That nobody cares about the result" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si podés explicarla en instrucciones claras y un fallo se corrige fácil, es buena candidata. Arrancá por lo simple, no por lo más difícil.",
+        "en": "If you can explain it in clear instructions and a slip is easy to fix, it's a good candidate. Start with the simple, not the hardest."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estas tareas NO conviene delegar entera a la IA?", "en": "Which of these should NOT be fully delegated to AI?" },
+      "options": [
+        { "es": "Aprobar un préstamo bancario sin que nadie lo revise", "en": "Approving a bank loan with no one reviewing it" },
+        { "es": "Ordenar por tema los correos que entran", "en": "Sorting incoming emails by topic" },
+        { "es": "Resumir reseñas de productos", "en": "Summarizing product reviews" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Aprobar un préstamo tiene alto impacto y responsabilidad legal: necesita decisión humana. Ordenar o resumir es de bajo riesgo.",
+        "en": "Approving a loan carries high impact and legal responsibility: it needs a human decision. Sorting or summarizing is low-risk."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Una tarea se hace 3 veces por año y cada vez es distinta. ¿Automatizarla?", "en": "A task runs 3 times a year and each time it's different. Automate it?" },
+      "options": [
+        { "es": "No conviene: poco volumen y sin patrón, el esfuerzo no se paga", "en": "Not worth it: low volume and no pattern, the effort doesn't pay off" },
+        { "es": "Sí, siempre hay que automatizar todo", "en": "Yes, you should always automate everything" },
+        { "es": "Sí, aunque tarde más que hacerlo a mano", "en": "Yes, even if it takes longer than doing it by hand" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Automatizar cuesta tiempo de armado. Si el volumen es bajo y cada caso es distinto, no se recupera la inversión.",
+        "en": "Automating takes setup time. If volume is low and each case differs, you don't recoup the investment."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el criterio para elegir una tarea a automatizar", "en": "Build the criteria to pick a task to automate" },
+      "solution": {
+        "es": ["Elegí una tarea repetitiva,", "con un patrón claro", "y de bajo riesgo si falla."],
+        "en": ["Pick a repetitive task,", "with a clear pattern", "and low risk if it fails."]
+      },
+      "distractors": {
+        "es": ["única e irrepetible,", "donde un error sea catastrófico."],
+        "en": ["unique and one-off,", "where an error is catastrophic."]
+      },
+      "explanation": {
+        "es": "Repetitiva + patrón claro + bajo riesgo: la receta de una buena primera automatización.",
+        "en": "Repetitive + clear pattern + low risk: the recipe for a good first automation."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená los pasos para arrancar una automatización", "en": "Order the steps to start an automation" },
+      "solution": {
+        "es": ["Detectá la tarea repetitiva,", "medí cuánto tiempo consume hoy,", "y probá primero en pocos casos."],
+        "en": ["Spot the repetitive task,", "measure how much time it eats today,", "and test on a few cases first."]
+      },
+      "distractors": {
+        "es": ["lanzalo a toda la empresa,", "sin medir ni probar nada."],
+        "en": ["roll it out company-wide,", "without measuring or testing anything."]
+      },
+      "explanation": {
+        "es": "Detectar, medir y probar en chico: así sabés si conviene antes de escalar.",
+        "en": "Spot, measure and test small: that's how you know it's worth it before scaling."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un buen caso de uso para atención al cliente", "en": "Build a good use case for customer support" },
+      "solution": {
+        "es": ["Que la IA redacte un borrador", "de respuesta a consultas comunes,", "y un humano lo apruebe antes de enviar."],
+        "en": ["Let AI draft a reply", "to common inquiries,", "and a human approves it before sending."]
+      },
+      "distractors": {
+        "es": ["Que la IA envíe sola", "reembolsos de miles de dólares."],
+        "en": ["Let AI issue on its own", "refunds of thousands of dollars."]
+      },
+      "explanation": {
+        "es": "Borrador automático + aprobación humana: ganás velocidad sin perder control en lo que importa.",
+        "en": "Auto draft + human approval: you gain speed without losing control where it matters."
+      }
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "u7l05",
+  "title": { "es": "Costo y latencia en la práctica", "en": "Cost and latency in practice" },
+  "byte_intro": {
+    "es": "Una fábrica que gasta de más o tarda una eternidad no sobrevive. Con la IA es igual: que rinda sin quemar plata ni hacer esperar.",
+    "en": "A factory that overspends or takes forever won't survive. With AI it's the same: make it pay off without burning money or making people wait."
+  },
+  "byte_outro": {
+    "es": "¡Perfecto! Elegir el modelo justo, acortar el prompt y no llamar de más: así el sistema es sostenible.",
+    "en": "Perfect! Pick the right model, shorten the prompt and don't over-call: that's how the system stays sustainable."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En la práctica, ¿qué suele cobrarse al usar un modelo por API?", "en": "In practice, what is usually charged when using a model via API?" },
+      "options": [
+        { "es": "Los tokens que entran y salen: a más texto, más costo", "en": "The tokens in and out: more text, more cost" },
+        { "es": "La cantidad de veces que decís 'por favor'", "en": "How many times you say 'please'" },
+        { "es": "El color de la interfaz", "en": "The color of the interface" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El costo suele ir por tokens de entrada y salida. Prompts y respuestas más largas cuestan más.",
+        "en": "Cost usually goes by input and output tokens. Longer prompts and answers cost more."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es la 'latencia'?", "en": "What is 'latency'?" },
+      "options": [
+        { "es": "El tiempo que tarda el sistema en responder", "en": "The time the system takes to respond" },
+        { "es": "La cantidad de errores por hora", "en": "The number of errors per hour" },
+        { "es": "El precio mensual del servicio", "en": "The monthly price of the service" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Latencia es la demora en obtener la respuesta. Mucha latencia arruina la experiencia, sobre todo en tiempo real.",
+        "en": "Latency is the delay in getting the answer. High latency ruins the experience, especially in real time."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Tenés una tarea simple de clasificar mails. ¿Qué conviene?", "en": "You have a simple email-classification task. What's best?" },
+      "options": [
+        { "es": "Usar un modelo chico y rápido, alcanza y sale más barato", "en": "Use a small, fast model; it's enough and cheaper" },
+        { "es": "Usar siempre el modelo más grande y caro por las dudas", "en": "Always use the biggest, priciest model just in case" },
+        { "es": "Usar tres modelos a la vez para cada mail", "en": "Use three models at once for every email" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "No toda tarea necesita el modelo más potente. Para lo simple, uno chico rinde igual y cuesta mucho menos.",
+        "en": "Not every task needs the most powerful model. For simple stuff, a small one performs just as well and costs far less."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cómo bajás costo sin cambiar de modelo?", "en": "How do you cut cost without switching models?" },
+      "options": [
+        { "es": "Acortando el prompt y pidiendo respuestas más breves", "en": "Shortening the prompt and asking for briefer answers" },
+        { "es": "Repitiendo el mismo texto muchas veces en el prompt", "en": "Repeating the same text many times in the prompt" },
+        { "es": "Pidiendo siempre respuestas larguísimas", "en": "Always asking for very long answers" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Menos tokens de entrada y de salida = menos costo. Un prompt limpio y una respuesta acotada ahorran plata.",
+        "en": "Fewer input and output tokens = less cost. A clean prompt and a bounded answer save money."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Miles de usuarios preguntan lo mismo todo el día. ¿Qué reduce costo y latencia?", "en": "Thousands of users ask the same thing all day. What cuts cost and latency?" },
+      "options": [
+        { "es": "Guardar (cachear) las respuestas frecuentes y reusarlas", "en": "Cache the frequent answers and reuse them" },
+        { "es": "Llamar a la IA de cero cada vez, aunque la pregunta sea idéntica", "en": "Call the AI from scratch every time, even if the question is identical" },
+        { "es": "Prohibir que la gente pregunte", "en": "Ban people from asking" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si la respuesta a una pregunta común no cambia, guardarla y reusarla evita llamadas repetidas: más rápido y más barato.",
+        "en": "If a common question's answer doesn't change, caching and reusing it avoids repeated calls: faster and cheaper."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la regla para elegir modelo según la tarea", "en": "Build the rule to pick a model by task" },
+      "solution": {
+        "es": ["Para tareas simples usá un modelo chico y rápido,", "y reservá el modelo grande", "para lo que de verdad lo necesita."],
+        "en": ["For simple tasks use a small, fast model,", "and save the big model", "for what truly needs it."]
+      },
+      "distractors": {
+        "es": ["usá el modelo más caro siempre,", "aunque la tarea sea trivial."],
+        "en": ["use the priciest model always,", "even if the task is trivial."]
+      },
+      "explanation": {
+        "es": "Ajustar el tamaño del modelo a la dificultad de la tarea equilibra costo, velocidad y calidad.",
+        "en": "Matching the model size to the task difficulty balances cost, speed and quality."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá tres formas de ahorrar en un sistema con IA", "en": "Build three ways to save in an AI system" },
+      "solution": {
+        "es": ["Acortá el prompt,", "limitá el largo de la respuesta,", "y cacheá lo que se repite."],
+        "en": ["Shorten the prompt,", "cap the answer length,", "and cache what repeats."]
+      },
+      "distractors": {
+        "es": ["mandá prompts gigantes,", "y llamá a la IA por cada tecla."],
+        "en": ["send giant prompts,", "and call the AI on every keystroke."]
+      },
+      "explanation": {
+        "es": "Prompt corto, respuesta acotada y caché: tres palancas directas sobre costo y latencia.",
+        "en": "Short prompt, bounded answer and cache: three direct levers on cost and latency."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Ordená cómo decidir si una optimización vale la pena", "en": "Order how to decide if an optimization is worth it" },
+      "solution": {
+        "es": ["Medí el costo y el tiempo actuales,", "aplicá el cambio,", "y compará si mejoró de verdad."],
+        "en": ["Measure current cost and time,", "apply the change,", "and compare if it truly improved."]
+      },
+      "distractors": {
+        "es": ["asumí que mejoró", "sin medir nada."],
+        "en": ["assume it improved", "without measuring anything."]
+      },
+      "explanation": {
+        "es": "Medir antes y después es la única forma de saber si la optimización sirvió o solo complicó el sistema.",
+        "en": "Measuring before and after is the only way to know if the optimization helped or just complicated things."
+      }
+    }
+  ]
+}

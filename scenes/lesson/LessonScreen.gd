@@ -171,7 +171,11 @@ func _terminar() -> void:
 		leccion["id"], perfectas, errores, segundos, es_repaso, es_boss)
 	resumen["byte_outro"] = leccion.get("byte_outro", "")
 	resumen["boss"] = es_boss
-	Game.goto("result", resumen)
+	# El boss de la última zona lleva a la certificación en vez del resultado normal.
+	if es_boss and Content.es_leccion_final(leccion["id"]):
+		Game.goto("cert", resumen)
+	else:
+		Game.goto("result", resumen)
 
 func _confirmar_salida() -> void:
 	var d := ConfirmationDialog.new()

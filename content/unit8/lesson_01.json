@@ -1,0 +1,146 @@
+{
+  "id": "u8l01",
+  "title": { "es": "Anatomía de un agente", "en": "Anatomy of an agent" },
+  "byte_intro": {
+    "es": "Llegamos a La Cima. Acá ya no escribimos prompts sueltos: diseñamos sistemas. Arranquemos por el corazón de un agente.",
+    "en": "We've reached The Summit. Here we no longer write one-off prompts: we design systems. Let's start with the heart of an agent."
+  },
+  "byte_outro": {
+    "es": "¡Bien! Un agente planifica, actúa, observa y corrige en un ciclo. Y ya sabés cuándo NO conviene usar uno.",
+    "en": "Nice! An agent plans, acts, observes and corrects in a loop. And you now know when NOT to use one."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué es, en el fondo, un agente de IA?", "en": "What is an AI agent, deep down?" },
+      "options": [
+        { "es": "Un LLM que decide y ejecuta pasos usando herramientas hasta cumplir un objetivo", "en": "An LLM that decides and executes steps using tools until it reaches a goal" },
+        { "es": "Un modelo más grande y más caro que los demás", "en": "A bigger, more expensive model than the rest" },
+        { "es": "Una base de datos con respuestas guardadas", "en": "A database of stored answers" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Un agente no solo responde: razona qué hacer, usa herramientas (buscar, calcular, llamar una API) y repite hasta lograr el objetivo.",
+        "en": "An agent doesn't just answer: it reasons what to do, uses tools (search, compute, call an API) and repeats until it reaches the goal."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál es el ciclo básico de un agente?", "en": "What is an agent's basic loop?" },
+      "options": [
+        { "es": "Planificar → actuar → observar → corregir", "en": "Plan → act → observe → correct" },
+        { "es": "Responder y terminar, siempre en un solo paso", "en": "Answer and stop, always in a single step" },
+        { "es": "Esperar hasta que el usuario resuelva todo", "en": "Wait until the user solves everything" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El agente arma un plan, ejecuta una acción, mira el resultado y ajusta. Ese lazo es lo que lo diferencia de una sola respuesta.",
+        "en": "The agent makes a plan, runs an action, looks at the result and adjusts. That loop is what sets it apart from a single answer."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "El paso 'observar' del ciclo, ¿para qué sirve?", "en": "What is the 'observe' step of the loop for?" },
+      "options": [
+        { "es": "Leer el resultado de la acción para decidir el próximo paso", "en": "To read the action's result and decide the next step" },
+        { "es": "Guardar el historial en la nube", "en": "To save the history to the cloud" },
+        { "es": "Hacer la respuesta más larga", "en": "To make the answer longer" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Observar es leer qué pasó (la búsqueda trajo esto, el cálculo dio aquello) para corregir el rumbo. Sin observar, el agente actúa a ciegas.",
+        "en": "Observing means reading what happened (the search returned this, the calculation gave that) to correct course. Without observing, the agent acts blind."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿En cuál de estos casos NO conviene un agente?", "en": "In which of these cases is an agent NOT worth it?" },
+      "options": [
+        { "es": "Una tarea de un solo paso, clara y directa, como resumir un texto", "en": "A single-step, clear, direct task, like summarizing a text" },
+        { "es": "Investigar en varias fuentes y combinar resultados", "en": "Researching across several sources and combining results" },
+        { "es": "Reservar un vuelo consultando precios y disponibilidad", "en": "Booking a flight by checking prices and availability" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Si la tarea se resuelve en un paso, un agente solo agrega costo, lentitud y más chances de error. Un prompt directo alcanza.",
+        "en": "If the task is solved in one step, an agent only adds cost, latency and more chances of error. A direct prompt is enough."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Qué le da a un agente la capacidad de 'actuar' en el mundo?", "en": "What gives an agent the ability to 'act' on the world?" },
+      "options": [
+        { "es": "Las herramientas que le conectás (buscar, calcular, llamar APIs)", "en": "The tools you connect to it (search, compute, call APIs)" },
+        { "es": "Tener más memoria RAM", "en": "Having more RAM" },
+        { "es": "Repetir el prompt en voz alta", "en": "Repeating the prompt out loud" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Sin herramientas, un LLM solo genera texto. Las herramientas son sus manos: le dejan buscar, calcular, escribir en una base o llamar un servicio.",
+        "en": "Without tools, an LLM only generates text. Tools are its hands: they let it search, compute, write to a database or call a service."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Un riesgo real de los agentes es que...", "en": "A real risk of agents is that..." },
+      "options": [
+        { "es": "Se queden en loop o acumulen errores paso a paso si nada los frena", "en": "They loop forever or stack up errors step by step if nothing stops them" },
+        { "es": "Nunca puedan usar herramientas", "en": "They can never use tools" },
+        { "es": "Siempre respondan en un solo idioma", "en": "They always answer in a single language" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Como deciden solos varios pasos, un error temprano se arrastra. Por eso se les ponen límites: máximo de pasos, chequeos y frenos de seguridad.",
+        "en": "Since they decide several steps on their own, an early mistake carries forward. That's why we add limits: max steps, checks and safety brakes."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el ciclo de un agente en orden", "en": "Build the agent loop in order" },
+      "solution": {
+        "es": ["El agente planifica,", "actúa con una herramienta,", "observa el resultado y corrige."],
+        "en": ["The agent plans,", "acts with a tool,", "observes the result and corrects."]
+      },
+      "distractors": {
+        "es": ["responde una sola vez", "y nunca revisa nada"],
+        "en": ["answers only once", "and never reviews anything"]
+      },
+      "explanation": {
+        "es": "Ese lazo (planificar, actuar, observar, corregir) es la anatomía de todo agente.",
+        "en": "That loop (plan, act, observe, correct) is the anatomy of every agent."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá la regla para decidir si usar un agente", "en": "Build the rule to decide whether to use an agent" },
+      "solution": {
+        "es": ["Usá un agente", "cuando la tarea necesita varios pasos", "y decisiones según lo que va pasando."],
+        "en": ["Use an agent", "when the task needs several steps", "and decisions based on what happens."]
+      },
+      "distractors": {
+        "es": ["para cualquier tarea,", "aunque sea de un solo paso"],
+        "en": ["for any task,", "even a single-step one"]
+      },
+      "explanation": {
+        "es": "Agente = varios pasos con decisiones. Tarea simple de un paso = prompt directo, sin agente.",
+        "en": "Agent = several steps with decisions. Simple one-step task = direct prompt, no agent."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá por qué se le ponen límites a un agente", "en": "Build why we set limits on an agent" },
+      "solution": {
+        "es": ["Le ponemos un máximo de pasos", "y chequeos", "para que no entre en loop ni acumule errores."],
+        "en": ["We set a max number of steps", "and checks", "so it doesn't loop or stack up errors."]
+      },
+      "distractors": {
+        "es": ["lo dejamos correr libre", "sin ningún freno"],
+        "en": ["we let it run free", "with no brakes at all"]
+      },
+      "explanation": {
+        "es": "Los límites y chequeos son la red de seguridad que evita que un error temprano arruine todo.",
+        "en": "Limits and checks are the safety net that keeps an early error from ruining everything."
+      }
+    }
+  ]
+}

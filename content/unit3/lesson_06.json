@@ -1,0 +1,146 @@
+{
+  "id": "u3l06",
+  "title": { "es": "Prompts para imágenes", "en": "Prompts for images" },
+  "byte_intro": {
+    "es": "Pedía 'un dibujo lindo' y salía cualquier cosa. Hoy recuerdo qué controla cada parte de un prompt de imagen: sujeto, estilo, luz y encuadre.",
+    "en": "I used to ask for 'a nice drawing' and got anything. Today I recall what each part of an image prompt controls: subject, style, light and framing."
+  },
+  "byte_outro": {
+    "es": "¡Genial! Ya sé describir sujeto, estilo, luz y composición para que la imagen salga como la imagino. Fragmento recuperado.",
+    "en": "Great! Now I know how to describe subject, style, light and composition so the image comes out as I imagine it. Fragment recovered."
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": { "es": "En un prompt de imagen, ¿qué es el 'sujeto'?", "en": "In an image prompt, what is the 'subject'?" },
+      "options": [
+        { "es": "Lo principal que querés ver: 'un gato naranja durmiendo'", "en": "The main thing you want to see: 'an orange cat sleeping'" },
+        { "es": "El color del fondo solamente", "en": "Only the background color" },
+        { "es": "El tamaño del archivo", "en": "The file size" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El sujeto es el protagonista de la imagen. Cuanto más claro ('gato naranja durmiendo'), mejor.",
+        "en": "The subject is the star of the image. The clearer ('orange cat sleeping'), the better."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "Querés una foto realista y no un dibujo. ¿Qué parte controla eso?", "en": "You want a realistic photo, not a drawing. Which part controls that?" },
+      "options": [
+        { "es": "El estilo: 'fotografía realista' vs. 'acuarela' vs. 'dibujo animado'", "en": "The style: 'realistic photo' vs. 'watercolor' vs. 'cartoon'" },
+        { "es": "El nombre del archivo", "en": "The file name" },
+        { "es": "La hora del día en tu reloj", "en": "The time on your clock" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El estilo define el 'cómo' se ve: foto, acuarela, 3D, cómic. Cambia todo el resultado.",
+        "en": "Style defines the 'how' it looks: photo, watercolor, 3D, comic. It changes the whole result."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Para qué sirve describir la luz, como 'luz cálida de atardecer'?", "en": "What's the point of describing light, like 'warm sunset light'?" },
+      "options": [
+        { "es": "Define la atmósfera y el clima emocional de la imagen", "en": "It sets the atmosphere and emotional mood of the image" },
+        { "es": "No cambia nada", "en": "It changes nothing" },
+        { "es": "Hace la imagen más pesada", "en": "It makes the image heavier" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "La luz cambia el clima: 'atardecer cálido' se siente distinto a 'luz fría de neón'. Es un control potente.",
+        "en": "Light changes the mood: 'warm sunset' feels different from 'cold neon light'. It's a powerful control."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "'Primer plano' o 'plano general': ¿qué controla el encuadre?", "en": "'Close-up' or 'wide shot': what does framing control?" },
+      "options": [
+        { "es": "Qué tan cerca o lejos se ve el sujeto en la imagen", "en": "How close or far the subject appears in the image" },
+        { "es": "El idioma del texto", "en": "The language of the text" },
+        { "es": "La marca de la cámara real", "en": "The brand of a real camera" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El encuadre decide la distancia: primer plano muestra detalle; plano general muestra el entorno.",
+        "en": "Framing sets the distance: a close-up shows detail; a wide shot shows the surroundings."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "¿Cuál de estos prompts de imagen es mejor?", "en": "Which of these image prompts is better?" },
+      "options": [
+        { "es": "Un faro en un acantilado al atardecer, fotografía realista, luz cálida, plano general", "en": "A lighthouse on a cliff at sunset, realistic photo, warm light, wide shot" },
+        { "es": "Algo lindo", "en": "Something nice" },
+        { "es": "Una imagen", "en": "An image" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "El primero define sujeto (faro), estilo (foto realista), luz (cálida, atardecer) y encuadre (plano general).",
+        "en": "The first defines subject (lighthouse), style (realistic photo), light (warm, sunset) and framing (wide shot)."
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": { "es": "La imagen salió casi bien pero muy oscura. ¿Qué hacés?", "en": "The image came out almost right but too dark. What do you do?" },
+      "options": [
+        { "es": "Ajustar el prompt: 'la misma escena, pero con más luz' e iterar", "en": "Tweak the prompt: 'the same scene, but brighter' and iterate" },
+        { "es": "Rendirte, no se puede cambiar", "en": "Give up, it can't be changed" },
+        { "es": "Cambiar de sujeto por completo", "en": "Change the subject entirely" }
+      ],
+      "correct": 0,
+      "explanation": {
+        "es": "Las imágenes se iteran: cambiás un detalle (más luz) y volvés a generar hasta acercarte a lo que querés.",
+        "en": "Images are iterated: change one detail (brighter) and regenerate until you get close to what you want."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt de imagen completo", "en": "Build a complete image prompt" },
+      "solution": {
+        "es": ["Un gato naranja durmiendo en un sillón,", "fotografía realista, luz suave de mañana,", "primer plano."],
+        "en": ["An orange cat sleeping on a couch,", "realistic photo, soft morning light,", "close-up."]
+      },
+      "distractors": {
+        "es": ["algo con un gato", "y ya está"],
+        "en": ["something with a cat", "and that's it"]
+      },
+      "explanation": {
+        "es": "Sujeto, estilo, luz y encuadre juntos: la imagen sale como la imaginás.",
+        "en": "Subject, style, light and framing together: the image comes out as you imagine."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá el ajuste de estilo sobre una imagen", "en": "Build a style tweak on an image" },
+      "solution": {
+        "es": ["La misma escena,", "pero en estilo acuarela", "y con colores más cálidos."],
+        "en": ["The same scene,", "but in watercolor style", "and with warmer colors."]
+      },
+      "distractors": {
+        "es": ["cambiá todo", "sin decir qué"],
+        "en": ["change everything", "without saying what"]
+      },
+      "explanation": {
+        "es": "Iterar cambiando solo el estilo y el color te acerca al resultado que buscás.",
+        "en": "Iterating by changing only style and color moves you toward the result you want."
+      }
+    },
+    {
+      "type": "block_builder",
+      "goal": { "es": "Armá un prompt controlando la luz y el encuadre", "en": "Build a prompt controlling light and framing" },
+      "solution": {
+        "es": ["Un café en una ciudad de noche,", "luz fría de neón,", "plano general desde la vereda."],
+        "en": ["A cafe in a city at night,", "cold neon light,", "wide shot from the sidewalk."]
+      },
+      "distractors": {
+        "es": ["un café", "por ahí"],
+        "en": ["a cafe", "somewhere"]
+      },
+      "explanation": {
+        "es": "La luz (neón fría) y el encuadre (plano general) fijan la atmósfera y la distancia.",
+        "en": "Light (cold neon) and framing (wide shot) set the atmosphere and the distance."
+      }
+    }
+  ]
+}
