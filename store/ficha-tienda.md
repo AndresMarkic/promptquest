@@ -7,6 +7,9 @@ Los assets visuales están en esta misma carpeta `store/`:
 - `feature_graphic.png` — gráfico de portada (1024×500).
 - `captura_1_mapa.png`, `captura_2_leccion.png`, `captura_3_resultado.png`,
   `captura_4_boss.png`, `captura_5_certificacion.png` — capturas (720×1280).
+- `feature_graphic.png` — **inglés** (para el listado en EE.UU./global).
+- `feature_graphic_es.png` — **español** (para el listado en Latinoamérica).
+  El juego detecta el idioma del sistema y arranca en ES o EN; se puede cambiar en Ajustes.
 
 ---
 

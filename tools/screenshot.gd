@@ -75,8 +75,51 @@ func _correr() -> void:
 	# prueba de responsive: distintas proporciones de teléfono
 	await _cap_responsive()
 
+	# verificación del inglés (que no quede nada en español)
+	await _cap_ingles()
+
 	print("LISTO")
 	quit(0)
+
+func _cap_ingles() -> void:
+	I18n.idioma_actual = "en"
+	# mapa con unidad 1 completa (para ver zonas y transición en inglés)
+	_reset_save()
+	_save.store.data["language"] = "en"
+	var lecs := {}
+	for n in range(1, 11):
+		lecs["u1l%02d" % n] = {"stars": 3}
+	_save.store.data["lessons"] = lecs
+	_save.store.data["xp_total"] = 210
+	var mapa = (load("res://scenes/map/MapScreen.tscn") as PackedScene).instantiate()
+	root.add_child(mapa)
+	for i in 12:
+		await process_frame
+	var sc := _buscar_scroll(mapa)
+	if sc != null:
+		sc.scroll_vertical = 1360
+	for i in 12:
+		await process_frame
+	root.get_viewport().get_texture().get_image().save_png("res://capturas/en_mapa.png")
+	print("captura: en_mapa")
+	mapa.queue_free()
+	await process_frame
+	# una lección en inglés
+	_reset_save()
+	_save.store.data["language"] = "en"
+	_game.params = {"lesson_id": "u1l01", "review": false}
+	var lec = (load("res://scenes/lesson/LessonScreen.tscn") as PackedScene).instantiate()
+	root.add_child(lec)
+	await process_frame
+	if lec.has_method("_cerrar_intro"):
+		lec._cerrar_intro()
+	for i in 14:
+		await process_frame
+	root.get_viewport().get_texture().get_image().save_png("res://capturas/en_leccion.png")
+	print("captura: en_leccion")
+	lec.queue_free()
+	await process_frame
+	I18n.idioma_actual = "es"
 
 func _cap_responsive() -> void:
 	# teléfono muy alto (9:19.5) y uno más bajo (3:5), para verificar centrado

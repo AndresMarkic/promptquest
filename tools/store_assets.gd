@@ -6,6 +6,7 @@ extends SceneTree
 
 var _save: Node
 var _game: Node
+var _feat_lang := "en"
 
 func _initialize() -> void:
 	_correr()
@@ -77,7 +78,10 @@ func _correr() -> void:
 		_game.params = {"xp": 1580, "boss": true})
 
 	# 2) Feature graphic 1024x500
+	_feat_lang = "en"
 	await _render_control("feature_graphic", Vector2i(1024, 500), _armar_feature)
+	_feat_lang = "es"
+	await _render_control("feature_graphic_es", Vector2i(1024, 500), _armar_feature)
 
 	# 3) Ícono 512x512
 	await _render_control("icono_512", Vector2i(512, 512), _armar_icono)
@@ -100,11 +104,15 @@ func _armar_feature(lienzo: Control, tam: Vector2) -> void:
 	t.autowrap_mode = TextServer.AUTOWRAP_OFF
 	t.position = Vector2(430, 158)
 	lienzo.add_child(t)
-	var s1 := UiTheme.etiqueta("Aprendé a usar la IA jugando", 32, UiTheme.TEXTO)
+	var textos: Array = {
+		"en": ["Learn to use AI by playing", "From zero to AI engineer · free & open source"],
+		"es": ["Aprendé a usar la IA jugando", "De cero a ingeniero · gratis y open source"],
+	}[_feat_lang]
+	var s1 := UiTheme.etiqueta(textos[0], 32, UiTheme.TEXTO)
 	s1.autowrap_mode = TextServer.AUTOWRAP_OFF
 	s1.position = Vector2(432, 268)
 	lienzo.add_child(s1)
-	var s2 := UiTheme.etiqueta("De cero a experto · en tu idioma", 24, UiTheme.PRIMARIO)
+	var s2 := UiTheme.etiqueta(textos[1], 23, UiTheme.PRIMARIO)
 	s2.autowrap_mode = TextServer.AUTOWRAP_OFF
 	s2.position = Vector2(432, 314)
 	lienzo.add_child(s2)

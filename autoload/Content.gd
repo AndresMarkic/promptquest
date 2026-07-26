@@ -4,14 +4,14 @@ extends Node
 # Registro de las 8 zonas del camino "de cero a ingeniero". El mapa muestra solo
 # las unidades que ya tienen contenido (se van sumando por tandas).
 const UNIDADES := [
-	{"num": 1, "zona": "EL NÚCLEO", "sub": "Fundamentos de IA", "lecciones": 10, "color": "22c9ff"},
-	{"num": 2, "zona": "LA FORJA", "sub": "Prompting Intermedio", "lecciones": 10, "color": "ff8a3c"},
-	{"num": 3, "zona": "EL TALLER", "sub": "Casos de Uso", "lecciones": 10, "color": "46e661"},
-	{"num": 4, "zona": "EL OBSERVATORIO", "sub": "Comparar Modelos", "lecciones": 10, "color": "a06bff"},
-	{"num": 5, "zona": "LA RED", "sub": "Herramientas y Ecosistema", "lecciones": 10, "color": "3d7bff"},
-	{"num": 6, "zona": "EL CRISOL", "sub": "Prompt Engineering Avanzado", "lecciones": 10, "color": "ff4d6d"},
-	{"num": 7, "zona": "LA FÁBRICA", "sub": "IA en Flujos Reales", "lecciones": 10, "color": "ffb02e"},
-	{"num": 8, "zona": "LA CIMA", "sub": "Ingeniería de IA", "lecciones": 10, "color": "ffcf3f", "final": true},
+	{"num": 1, "zona": {"es": "EL NÚCLEO", "en": "THE CORE"}, "sub": {"es": "Fundamentos de IA", "en": "AI Foundations"}, "lecciones": 10, "color": "22c9ff"},
+	{"num": 2, "zona": {"es": "LA FORJA", "en": "THE FORGE"}, "sub": {"es": "Prompting Intermedio", "en": "Intermediate Prompting"}, "lecciones": 10, "color": "ff8a3c"},
+	{"num": 3, "zona": {"es": "EL TALLER", "en": "THE WORKSHOP"}, "sub": {"es": "Casos de Uso", "en": "Real Use Cases"}, "lecciones": 10, "color": "46e661"},
+	{"num": 4, "zona": {"es": "EL OBSERVATORIO", "en": "THE OBSERVATORY"}, "sub": {"es": "Comparar Modelos", "en": "Comparing Models"}, "lecciones": 10, "color": "a06bff"},
+	{"num": 5, "zona": {"es": "LA RED", "en": "THE NETWORK"}, "sub": {"es": "Herramientas y Ecosistema", "en": "Tools & Ecosystem"}, "lecciones": 10, "color": "3d7bff"},
+	{"num": 6, "zona": {"es": "EL CRISOL", "en": "THE CRUCIBLE"}, "sub": {"es": "Prompt Engineering Avanzado", "en": "Advanced Prompt Engineering"}, "lecciones": 10, "color": "ff4d6d"},
+	{"num": 7, "zona": {"es": "LA FÁBRICA", "en": "THE FACTORY"}, "sub": {"es": "IA en Flujos Reales", "en": "AI in Real Workflows"}, "lecciones": 10, "color": "ffb02e"},
+	{"num": 8, "zona": {"es": "LA CIMA", "en": "THE SUMMIT"}, "sub": {"es": "Ingeniería de IA", "en": "AI Engineering"}, "lecciones": 10, "color": "ffcf3f", "final": true},
 ]
 
 func idioma() -> String:
@@ -70,7 +70,9 @@ func get_unidades() -> Array:
 			lecciones.append({"id": id, "title": l.get("title", id), "boss": l.get("boss", false)})
 		if lecciones.is_empty():
 			continue  # unidad todavía sin contenido: no se muestra
-		salida.append({"num": u["num"], "zona": u["zona"], "sub": u["sub"],
+		salida.append({"num": u["num"],
+			"zona": ContentLoader.localizar(u["zona"], idioma()),
+			"sub": ContentLoader.localizar(u["sub"], idioma()),
 			"color": u.get("color", "22c9ff"), "final": u.get("final", false),
 			"lecciones": lecciones})
 	return salida

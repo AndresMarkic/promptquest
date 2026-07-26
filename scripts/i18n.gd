@@ -20,7 +20,7 @@ const DIC := {
 	"REPASAR": {"es": "Repasar", "en": "Review"},
 	"LECCION_COMPLETADA": {"es": "¡Lección completada!", "en": "Lesson complete!"},
 	"RACHA_DIAS": {"es": "¡Racha de %d días!", "en": "%d day streak!"},
-	"UNIDAD_COMPLETADA": {"es": "¡Venciste al Boss! Unidad completada", "en": "You beat the Boss! Unit complete"},
+	"UNIDAD_COMPLETADA": {"es": "¡Venciste al Boss! Unidad completada", "en": "You beat the Boss! Zone complete!"},
 	"BOSS_FALLADO": {"es": "El Boss te ganó esta vez (necesitás 9 de 12). ¡Reintentá!", "en": "The Boss won this time (you need 9 of 12). Try again!"},
 	"INTRO_1": {"es": "En el Mundo Digital, una pequeña IA acaba de despertar...", "en": "In the Digital World, a little AI just woke up..."},
 	"INTRO_2": {"es": "\"¡Hola! Soy Byte. Perdí mis fragmentos de memoria y no recuerdo cómo funciono.\"", "en": "\"Hi! I'm Byte. I lost my memory fragments and can't remember how I work.\""},
